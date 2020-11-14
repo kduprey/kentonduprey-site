@@ -25,7 +25,6 @@ const App = () => {
 		setAuthor(response.data.results[randomPic].user.name);
 		setProfile(response.data.results[randomPic].user.links.html);
 		setDogPic(response.data.results[randomPic].urls.regular);
-		console.log(response.data.results[randomPic]);
 	};
 
 	useEffect(() => {
@@ -33,7 +32,7 @@ const App = () => {
 	}, []);
 
 	return (
-		<div className="container mx-auto h-auto pt-8 md:h-screen flex items-center justify-center flex-col md:flex-row">
+		<div className="container mx-auto h-auto pt-6 md:h-screen flex items-center justify-center flex-col md:flex-row">
 			<div className="flex-shrink text-center px-2 pb-4 flex items-center justify-center flex-col">
 				<h1 className="text-4xl text-white">
 					Hi! My name is{" "}
@@ -47,13 +46,13 @@ const App = () => {
 					meantime 🐶
 				</h3>
 			</div>
-			<div className="flex-none md:w-1/2">
+			<div className="flex-none md:w-1/2 flex flex-col place-items-center">
 				<img
-					className="rounded-md shadow-xl bg-white"
+					className="rounded-md shadow-xl md:h-auto md:w-auto max-w-60"
 					src={dogPic}
 					alt="#"
 				/>
-				<p className="pl-3 text-gray-600 italic text-sm">
+				<p className=" text-gray-600 italic text-sm">
 					Photo by{" "}
 					<a
 						href={`${profile}?utm_source=KentonDuprey-Site&utm_medium=referral`}
