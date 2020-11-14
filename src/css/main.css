@@ -1,0 +1,17 @@
+/* colors:
+	#4A56E2
+	#E8E4FD
+	#000000
+	#FFFFFF
+ */
+
+.dark-purple {
+	color: #4a56e2;
+}
+.light-purple {
+	color: #e8e4fd;
+}
+
+body {
+	background-color: #000000;
+}
