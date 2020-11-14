@@ -48,7 +48,7 @@ const App = () => {
 			</div>
 			<div className="flex-none md:w-1/2 flex flex-col place-items-center">
 				<img
-					className="rounded-md shadow-xl md:h-auto md:w-auto max-w-60"
+					className="rounded-md shadow-xl md:h-auto md:w-auto max-w-60 md:max-w-80"
 					src={dogPic}
 					alt="#"
 				/>
