@@ -1,31 +1,35 @@
 import "./css/main.css";
-import React, { useEffect } from "react";
-// import axios from "axios";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const App = () => {
-	// const [dogPic, setDogPic] = useState("");
-	// const dogs = async () => {
-	// 	const randomPic = Math.floor(Math.random() * 10);
-	// 	const randomPage = Math.floor(Math.random() * 100);
-	// 	const response = await axios.get(
-	// 		"https://api.unsplash.com/search/photos",
-	// 		{
-	// 			headers: {
-	// 				"Accept-Version": "v1",
-	// 				Authorization: `Client-ID ${process.env.REACT_APP_UNSPLASH_ACCESS_KEY}`,
-	// 			},
-	// 			params: {
-	// 				page: randomPage,
-	// 				query: "puppy",
-	// 			},
-	// 		}
-	// 	);
-
-	// 	setDogPic(response.data.results[randomPic].urls.regular);
-	// };
+	const [dogPic, setDogPic] = useState("");
+	const [author, setAuthor] = useState("");
+	const [profile, setProfile] = useState("");
+	const dogs = async () => {
+		const randomPic = Math.floor(Math.random() * 10);
+		const randomPage = Math.floor(Math.random() * 100);
+		const response = await axios.get(
+			"https://api.unsplash.com/search/photos",
+			{
+				headers: {
+					"Accept-Version": "v1",
+					Authorization: `Client-ID ${process.env.REACT_APP_UNSPLASH_ACCESS_KEY}`,
+				},
+				params: {
+					page: randomPage,
+					query: "puppy",
+				},
+			}
+		);
+		setAuthor(response.data.results[randomPic].user.name);
+		setProfile(response.data.results[randomPic].user.links.html);
+		setDogPic(response.data.results[randomPic].urls.regular);
+		console.log(response.data.results[randomPic]);
+	};
 
 	useEffect(() => {
-		//dogs();
+		dogs();
 	}, []);
 
 	return (
@@ -46,9 +50,25 @@ const App = () => {
 			<div className="flex-none md:w-1/2">
 				<img
 					className="rounded-md shadow-xl bg-white"
-					src="https://images.unsplash.com/photo-1579180728061-3a0f2d871a31?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEzODc3NH0"
+					src={dogPic}
 					alt="#"
 				/>
+				<p className="pl-3 text-gray-600 italic text-sm">
+					Photo by{" "}
+					<a
+						href={`${profile}?utm_source=KentonDuprey-Site&utm_medium=referral`}
+						className="underline"
+					>
+						{author}
+					</a>{" "}
+					on{" "}
+					<a
+						href="https://unsplash.com/?utm_source=KentonDuprey-Site&utm_medium=referral"
+						className="underline"
+					>
+						Unsplash
+					</a>
+				</p>
 			</div>
 		</div>
 	);
