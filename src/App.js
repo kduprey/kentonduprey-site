@@ -1,11 +1,11 @@
 import "./css/main.css";
 import React from "react";
-import DogImage from "./components/DogImage";
+import StarterScreen from "./components/StarterScreen";
 
 const App = () => {
 	return (
 		<div>
-			<DogImage />
+			<StarterScreen />
 		</div>
 	);
 };

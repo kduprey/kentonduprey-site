@@ -22,16 +22,41 @@
 body {
 	background-color: #000000;
 }
+
+.spinner {
+	border-top-color: #3498db;
+	-webkit-animation: spinner 1.5s linear infinite;
+	animation: spinner 1.5s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
 .fade-in {
-	animation: fadeIn ease 3s;
-	-webkit-animation: fadeIn ease 3s;
-	-moz-animation: fadeIn ease 3s;
-	-o-animation: fadeIn ease 3s;
-	-ms-animation: fadeIn ease 3s;
+	animation: fadeIn ease 3.5s;
+	-webkit-animation: fadeIn ease 3.5s;
+	-moz-animation: fadeIn ease 3.5s;
+	-o-animation: fadeIn ease 3.5s;
+	-ms-animation: fadeIn ease 3.5s;
 }
 @keyframes fadeIn {
 	0% {
-		opacity: 0.1;
+		opacity: 0;
 	}
 	100% {
 		opacity: 1;
@@ -40,7 +65,7 @@ body {
 
 @-moz-keyframes fadeIn {
 	0% {
-		opacity: 0.1;
+		opacity: 0;
 	}
 	100% {
 		opacity: 1;
@@ -49,7 +74,7 @@ body {
 
 @-webkit-keyframes fadeIn {
 	0% {
-		opacity: 0.1;
+		opacity: 0;
 	}
 	100% {
 		opacity: 1;
@@ -58,7 +83,7 @@ body {
 
 @-o-keyframes fadeIn {
 	0% {
-		opacity: 0.1;
+		opacity: 0;
 	}
 	100% {
 		opacity: 1;
@@ -67,7 +92,7 @@ body {
 
 @-ms-keyframes fadeIn {
 	0% {
-		opacity: 0.1;
+		opacity: 0;
 	}
 	100% {
 		opacity: 1;
