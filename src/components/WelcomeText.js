@@ -12,7 +12,7 @@ const WelcomeText = ({ status }) => {
 				</h1>
 				<h3 className="text-2xl text-white">
 					My site is <span className="dark-red">not</span> fully
-					ready, but enjoy a random picture of a{" "}
+					ready, but enjoy <br />a random picture of a{" "}
 					<span className="dark-cyan">puppy</span> in the
 					meantime 🐶
 				</h3>
