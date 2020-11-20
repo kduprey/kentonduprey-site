@@ -1,11 +1,11 @@
 import "./css/main.css";
 import React from "react";
-import StarterScreen from "./components/StarterScreen";
+import WelcomeText from "./components/WelcomeText";
 
 const App = () => {
 	return (
 		<div>
-			<StarterScreen />
+			<WelcomeText />
 		</div>
 	);
 };
