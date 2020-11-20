@@ -14,7 +14,7 @@ const Time = () => {
 		};
 	}, [time]);
 
-	return <div className="dark-cyan">{time}</div>;
+	return <span className="dark-cyan">{time}</span>;
 };
 
 export default Time;
