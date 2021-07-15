@@ -1,7 +1,7 @@
 # Kenton Duprey's Mainsite
 
 Created with create-react-app
-Hosted on Netlify
+Hosted on Vercel
 
 ## Contact me
 
