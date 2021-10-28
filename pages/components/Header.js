@@ -1,13 +1,10 @@
 import Head from "next/head";
 
-const Header = () => {
+const Header = ({ title, description }) => {
 	return (
 		<Head>
-			<title>Create Next App</title>
-			<meta
-				name="description"
-				content="Kenton Duprey: Web Applcation Developer"
-			/>
+			<title>{title}</title>
+			<meta name="description" content={description} />
 			<meta
 				name="viewport"
 				content="width=device-width, inital-scale=1"
