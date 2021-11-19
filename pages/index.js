@@ -3,11 +3,11 @@ import Navbar from "./components/Navbar";
 
 const Home = () => {
 	return (
-		<div className="flex flex-col items-center justify-center min-h-screen py-2">
+		<div>
 			{/* Header */}
 			<Header title="Kenton Duprey - Web Developer" />
 
-			<main className="vh-100 flex flex-col">
+			<main className="">
 				<Navbar />
 			</main>
 		</div>
