@@ -1,21 +1,18 @@
-import Header from ".//components/Header.js";
-import Navbar from ".//components/Navbar.js";
-import Image from "next/image";
+import Header from "./components/Header";
 
-export default function Home() {
+const Home = () => {
 	return (
-		<div>
-			<Header
-				title="Kenton Duprey - Web Developer"
-				description="Kenton Duprey - I create web applications"
-			/>
-			<Navbar />
-			<div className="d-flex justify-content-center align-items-center vh-100">
-				<h1 className="display-4 text-center">
-					Hi, my name is <b>Kenton</b> and<br></br> I develop web
-					applications.
+		<div className="flex flex-col items-center justify-center min-h-screen py-2">
+			{/* Header */}
+			<Header title="Kenton Duprey - Web Developer" />
+
+			<main>
+				<h1 className="text-6xl font-bold">
+					Hello, this is a Next Tailwind Template! :)
 				</h1>
-			</div>
+			</main>
 		</div>
 	);
-}
+};
+
+export default Home;
