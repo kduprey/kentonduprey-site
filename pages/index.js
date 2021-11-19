@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 
 const Home = () => {
 	return (
@@ -6,10 +7,8 @@ const Home = () => {
 			{/* Header */}
 			<Header title="Kenton Duprey - Web Developer" />
 
-			<main>
-				<h1 className="text-6xl font-bold">
-					Hello, this is a Next Tailwind Template! :)
-				</h1>
+			<main className="vh-100 flex flex-col">
+				<Navbar />
 			</main>
 		</div>
 	);
