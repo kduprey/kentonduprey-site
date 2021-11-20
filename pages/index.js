@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 const Home = () => {
 	return (
@@ -7,8 +8,9 @@ const Home = () => {
 			{/* Header */}
 			<Header title="Kenton Duprey - Web Developer" />
 
-			<main className="">
+			<main className="font-display vh-full flex flex-col items-center">
 				<Navbar />
+				<Hero />
 			</main>
 		</div>
 	);
