@@ -7,9 +7,9 @@ const Navbar = (props) => {
 				Kenton Duprey.
 			</h1>
 			<div className="flex justify-evenly">
-				<Button text="About" />
-				<Button text="Projects" />
-				<Button text="Contact" />
+				<Button>About</Button>
+				<Button>Projects</Button>
+				<Button>Contact</Button>
 			</div>
 		</nav>
 	);
