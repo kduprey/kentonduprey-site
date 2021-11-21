@@ -5,7 +5,7 @@ const Hero = (props) => {
 	return (
 		<div className="container flex flex-col justify-around items-center pt-5">
 			<p className="font-semibold py-3">Hi, I'm Kenton 👋</p>
-			<h1 className="text-5xl font-bold text-center p-3 leading-tight">
+			<h1 className="text-5xl font-bold text-center py-3 leading-tight">
 				Building web applications,
 				<br /> user-friendly products,
 				<br /> and experiences
@@ -15,7 +15,8 @@ const Hero = (props) => {
 				industry. Lorem Ipsum has been the industry's standard dummy
 				text.
 			</p>
-			<Button className="uppercase" text="Connect with Me">
+			<Button className="uppercase">
+				Connect with Me
 				<FaArrowRight className="pl-1" />
 			</Button>
 		</div>
