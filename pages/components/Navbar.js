@@ -7,9 +7,15 @@ const Navbar = (props) => {
 				Kenton Duprey.
 			</h1>
 			<div className="flex justify-evenly">
-				<Button>About</Button>
-				<Button>Projects</Button>
-				<Button>Contact</Button>
+				<Button className="uppercase bg-black text-white hover:bg-gray-700 transition ease-in">
+					<a href="#about">About</a>
+				</Button>
+				<Button className="uppercase bg-black text-white hover:bg-gray-700 transition ease-in">
+					<a href="#work">Work</a>
+				</Button>
+				<Button className="uppercase bg-black text-white hover:bg-gray-700 transition ease-in">
+					<a href="#contact">Contact</a>
+				</Button>
 			</div>
 		</nav>
 	);
