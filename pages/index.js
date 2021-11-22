@@ -5,6 +5,7 @@ import ProjectCard from "./components/ProjectCard";
 import About from "./components/About";
 import Skill from "./components/Skill";
 import Contact from "./components/Contact";
+import { FaApple } from "react-icons/fa";
 
 const Home = () => {
 	return (
@@ -33,7 +34,9 @@ const Home = () => {
 						<h1 className="text-5xl font-bold text-center py-3">
 							Skills
 						</h1>
-						<Skill />
+						<Skill>
+							<FaApple />
+						</Skill>
 					</section>
 					<Contact />
 				</section>
