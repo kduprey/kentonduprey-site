@@ -5,7 +5,7 @@ const Header = ({ title }) => {
 		<Head>
 			<script
 				async
-				src="https://www.googletagmanager.com/gtag/js?id=G-47RFWE9Y3T"
+				src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
 			></script>
 			<script
 				dangerouslySetInnerHTML={{
@@ -14,7 +14,7 @@ const Header = ({ title }) => {
   					function gtag(){dataLayer.push(arguments);}
   					gtag('js', new Date());
 
-  					gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}, {
+  					gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
 						  page_path: window.location.pathname,
 						  });
   					`,
