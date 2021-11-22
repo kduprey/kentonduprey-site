@@ -10,7 +10,7 @@ const Hero = (props) => {
 				<br /> user-friendly products,
 				<br /> and experiences
 			</h1>
-			<p className="text-base font-light text-center py-3">
+			<p className="text-base font-light text-center leading-tight py-3">
 				Lorem Ipsum is simply dummy text of the printing and typesetting
 				industry. Lorem Ipsum has been the industry's standard dummy
 				text.
