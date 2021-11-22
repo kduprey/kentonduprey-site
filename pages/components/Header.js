@@ -3,6 +3,7 @@ import Head from "next/head";
 const Header = ({ title }) => {
 	return (
 		<Head>
+			<link rel="shortcut icon" href="/64px.png" />
 			<script
 				async
 				src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
@@ -21,7 +22,6 @@ const Header = ({ title }) => {
 				}}
 			/>
 			<title>{title}</title>
-			<link rel="icon" href="/favicon.ico" />
 		</Head>
 	);
 };
