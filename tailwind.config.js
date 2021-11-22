@@ -170,6 +170,9 @@ module.exports = {
 					900: "#20144C",
 				},
 			},
+			transitionProperty: {
+				objectFit: "object-fit",
+			},
 		},
 	},
 	variants: {
@@ -178,6 +181,7 @@ module.exports = {
 			strokeWidth: ["hover", "focus"],
 			backgroundColor: ["active"],
 			borderColor: ["active"],
+			objectFit: ["hover"],
 		},
 	},
 	plugins: [
