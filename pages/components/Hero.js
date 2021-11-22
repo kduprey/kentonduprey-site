@@ -1,20 +1,20 @@
 import Button from "./Button";
 import { FaArrowRight } from "react-icons/fa";
 
-const Hero = (props) => {
+const Hero = ({ blurb }) => {
+	if (!blurb) {
+		blurb =
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.";
+	}
 	return (
 		<div className="container flex flex-col justify-around items-center pt-5">
 			<p className="font-semibold py-3">Hi, I'm Kenton 👋</p>
-			<h1 className="text-5xl font-bold text-center py-3 leading-tight">
+			<h1 className="text-2xl md:text-5xl lg:text-5xl font-bold text-center py-3 leading-tight">
 				Building web applications,
 				<br /> user-friendly products,
 				<br /> and experiences
 			</h1>
-			<p className="text-base font-light text-center leading-tight py-3">
-				Lorem Ipsum is simply dummy text of the printing and typesetting
-				industry. Lorem Ipsum has been the industry's standard dummy
-				text.
-			</p>
+
 			<Button className="uppercase bg-black text-white hover:bg-gray-700 transition ease-in">
 				<a href="#contact">Connect with Me</a>
 				<FaArrowRight className="pl-1" />

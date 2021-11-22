@@ -2,7 +2,7 @@ import Button from "./Button";
 
 const Navbar = (props) => {
 	return (
-		<nav className="container flex flex-col md:flex-row justify-between py-3 items-center mx-6">
+		<nav className="container flex flex-col md:flex-row md:w-4/5 justify-between p-3 items-center">
 			<h1 className="text-2xl md:text-4xl font-semibold font-display text-center">
 				Kenton Duprey.
 			</h1>
