@@ -1,8 +1,7 @@
-# Kenton Duprey's Mainsite
+## Next.JS Tailwind Template
 
-Created with create-react-app
-Hosted on Vercel
-
-## Contact me
-
-Email: kentonduprey@icloud.com
+Clone the repo
+`cd` into the folder
+Run `npm i` to install the project dependencies
+Run `npm run dev` to start the development server
+Have fun! :)
