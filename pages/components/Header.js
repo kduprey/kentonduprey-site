@@ -7,9 +7,8 @@ const Header = ({ title }) => {
 				async
 				src="https://www.googletagmanager.com/gtag/js?id=G-47RFWE9Y3T"
 			></script>
-			<script>
-				dangerouslySetInnerHTML=
-				{{
+			<script
+				dangerouslySetInnerHTML={{
 					__html: `
   					window.dataLayer = window.dataLayer || [];
   					function gtag(){dataLayer.push(arguments);}
@@ -20,7 +19,7 @@ const Header = ({ title }) => {
 						  });
   					`,
 				}}
-			</script>
+			/>
 			<title>{title}</title>
 			<link rel="icon" href="/favicon.ico" />
 		</Head>
