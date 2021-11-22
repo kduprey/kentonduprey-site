@@ -5,7 +5,7 @@ import ProjectCard from "./components/ProjectCard";
 import About from "./components/About";
 import Skill from "./components/Skill";
 import Contact from "./components/Contact";
-import { FaApple } from "react-icons/fa";
+import { FaHtml5 } from "react-icons/fa";
 
 const Home = () => {
 	return (
@@ -26,16 +26,17 @@ const Home = () => {
 							title="World Eye Foundation"
 							link="https://dev.worldeyef.org"
 						/>
-						<ProjectCard />
-						<ProjectCard />
 					</div>
 					<About />
 					<section>
 						<h1 className="text-5xl font-bold text-center py-3">
 							Skills
 						</h1>
-						<Skill>
-							<FaApple />
+						<Skill
+							title="HTML5"
+							blurb="All of the projects that I have created are using the current version of HTML, and all semantics and proper tags for the creation of the page."
+						>
+							<FaHtml5 />
 						</Skill>
 					</section>
 					<Contact />

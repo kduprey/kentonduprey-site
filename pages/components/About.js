@@ -9,7 +9,7 @@ const About = ({ blurb }) => {
 			<div className="h-1/4 w-1/2 p-3">
 				<img src="/me.png" alt="Kenton Duprey" className="rounded-md" />
 			</div>
-			<p className="text-center leading-tight p-3">{blurb}</p>
+			<p className="text-center leading-tight p-3 font-light">{blurb}</p>
 		</div>
 	);
 };
