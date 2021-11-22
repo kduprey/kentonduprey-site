@@ -12,7 +12,7 @@ const Home = () => {
 			{/* Header */}
 			<Header title="Kenton Duprey - Web Developer" />
 
-			<main className="font-display vh-full flex flex-col items-center">
+			<main className="font-display vh-full flex flex-col items-center justify-center">
 				<Navbar />
 				<Hero />
 				<section className="container">
