@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Button from "./Button";
-import Image from "next/image";
 
-const ProjectCard = ({ image, title, blurb, link }) => {
+const ProjectCard = ({ image, title, blurb, link, skills }) => {
 	if (!link) link = "#";
 	if (!image) image = "https://via.placeholder.com/300x200";
 	if (!title) title = "Project Title";
@@ -17,11 +16,17 @@ const ProjectCard = ({ image, title, blurb, link }) => {
 					<img src={image} alt={title} className="rounded-xl" />
 				</div>
 				<div className="w-full md:w-2/3 bg-white flex flex-col space-y-2 p-3">
-					<h3 className="font-black  md:text-2xl text-xl">{title}</h3>
-					<p className="md:text-lg text-gray-500 text-base leading-tight font-light">
+					<h3 className="font-black md:text-2xl text-xl">{title}</h3>
+					<p className="md:text-lg text-gray-500 leading-tight font-light">
 						{blurb}
 					</p>
-					<Button className="m-auto uppercase bg-gray-500 text-white hover:bg-gray-600 transition ease-in">
+					<div
+						id="skills"
+						className="flex text-xl justify-evenly p-3"
+					>
+						{skills}
+					</div>
+					<Button className="m-auto uppercase bg-black text-white hover:bg-gray-700 transition ease-in">
 						<Link href={link}>Explore</Link>
 					</Button>
 				</div>
