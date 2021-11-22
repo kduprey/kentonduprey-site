@@ -9,10 +9,18 @@ const About = ({ blurb }) => {
 			id="about"
 		>
 			<h1 className="text-5xl font-bold text-center py-3">About</h1>
-			<div className="h-1/4 w-1/2 p-3">
-				<img src="/me.png" alt="Kenton Duprey" className="rounded-md" />
+			<div className="flex items-center justify-center">
+				<div className="h-1/4 w-1/2 p-3 md:w-1/4">
+					<img
+						src="/me.png"
+						alt="Kenton Duprey"
+						className="rounded-md"
+					/>
+				</div>
+				<p className="text-center leading-tight p-3 font-light md:w-1/2">
+					{blurb}
+				</p>
 			</div>
-			<p className="text-center leading-tight p-3 font-light">{blurb}</p>
 		</div>
 	);
 };
