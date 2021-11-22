@@ -15,7 +15,7 @@ const Hero = (props) => {
 				industry. Lorem Ipsum has been the industry's standard dummy
 				text.
 			</p>
-			<Button className="uppercase">
+			<Button className="uppercase bg-gray-500 text-white hover:bg-gray-600 transition ease-in">
 				Connect with Me
 				<FaArrowRight className="pl-1" />
 			</Button>
