@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Button from "./Button";
+import Skill from "./Skill";
 
 const ProjectCard = ({ image, title, blurb, link, skills }) => {
 	if (!link) link = "#";
@@ -24,7 +25,15 @@ const ProjectCard = ({ image, title, blurb, link, skills }) => {
 						id="skills"
 						className="flex text-xl justify-evenly p-3"
 					>
-						{skills}
+						{skills.map((skill, index) => {
+							return (
+								<Skill
+									project={true}
+									key={index}
+									iconName={skill.iconName.icon}
+								/>
+							);
+						})}
 					</div>
 					<Button className="m-auto uppercase bg-black text-white hover:bg-gray-700 transition ease-in">
 						<Link href={link}>Explore</Link>
