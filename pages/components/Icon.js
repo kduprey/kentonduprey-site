@@ -4,7 +4,7 @@ import * as SimpleIcons from "react-icons/si";
 import * as GrommetIcons from "react-icons/gr";
 
 const Icon = ({ iconName, size, color }) => {
-	if (!iconName) iconName = "fa-question-circle";
+	if (!iconName) iconName = "FaFontAwesomeFlag";
 
 	const library = iconName.substring(0, 2).toLowerCase();
 	switch (library) {
