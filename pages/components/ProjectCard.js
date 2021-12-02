@@ -9,6 +9,7 @@ const ProjectCard = ({ image, title, blurb, link, skills }) => {
 	if (!blurb)
 		blurb =
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni explicabo ipsum quas tenetur libero repellat, quos dignissimos consectetur harum a.";
+	if (!skills) skills = [];
 
 	return (
 		<div className="flex flex-col justify-center p-3">
