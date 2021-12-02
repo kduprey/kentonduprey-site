@@ -1,7 +1,10 @@
-const About = ({ blurb }) => {
+const About = ({ blurb, imageUrl, imageHeight, imageWidth }) => {
 	if (!blurb) {
 		blurb =
 			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, rerum. Est maiores deserunt voluptatem vitae, nostrum minima, doloribus sunt quisquam omnis rerum quod soluta blanditiis. Repudiandae delectus quas deleniti excepturi.";
+	}
+	if (!imageUrl) {
+		imageUrl = "/me.png";
 	}
 	return (
 		<div
@@ -12,12 +15,12 @@ const About = ({ blurb }) => {
 			<div className="flex flex-col md:flex-row items-center justify-center">
 				<div className="h-1/4 w-1/2 p-3">
 					<img
-						src="/me.png"
+						src={imageUrl}
 						alt="Kenton Duprey"
 						className="rounded-md"
 					/>
 				</div>
-				<p className="text-center leading-tight p-3 font-light md:w-4/5 lg:w-4/5 lg:text-lg">
+				<p className="text-justify leading-tight p-3 font-light md:w-4/5 lg:w-4/5 lg:text-lg">
 					{blurb}
 				</p>
 			</div>
