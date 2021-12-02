@@ -2,12 +2,12 @@ import Link from "next/link";
 import Button from "./Button";
 import Skill from "./Skill";
 
-const ProjectCard = ({ image, title, blurb, link, skills }) => {
+const ProjectCard = ({ image, title, description, link, skills }) => {
 	if (!link) link = "#";
 	if (!image) image = "https://via.placeholder.com/300x200";
 	if (!title) title = "Project Title";
-	if (!blurb)
-		blurb =
+	if (!description)
+		description =
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni explicabo ipsum quas tenetur libero repellat, quos dignissimos consectetur harum a.";
 	if (!skills) skills = [];
 
@@ -20,7 +20,7 @@ const ProjectCard = ({ image, title, blurb, link, skills }) => {
 				<div className="w-full md:w-2/3 bg-white flex flex-col space-y-2 p-3">
 					<h3 className="font-black md:text-2xl text-xl">{title}</h3>
 					<p className="md:text-lg text-gray-500 leading-tight font-light">
-						{blurb}
+						{description}
 					</p>
 					<div
 						id="skills"
