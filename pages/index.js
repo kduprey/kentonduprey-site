@@ -5,9 +5,6 @@ import ProjectCard from "./components/ProjectCard";
 import About from "./components/About";
 import Skill from "./components/Skill";
 import Contact from "./components/Contact";
-import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
-import { SiNextdotjs, SiAzurefunctions, SiMongodb } from "react-icons/si";
-import { GrGraphQl } from "react-icons/gr";
 import axios from "axios";
 
 const QUERY = `{
@@ -21,11 +18,29 @@ const QUERY = `{
 		height
 	  }
 	}
+	projects {
+	  title
+	  description
+	  link
+	  projectImage {
+		url
+		width
+		height
+	  }
+	  projectSkills {
+		... on Skill {
+		  iconName
+		}
+	  }
+	}
+	skills {
+	  title
+	  iconName
+	}
   }
   `;
 
-const Home = ({ bioInfo }) => {
-	console.log(bioInfo);
+const Home = ({ bioInfo, projects, skills }) => {
 	return (
 		<div>
 			{/* Header */}
@@ -39,18 +54,18 @@ const Home = ({ bioInfo }) => {
 						Work
 					</h1>
 					<div className="flex flex-col justify-center items-center ">
-						<ProjectCard
-							image="/projects/worldeyef-proj.jpeg"
-							title="World Eye Foundation"
-							blurb="World Eye Foundation is a non-profit organization that provides education and awareness to children in need of eye care."
-							link="https://dev.worldeyef.org"
-							skills={[
-								<SiNextdotjs key={1} />,
-								<SiAzurefunctions key={2} />,
-								<SiMongodb key={3} />,
-								<GrGraphQl key={4} />,
-							]}
-						/>
+						{projects.map((project, index) => {
+							return (
+								<ProjectCard
+									key={index}
+									title={project.title}
+									description={project.description}
+									link={project.link}
+									image={project.projectImage.url}
+									skills={project.projectSkills}
+								/>
+							);
+						})}
 					</div>
 					<About
 						blurb={bioInfo.biographyBlurb.text}
@@ -63,27 +78,15 @@ const Home = ({ bioInfo }) => {
 							Skills
 						</h1>
 						<div className="flex justify-evenly items-center flex-wrap">
-							<Skill title="HTML 5">
-								<FaHtml5 />
-							</Skill>
-							<Skill title="CSS 3">
-								<FaCss3Alt />
-							</Skill>
-							<Skill title="React">
-								<FaReact />
-							</Skill>
-							<Skill title="Next.js">
-								<SiNextdotjs />
-							</Skill>
-							<Skill title="GraphQL">
-								<GrGraphQl />
-							</Skill>
-							<Skill title="Serverless Functions">
-								<SiAzurefunctions />
-							</Skill>
-							<Skill title="MongoDB">
-								<SiMongodb />
-							</Skill>
+							{skills.map((skill, index) => {
+								return (
+									<Skill
+										key={index}
+										title={skill.title}
+										iconName={skill.iconName.icon}
+									/>
+								);
+							})}
 						</div>
 					</section>
 					<Contact />
@@ -108,6 +111,8 @@ export async function getStaticProps(context) {
 		return {
 			props: {
 				bioInfo: data.data.bios[0],
+				projects: data.data.projects,
+				skills: data.data.skills,
 			},
 		};
 	} catch (error) {
