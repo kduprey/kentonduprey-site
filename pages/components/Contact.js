@@ -55,9 +55,7 @@ const Contact = (props) => {
 				setAge("");
 				setLoading(false);
 				setTimeout(() => {
-					document
-						.getElementById("usr-msg")
-						.classList.remove("opacity-100");
+					setSuccess(false);
 				}, 2000);
 			})
 			.catch((err) => {
@@ -130,8 +128,8 @@ const Contact = (props) => {
 				</Button>
 				<p
 					className={
-						"font-light opacity-0 transition-opacity ease-in " +
-						(success ? "opacity-100" : "")
+						"font-light transition-opacity ease-in " +
+						(success ? "opacity-100" : "opacity-0")
 					}
 					id="usr-msg"
 				>
