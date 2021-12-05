@@ -31,5 +31,4 @@ export default async function handler(req, res) {
 		.then((response) => {
 			res.status(response.status).send(response.data);
 		});
-	res.status(200).send("OK");
 }
