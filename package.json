@@ -6,7 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@tailwindcss/forms": "^0.3.4",
+    "@tailwindcss/forms": "^0.4.0",
     "@tailwindcss/typography": "^0.4.1",
     "axios": "^0.24.0",
     "next": "latest",
