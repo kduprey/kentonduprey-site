@@ -1,12 +1,8 @@
-const colors = require("tailwindcss/colors");
-
 module.exports = {
-	mode: "jit",
-	purge: [
+	content: [
 		"./pages/**/*.{js,ts,jsx,tsx}",
 		"./components/**/*.{js,ts,jsx,tsx}",
 	],
-	darkMode: false, // or 'media' or 'class'
 	theme: {
 		colors: {
 			transparent: "transparent",
@@ -173,15 +169,6 @@ module.exports = {
 			transitionProperty: {
 				objectFit: "object-fit",
 			},
-		},
-	},
-	variants: {
-		extend: {
-			stroke: ["hover", "focus"],
-			strokeWidth: ["hover", "focus"],
-			backgroundColor: ["active"],
-			borderColor: ["active"],
-			objectFit: ["hover"],
 		},
 	},
 	plugins: [
