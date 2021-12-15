@@ -6,7 +6,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/line-clamp": "^0.3.0",
     "@tailwindcss/typography": "^0.5.0",
     "axios": "^0.24.0",
     "next": "latest",
@@ -15,8 +17,8 @@
     "react-icons": "^4.3.1"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.6",
+    "autoprefixer": "^10.4.0",
     "postcss": "^8.4.5",
-    "tailwindcss": "^3.0.2"
+    "tailwindcss": "^3.0.5"
   }
 }
