@@ -17,7 +17,7 @@ const About = ({ blurb, imageUrl, imageHeight, imageWidth }) => {
 					<img
 						src={imageUrl}
 						alt="Kenton Duprey"
-						className="rounded-md"
+						className="rounded-full dark:border dark:border-gray-300"
 					/>
 				</div>
 				<p className="text-justify leading-tight p-3 font-light md:w-4/5 lg:w-4/5 lg:text-lg">
