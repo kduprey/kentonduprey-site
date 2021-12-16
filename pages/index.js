@@ -46,7 +46,7 @@ const Home = ({ bioInfo, projects, skills }) => {
 			{/* Header */}
 			<Header title="Kenton Duprey - Web Developer" />
 
-			<main className="font-display vh-full flex flex-col items-center justify-center">
+			<main className="font-display vh-full flex flex-col items-center justify-center dark:bg-black dark:text-white">
 				<Navbar />
 				<Hero blurb="" />
 				<section className="container md:w-4/5" id="work">
