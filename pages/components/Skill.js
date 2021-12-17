@@ -9,10 +9,10 @@ const Skill = ({ project, title, iconName, children }) => {
 
 	return (
 		<div className="container p-3 flex flex-col items-center justify-center w-auto">
-			<div className="pb-3 text-5xl">
+			<div className="pb-3 text-3xl">
 				<Icon iconName={iconName} />
 			</div>
-			<h1 className="text-2xl font-semibold text-center">{title}</h1>
+			<h3 className=" text-center">{title}</h3>
 		</div>
 	);
 };
