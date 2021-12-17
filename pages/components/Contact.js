@@ -68,7 +68,7 @@ const Contact = (props) => {
 			className="container flex flex-col items-center justify-center"
 			id="contact"
 		>
-			<h1 className="text-5xl font-bold text-center py-3">Contact</h1>
+			<h2 className="font-bold text-center py-3">Contact</h2>
 			<form
 				className="flex flex-col items-center container"
 				id="contact-form"

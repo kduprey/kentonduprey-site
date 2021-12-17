@@ -49,11 +49,9 @@ const Home = ({ bioInfo, projects, skills }) => {
 			<main className="font-display vh-full flex flex-col items-center justify-center dark:bg-black dark:text-white">
 				<Navbar />
 				<Hero blurb="" />
-				<section className="container md:w-4/5" id="work">
-					<h1 className="text-5xl font-bold text-center py-3">
-						Work
-					</h1>
-					<div className="flex flex-col justify-center items-center ">
+				<section className="container" id="work">
+					<h2 className="font-bold text-center py-3">Work</h2>
+					<div className="flex flex-col lg:flex-row justify-center items-center space-y-2 lg:space-x-2 lg:space-y-0 p-3">
 						{projects.map((project, index) => {
 							return (
 								<ProjectCard
@@ -74,9 +72,7 @@ const Home = ({ bioInfo, projects, skills }) => {
 						imageWidth={bioInfo.bioPic.width}
 					/>
 					<section className="mx-auto md:w-4/5 lg:w-auto">
-						<h1 className="text-5xl font-bold text-center py-3">
-							Skills
-						</h1>
+						<h2 className="font-bold text-center py-3">Skills</h2>
 						<div className="flex justify-evenly items-center flex-wrap">
 							{skills.map((skill, index) => {
 								return (
