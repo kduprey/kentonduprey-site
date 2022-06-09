@@ -7,7 +7,7 @@ module.exports = {
 			{
 				source: "/resume",
 				destination: "/Kenton-Duprey.pdf",
-				type: "permanent",
+				permanent: true,
 			},
 		];
 	},
