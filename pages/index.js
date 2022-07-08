@@ -65,12 +65,12 @@ const Home = ({ bioInfo, projects, skills }) => {
 			{/* Header */}
 			<Header title="Kenton Duprey - Web Developer" />
 
-			<main className="font-display vh-full flex flex-col items-center justify-center dark:bg-black dark:text-white">
+			<main className="font-display vh-full flex flex-col items-center justify-center dark:bg-black dark:text-white p-6">
 				<Navbar />
 				<Hero blurb="" />
 				<section className="container" id="work">
 					<h2 className="font-bold text-center py-3">Work</h2>
-					<div className="flex flex-col lg:flex-row justify-center items-center space-y-2 lg:space-x-2 lg:space-y-0 p-3">
+					<div className="flex flex-col lg:flex-row justify-center items-center space-y-6 md:space-x-10 lg:space-y-0 p-3">
 						{projects.map((project, index) => {
 							return (
 								<ProjectCard
