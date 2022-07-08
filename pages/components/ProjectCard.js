@@ -12,20 +12,20 @@ const ProjectCard = ({ image, title, description, link, skills }) => {
 	if (!skills) skills = [];
 
 	return (
-		<div class="max-w-md mx-auto bg-white dark:bg-black dark:border dark:border-gray-300 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-			<div class="md:flex">
-				<div class="md:shrink-0">
+		<div className="max-w-md mx-auto bg-white dark:bg-black dark:border dark:border-gray-300 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+			<div className="md:flex">
+				<div className="md:shrink-0">
 					<img
-						class="h-48 w-full object-cover md:h-full md:w-48"
+						className="h-48 w-full object-cover md:h-full md:w-48"
 						src={image}
 						alt={title}
 					/>
 				</div>
-				<div class="p-8">
-					<h3 class="block mt-1 text-lg leading-tight font-medium text-black dark:text-white hover:underline">
+				<div className="p-8">
+					<h3 className="block mt-1 text-lg leading-tight font-medium text-black dark:text-white hover:underline">
 						{title}
 					</h3>
-					<p class="mt-2 text-gray-500 dark:text-gray-200">
+					<p className="mt-2 text-gray-500 dark:text-gray-200">
 						{description}
 					</p>
 					<div

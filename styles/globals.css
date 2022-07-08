@@ -34,3 +34,6 @@
 		@apply text-base;
 	}
 }
+hr {
+	@apply border-t w-4/5 opacity-70 rounded bg-gray-300;
+}

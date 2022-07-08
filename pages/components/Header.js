@@ -1,14 +1,15 @@
 import Head from "next/head";
+import Script from "next/script";
 
 const Header = ({ title }) => {
 	return (
 		<Head>
 			<link rel="shortcut icon" href="/64px.png" />
-			<script
+			<Script
 				async
 				src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-			></script>
-			<script
+			></Script>
+			<Script
 				dangerouslySetInnerHTML={{
 					__html: `
   					window.dataLayer = window.dataLayer || [];
