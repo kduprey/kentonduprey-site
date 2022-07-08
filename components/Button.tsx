@@ -1,4 +1,10 @@
-const Button = ({ className, children, ...attributes }) => {
+type Props = {
+	className?: string;
+	children?: React.ReactNode;
+	[x: string]: any;
+};
+
+const Button = ({ className, children, ...attributes }: Props) => {
 	return (
 		<button
 			className={

@@ -1,4 +1,11 @@
-const Input = ({ error, textArea, classes, ...args }) => {
+type Props = {
+	error?: Error | null;
+	textArea?: boolean;
+	classes?: string;
+	[x: string]: any;
+};
+
+const Input = ({ error, textArea, classes, attributes }: Props) => {
 	const inputClasses =
 		"ml-2 mt-2 bg-gray-100 border-transparent rounded focus:text-black transition ease-in focus:bg-white focus:border-gray-500 dark:bg-black dark:border dark:border-gray-300 dark:text-white " +
 		classes +
@@ -8,9 +15,9 @@ const Input = ({ error, textArea, classes, ...args }) => {
 		(error ? " border-red-500" : "");
 
 	if (textArea) {
-		return <textarea rows="3" className={inputClasses} {...args} />;
+		return <textarea rows={3} className={inputClasses} {...attributes} />;
 	} else {
-		return <input className={inputClasses} {...args} />;
+		return <input className={inputClasses} {...attributes} />;
 	}
 };
 

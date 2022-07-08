@@ -1,12 +1,14 @@
-import Header from "./components/Header";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import ProjectCard from "./components/ProjectCard";
-import About from "./components/About";
-import Skill from "./components/Skill";
-import Contact from "./components/Contact";
+import Header from "../components/Header";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import ProjectCard from "../components/ProjectCard";
+import About from "../components/About";
+import Skill from "../components/Skill";
+import Contact from "../components/Contact";
 import axios from "axios";
 import Script from "next/script";
+import { NextPage } from "next";
+import { Bio, Project, SkillIcon } from "../types";
 
 const QUERY = `{
 	bios(where: {createdBy: {name: "Kenton Duprey"}}) {
@@ -41,7 +43,13 @@ const QUERY = `{
   }
   `;
 
-const Home = ({ bioInfo, projects, skills }) => {
+type Props = {
+	bioInfo: Bio;
+	projects: Project[];
+	skills: SkillIcon[];
+};
+
+const Home: NextPage = ({ bioInfo, projects, skills }: Props) => {
 	return (
 		<div>
 			<Script
@@ -63,7 +71,10 @@ const Home = ({ bioInfo, projects, skills }) => {
 				}}
 			/>
 			{/* Header */}
-			<Header title="Kenton Duprey - Web Developer" />
+			<Header
+				title="Kenton Duprey - Web Developer"
+				description="Building web applications, user-friendly products, and experiences"
+			/>
 
 			<main className="font-display vh-full flex flex-col items-center justify-center dark:bg-black dark:text-white p-6">
 				<Navbar />
@@ -78,29 +89,26 @@ const Home = ({ bioInfo, projects, skills }) => {
 									title={project.title}
 									description={project.description}
 									link={project.link}
-									image={project.projectImage.url}
-									skills={project.projectSkills}
-									imageHeight={project.projectImage.height}
-									imageWidth={project.projectImage.width}
+									projectImage={project.projectImage}
+									projectSkills={project.projectSkills}
 								/>
 							);
 						})}
 					</div>
 					<About
-						blurb={bioInfo.biographyBlurb.text}
-						imageUrl={bioInfo.bioPic.url}
-						imageHeight={bioInfo.bioPic.height}
-						imageWidth={bioInfo.bioPic.width}
+						biographyBlurb={bioInfo.biographyBlurb}
+						bioPic={bioInfo.bioPic}
 					/>
 					<section className="mx-auto md:w-4/5 lg:w-auto">
 						<h2 className="font-bold text-center py-3">Skills</h2>
 						<div className="flex justify-evenly items-center flex-wrap">
-							{skills.map((skill, index) => {
+							{skills.map((e, index) => {
 								return (
 									<Skill
 										key={index}
-										title={skill.title}
-										iconName={skill.iconName.icon}
+										project={false}
+										title={e.title}
+										iconName={e.iconName}
 									/>
 								);
 							})}

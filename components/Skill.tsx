@@ -1,6 +1,14 @@
+import { IconName } from "../types";
 import Icon from "./Icon";
 
-const Skill = ({ project, title, iconName, children }) => {
+type Props = {
+	project: boolean;
+	title: string;
+	iconName: IconName;
+	children?: React.ReactNode;
+};
+
+const Skill = ({ project, title, iconName, children }: Props) => {
 	if (!title) title = "Skill Title";
 
 	if (project) {

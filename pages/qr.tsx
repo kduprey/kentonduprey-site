@@ -1,8 +1,9 @@
 import personalPhoto from "/public/me.png";
 import Image from "next/image";
 import Link from "next/link";
+import { NextPage } from "next";
 
-const QR = () => {
+const QR: NextPage = () => {
 	return (
 		<div className="flex flex-col h-screen bg-gray-50">
 			<div className="bg-black w-full space-y-3 flex flex-col items-center mb-3 sm:mb-0">

@@ -1,6 +1,7 @@
+import { NextComponentType } from "next";
 import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 
-const Socials = (props) => {
+const Socials: NextComponentType = () => {
 	return (
 		<div className="flex justify-center items-center py-3">
 			<a href="https://github.com/kentond18" className="p-2">

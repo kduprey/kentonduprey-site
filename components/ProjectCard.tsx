@@ -1,24 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Project } from "../types";
 import Button from "./Button";
 import Skill from "./Skill";
 
+type Props = {
+	project: Project;
+};
+
 const ProjectCard = ({
-	image,
+	projectImage,
 	title,
 	description,
 	link,
-	skills,
-	imageHeight,
-	imageWidth,
-}) => {
+	projectSkills,
+}: Project) => {
 	if (!link) link = "#";
-	if (!image) image = "https://via.placeholder.com/300x200";
+	if (!projectImage) projectImage.url = "https://via.placeholder.com/300x200";
 	if (!title) title = "Project Title";
 	if (!description)
 		description =
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni explicabo ipsum quas tenetur libero repellat, quos dignissimos consectetur harum a.";
-	if (!skills) skills = [];
+	if (!projectSkills) projectSkills = [];
 
 	return (
 		<div className="max-w-md mx-auto bg-white dark:bg-black dark:border dark:border-gray-300 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
@@ -26,11 +29,11 @@ const ProjectCard = ({
 				<div className="">
 					<Image
 						className="h-48 w-full"
-						src={image}
+						src={projectImage.url}
 						alt={title}
 						objectFit="cover"
-						height={imageHeight}
-						width={imageWidth}
+						height={projectImage.height}
+						width={projectImage.width}
 						loading="lazy"
 					/>
 				</div>
@@ -45,12 +48,13 @@ const ProjectCard = ({
 						id="skills"
 						className="flex text-xl justify-evenly p-3"
 					>
-						{skills.map((skill, index) => {
+						{projectSkills.map((skill, index) => {
 							return (
 								<Skill
 									project={true}
+									title={skill.title}
 									key={index}
-									iconName={skill.iconName.icon}
+									iconName={skill.iconName}
 								/>
 							);
 						})}

@@ -1,7 +1,11 @@
 import Button from "./Button";
 import { FaArrowRight } from "react-icons/fa";
 
-const Hero = ({ blurb }) => {
+type Props = {
+	blurb: string;
+};
+
+const Hero = ({ blurb }: Props) => {
 	if (!blurb) {
 		blurb =
 			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.";
