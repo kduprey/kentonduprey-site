@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const About = ({ blurb, imageUrl, imageHeight, imageWidth }) => {
 	if (!blurb) {
 		blurb =
@@ -14,8 +16,10 @@ const About = ({ blurb, imageUrl, imageHeight, imageWidth }) => {
 			<h2 className="font-bold text-center py-3">About</h2>
 			<div className="flex flex-col md:flex-row items-center justify-center">
 				<div className="h-1/6 w-1/2 sm:w-1/3 lg:w-1/4 p-3">
-					<img
+					<Image
 						src={imageUrl}
+						height={imageHeight}
+						width={imageWidth}
 						alt="Kenton Duprey"
 						className="rounded-full dark:border dark:border-gray-300"
 					/>

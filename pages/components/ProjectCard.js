@@ -1,8 +1,17 @@
+import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
 import Skill from "./Skill";
 
-const ProjectCard = ({ image, title, description, link, skills }) => {
+const ProjectCard = ({
+	image,
+	title,
+	description,
+	link,
+	skills,
+	imageHeight,
+	imageWidth,
+}) => {
 	if (!link) link = "#";
 	if (!image) image = "https://via.placeholder.com/300x200";
 	if (!title) title = "Project Title";
@@ -15,10 +24,12 @@ const ProjectCard = ({ image, title, description, link, skills }) => {
 		<div className="max-w-md mx-auto bg-white dark:bg-black dark:border dark:border-gray-300 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
 			<div className="md:flex">
 				<div className="md:shrink-0">
-					<img
+					<Image
 						className="h-48 w-full object-cover md:h-full md:w-48"
 						src={image}
 						alt={title}
+						height={imageHeight}
+						width={imageWidth}
 					/>
 				</div>
 				<div className="p-8">

@@ -13,7 +13,11 @@ const QR = () => {
 						backgroundSize: "cover",
 					}}
 				>
-					<Image src={personalPhoto} objectFit="contain" />
+					<Image
+						src={personalPhoto}
+						objectFit="contain"
+						alt="Bio Pic"
+					/>
 				</div>
 
 				<h1 className="text-white">Kenton Duprey</h1>

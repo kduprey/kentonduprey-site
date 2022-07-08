@@ -6,6 +6,7 @@ import About from "./components/About";
 import Skill from "./components/Skill";
 import Contact from "./components/Contact";
 import axios from "axios";
+import Script from "next/script";
 
 const QUERY = `{
 	bios(where: {createdBy: {name: "Kenton Duprey"}}) {
@@ -43,6 +44,24 @@ const QUERY = `{
 const Home = ({ bioInfo, projects, skills }) => {
 	return (
 		<div>
+			<Script
+				async
+				src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+			></Script>
+			<Script
+				id="ga-script"
+				dangerouslySetInnerHTML={{
+					__html: `
+  					window.dataLayer = window.dataLayer || [];
+  					function gtag(){dataLayer.push(arguments);}
+  					gtag('js', new Date());
+
+  					gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+						  page_path: window.location.pathname,
+						  });
+  					`,
+				}}
+			/>
 			{/* Header */}
 			<Header title="Kenton Duprey - Web Developer" />
 
@@ -61,6 +80,8 @@ const Home = ({ bioInfo, projects, skills }) => {
 									link={project.link}
 									image={project.projectImage.url}
 									skills={project.projectSkills}
+									imageHeight={project.projectImage.height}
+									imageWidth={project.projectImage.width}
 								/>
 							);
 						})}
