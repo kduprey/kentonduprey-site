@@ -8,7 +8,7 @@ type Props = {
 	children?: React.ReactNode;
 };
 
-const Skill = ({ project, title, iconName, children }: Props) => {
+const Skill = ({ project, title, iconName }: Props) => {
 	if (!title) title = "Skill Title";
 
 	if (project) {
@@ -16,11 +16,11 @@ const Skill = ({ project, title, iconName, children }: Props) => {
 	}
 
 	return (
-		<div className="container p-3 flex flex-col items-center justify-center w-auto">
+		<div className="flex flex-col items-center justify-center ">
 			<div className="pb-3 text-3xl">
 				<Icon iconName={iconName} />
 			</div>
-			<h3 className=" text-center">{title}</h3>
+			<h3 className="text-center">{title}</h3>
 		</div>
 	);
 };
