@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Bio } from "../types";
+import { Bio } from "../../types";
 
 const About = ({ biographyBlurb, bioPic }: Bio) => {
 	if (!biographyBlurb.text) {
@@ -11,23 +11,21 @@ const About = ({ biographyBlurb, bioPic }: Bio) => {
 	}
 	return (
 		<div
-			className="container p-3 flex flex-col items-center justify-center"
+			className="flex w-full flex-col items-center justify-center gap-5"
 			id="about"
 		>
-			<h2 className="font-bold text-center py-3">About</h2>
-			<div className="flex flex-col md:flex-row items-center justify-center">
-				<div className="h-1/6 w-1/2 sm:w-1/3 lg:w-1/4 p-3">
+			<h2 className="text-center font-bold">About</h2>
+			<div className="flex flex-col items-center justify-evenly gap-8 text-justify md:flex-row md:text-left">
+				<div className="max-w-[18rem]">
 					<Image
 						src={bioPic.url}
 						height={bioPic.height}
 						width={bioPic.width}
 						alt="Kenton Duprey"
-						className="rounded-full dark:border dark:border-gray-300"
+						className="rounded-full dark:border dark:border-white"
 					/>
 				</div>
-				<p className="text-justify leading-tight p-3 font-light sm:w-4/5 md:w-2/5 lg:w-2/5">
-					{biographyBlurb.text}
-				</p>
+				<p className="max-w-md p-3">{biographyBlurb.text}</p>
 			</div>
 		</div>
 	);

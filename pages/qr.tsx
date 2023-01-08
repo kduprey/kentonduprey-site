@@ -5,10 +5,10 @@ import personalPhoto from "/public/me.png";
 
 const QR: NextPage = () => {
 	return (
-		<div className="flex flex-col h-screen bg-gray-50">
-			<div className="bg-black w-full space-y-3 flex flex-col items-center mb-3 sm:mb-0">
+		<div className="flex h-screen flex-col bg-gray-50">
+			<div className="mb-3 flex w-full flex-col items-center space-y-3 bg-black sm:mb-0">
 				<div
-					className="rounded-[50%] mt-3 mb-0 w-[95px] h-[95px]"
+					className="mt-3 mb-0 h-[95px] w-[95px] rounded-[50%]"
 					style={{
 						clipPath: "circle()",
 						backgroundSize: "cover",
@@ -22,24 +22,24 @@ const QR: NextPage = () => {
 				</div>
 
 				<h1 className="text-white">Kenton Duprey</h1>
-				<h2 className="text-gray-300 text-base">Software Engineer</h2>
+				<h2 className="text-base text-gray-300">Software Engineer</h2>
 
-				<div className="flex justify-evenly w-full items-center">
+				<div className="flex w-full items-center justify-evenly">
 					<a className="w-full" href="tel:+15087350622">
-						<button className="text-white font-light border-t border-opacity-30 w-full p-3 border-r border-gray-50">
+						<button className="w-full border-t border-r border-gray-50 border-opacity-30 p-3 font-light text-white">
 							Call
 						</button>
 					</a>
 					<a className="w-full" href="mailto:dev@kentonduprey.com">
-						<button className="text-white font-light border-t border-opacity-30 w-full p-3 border-gray-50">
+						<button className="w-full border-t border-gray-50 border-opacity-30 p-3 font-light text-white">
 							Email
 						</button>
 					</a>
 				</div>
 			</div>
 
-			<div className="w-full h-1/2 flex flex-col justify-evenly items-center">
-				<div className="flex w-full p-3 items-center">
+			<div className="flex h-1/2 w-full flex-col items-center justify-evenly">
+				<div className="flex w-full items-center p-3">
 					<div className="text-gray-400">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ const QR: NextPage = () => {
 					</div>
 				</div>
 				<hr />
-				<div className="flex p-3 w-full items-center">
+				<div className="flex w-full items-center p-3">
 					<div className="text-gray-400">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +84,7 @@ const QR: NextPage = () => {
 					</div>
 				</div>
 				<hr />
-				<div className="flex p-3 w-full items-center">
+				<div className="flex w-full items-center p-3">
 					<div className="text-gray-400">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +105,7 @@ const QR: NextPage = () => {
 					</div>
 				</div>
 				<hr />
-				<div className="flex p-3 w-full items-center">
+				<div className="flex w-full items-center p-3">
 					<div className="text-gray-400">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +129,7 @@ const QR: NextPage = () => {
 			</div>
 
 			<a href="/contactcard.vcf">
-				<button className="fixed shadow-lg shadow-blue-300 bottom-0 right-0 p-6 bg-blue-200 text-blue-800 rounded-full m-6 hover:bg-blue-300 transition ease-in-out">
+				<button className="fixed bottom-0 right-0 m-6 rounded-full bg-blue-200 p-6 text-blue-800 shadow-lg shadow-blue-300 transition ease-in-out hover:bg-blue-300">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="30"

@@ -1,12 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Project } from "../types";
-import Button from "./Button";
 import Skill from "./Skill";
-
-type Props = {
-	project: Project;
-};
 
 const ProjectCard = ({
 	projectImage,
@@ -24,45 +19,41 @@ const ProjectCard = ({
 	if (!projectSkills) projectSkills = [];
 
 	return (
-		<div className="max-w-md mx-auto bg-white dark:bg-black dark:border dark:border-gray-300 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-			<div className="">
-				<div className="">
-					<Image
-						className="h-48 w-full"
-						src={projectImage.url}
-						alt={title}
-						objectFit="cover"
-						height={projectImage.height}
-						width={projectImage.width}
-						loading="lazy"
-					/>
+		<div className="max-w-md rounded-xl bg-white shadow-md ring-2 ring-slate-100 dark:border dark:border-gray-300 dark:bg-black md:max-w-lg">
+			<Image
+				className="max-w-md"
+				src={projectImage.url}
+				alt={title}
+				objectFit="cover"
+				height={projectImage.height}
+				width={projectImage.width}
+				loading="lazy"
+			/>
+			<div className="flex flex-col justify-between space-y-3 p-3">
+				<h3 className="text-xl font-medium leading-tight text-black hover:underline dark:text-white md:text-2xl">
+					{title}
+				</h3>
+				<p className="text-gray-500 dark:text-gray-200 md:text-lg">
+					{description}
+				</p>
+				<div
+					id="skills"
+					className="flex justify-evenly text-xl md:text-3xl"
+				>
+					{projectSkills.map((skill, index) => {
+						return (
+							<Skill
+								project={true}
+								title={skill.title}
+								key={index}
+								iconName={skill.iconName}
+							/>
+						);
+					})}
 				</div>
-				<div className="p-8">
-					<h3 className="block mt-1 text-lg leading-tight font-medium text-black dark:text-white hover:underline">
-						{title}
-					</h3>
-					<p className="mt-2 text-gray-500 dark:text-gray-200">
-						{description}
-					</p>
-					<div
-						id="skills"
-						className="flex text-xl justify-evenly p-3"
-					>
-						{projectSkills.map((skill, index) => {
-							return (
-								<Skill
-									project={true}
-									title={skill.title}
-									key={index}
-									iconName={skill.iconName}
-								/>
-							);
-						})}
-					</div>
-					<Button className="m-auto uppercase bg-black text-white hover:bg-gray-700 transition ease-in">
-						<Link href={link}>Explore</Link>
-					</Button>
-				</div>
+				<button className="mx-auto">
+					<Link href={link}>Explore</Link>
+				</button>
 			</div>
 		</div>
 	);

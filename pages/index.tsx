@@ -1,14 +1,14 @@
-import Header from "../components/Header";
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import ProjectCard from "../components/ProjectCard";
-import About from "../components/About";
-import Skill from "../components/Skill";
-import Contact from "../components/Contact";
 import axios from "axios";
-import Script from "next/script";
 import { NextPage } from "next";
+import Script from "next/script";
+import Header from "../components/Header";
+import About from "../components/Sections/About";
+import Contact from "../components/Sections/Contact";
+import Hero from "../components/Sections/Hero";
+import Navbar from "../components/Sections/Navbar";
 import { Bio, Project, SkillIcon } from "../types";
+import Projects from "./../components/Sections/Projects";
+import Skills from "./../components/Sections/Skills";
 
 const QUERY = `{
 	bios(where: {createdBy: {name: "Kenton Duprey"}}) {
@@ -73,49 +73,20 @@ const Home: NextPage = ({ bioInfo, projects, skills }: Props) => {
 			{/* Header */}
 			<Header
 				title="Kenton Duprey - Web Developer"
-				description="Building web applications, user-friendly products, and experiences"
+				description="Building elegant web solutions for clients and companies"
 			/>
 
-			<main className="font-display vh-full flex flex-col items-center justify-center dark:bg-black dark:text-white p-6">
+			<main className="flex h-full w-full flex-col items-center gap-5 p-6 font-display dark:bg-black dark:text-white">
 				<Navbar />
 				<Hero blurb="" />
-				<section className="container" id="work">
-					<h2 className="font-bold text-center py-3">Work</h2>
-					<div className="flex flex-col lg:flex-row justify-center items-center space-y-6 md:space-x-10 lg:space-y-0 p-3">
-						{projects.map((project, index) => {
-							return (
-								<ProjectCard
-									key={index}
-									title={project.title}
-									description={project.description}
-									link={project.link}
-									projectImage={project.projectImage}
-									projectSkills={project.projectSkills}
-								/>
-							);
-						})}
-					</div>
-					<About
-						biographyBlurb={bioInfo.biographyBlurb}
-						bioPic={bioInfo.bioPic}
-					/>
-					<section className="mx-auto md:w-4/5 lg:w-auto">
-						<h2 className="font-bold text-center py-3">Skills</h2>
-						<div className="flex justify-evenly items-center flex-wrap">
-							{skills.map((e, index) => {
-								return (
-									<Skill
-										key={index}
-										project={false}
-										title={e.title}
-										iconName={e.iconName}
-									/>
-								);
-							})}
-						</div>
-					</section>
-					<Contact />
-				</section>
+				<Projects projectsData={projects} />
+
+				<About
+					biographyBlurb={bioInfo.biographyBlurb}
+					bioPic={bioInfo.bioPic}
+				/>
+				<Skills skillData={skills} />
+				<Contact />
 			</main>
 		</div>
 	);
@@ -123,16 +94,13 @@ const Home: NextPage = ({ bioInfo, projects, skills }: Props) => {
 
 export default Home;
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
 	try {
-		const { data } = await axios.get(
-			process.env.NEXT_PUBLIC_GRAPH_CMS_API,
-			{
-				params: {
-					query: QUERY,
-				},
-			}
-		);
+		const { data } = await axios.get(process.env.GRAPH_CMS_API, {
+			params: {
+				query: QUERY,
+			},
+		});
 		return {
 			props: {
 				bioInfo: data.data.bios[0],
