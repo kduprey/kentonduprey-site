@@ -129,7 +129,11 @@ const QR: NextPage = () => {
 			</div>
 
 			<a href="/contactcard.vcf">
-				<button className="fixed bottom-0 right-0 m-6 rounded-full bg-blue-200 p-6 text-blue-800 shadow-lg shadow-blue-300 transition ease-in-out hover:bg-blue-300">
+				<button
+					className="fixed bottom-0 right-0 m-6 rounded-full bg-blue-200 p-6 text-blue-800 shadow-lg shadow-blue-300 transition ease-in-out hover:bg-blue-300"
+					name="ContactCard"
+					aria-label="Download Contact Card"
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="30"
