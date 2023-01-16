@@ -24,7 +24,7 @@
     "@types/react": "^18.0.25",
     "autoprefixer": "^10.4.13",
     "eslint": "^8.32.0",
-    "eslint-config-next": "^13.1.1",
+    "eslint-config-next": "^13.1.2",
     "postcss": "^8.4.14",
     "prettier": "^2.8.3",
     "prettier-plugin-tailwindcss": "^0.2.1",
