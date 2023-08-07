@@ -76,7 +76,7 @@ const Home: NextPage = ({ bioInfo, projects, skills }: Props) => {
 				description="Building elegant web solutions for clients and companies"
 			/>
 
-			<main className="flex h-full w-full flex-col items-center gap-5 p-6 font-display dark:bg-black dark:text-white">
+			<main className="flex h-full w-full flex-col items-center gap-10 p-6 font-display dark:bg-black dark:text-white">
 				<Navbar />
 				<Hero blurb="" />
 				<Projects projectsData={projects} />

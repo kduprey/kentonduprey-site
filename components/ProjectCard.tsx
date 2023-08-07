@@ -21,7 +21,6 @@ const ProjectCard = ({
 	return (
 		<div className="max-w-md rounded-xl bg-white shadow-md ring-2 ring-slate-100 dark:border dark:border-gray-300 dark:bg-black md:max-w-lg">
 			<Image
-				className="max-w-md"
 				src={projectImage.url}
 				alt={title}
 				objectFit="cover"
@@ -29,7 +28,7 @@ const ProjectCard = ({
 				width={projectImage.width}
 				loading="lazy"
 			/>
-			<div className="flex flex-col justify-between space-y-3 p-3">
+			<div className="flex flex-col justify-between space-y-3 p-3 gap-3">
 				<h3 className="text-xl font-medium leading-tight text-black hover:underline dark:text-white md:text-2xl">
 					{title}
 				</h3>
