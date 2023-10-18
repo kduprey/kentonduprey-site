@@ -1,40 +1,39 @@
 import Image from "next/image";
 import Link from "next/link";
+import personalPhoto from "../../../public/me.png";
 import { SvgIcon } from "@/components";
-import personalPhoto from "/public/me.png";
 
 const page = () => {
 	return (
-        <main className="flex h-full w-full flex-col items-center gap-10 p-6 font-display dark:bg-black dark:text-white">
+		<main className="flex h-full w-full flex-col items-center gap-10 p-6 font-display dark:bg-black dark:text-white">
 			<div className="flex h-screen flex-col">
 				<div className="mb-3 flex w-full flex-col items-center space-y-3 bg-black sm:mb-0">
 					<div
-						className="mt-3 mb-0 h-[95px] w-[95px] rounded-[50%]"
+						className="mb-0 mt-3 h-[95px] w-[95px] rounded-[50%]"
 						style={{
 							clipPath: "circle()",
 							backgroundSize: "cover",
 						}}
 					>
 						<Image
-                            src={personalPhoto}
-                            alt="Bio Pic"
-                            style={{
-                                maxWidth: "100%",
-                                height: "auto"
-                            }} />
+							alt="Bio Pic"
+							src={personalPhoto}
+							style={{
+								maxWidth: "100%",
+								height: "auto",
+							}}
+						/>
 					</div>
 
 					<h1 className="text-white">Kenton Duprey</h1>
-					<h2 className="text-base text-gray-300">
-						Software Engineer
-					</h2>
+					<h2 className="text-base text-gray-300">Software Engineer</h2>
 
 					<div className="flex w-full items-center justify-evenly">
 						<a href="tel:+15087350622">
-							<button>Call</button>
+							<button type="button">Call</button>
 						</a>
 						<a href="mailto:dev@kentonduprey.com">
-							<button>Email</button>
+							<button type="button">Email</button>
 						</a>
 					</div>
 				</div>
@@ -86,16 +85,17 @@ const page = () => {
 
 				<a href="/contactcard.vcf">
 					<button
+						aria-label="Download Contact Card"
 						className="fixed bottom-0 right-0 m-6 rounded-full  p-6 "
 						name="ContactCard"
-						aria-label="Download Contact Card"
+						type="button"
 					>
 						<SvgIcon iconName="addContact" />
 					</button>
 				</a>
 			</div>
 		</main>
-    );
+	);
 };
 
 export default page;

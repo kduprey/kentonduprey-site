@@ -1,22 +1,22 @@
-import { SkillIcon } from "@/types";
 import { Skill } from "../Skill";
+import type { SkillIcon } from "@/types";
 
-type Props = {
+interface SkillsProps {
 	skillData: SkillIcon[];
-};
+}
 
-export const Skills = ({ skillData }: Props) => {
+export const Skills = ({ skillData }: SkillsProps) => {
 	return (
 		<section className="flex w-full flex-col items-center">
 			<h2 className="pb-5 text-center font-bold">Skills</h2>
 			<div className="flex w-full max-w-screen-lg flex-wrap items-center justify-evenly">
-				{skillData.map((e, index) => {
+				{skillData.map((e) => {
 					return (
 						<Skill
-							key={index}
+							iconName={e.iconName}
+							key={e.title}
 							project={false}
 							title={e.title}
-							iconName={e.iconName}
 						/>
 					);
 				})}

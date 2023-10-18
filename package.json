@@ -2,11 +2,34 @@
 	"name": "kenton-duprey-portfolio",
 	"private": true,
 	"scripts": {
-		"dev": "next dev",
 		"build": "next build",
+		"postbuild": "pnpm run prisma:deploy",
+		"predev": "docker-compose up -d",
+		"dev": "next dev",
+		"postinstall": "pnpm run prisma:generate",
+		"lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+		"prisma:deploy": "prisma migrate deploy",
+		"prisma:generate": "prisma generate",
+		"prisma:migrate": "prisma migrate dev",
+		"prisma:reset": "prisma migrate reset --force",
+		"prisma:studio": "prisma studio",
 		"start": "next start"
 	},
+	"prettier": {
+		"bracketSpacing": true,
+		"endOfLine": "lf",
+		"plugins": [
+			"prettier-plugin-packagejson"
+		],
+		"printWidth": 80,
+		"semi": true,
+		"singleQuote": false,
+		"tabWidth": 2,
+		"trailingComma": "es5",
+		"useTabs": true
+	},
 	"dependencies": {
+		"@prisma/client": "5.4.2",
 		"axios": "^1.5.1",
 		"next": "^13.5.5",
 		"react": "^18.2.0",
@@ -23,12 +46,18 @@
 		"@tailwindcss/typography": "^0.5.10",
 		"@types/node": "^20.8.6",
 		"@types/react": "^18.2.28",
+		"@vercel/style-guide": "^5.0.1",
 		"autoprefixer": "^10.4.16",
 		"eslint": "^8.51.0",
 		"eslint-config-next": "^13.5.5",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-config-turbo": "^1.10.15",
+		"eslint-plugin-import": "^2.28.1",
+		"eslint-plugin-tailwindcss": "^3.13.0",
 		"postcss": "^8.4.31",
 		"prettier": "^3.0.3",
-		"prettier-plugin-tailwindcss": "^0.4.1",
+		"prettier-plugin-packagejson": "^2.4.6",
+		"prisma": "^5.4.2",
 		"tailwindcss": "^3.3.3",
 		"typescript": "^5.2.2"
 	}

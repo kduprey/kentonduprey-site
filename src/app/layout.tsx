@@ -1,5 +1,5 @@
-import { Metadata } from "next";
-import { PropsWithChildren } from "react";
+import type { Metadata } from "next";
+import type { PropsWithChildren } from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -16,7 +16,7 @@ const inter = Inter({
 
 const rootLayout = ({ children }: PropsWithChildren) => {
 	return (
-		<html lang="en" className={`${inter.variable}`}>
+		<html className={`${inter.variable}`} lang="en">
 			<body>{children}</body>
 		</html>
 	);
