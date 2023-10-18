@@ -1,4 +1,4 @@
-const Navbar = () => {
+export const Navbar = () => {
 	return (
 		<nav className="flex flex-col items-center space-y-4 p-3 md:flex-row md:justify-center md:space-y-0 md:space-x-4 lg:w-4/5 lg:justify-between">
 			<h1 className="text-center text-4xl font-semibold">
@@ -18,5 +18,3 @@ const Navbar = () => {
 		</nav>
 	);
 };
-
-export default Navbar;

@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Bio } from "../../types";
+import { Bio } from "@/types";
 
-const About = ({ biographyBlurb, bioPic }: Bio) => {
+export const About = ({ biographyBlurb, bioPic }: Bio) => {
 	if (!biographyBlurb.text) {
 		biographyBlurb.text =
 			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, rerum. Est maiores deserunt voluptatem vitae, nostrum minima, doloribus sunt quisquam omnis rerum quod soluta blanditiis. Repudiandae delectus quas deleniti excepturi.";
@@ -30,5 +30,3 @@ const About = ({ biographyBlurb, bioPic }: Bio) => {
 		</div>
 	);
 };
-
-export default About;

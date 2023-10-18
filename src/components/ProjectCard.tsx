@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Project } from "../types";
-import Skill from "./Skill";
+import { Project } from "@/types";
+import { Skill } from "./Skill";
 
-const ProjectCard = ({
+export const ProjectCard = ({
 	projectImage,
 	title,
 	description,
@@ -57,5 +57,3 @@ const ProjectCard = ({
 		</div>
 	);
 };
-
-export default ProjectCard;

@@ -1,10 +1,9 @@
-import { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { SvgIcon } from "../components";
+import { SvgIcon } from "@/components";
 import personalPhoto from "/public/me.png";
 
-const QR: NextPage = () => {
+const page = () => {
 	return (
 		<main className="flex h-full w-full flex-col items-center gap-10 p-6 font-display dark:bg-black dark:text-white">
 			<div className="flex h-screen flex-col">
@@ -92,4 +91,5 @@ const QR: NextPage = () => {
 		</main>
 	);
 };
-export default QR;
+
+export default page;

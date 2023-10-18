@@ -1,12 +1,11 @@
-import React from "react";
-import { Project } from "../../types";
-import ProjectCard from "../ProjectCard";
+import { Project } from "@/types";
+import { ProjectCard } from "../ProjectCard";
 
 type Props = {
 	projectsData: Project[];
 };
 
-const Projects = ({ projectsData }: Props) => {
+export const Projects = ({ projectsData }: Props) => {
 	return (
 		<div className="w-full space-y-5">
 			<h2 className="text-center font-bold">Work</h2>
@@ -27,5 +26,3 @@ const Projects = ({ projectsData }: Props) => {
 		</div>
 	);
 };
-
-export default Projects;

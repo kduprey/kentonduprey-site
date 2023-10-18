@@ -1,5 +1,7 @@
+"use client";
+
 import axios from "axios";
-import React, {
+import {
 	ChangeEvent,
 	ChangeEventHandler,
 	FormEvent,
@@ -7,9 +9,9 @@ import React, {
 	useState,
 } from "react";
 import { CgSpinner } from "react-icons/cg";
-import Socials from "./Socials";
+import { Socials } from "./Socials";
 
-const Contact = () => {
+export const Contact = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
@@ -147,5 +149,3 @@ const Contact = () => {
 		</div>
 	);
 };
-
-export default Contact;
