@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Bio } from "@/types";
 
 export const About = ({ biographyBlurb, bioPic }: Bio) => {

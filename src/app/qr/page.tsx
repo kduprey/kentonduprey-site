@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import { SvgIcon } from "@/components";
 import personalPhoto from "/public/me.png";
