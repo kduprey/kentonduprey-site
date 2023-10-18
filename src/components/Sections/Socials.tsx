@@ -1,7 +1,7 @@
 import { NextComponentType } from "next";
 import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 
-const Socials: NextComponentType = () => {
+export const Socials: NextComponentType = () => {
 	return (
 		<div className="flex items-center justify-center py-3">
 			<a href="https://github.com/kentond18" className="p-2">
@@ -16,5 +16,3 @@ const Socials: NextComponentType = () => {
 		</div>
 	);
 };
-
-export default Socials;

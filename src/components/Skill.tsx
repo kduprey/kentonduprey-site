@@ -1,5 +1,5 @@
 import { IconName } from "../types";
-import Icon from "./Icon";
+import { Icon } from "./Icon";
 
 type Props = {
 	project: boolean;
@@ -8,9 +8,7 @@ type Props = {
 	children?: React.ReactNode;
 };
 
-const Skill = ({ project, title, iconName }: Props) => {
-	if (!title) title = "Skill Title";
-
+export const Skill = ({ project, title, iconName }: Props) => {
 	if (project) {
 		return <Icon iconName={iconName} />;
 	}
@@ -24,5 +22,3 @@ const Skill = ({ project, title, iconName }: Props) => {
 		</div>
 	);
 };
-
-export default Skill;

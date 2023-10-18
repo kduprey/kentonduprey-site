@@ -1,12 +1,11 @@
-import React from "react";
-import { SkillIcon } from "../../types";
-import Skill from "../Skill";
+import { SkillIcon } from "@/types";
+import { Skill } from "../Skill";
 
 type Props = {
 	skillData: SkillIcon[];
 };
 
-const Skills = ({ skillData }: Props) => {
+export const Skills = ({ skillData }: Props) => {
 	return (
 		<section className="flex w-full flex-col items-center">
 			<h2 className="pb-5 text-center font-bold">Skills</h2>
@@ -25,5 +24,3 @@ const Skills = ({ skillData }: Props) => {
 		</section>
 	);
 };
-
-export default Skills;

@@ -2,7 +2,7 @@ import React from "react";
 import * as FontAwesome from "react-icons/fa";
 import * as GrommetIcons from "react-icons/gr";
 import * as SimpleIcons from "react-icons/si";
-import { IconName } from "../types";
+import { IconName } from "@/types";
 
 type Props = {
 	iconName: IconName;
@@ -10,9 +10,7 @@ type Props = {
 	color?: string;
 };
 
-const Icon = ({ iconName, size, color }: Props) => {
-	if (!iconName || !iconName.icon) iconName.icon = "FaFontAwesomeFlag";
-
+export const Icon = ({ iconName, size, color }: Props) => {
 	const library = iconName.icon.substring(0, 2).toLowerCase();
 	switch (library) {
 		case "fa":
@@ -37,5 +35,3 @@ const Icon = ({ iconName, size, color }: Props) => {
 			break;
 	}
 };
-
-export default Icon;
