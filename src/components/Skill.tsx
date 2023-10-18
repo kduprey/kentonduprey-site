@@ -1,14 +1,14 @@
-import { IconName } from "../types";
+import type { IconName } from "../types";
 import { Icon } from "./Icon";
 
-type Props = {
+interface SkillProps {
 	project: boolean;
 	title: string;
 	iconName: IconName;
 	children?: React.ReactNode;
-};
+}
 
-export const Skill = ({ project, title, iconName }: Props) => {
+export const Skill = ({ project, title, iconName }: SkillProps) => {
 	if (project) {
 		return <Icon iconName={iconName} />;
 	}

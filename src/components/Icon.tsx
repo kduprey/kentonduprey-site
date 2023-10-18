@@ -1,37 +1,56 @@
-import React from "react";
+import { createElement } from "react";
 import * as FontAwesome from "react-icons/fa";
 import * as GrommetIcons from "react-icons/gr";
 import * as SimpleIcons from "react-icons/si";
-import { IconName } from "@/types";
+import type { IconName } from "@/types";
 
-type Props = {
+interface IconProps {
 	iconName: IconName;
 	size?: number;
 	color?: string;
-};
+}
 
-export const Icon = ({ iconName, size, color }: Props) => {
+export const Icon = ({ iconName, size, color }: IconProps) => {
 	const library = iconName.icon.substring(0, 2).toLowerCase();
 	switch (library) {
 		case "fa":
-			// @ts-ignore
-			const a = React.createElement(FontAwesome[iconName.icon]);
-			return <div style={{ fontSize: size, color: color }}>{a}</div>;
+			// const a = React.createElement(FontAwesome[iconName.icon]);
+
+			return (
+				<div style={{ fontSize: size, color }}>
+					{createElement(
+						FontAwesome[iconName.icon as keyof typeof FontAwesome]
+					)}
+				</div>
+			);
+
 			break;
 		case "si":
-			// @ts-ignore
-			const b = React.createElement(SimpleIcons[iconName.icon]);
-			return <div style={{ fontSize: size, color: color }}>{b}</div>;
+			return (
+				<div style={{ fontSize: size, color }}>
+					{createElement(
+						SimpleIcons[iconName.icon as keyof typeof SimpleIcons]
+					)}
+				</div>
+			);
 			break;
 		case "gr":
-			// @ts-ignore
-			const c = React.createElement(GrommetIcons[iconName.icon]);
-			return <div style={{ fontSize: size, color: color }}>{c}</div>;
+			return (
+				<div style={{ fontSize: size, color }}>
+					{createElement(
+						GrommetIcons[iconName.icon as keyof typeof GrommetIcons]
+					)}
+				</div>
+			);
 			break;
 		default:
-			// @ts-ignore
-			const d = React.createElement(FontAwesome[iconName.icon]);
-			return <div style={{ fontSize: size, color: color }}>{d}</div>;
+			return (
+				<div style={{ fontSize: size, color }}>
+					{createElement(
+						FontAwesome[iconName.icon as keyof typeof FontAwesome]
+					)}
+				</div>
+			);
 			break;
 	}
 };
