@@ -1,21 +1,24 @@
 "use client";
 
 import axios from "axios";
-import {
+import type {
 	ChangeEvent,
 	ChangeEventHandler,
 	FormEvent,
 	FormEventHandler,
-	useState,
 } from "react";
+import { useState } from "react";
 import { CgSpinner } from "react-icons/cg";
 import { Socials } from "./Socials";
 
 export const Contact = () => {
-	const [name, setName] = useState("");
-	const [email, setEmail] = useState("");
-	const [message, setMessage] = useState("");
-	const [age, setAge] = useState("");
+	const [inputData, setInputData] = useState({
+		name: "",
+		email: "",
+		message: "",
+		age: undefined,
+	});
+
 	const [loading, setLoading] = useState(false);
 	const [success, setSuccess] = useState(false);
 	const [usrMsg, setUsrMsg] = useState("");
@@ -26,13 +29,13 @@ export const Contact = () => {
 		const { name, value } = e.target;
 		switch (name) {
 			case "name":
-				setName(value);
+				setInputData({ ...inputData, name: value });
 				break;
 			case "email":
-				setEmail(value);
+				setInputData({ ...inputData, email: value });
 				break;
 			case "message":
-				setMessage(value);
+				setInputData({ ...inputData, message: value });
 				break;
 			default:
 				break;
@@ -42,14 +45,9 @@ export const Contact = () => {
 	const onSubmit: FormEventHandler = (e: FormEvent) => {
 		e.preventDefault();
 		setLoading(true);
-		const data = {
-			name,
-			email,
-			message,
-			age,
-		};
+
 		axios
-			.post("/api/contact", data)
+			.post("/api/contact", inputData)
 			.then((res) => {
 				if (res.status === 200) {
 					setUsrMsg("Your message has been sent!");
@@ -57,17 +55,19 @@ export const Contact = () => {
 					setUsrMsg("Something went wrong!");
 				}
 				setSuccess(true);
-				setName("");
-				setEmail("");
-				setMessage("");
-				setAge("");
+				setInputData({
+					name: "",
+					email: "",
+					message: "",
+					age: undefined,
+				});
 				setLoading(false);
 				setTimeout(() => {
 					setSuccess(false);
 				}, 2000);
 			})
 			.catch((err) => {
-				console.log(err);
+				console.error(err);
 			});
 	};
 
@@ -75,71 +75,69 @@ export const Contact = () => {
 		<div className="" id="contact">
 			<h2 className="py-3 text-center font-bold">Contact</h2>
 			<form
-				className="mx-auto flex w-full max-w-lg flex-wrap items-center justify-evenly gap-4"
+				className="relative mx-auto flex w-full max-w-lg flex-wrap items-center justify-evenly gap-4"
 				id="contact-form"
 				onSubmit={onSubmit}
 			>
 				<input
-					type="text"
-					placeholder="Age"
-					name="age"
 					className="hidden"
-					value={age}
+					name="age"
 					onChange={handleChange}
-				/>
-				<input
-					className="input form-input"
+					placeholder="Age"
 					type="text"
-					placeholder="Name"
-					name="name"
-					value={name}
-					onChange={handleChange}
-					disabled={loading}
-					required
+					value={inputData.age}
 				/>
 				<input
 					className="input form-input"
-					type="email"
-					placeholder="Email"
-					name="email"
-					value={email}
-					onChange={handleChange}
 					disabled={loading}
+					name="name"
+					onChange={handleChange}
+					placeholder="Name"
 					required
+					type="text"
+					value={inputData.name}
+				/>
+				<input
+					className="input form-input"
+					disabled={loading}
+					name="email"
+					onChange={handleChange}
+					placeholder="Email"
+					required
+					type="email"
+					value={inputData.email}
 				/>
 				<div className="mx-auto flex flex-col items-center gap-4">
 					<textarea
 						className="input form-textarea"
-						placeholder="Message"
-						name="message"
-						value={message}
-						onChange={handleChange}
 						disabled={loading}
+						name="message"
+						onChange={handleChange}
+						placeholder="Message"
 						required
+						value={inputData.message}
 					/>
 
 					<button
-						type="submit"
 						className="m-2 flex "
-						id="btn-submit"
 						disabled={loading}
+						id="btn-submit"
+						type="submit"
 					>
 						{loading ? "Sending..." : "Send"}
 
 						<CgSpinner
-							className={
-								"text-gray ml-1 h-6 w-6 animate-spin " +
-								(loading ? "" : "hidden")
-							}
+							className={`ml-1 h-6 w-6 animate-spin text-gray-500 ${
+								loading ? "" : "hidden"
+							}`}
 						/>
 					</button>
 				</div>
 
 				<p
-					className={
-						"font-light transition-opacity ease-in " +
-						(success ? "opacity-100" : "hidden opacity-0")
-					}
+					className={`absolute -bottom-6 font-light transition-opacity ease-in md:-right-28 md:bottom-auto ${
+						success ? "opacity-100" : "hidden opacity-0"
+					}`}
 					id="usr-msg"
 				>
 					{usrMsg}
