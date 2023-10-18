@@ -1,10 +1,18 @@
+// @ts-check
+
+/** @type {import("next").NextConfig} */
+
 module.exports = {
 	images: {
-		domains: [
-			"via.placeholder.com",
-			"api-us-east-1.graphcms.com",
-			"media.graphassets.com",
+		remotePatterns: [
+			{ hostname: "via.placeholder.com" },
+			{ hostname: "api-us-east-1.graphcms.com" },
+			{ hostname: "media.graphassets.com" },
 		],
+	},
+	i18n: {
+		locales: ["en"],
+		defaultLocale: "en",
 	},
 	async redirects() {
 		return [
