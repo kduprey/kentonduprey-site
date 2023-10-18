@@ -5,10 +5,6 @@ type Props = {
 };
 
 export const Hero = ({ blurb }: Props) => {
-	if (!blurb) {
-		blurb =
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.";
-	}
 	return (
 		<div className="flex flex-col items-center justify-around">
 			<p className="py-3 font-semibold text-black dark:text-white">

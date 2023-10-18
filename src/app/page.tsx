@@ -40,6 +40,8 @@ const QUERY = `{
   }
   `;
 
+export const dynamic = "force-static";
+
 const Home: NextPage = async () => {
 	const { bioInfo, projects, skills } = await getContent();
 
@@ -63,7 +65,7 @@ export default Home;
 
 const getContent = async () => {
 	try {
-		const { data } = await axios.get(process.env.GRAPH_CMS_API, {
+		const { data } = await axios.get(process.env.GRAPH_CMS_API!, {
 			params: {
 				query: QUERY,
 			},

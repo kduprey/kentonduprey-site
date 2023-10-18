@@ -9,8 +9,6 @@ type Props = {
 };
 
 export const Skill = ({ project, title, iconName }: Props) => {
-	if (!title) title = "Skill Title";
-
 	if (project) {
 		return <Icon iconName={iconName} />;
 	}

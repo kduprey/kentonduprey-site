@@ -1,11 +1,11 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import { SvgIcon } from "@/components";
 import personalPhoto from "/public/me.png";
 
 const page = () => {
 	return (
-		<main className="flex h-full w-full flex-col items-center gap-10 p-6 font-display dark:bg-black dark:text-white">
+        <main className="flex h-full w-full flex-col items-center gap-10 p-6 font-display dark:bg-black dark:text-white">
 			<div className="flex h-screen flex-col">
 				<div className="mb-3 flex w-full flex-col items-center space-y-3 bg-black sm:mb-0">
 					<div
@@ -15,7 +15,13 @@ const page = () => {
 							backgroundSize: "cover",
 						}}
 					>
-						<Image src={personalPhoto} alt="Bio Pic" />
+						<Image
+                            src={personalPhoto}
+                            alt="Bio Pic"
+                            style={{
+                                maxWidth: "100%",
+                                height: "auto"
+                            }} />
 					</div>
 
 					<h1 className="text-white">Kenton Duprey</h1>
@@ -89,7 +95,7 @@ const page = () => {
 				</a>
 			</div>
 		</main>
-	);
+    );
 };
 
 export default page;

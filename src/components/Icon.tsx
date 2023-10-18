@@ -11,8 +11,6 @@ type Props = {
 };
 
 export const Icon = ({ iconName, size, color }: Props) => {
-	if (!iconName || !iconName.icon) iconName.icon = "FaFontAwesomeFlag";
-
 	const library = iconName.icon.substring(0, 2).toLowerCase();
 	switch (library) {
 		case "fa":
