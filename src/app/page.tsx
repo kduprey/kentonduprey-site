@@ -59,6 +59,10 @@ const Home: NextPage = async () => {
 			<About bioPic={bioInfo.bioPic} biographyBlurb={bioInfo.biographyBlurb} />
 			<Skills skillData={skills} />
 			<Contact />
+
+			<p className="text-center dark:text-gray-400">
+				&copy; Haus of Web, LLC {new Date().getFullYear()}
+			</p>
 		</main>
 	);
 };
