@@ -1,0 +1,96 @@
+name: Cut Patch Release
+
+on:
+  push:
+    branches:
+      - develop
+
+permissions: write-all
+
+# when a push is made to develop branch by dependabot or github-actions, or the merge branch includes 'hotfix', it will cut a patch release
+
+jobs:
+  cutPatchRelease:
+    if: github.actor == 'dependabot[bot]' || github.actor == 'github-actions[bot]' || github.actor == 'kduprey-app-token[bot]' || contains(github.event.head_commit.message, 'hotfix')
+    runs-on: ubuntu-latest
+    name: Cut Patch Release
+    outputs:
+      v_patch: ${{ steps.semvers.outputs.v_patch }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: develop
+
+      - name: Get previous tag
+        id: previoustag
+        uses: WyriHaximus/github-action-get-previous-tag@v1.4.0
+        with:
+          prefix: "v"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Get next version
+        id: semvers
+        uses: WyriHaximus/github-action-next-semvers@v1.2.1
+        with:
+          version: ${{ steps.previoustag.outputs.tag }}
+
+      - name: Create release branch
+        run: git checkout -b release/${{ steps.semvers.outputs.v_patch }}
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Publish tag
+        run: git tag ${{ steps.semvers.outputs.v_patch }} && git push origin ${{ steps.semvers.outputs.v_patch }}
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Push release branch
+        run: git push origin release/${{ steps.semvers.outputs.v_patch }}
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Cut release branch
+        run: gh release create ${{ steps.semvers.outputs.v_patch }} --generate-notes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create pull request to production
+        uses: vsoch/pull-request-action@master
+        id: pr
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH_PREFIX: release/v
+          PULL_REQUEST_FROM_BRANCH: release/${{ steps.semvers.outputs.v_patch }}
+          PULL_REQUEST_BRANCH: main
+          PULL_REQUEST_TITLE: release/${{ steps.semvers.outputs.v_patch }}
+
+      - name: Wait 10 seconds for PR Deployments to be created
+        run: sleep 10
+
+      - name: Enable pull request auto merge
+        run: gh pr merge ${{ steps.pr.outputs.pull_request_number }} --auto --merge
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # submitSentryPreviewRelease:
+  #   needs: cutPatchRelease
+  #   if: github.ref == 'refs/heads/develop'
+  #   runs-on: ubuntu-latest
+  #   name: Submit Sentry Patch Release
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #       with:
+  #         fetch-depth: 0
+  #     - name: Create Sentry release
+  #       uses: getsentry/action-release@v1
+  #       env:
+  #         SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+  #         SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+  #         SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+  #       with:
+  #         environment: preview
+  #         version: ${{ needs.cutPatchRelease.outputs.v_patch }}
+  #         ignore_missing: true

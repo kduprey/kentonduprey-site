@@ -10,8 +10,15 @@ jobs:
         runs-on: ubuntu-latest
         if: ${{ github.actor == 'dependabot[bot]' }}
         steps:
+            - name: Generate a token
+              id: id-token
+              uses: actions/create-github-app-token@v1
+              with:
+                  app-id: ${{ vars.APP_ID }}
+                  private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
             - name: Enable auto-merge for Dependabot PRs
               run: gh pr merge --auto --merge "$PR_URL"
               env:
                   PR_URL: ${{github.event.pull_request.html_url}}
-                  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+                  GH_TOKEN: ${{ steps.id-token.outputs.token }}
