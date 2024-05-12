@@ -5,11 +5,11 @@ import { SvgIcon } from "@/components";
 
 const page = () => {
 	return (
-		<main className="flex h-full w-full flex-col items-center gap-10 p-6 font-display dark:bg-black dark:text-white">
+		<main className="flex size-full flex-col items-center gap-10 p-6 font-display dark:bg-black dark:text-white">
 			<div className="flex h-screen flex-col">
 				<div className="mb-3 flex w-full flex-col items-center space-y-3 bg-black sm:mb-0">
 					<div
-						className="mb-0 mt-3 h-[95px] w-[95px] rounded-[50%]"
+						className="mb-0 mt-3 size-[95px] rounded-[50%]"
 						style={{
 							clipPath: "circle()",
 							backgroundSize: "cover",

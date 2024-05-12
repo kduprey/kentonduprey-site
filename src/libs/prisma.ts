@@ -27,7 +27,7 @@ let prisma: PrismaClient;
 if (typeof window === "undefined") {
 	if (process.env.VERCEL_ENV === "production") {
 		prisma =
-			global.prisma || new PrismaClient(dev ? { ...prismaConfig } : undefined);
+			global.prisma ?? new PrismaClient(dev ? { ...prismaConfig } : undefined);
 	} else {
 		if (!global.prisma) {
 			global.prisma = new PrismaClient(dev ? { ...prismaConfig } : undefined);

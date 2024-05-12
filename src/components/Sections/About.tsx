@@ -9,7 +9,7 @@ export const About = ({ biographyBlurb, bioPic }: Bio) => {
 		>
 			<h2 className="text-center font-bold">About</h2>
 			<div className="flex flex-col items-center justify-evenly gap-8 text-justify md:flex-row md:text-left">
-				<div className="max-w-[18rem]">
+				<div className="max-w-72">
 					<Image
 						alt="Kenton Duprey"
 						className="rounded-full dark:border dark:border-white"

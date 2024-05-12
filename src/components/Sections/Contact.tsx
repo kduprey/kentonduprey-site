@@ -66,7 +66,7 @@ export const Contact = () => {
 					setSuccess(false);
 				}, 2000);
 			})
-			.catch((err) => {
+			.catch((err: unknown) => {
 				console.error(err);
 			});
 	};
@@ -127,7 +127,7 @@ export const Contact = () => {
 						{loading ? "Sending..." : "Send"}
 
 						<CgSpinner
-							className={`ml-1 h-6 w-6 animate-spin text-gray-500 ${
+							className={`ml-1 size-6 animate-spin text-gray-500 ${
 								loading ? "" : "hidden"
 							}`}
 						/>

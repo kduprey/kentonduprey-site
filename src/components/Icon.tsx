@@ -14,8 +14,6 @@ export const Icon = ({ iconName, size, color }: IconProps) => {
 	const library = iconName.icon.substring(0, 2).toLowerCase();
 	switch (library) {
 		case "fa":
-			// const a = React.createElement(FontAwesome[iconName.icon]);
-
 			return (
 				<div style={{ fontSize: size, color }}>
 					{createElement(
@@ -23,8 +21,6 @@ export const Icon = ({ iconName, size, color }: IconProps) => {
 					)}
 				</div>
 			);
-
-			break;
 		case "si":
 			return (
 				<div style={{ fontSize: size, color }}>
@@ -33,7 +29,6 @@ export const Icon = ({ iconName, size, color }: IconProps) => {
 					)}
 				</div>
 			);
-			break;
 		case "gr":
 			return (
 				<div style={{ fontSize: size, color }}>
@@ -42,7 +37,6 @@ export const Icon = ({ iconName, size, color }: IconProps) => {
 					)}
 				</div>
 			);
-			break;
 		default:
 			return (
 				<div style={{ fontSize: size, color }}>
@@ -51,6 +45,5 @@ export const Icon = ({ iconName, size, color }: IconProps) => {
 					)}
 				</div>
 			);
-			break;
 	}
 };
