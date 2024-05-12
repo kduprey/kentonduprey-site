@@ -1,6 +1,11 @@
 {
 	"$schema": "https://turbo.build/schema.json",
-	"globalEnv": ["GRAPH_CMS_API", "VERCEL_ENV"],
+	"globalEnv": [
+		"GRAPH_CMS_API",
+		"VERCEL_ENV",
+		"STRIPE_SECRET_KEY",
+		"JWT_SECRET"
+	],
 	"pipeline": {
 		"build": {
 			"outputs": [".next/**", "!.next/cache/**"]
