@@ -17,7 +17,6 @@ export const SvgIcon = ({ iconName }: SvgIconProps) => {
 					<path d="M17.543 9.704c.302.728.457 1.508.457 2.296h-1.8A4.199 4.199 0 0012 7.8V6a6 6 0 015.543 3.704z" />
 				</svg>
 			);
-			break;
 		case "email":
 			return (
 				<svg
@@ -34,7 +33,6 @@ export const SvgIcon = ({ iconName }: SvgIconProps) => {
 					/>
 				</svg>
 			);
-			break;
 		case "work":
 			return (
 				<svg
@@ -51,7 +49,6 @@ export const SvgIcon = ({ iconName }: SvgIconProps) => {
 					/>
 				</svg>
 			);
-			break;
 		case "website":
 			return (
 				<svg
@@ -68,8 +65,6 @@ export const SvgIcon = ({ iconName }: SvgIconProps) => {
 					/>
 				</svg>
 			);
-			break;
-
 		case "addContact":
 			return (
 				<svg
@@ -87,8 +82,6 @@ export const SvgIcon = ({ iconName }: SvgIconProps) => {
 					<path d="M11 14a1 1 0 011 1v6h2v-6a3 3 0 00-3-3H5a3 3 0 00-3 3v6h2v-6a1 1 0 011-1h6zM18 7h2v2h2v2h-2v2h-2v-2h-2V9h2V7z" />
 				</svg>
 			);
-			break;
-
 		default:
 			break;
 	}

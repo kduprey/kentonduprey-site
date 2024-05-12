@@ -51,7 +51,7 @@ const Home: NextPage = async () => {
 	}
 
 	return (
-		<main className="flex h-full w-full flex-col items-center gap-10 p-6 font-display dark:bg-black dark:text-white">
+		<main className="flex size-full flex-col items-center gap-10 p-6 font-display dark:bg-black dark:text-white">
 			<Navbar />
 			<Hero />
 			<Projects projectsData={projects} />
@@ -82,7 +82,7 @@ const getContent = async (): Promise<{
 				projects: Project[];
 				skills: SkillIcon[];
 			};
-		}>(`${process.env.GRAPH_CMS_API}`, {
+		}>(process.env.GRAPH_CMS_API ?? "", {
 			params: {
 				query: QUERY,
 			},
