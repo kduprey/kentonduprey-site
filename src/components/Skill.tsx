@@ -5,7 +5,6 @@ interface SkillProps {
 	project: boolean;
 	title: string;
 	iconName: IconName;
-	children?: React.ReactNode;
 }
 
 export const Skill = ({ project, title, iconName }: SkillProps) => {

@@ -16,7 +16,7 @@ const inter = Inter({
 
 const rootLayout = ({ children }: PropsWithChildren) => {
 	return (
-		<html className={`${inter.variable}`} lang="en">
+		<html className={inter.variable} lang="en">
 			<body>{children}</body>
 		</html>
 	);
