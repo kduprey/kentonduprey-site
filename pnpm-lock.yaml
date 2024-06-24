@@ -86,8 +86,8 @@ devDependencies:
     specifier: ^2.29.1
     version: 2.29.1(@typescript-eslint/parser@7.8.0)(eslint@8.57.0)
   eslint-plugin-tailwindcss:
-    specifier: ^3.17.3
-    version: 3.17.3(tailwindcss@3.4.4)
+    specifier: ^3.17.4
+    version: 3.17.4(tailwindcss@3.4.4)
   postcss:
     specifier: ^8.4.38
     version: 8.4.38
@@ -2472,8 +2472,8 @@ packages:
       string.prototype.matchall: 4.0.10
     dev: true
 
-  /eslint-plugin-tailwindcss@3.17.3(tailwindcss@3.4.4):
-    resolution: {integrity: sha512-DVMVVUFQ+lPraRSuUk2I41XMnusXT6b3WaQZYlUHduULnERaqe9sNfmpRY1IyxlzmKoQxSbZ8IHRhl9ePo8PeA==}
+  /eslint-plugin-tailwindcss@3.17.4(tailwindcss@3.4.4):
+    resolution: {integrity: sha512-gJAEHmCq2XFfUP/+vwEfEJ9igrPeZFg+skeMtsxquSQdxba9XRk5bn0Bp9jxG1VV9/wwPKi1g3ZjItu6MIjhNg==}
     engines: {node: '>=18.12.0'}
     peerDependencies:
       tailwindcss: ^3.4.0
