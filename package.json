@@ -30,7 +30,7 @@
 	},
 	"dependencies": {
 		"@bdsqqq/try": "^2.3.1",
-		"@prisma/client": "5.15.1",
+		"@prisma/client": "5.16.0",
 		"axios": "^1.7.2",
 		"jsonwebtoken": "^9.0.2",
 		"next": "^14.2.4",
@@ -48,7 +48,7 @@
 		"@tailwindcss/line-clamp": "^0.4.4",
 		"@tailwindcss/typography": "^0.5.13",
 		"@types/jsonwebtoken": "^9.0.6",
-		"@types/node": "^20.14.8",
+		"@types/node": "^20.14.9",
 		"@types/react": "^18.3.3",
 		"@vercel/style-guide": "^6.0.0",
 		"autoprefixer": "^10.4.19",
