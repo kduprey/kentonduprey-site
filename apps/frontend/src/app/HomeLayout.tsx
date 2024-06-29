@@ -1,16 +1,13 @@
+import type { EncodeDataAttributeCallback } from "@sanity/react-loader";
 import { About, Contact, Hero, Navbar, Projects, Skills } from "@/components";
 import type { HomeType } from "@/sanity";
-import type { EncodeDataAttributeCallback } from "@sanity/react-loader";
 
 interface HomeLayoutProps {
   encodeDataAttribute?: EncodeDataAttributeCallback;
   homeData: HomeType;
 }
 
-export const HomeLayout = ({
-  homeData,
-  encodeDataAttribute,
-}: HomeLayoutProps) => {
+export const HomeLayout = ({ homeData }: HomeLayoutProps) => {
   return (
     <main className="flex size-full flex-col items-center gap-10 p-6 font-display dark:bg-black dark:text-white">
       <Navbar />

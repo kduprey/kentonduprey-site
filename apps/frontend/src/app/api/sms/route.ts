@@ -1,6 +1,6 @@
-import { type NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
-export const POST = async (req: NextRequest) => {
+export const POST = () => {
   // if (error) {
   // 	console.error(error);
   // 	return new NextResponse("Error message not set", {

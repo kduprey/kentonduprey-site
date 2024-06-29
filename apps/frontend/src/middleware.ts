@@ -1,4 +1,4 @@
-import { type NextRequest } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
 import { verify } from "jsonwebtoken";
 import { z } from "zod";
 
@@ -24,4 +24,6 @@ export function middleware(request: NextRequest) {
     // If the JWT is invalid, return 401 with an error message
     return Response.json(error, { status: 401, statusText: "Unauthorized" });
   }
+
+  return NextResponse.next();
 }
