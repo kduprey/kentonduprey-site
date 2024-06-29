@@ -1,0 +1,11 @@
+{
+	"name": "@kduprey/tsconfig",
+	"version": "1.0.0",
+	"private": true,
+	"publishConfig": {
+		"access": "public"
+	},
+	"dependencies": {
+		"next": "14.2.4"
+	}
+}
