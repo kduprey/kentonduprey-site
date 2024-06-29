@@ -1,0 +1,6 @@
+{
+	"baseurl": "./src",
+	"delete": true,
+	"directory": ["./src/schemas", "./src/config"],
+	"noHeader": true
+}
