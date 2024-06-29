@@ -1,0 +1,30 @@
+{
+  "name": "@kduprey/config",
+  "version": "1.0.0",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "dev": "tsc --watch",
+    "generate-barrels": "barrelsby -c barrelsby.config.json",
+    "lint": "eslint src/",
+    "test": "jest",
+    "typecheck": "tsc --noEmit"
+  },
+  "prettier": "@kduprey/eslint-config/prettier",
+  "dependencies": {
+    "@bdsqqq/try": "^2.3.1",
+    "stripe": "^16.1.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@kduprey/eslint-config": "workspace:*",
+    "@kduprey/tsconfig": "workspace:*",
+    "@types/node": "^20.14.9",
+    "barrelsby": "^2.8.1",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.2"
+  }
+}

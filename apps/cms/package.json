@@ -1,0 +1,42 @@
+{
+  "name": "@kduprey/cms",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "analyze": "ANALYZE=true next build",
+    "build": "next build",
+    "dev": "next dev -p 3402",
+    "generate-barrels": "barrelsby -c barrelsby.config.json",
+    "lint": "next lint",
+    "prettier:check": "prettier --check \"**/*.{ts,tsx}\"",
+    "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",
+    "publishContent": "sanity dataset export staging . --overwrite && sanity dataset import staging.tar.gz production --replace",
+    "pullContent": "sanity dataset export production . --overwrite && sanity dataset import production.tar.gz staging --replace",
+    "start": "next start",
+    "test": "npm run prettier:check && npm run lint && npm run typecheck",
+    "typecheck": "tsc --noEmit"
+  },
+  "prettier": "@kduprey/eslint-config/prettier",
+  "dependencies": {
+    "@kduprey/config": "workspace:*",
+    "@kduprey/tsconfig": "workspace:*",
+    "@sanity/icons": "^3.2.0",
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^3.48.1",
+    "next": "14.2.4",
+    "next-sanity": "^9.4.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "sanity-plugin-iframe-pane": "^3.1.6",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@kduprey/eslint-config": "workspace:*",
+    "@next/bundle-analyzer": "^14.2.4",
+    "@types/node": "^20.14.9",
+    "@types/react": "18.3.3",
+    "sanity": "^3.48.1",
+    "styled-components": "^6.1.11",
+    "typescript": "5.5.2"
+  }
+}

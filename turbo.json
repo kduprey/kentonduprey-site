@@ -1,15 +1,66 @@
 {
-	"$schema": "https://turbo.build/schema.json",
-	"globalEnv": [
-		"GRAPH_CMS_API",
-		"VERCEL_ENV",
-		"STRIPE_SECRET_KEY",
-		"JWT_SECRET"
-	],
-	"pipeline": {
-		"build": {
-			"outputs": [".next/**", "!.next/cache/**"]
-		},
-		"lint": {}
-	}
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"],
+      "dotEnv": [
+        ".env.development.local",
+        ".env.local",
+        ".env.development",
+        ".env"
+      ]
+    },
+    "deploy": {
+      "dependsOn": ["build", "test", "lint"]
+    },
+    "test": {
+      "dependsOn": ["build"],
+      "inputs": [
+        "src/**/*.tsx",
+        "src/**/*.ts",
+        "test/**/*.ts",
+        "test/**/*.tsx"
+      ],
+      "dotEnv": [
+        ".env.development.local",
+        ".env.local",
+        ".env.development",
+        ".env"
+      ]
+    },
+    "lint": {},
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "dotEnv": [
+        ".env.development.local",
+        ".env.local",
+        ".env.development",
+        ".env"
+      ]
+    },
+    "db:generate": {
+      "cache": false
+    },
+    "db:push": {
+      "cache": false
+    }
+  },
+  "globalDotEnv": [".env"],
+  "globalEnv": [
+    "VERCEL_ENV",
+    "VERCEL_URL",
+    "CI",
+    "NODE_ENV",
+    "INTERNAL_API_URL",
+    "NEXT_PUBLIC_VERCEL_ENV",
+    "NEXT_PUBLIC_VERCEL_URL",
+    "STRIPE_SECRET_KEY",
+    "NEXT_PUBLIC_FATHOM_ID",
+    "NEXT_PUBLIC_SANITY_PROJECT_ID",
+    "SANITY_REVALIDATE_SECRET",
+    "NEXT_RUNTIME",
+    "NEXT_PUBLIC_SANITY_DATASET"
+  ]
 }

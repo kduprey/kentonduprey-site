@@ -1,0 +1,37 @@
+{
+  "name": "@kduprey/db",
+  "version": "1.0.0",
+  "private": "true",
+  "author": "Kenton Duprey",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "deploy": "prisma migrate deploy",
+    "predev": "pnpm generate",
+    "dev": "tsup src/* --watch",
+    "format": "prisma format",
+    "generate": "prisma generate",
+    "lint": "eslint . --max-warnings 0",
+    "migrate": "prisma migrate dev",
+    "prebuild": "pnpm generate",
+    "push": "prisma db push --skip-generate",
+    "seed": "prisma db seed",
+    "studio": "prisma studio"
+  },
+  "prettier": "@kduprey/eslint-config/prettier",
+  "dependencies": {
+    "@prisma/client": "5.16.1"
+  },
+  "devDependencies": {
+    "@kduprey/eslint-config": "workspace:*",
+    "@kduprey/tsconfig": "workspace:*",
+    "@types/node": "^20.14.9",
+    "prisma": "^5.16.1",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.2"
+  },
+  "prisma": {
+    "schema": "./prisma/schema.prisma"
+  }
+}

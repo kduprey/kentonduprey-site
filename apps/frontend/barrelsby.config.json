@@ -1,0 +1,7 @@
+{
+  "baseurl": "./src",
+  "delete": true,
+  "directory": ["./src/components", "./src/sanity", "./src/sanity/data"],
+  "exclude": [".*\\.(test|spec|story)\\.(js|ts|jsx|tsx)$"],
+  "noHeader": true
+}
