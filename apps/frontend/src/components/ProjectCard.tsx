@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Skill } from "./Skill";
 import type { ProjectType } from "@/sanity";
+import { Skill } from "./Skill";
 
 export const ProjectCard = ({
   projectImage,

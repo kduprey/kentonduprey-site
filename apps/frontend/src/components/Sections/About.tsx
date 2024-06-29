@@ -7,7 +7,7 @@ export const About = ({ headerText, content, bioImage }: AboutSectionType) => {
       className="flex w-full flex-col items-center justify-center gap-5"
       id="about"
     >
-      <h2 className="text-center font-bold">About</h2>
+      <h2 className="text-center font-bold">{headerText}</h2>
       <div className="flex flex-col items-center justify-evenly gap-8 text-justify md:flex-row md:text-left">
         <div className="max-w-72">
           <Image
