@@ -1,21 +1,20 @@
-name: Cut Patch Release
+name: Cut Major Release
 
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches:
       - main
 
-permissions: write-all
-
-# when a push is made to develop branch by dependabot or github-actions, or the merge branch includes 'hotfix', it will cut a patch release
+# when a push is made to develop branch by kduprey, and the merge branch does not include hotfix, and merge branch has label 'major version', it will cut a major release
 
 jobs:
-  cutPatchRelease:
-    if: github.actor == 'dependabot[bot]' || github.actor == 'github-actions[bot]' || github.actor == 'kduprey-app-token[bot]' || contains(github.event.head_commit.message, 'hotfix')
+  cutMajorRelease:
+    if: github.actor == 'kduprey' && github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'major version')
     runs-on: ubuntu-latest
-    name: Cut Patch Release
-    outputs:
-      v_patch: ${{ steps.semvers.outputs.v_patch }}
+    permissions:
+      contents: write
+    name: Cut Major Release
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,7 +28,7 @@ jobs:
         with:
           prefix: "v"
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get next version
         id: semvers
@@ -41,7 +40,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ steps.semvers.outputs.v_patch }}
+          tag: ${{ steps.semvers.outputs.v_major }}
           generateReleaseNotes: true
           commit: "main"
 
@@ -53,5 +52,4 @@ jobs:
           SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
         with:
           environment: production
-          version: ${{ steps.semvers.outputs.v_patch }}
-          ignore_missing: true
+          version: ${{ steps.semvers.outputs.v_major }}
