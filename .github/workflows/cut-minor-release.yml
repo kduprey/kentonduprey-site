@@ -3,7 +3,7 @@ name: Cut Minor Release
 on:
   push:
     branches:
-      - develop
+      - main
 
 # when a push is made to develop branch by kduprey, and the merge branch does not include hotfix, it will cut a minor release
 
@@ -12,14 +12,12 @@ jobs:
     if: github.actor == 'kduprey' && !contains(github.event.head_commit.message, 'hotfix')
     runs-on: ubuntu-latest
     name: Cut Minor Release
-    outputs:
-      v_minor: ${{ steps.semvers.outputs.v_minor }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: develop
+          ref: main
 
       - name: Get previous tag
         id: previoustag
@@ -35,59 +33,20 @@ jobs:
         with:
           version: ${{ steps.previoustag.outputs.tag }}
 
-      - name: Create release branch
-        run: git checkout -b release/${{ steps.semvers.outputs.v_minor }}
+      - name: Create release
+        uses: ncipollo/release-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ steps.semvers.outputs.v_minor }}
+          generateReleaseNotes: true
+          commit: "main"
+
+      - name: Create Sentry release
+        uses: getsentry/action-release@v1
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-
-      - name: Publish tag
-        run: git tag ${{ steps.semvers.outputs.v_minor }} && git push origin ${{ steps.semvers.outputs.v_minor }}
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-
-      - name: Push release branch
-        run: git push origin release/${{ steps.semvers.outputs.v_minor }}
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-
-      - name: Cut release branch
-        run: gh release create ${{ steps.semvers.outputs.v_minor }} --generate-notes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Create pull request to production
-        uses: vsoch/pull-request-action@master
-        id: pr
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH_PREFIX: release/v
-          PULL_REQUEST_FROM_BRANCH: release/${{ steps.semvers.outputs.v_minor }}
-          PULL_REQUEST_BRANCH: main
-          PULL_REQUEST_TITLE: release/${{ steps.semvers.outputs.v_minor }}
-
-      - name: Wait 10 seconds for PR Deployments to be created
-        run: sleep 10
-
-      - name: Enable pull request auto merge
-        run: gh pr merge ${{ steps.pr.outputs.pull_request_number }} --auto --merge
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  # submitSentryPreviewRelease:
-  #   needs: cutMinorRelease
-  #   if: github.ref == 'refs/heads/develop'
-  #   runs-on: ubuntu-latest
-  #   name: Submit Sentry Minor Release
-  #   steps:
-  #     - uses: actions/checkout@v4
-  #       with:
-  #         fetch-depth: 0
-  #     - name: Create Sentry release
-  #       uses: getsentry/action-release@v1
-  #       env:
-  #         SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-  #         SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
-  #         SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
-  #       with:
-  #         environment: preview
-  #         version: ${{ needs.cutMinorRelease.outputs.v_minor }}
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+        with:
+          environment: production
+          version: ${{ steps.semvers.outputs.v_minor }}
