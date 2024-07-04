@@ -100,8 +100,8 @@ importers:
         specifier: ^1.6.18
         version: 1.6.18(@sanity/client@6.20.1)
       '@sanity/react-loader':
-        specifier: ^1.10.3
-        version: 1.10.3(@sanity/client@6.20.1)(react@18.3.1)
+        specifier: ^1.10.4
+        version: 1.10.4(@sanity/client@6.20.1)(react@18.3.1)
       '@sanity/webhook':
         specifier: ^4.0.4
         version: 4.0.4
@@ -3419,11 +3419,11 @@ packages:
     resolution: {integrity: sha512-2TjYEvOftD0v7ukx3Csdh9QIu44P2z7NDJtlC3qITJRYV36J7R6Vfd3trVhFnN77/7CZrGjqngrtohv8VqO5nw==}
     engines: {node: '>=18.0.0'}
 
-  /@sanity/core-loader@1.6.19(@sanity/client@6.20.1):
-    resolution: {integrity: sha512-dLV2Flw0L521KYm2EdWOqtS53D+geGpLqMIvpWdLD/7NhM3p3y12Eps8UY3VYHZfsUtqpXmOBx0X9vYsfZlvxA==}
+  /@sanity/core-loader@1.6.20(@sanity/client@6.20.1):
+    resolution: {integrity: sha512-QmfpCtGFoa3WsGwCKZbkL/AnRYygqaVFucG4gQqo0s52YYVKA0bsAb/QOK1BvK27afFzr/BJ1jaD0tBuxxg/tg==}
     engines: {node: '>=18'}
     peerDependencies:
-      '@sanity/client': ^6.19.1
+      '@sanity/client': ^6.20.1
     dependencies:
       '@sanity/client': 6.20.1(debug@4.3.4)
     dev: false
@@ -3676,15 +3676,15 @@ packages:
       '@sanity/client': 6.20.1(debug@4.3.4)
       '@sanity/uuid': 3.0.2
 
-  /@sanity/react-loader@1.10.3(@sanity/client@6.20.1)(react@18.3.1):
-    resolution: {integrity: sha512-SR0qcxgICFeiFA5WTKm57sr7UspQ8tpy9TbbS33ILcWUkTBo9TCbiYiG7ooD/ood4Df6MKZCnWq6cxskbCxY2A==}
+  /@sanity/react-loader@1.10.4(@sanity/client@6.20.1)(react@18.3.1):
+    resolution: {integrity: sha512-C7KIkac62fmIspTuS3ao70VGaxc8RJEx+SHuIblBBnBGWZy8VZq64kg/RGbxmV5isfdBqkh5ASdwB7YrhUOyjA==}
     engines: {node: '>=18'}
     peerDependencies:
-      '@sanity/client': ^6.19.1
+      '@sanity/client': ^6.20.1
       react: ^18.3 || >=19.0.0-rc
     dependencies:
       '@sanity/client': 6.20.1(debug@4.3.4)
-      '@sanity/core-loader': 1.6.19(@sanity/client@6.20.1)
+      '@sanity/core-loader': 1.6.20(@sanity/client@6.20.1)
       react: 18.3.1
     dev: false
 
