@@ -1,0 +1,25 @@
+{
+  "extends": "@kduprey/tsconfig/nextjs.json",
+  "compilerOptions": {
+    "types": [
+      "node",
+      "jest",
+      "@testing-library/jest-dom",
+      "@testing-library/react"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*", "./src/*"],
+      "test-utils": ["./src/test-utils"]
+    },
+    "plugins": [{ "name": "next" }]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "jest.setup.cjs"
+  ],
+  "exclude": ["node_modules"]
+}
