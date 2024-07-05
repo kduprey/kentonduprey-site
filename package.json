@@ -1,32 +1,36 @@
 {
-	"name": "@kduprey/apps",
-	"version": "1.0.0",
-	"keywords": [],
-	"author": "Kenton Duprey",
-	"scripts": {
-		"prebuild": "pnpm --filter @kduprey/db build",
-		"build": "pnpm dlx turbo@1 build",
-		"predev": "pnpm start:db:local",
-		"dev": "dotenv -- concurrently 'pnpm dlx turbo@1 dev' 'pnpm stripe:listen'",
-		"postdev": "pnpm stop:db:local",
-		"generate-barrels:cms": "pnpm --filter @kduprey/cms generate-barrels",
-		"generate-barrels:frontend": "pnpm --filter @kduprey/frontend generate-barrels",
-		"postinstall": "pnpm --filter @kduprey/db generate",
-		"lint": "pnpm dlx turbo@1 lint",
-		"publishContent": "pnpm --filter @kduprey/cms publishContent",
-		"pullContent": "pnpm --filter @kduprey/cms pullContent",
-		"start": "pnpm dlx turbo@1 start",
-		"start:db:local": "docker-compose up -d",
-		"stop:db:local": "docker-compose down",
-		"stripe:listen": "stripe listen -f $STRIPE_WEBHOOK_FW_URL -a",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"prettier": "./packages/eslint-config/prettier.js",
-	"devDependencies": {
-		"barrelsby": "^2.8.1",
-		"concurrently": "^8.2.2",
-		"dotenv-cli": "^7.4.2",
-		"turbo": "^1.13.4"
-	},
-	"packageManager": "pnpm@8.15.8"
+  "name": "@kduprey/apps",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "Kenton Duprey",
+  "scripts": {
+    "prebuild": "pnpm --filter @kduprey/db build",
+    "build": "pnpm dlx turbo@1 build",
+    "build:local": "pnpm start:db:local && dotenv -- pnpm dlx turbo@1 build && pnpm stop:db:local",
+    "predev": "pnpm start:db:local",
+    "dev": "dotenv -- concurrently 'pnpm dlx turbo@1 dev' 'pnpm stripe:listen'",
+    "postdev": "pnpm stop:db:local",
+    "generate-barrels": "pnpm run generate-barrels:admin && pnpm run generate-barrels:cms && pnpm run generate-barrels:frontend",
+    "generate-barrels:admin": "pnpm --filter @kduprey/admin generate-barrels",
+    "generate-barrels:cms": "pnpm --filter @kduprey/cms generate-barrels",
+    "generate-barrels:frontend": "pnpm --filter @kduprey/frontend generate-barrels",
+    "postinstall": "pnpm --filter @kduprey/db generate",
+    "lint": "pnpm dlx turbo@1 lint",
+    "publishContent": "pnpm --filter @kduprey/cms publishContent",
+    "pullContent": "pnpm --filter @kduprey/cms pullContent",
+    "start": "pnpm dlx turbo@1 start",
+    "start:db:local": "docker-compose up -d",
+    "stop:db:local": "docker-compose down",
+    "stripe:listen": "stripe listen -f $STRIPE_WEBHOOK_FW_URL -a",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "prettier": "./packages/eslint-config/prettier.js",
+  "devDependencies": {
+    "@kduprey/eslint-config": "workspace:*",
+    "barrelsby": "^2.8.1",
+    "concurrently": "^8.2.2",
+    "dotenv-cli": "^7.4.2",
+    "turbo": "^1.13.4"
+  },
+  "packageManager": "pnpm@8.15.8"
 }
