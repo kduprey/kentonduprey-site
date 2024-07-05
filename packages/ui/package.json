@@ -1,0 +1,38 @@
+{
+  "name": "@kduprey/ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "dev": "tsc --watch",
+    "generate-barrels": "barrelsby -c barrelsby.config.json",
+    "lint": "eslint src/",
+    "test": "jest",
+    "typecheck": "tsc --noEmit"
+  },
+  "prettier": "@kduprey/eslint-config/prettier",
+  "dependencies": {
+    "@mantine/core": "7.11.1",
+    "@mantine/hooks": "7.11.1",
+    "@tabler/icons-react": "^3.8.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@kduprey/eslint-config": "workspace:*",
+    "@kduprey/tsconfig": "workspace:*",
+    "@types/node": "^20.14.9",
+    "@types/react": "18.3.3",
+    "postcss": "^8.4.39",
+    "postcss-preset-mantine": "1.15.0",
+    "postcss-simple-vars": "^7.0.1",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.3"
+  }
+}
