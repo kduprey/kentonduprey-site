@@ -1,7 +1,8 @@
 name: Cut Minor Release
 
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches:
       - main
 
@@ -9,7 +10,7 @@ on:
 
 jobs:
   cutMinorRelease:
-    if: github.actor == 'kduprey' && !contains(github.event.head_commit.message, 'hotfix')
+    if: github.actor == 'kduprey' && github.event.pull_request.merged == true && !contains(github.event.pull_request.head.ref, 'hotfix') && !contains(github.event.pull_request.labels.*.name, 'major version')
     runs-on: ubuntu-latest
     name: Cut Minor Release
     steps:
