@@ -187,8 +187,8 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2
       '@sanity/vision':
-        specifier: ^3.49.0
-        version: 3.49.0(@babel/runtime@7.24.7)(@codemirror/lint@6.8.1)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(codemirror@6.0.1)(react-dom@18.3.1)(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.11)
+        specifier: ^3.50.0
+        version: 3.50.0(@babel/runtime@7.24.7)(@codemirror/lint@6.8.1)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(codemirror@6.0.1)(react-dom@18.3.1)(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.11)
       next:
         specifier: 14.2.5
         version: 14.2.5(@babel/core@7.24.8)(@opentelemetry/api@1.9.0)(react-dom@18.3.1)(react@18.3.1)
@@ -4803,8 +4803,8 @@ packages:
       '@types/uuid': 8.3.4
       uuid: 8.3.2
 
-  /@sanity/vision@3.49.0(@babel/runtime@7.24.7)(@codemirror/lint@6.8.1)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(codemirror@6.0.1)(react-dom@18.3.1)(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.11):
-    resolution: {integrity: sha512-iPTLRc+A3PdyPw+Ufz+YpsbnIw1I/bcZsNhmuqPM41jwG/s2gdLiCfP+VTIfSJ+1d8oT3KHDGoz7F3qlvivrew==}
+  /@sanity/vision@3.50.0(@babel/runtime@7.24.7)(@codemirror/lint@6.8.1)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(codemirror@6.0.1)(react-dom@18.3.1)(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.11):
+    resolution: {integrity: sha512-xQBi20eB1GjCDSH6F1reezcHsK1TGwmBDKWZv6ZY1n1s6VYlb4JflmANZMk4X2LsRXA2WWc9Ba/4d0GuKRYy+A==}
     peerDependencies:
       react: ^18
       styled-components: ^6.1
@@ -4822,7 +4822,7 @@ packages:
       '@rexxars/react-split-pane': 0.1.93(react-dom@18.3.1)(react@18.3.1)
       '@sanity/color': 3.0.6
       '@sanity/icons': 3.3.0(react@18.3.1)
-      '@sanity/ui': 2.6.1(react-dom@18.3.1)(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.11)
+      '@sanity/ui': 2.6.7(react-dom@18.3.1)(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.11)
       '@uiw/react-codemirror': 4.23.0(@babel/runtime@7.24.7)(@codemirror/autocomplete@6.17.0)(@codemirror/language@6.10.2)(@codemirror/lint@6.8.1)(@codemirror/search@6.5.6)(@codemirror/state@6.4.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.28.4)(codemirror@6.0.1)(react-dom@18.3.1)(react@18.3.1)
       is-hotkey-esm: 1.0.0
       json-2-csv: 5.5.4
