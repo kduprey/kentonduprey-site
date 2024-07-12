@@ -22,7 +22,7 @@
     "@kduprey/tsconfig": "workspace:*",
     "@sanity/icons": "^3.3.0",
     "@sanity/image-url": "^1.0.2",
-    "@sanity/vision": "^3.49.0",
+    "@sanity/vision": "^3.50.0",
     "next": "14.2.5",
     "next-sanity": "^9.4.2",
     "react": "18.3.1",
