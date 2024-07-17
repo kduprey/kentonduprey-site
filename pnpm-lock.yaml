@@ -91,8 +91,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/tsconfig
       '@prisma/nextjs-monorepo-workaround-plugin':
-        specifier: ^5.16.2
-        version: 5.16.2
+        specifier: ^5.17.0
+        version: 5.17.0
       '@storybook/addon-essentials':
         specifier: ^8.2.4
         version: 8.2.4(storybook@8.2.4)
@@ -3872,8 +3872,8 @@ packages:
       - supports-color
     dev: false
 
-  /@prisma/nextjs-monorepo-workaround-plugin@5.16.2:
-    resolution: {integrity: sha512-yr6HImoL5Jsxs0F56oAGoYU2MKrUDmKa2JYwRzTnueGmXn9/RVNaCeMcKBGdnagzUj5DbcWvinh9WRnHpKaDEw==}
+  /@prisma/nextjs-monorepo-workaround-plugin@5.17.0:
+    resolution: {integrity: sha512-kZ7RA2NhANbgQXWb2T/QmeRW5+I+9XZRcWG6c2nFnA7YhAidXDv2QBctKhtB369m86HBy8m2TFa9fCfo/pmEYQ==}
     dev: true
 
   /@radix-ui/primitive@1.1.0:
