@@ -5,7 +5,15 @@
 import { defineCliConfig } from "sanity/cli";
 import { z } from "zod";
 
-const projectId = z.string().parse(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID);
-const dataset = z.string().parse(process.env.NEXT_PUBLIC_SANITY_DATASET);
+const projectId = z
+  .string({
+    message: "Environment variable NEXT_PUBLIC_SANITY_PROJECT_ID is required",
+  })
+  .parse(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID);
+const dataset = z
+  .string({
+    message: "Environment variable NEXT_PUBLIC_SANITY_DATASET is required",
+  })
+  .parse(process.env.NEXT_PUBLIC_SANITY_DATASET);
 
-export default defineCliConfig({ api: { projectId, dataset } });
+export default defineCliConfig({ api: { dataset, projectId } });

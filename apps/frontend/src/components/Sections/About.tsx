@@ -1,7 +1,8 @@
-import Image from "next/image";
 import type { AboutSectionType } from "@/sanity";
 
-export const About = ({ headerText, content, bioImage }: AboutSectionType) => {
+import Image from "next/image";
+
+export const About = ({ bioImage, content, headerText }: AboutSectionType) => {
   return (
     <div
       className="flex w-full flex-col items-center justify-center gap-5"
@@ -16,8 +17,8 @@ export const About = ({ headerText, content, bioImage }: AboutSectionType) => {
             height={bioImage.dimensions.height}
             src={bioImage.src}
             style={{
-              maxWidth: "100%",
               height: "auto",
+              maxWidth: "100%",
             }}
             width={bioImage.dimensions.width}
           />

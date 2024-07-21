@@ -1,5 +1,6 @@
-import { draftMode } from "next/headers";
 import dynamic from "next/dynamic";
+import { draftMode } from "next/headers";
+
 import { loadHomePage } from "../sanity";
 import { HomeLayout } from "./HomeLayout";
 

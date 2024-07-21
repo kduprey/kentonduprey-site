@@ -1,8 +1,9 @@
 "use client";
 
-import { type QueryResponseInitial } from "@sanity/react-loader";
+import { type HomeType, homeQuery } from "@/sanity/data";
 import { useQuery } from "@/sanity/utils/useQuery";
-import { homeQuery, type HomeType } from "@/sanity/data";
+import { type QueryResponseInitial } from "@sanity/react-loader";
+
 import { HomeLayout } from "./HomeLayout";
 
 interface HomePagePreviewProps {

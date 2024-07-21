@@ -3,6 +3,8 @@
  * Importing other npm packages here could lead to needlessly increasing the client bundle size, or end up in a server-only function that don't need it.
  */
 
+import { z } from "zod";
+
 const assertValue = <T>(v: T | undefined, errorMessage: string): T => {
   if (v === undefined) throw new Error(errorMessage);
 
@@ -30,4 +32,8 @@ export const apiVersion = new Date().toISOString().split("T")[0];
 export const previewSecretId: `${string}.${string}` = "preview.secret";
 
 // See the app/api/revalidate/route.ts for how this is used
-export const revalidateSecret = process.env.SANITY_REVALIDATE_SECRET;
+export const revalidateSecret = z
+  .string({
+    message: "Environment variable SANITY_REVALIDATE_SECRET is required",
+  })
+  .parse(process.env.SANITY_REVALIDATE_SECRET);

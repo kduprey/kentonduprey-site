@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
+
 import { Inter } from "next/font/google";
-import "./globals.css";
 import { draftMode } from "next/headers";
 import { VisualEditing } from "next-sanity";
 
+import "./globals.css";
+
 export const metadata: Metadata = {
-  title: "Kenton Duprey - Web Developer",
   description: "Building elegant web solutions for clients and companies",
+  title: "Kenton Duprey - Web Developer",
 };
 
 const inter = Inter({
-  subsets: ["latin"],
   style: ["normal"],
+  subsets: ["latin"],
   variable: "--font-raleway",
 });
 

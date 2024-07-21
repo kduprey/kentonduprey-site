@@ -1,5 +1,6 @@
-import { createClient } from "next-sanity";
 import { SERVER_CMS_URL } from "@kduprey/config";
+import { createClient } from "next-sanity";
+
 import { apiVersion, dataset, projectId } from "./sanity.api";
 
 export const client = createClient({

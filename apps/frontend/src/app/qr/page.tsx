@@ -1,6 +1,7 @@
+import { SvgIcon } from "@/components";
 import Image from "next/image";
 import Link from "next/link";
-import { SvgIcon } from "@/components";
+
 import personalPhoto from "../../../public/me.png";
 
 const page = () => {
@@ -11,16 +12,16 @@ const page = () => {
           <div
             className="mb-0 mt-3 size-[95px] rounded-[50%]"
             style={{
-              clipPath: "circle()",
               backgroundSize: "cover",
+              clipPath: "circle()",
             }}
           >
             <Image
               alt="Bio Pic"
               src={personalPhoto}
               style={{
-                maxWidth: "100%",
                 height: "auto",
+                maxWidth: "100%",
               }}
             />
           </div>

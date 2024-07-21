@@ -1,18 +1,24 @@
-import "server-only";
-
 import type { QueryParams, ResponseQueryOptions } from "next-sanity";
-import { z } from "zod";
+
 import { draftMode } from "next/headers";
+import "server-only";
+import { z } from "zod";
+
 import { client } from "../config/sanity.client";
 import {
-  homeQuery,
   type HomeType,
-  settingsQuery,
   type SettingsType,
+  homeQuery,
+  settingsQuery,
 } from "../data";
 import { queryStore } from "./createQueryStore";
 
-export const token = z.string().min(1).parse(process.env.SANITY_API_READ_TOKEN);
+export const token = z
+  .string({
+    message: "Environment variable SANITY_API_READ_TOKEN is required",
+  })
+  .min(1)
+  .parse(process.env.SANITY_API_READ_TOKEN);
 
 const DEFAULT_PARAMS = {} as QueryParams;
 

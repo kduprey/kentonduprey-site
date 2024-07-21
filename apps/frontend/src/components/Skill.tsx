@@ -1,12 +1,12 @@
 import { Icon } from "./Icon";
 
 interface SkillProps {
+  iconName: string;
   project: boolean;
   title: string;
-  iconName: string;
 }
 
-export const Skill = ({ project, title, iconName }: SkillProps) => {
+export const Skill = ({ iconName, project, title }: SkillProps) => {
   if (project) {
     return <Icon iconName={iconName} />;
   }

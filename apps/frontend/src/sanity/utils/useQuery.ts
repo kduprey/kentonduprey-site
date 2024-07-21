@@ -1,11 +1,12 @@
+import { PUBLIC_CMS_URL } from "@kduprey/config";
 import {
   type QueryParams,
-  useEncodeDataAttribute,
+  type QueryStoreState,
   type UseQueryOptionsDefinedInitial,
   type WithEncodeDataAttribute,
-  type QueryStoreState,
+  useEncodeDataAttribute,
 } from "@sanity/react-loader";
-import { PUBLIC_CMS_URL } from "@kduprey/config";
+
 import { queryStore } from "./createQueryStore";
 
 /**
@@ -18,9 +19,10 @@ export const useQuery = <
   query: string,
   params?: QueryParams,
   options?: UseQueryOptionsDefinedInitial<QueryResponseResult>,
-): Omit<QueryStoreState<QueryResponseResult, QueryResponseError>, "data"> & {
+): {
   data: QueryResponseResult;
-} & WithEncodeDataAttribute => {
+} & Omit<QueryStoreState<QueryResponseResult, QueryResponseError>, "data"> &
+  WithEncodeDataAttribute => {
   const snapshot = queryStore.useQuery<QueryResponseResult, QueryResponseError>(
     query,
     params,

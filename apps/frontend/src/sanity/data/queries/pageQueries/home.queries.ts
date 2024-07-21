@@ -70,26 +70,26 @@ export const homeQuery = groq`
 `;
 
 export const ImageSchema = z.object({
-  dimensions: z.object({ height: z.number(), width: z.number() }),
   alt: z.string(),
+  blurData: z.string(),
+  dimensions: z.object({ height: z.number(), width: z.number() }),
   id: z.string(),
   src: z.string(),
-  blurData: z.string(),
 });
 
 export const SkillSchema = z.object({
   _id: z.string(),
-  title: z.string(),
   iconSlug: z.string(),
+  title: z.string(),
 });
 
 export const ProjectSchema = z.object({
-  projectSkills: z.array(SkillSchema),
   _id: z.string(),
-  title: z.string(),
   description: z.string(),
   link: z.string(),
   projectImage: ImageSchema,
+  projectSkills: z.array(SkillSchema),
+  title: z.string(),
 });
 
 export const ProjectSectionSchema = z.object({
@@ -98,25 +98,25 @@ export const ProjectSectionSchema = z.object({
 });
 
 export const AboutSectionSchema = z.object({
-  headerText: z.string(),
-  content: z.string(),
   bioImage: ImageSchema,
+  content: z.string(),
+  headerText: z.string(),
 });
 
 export const homeSchema = z.object({
+  aboutSection: AboutSectionSchema,
   contactSection: z.null(),
-  linksSection: z.object({
-    instagramLink: z.string(),
-    twitterLink: z.string(),
-    githubLink: z.string(),
-  }),
   heroSection: z.object({
+    buttonText: z.string(),
     headerText: z.string(),
     subHeaderText: z.string(),
-    buttonText: z.string(),
+  }),
+  linksSection: z.object({
+    githubLink: z.string(),
+    instagramLink: z.string(),
+    twitterLink: z.string(),
   }),
   projectsSection: ProjectSectionSchema,
-  aboutSection: AboutSectionSchema,
   skillsSection: z.object({
     headerText: z.string(),
     skills: z.array(SkillSchema),

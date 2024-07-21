@@ -1,14 +1,16 @@
+import type { ProjectType } from "@/sanity";
+
 import Image from "next/image";
 import Link from "next/link";
-import type { ProjectType } from "@/sanity";
+
 import { Skill } from "./Skill";
 
 export const ProjectCard = ({
-  projectImage,
-  title,
   description,
   link,
+  projectImage,
   projectSkills,
+  title,
 }: ProjectType) => {
   return (
     <div className="max-w-md rounded-xl bg-white shadow-md ring-2 ring-slate-100 md:max-w-lg dark:border dark:border-gray-300 dark:bg-black">
@@ -18,8 +20,8 @@ export const ProjectCard = ({
         loading="lazy"
         src={projectImage.src}
         style={{
-          maxWidth: "100%",
           height: "auto",
+          maxWidth: "100%",
           objectFit: "cover",
         }}
         width={projectImage.dimensions.width}

@@ -1,4 +1,5 @@
 import type { SkillType } from "@/sanity";
+
 import { Skill } from "../Skill";
 
 interface SkillsProps {
