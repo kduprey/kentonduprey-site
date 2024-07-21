@@ -1,5 +1,5 @@
 interface SvgIconProps {
-  iconName: "phone" | "email" | "work" | "website" | "addContact";
+  iconName: "addContact" | "email" | "phone" | "website" | "work";
 }
 
 export const SvgIcon = ({ iconName }: SvgIconProps) => {

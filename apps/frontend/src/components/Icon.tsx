@@ -1,18 +1,19 @@
-import dynamic from "next/dynamic";
 import type { IconBaseProps } from "react-icons";
+
+import dynamic from "next/dynamic";
 import { FaRegCircle } from "react-icons/fa";
 import { FiCircle } from "react-icons/fi";
 import { SiReact } from "react-icons/si";
 
 interface IconProps {
+  color?: string;
   iconName: string;
   size?: number;
-  color?: string;
 }
 
 type IconsMapping = Record<string, React.ComponentType<IconBaseProps>>;
 
-export const Icon = ({ iconName, size, color }: IconProps) => {
+export const Icon = ({ color, iconName, size }: IconProps) => {
   const Icons: IconsMapping = {
     fa: dynamic(
       () =>
@@ -41,7 +42,7 @@ export const Icon = ({ iconName, size, color }: IconProps) => {
   };
   const DynamicIcon = iconName ? Icons.si : null;
   return (
-    <div style={{ fontSize: size, color }}>
+    <div style={{ color, fontSize: size }}>
       {DynamicIcon ? <DynamicIcon /> : null}
     </div>
   );

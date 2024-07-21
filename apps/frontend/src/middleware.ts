@@ -1,5 +1,5 @@
-import { NextResponse, type NextRequest } from "next/server";
 import { verify } from "jsonwebtoken";
+import { type NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 
 export const config = {
@@ -7,7 +7,11 @@ export const config = {
 };
 
 export function middleware(request: NextRequest) {
-  const secret = z.string().parse(process.env.JWT_SECRET);
+  const secret = z
+    .string({
+      message: "Environment variable JWT_SECRET is required",
+    })
+    .parse(process.env.JWT_SECRET);
   // Check if the request has a cookie with the name "session"
   const authJWT = request.headers.get("Authorization");
 

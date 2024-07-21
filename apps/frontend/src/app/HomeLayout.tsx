@@ -1,6 +1,7 @@
-import type { EncodeDataAttributeCallback } from "@sanity/react-loader";
-import { About, Contact, Hero, Navbar, Projects, Skills } from "@/components";
 import type { HomeType } from "@/sanity";
+import type { EncodeDataAttributeCallback } from "@sanity/react-loader";
+
+import { About, Contact, Hero, Navbar, Projects, Skills } from "@/components";
 
 interface HomeLayoutProps {
   encodeDataAttribute?: EncodeDataAttributeCallback;

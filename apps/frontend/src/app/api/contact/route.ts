@@ -1,17 +1,18 @@
 import type { NextRequest } from "next/server";
+
+import { prisma } from "@kduprey/db";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { fromZodError } from "zod-validation-error";
-import { prisma } from "@kduprey/db";
 
 export const POST = async (req: NextRequest) => {
   try {
-    const { name, email, message, age } = z
+    const { age, email, message, name } = z
       .object({
-        name: z.string(),
+        age: z.string().optional(),
         email: z.string().email(),
         message: z.string(),
-        age: z.string().optional(),
+        name: z.string(),
       })
       .parse(await req.json());
 
@@ -21,9 +22,9 @@ export const POST = async (req: NextRequest) => {
 
     const res = await prisma.contactSubmission.create({
       data: {
-        name,
         email,
         message,
+        name,
       },
     });
 

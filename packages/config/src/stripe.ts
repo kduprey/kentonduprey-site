@@ -3,7 +3,11 @@ import { z } from "zod";
 import { SERVER_SITE_URL } from "./serverConstants";
 
 export const stripe = new Stripe(
-  z.string().parse(process.env.STRIPE_SECRET_KEY),
+  z
+    .string({
+      message: "Environment variable STRIPE_SECRET_KEY is required",
+    })
+    .parse(process.env.STRIPE_SECRET_KEY),
   {
     apiVersion: "2024-06-20",
     typescript: true,

@@ -1,4 +1,5 @@
 import type { ProjectSectionType } from "@/sanity";
+
 import { ProjectCard } from "../ProjectCard";
 
 export const Projects = ({ headerText, projects }: ProjectSectionType) => {

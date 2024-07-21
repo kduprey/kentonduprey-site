@@ -1,13 +1,11 @@
-// ./app/api/draft/route.ts
-
+import { client, token } from "@/sanity";
 import { validatePreviewUrl } from "@sanity/preview-url-secret";
 import { draftMode } from "next/headers";
 import { redirect } from "next/navigation";
-import { client, token } from "@/sanity";
 
 const clientWithToken = client.withConfig({ token });
 
-export async function GET(request: Request) {
+export const GET = async (request: Request) => {
   const { isValid, redirectTo = "/" } = await validatePreviewUrl(
     clientWithToken,
     request.url,
@@ -18,4 +16,4 @@ export async function GET(request: Request) {
   draftMode().enable();
 
   redirect(redirectTo);
-}
+};
