@@ -21,6 +21,7 @@ module.exports = {
       "@vercel/style-guide/eslint/next",
     ].map(require.resolve),
     "turbo",
+    "plugin:perfectionist/recommended-natural",
   ],
   parserOptions: {
     project,
@@ -46,8 +47,9 @@ module.exports = {
     "json-files/require-license": "error",
     "json-files/restrict-ranges": "error",
     "json-files/sort-package-json": "error",
-
     "import/no-default-export": "off",
+    "import/sort-imports": "off",
+    "import/order": "off",
     "react/function-component-definition": [
       "error",
       {
@@ -70,6 +72,12 @@ module.exports = {
         selector:
           "CallExpression[callee.object.name='console'][callee.property.name!=/^(warn|error|info|trace|assert)$/]",
         message: "Unexpected property on console object was called",
+      },
+    ],
+    "react/no-unstable-nested-components": [
+      "error",
+      {
+        allowAsProps: true,
       },
     ],
   },
