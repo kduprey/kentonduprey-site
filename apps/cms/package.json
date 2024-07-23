@@ -37,6 +37,6 @@
     "@types/react": "18.3.3",
     "sanity": "^3.52.0",
     "styled-components": "^6.1.12",
-    "typescript": "5.5.3"
+    "typescript": "5.5.4"
   }
 }
