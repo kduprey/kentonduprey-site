@@ -28,7 +28,7 @@
     "@types/node": "^20.14.11",
     "prisma": "^5.17.0",
     "tsup": "^8.2.2",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   },
   "prisma": {
     "schema": "./prisma/schema.prisma"
