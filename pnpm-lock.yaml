@@ -30,8 +30,8 @@ importers:
         specifier: ^5.2.8
         version: 5.2.8(next@14.2.5(@babel/core@7.24.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@clerk/themes':
-        specifier: ^2.1.13
-        version: 2.1.13
+        specifier: ^2.1.14
+        version: 2.1.14
       '@kduprey/config':
         specifier: workspace:*
         version: link:../../packages/config
@@ -1265,12 +1265,8 @@ packages:
       react-dom:
         optional: true
 
-  '@clerk/themes@2.1.13':
-    resolution: {integrity: sha512-sX9jM8kZtImg71dRKENVdIXcue55tFD4RzNNpqLspfPB7Xa+06F1tUC7lIlRU9pGgkLyHmAg/qd3mnFA+TJyHg==}
-    engines: {node: '>=18.17.0'}
-
-  '@clerk/types@4.9.0':
-    resolution: {integrity: sha512-t+PDtVItnwit8u+YefMBVfJVdENdRAndMiIwGGJgnZ7+DyPjOwqomVy3VmcyycUdkdHcnx16UKm3a0rh2JQG/w==}
+  '@clerk/themes@2.1.14':
+    resolution: {integrity: sha512-j0nZ7cDmn5XBWg/bx8msvlPnoNZCTb6ovfhldvCxy0/VVn6v1zDwSgJM3hVVPKwdM20tNNMvhWrseS4248jgTg==}
     engines: {node: '>=18.17.0'}
 
   '@clerk/types@4.9.1':
@@ -11242,14 +11238,10 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@clerk/themes@2.1.13':
+  '@clerk/themes@2.1.14':
     dependencies:
-      '@clerk/types': 4.9.0
+      '@clerk/types': 4.9.1
       tslib: 2.4.1
-
-  '@clerk/types@4.9.0':
-    dependencies:
-      csstype: 3.1.1
 
   '@clerk/types@4.9.1':
     dependencies:
