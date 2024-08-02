@@ -28,7 +28,7 @@
     "@sanity/react-loader": "^1.10.4",
     "@sanity/webhook": "^4.0.4",
     "@sentry/nextjs": "^8",
-    "axios": "^1.7.2",
+    "axios": "^1.7.3",
     "jsonwebtoken": "^9.0.2",
     "next": "^14.2.5",
     "next-sanity": "^9.4.3",
