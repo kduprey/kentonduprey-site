@@ -38,7 +38,7 @@
     "server-only": "^0.0.1",
     "sharp": "^0.33.4",
     "zod": "^3.23.8",
-    "zod-validation-error": "^3.3.0"
+    "zod-validation-error": "^3.3.1"
   },
   "devDependencies": {
     "@kduprey/eslint-config": "workspace:*",
