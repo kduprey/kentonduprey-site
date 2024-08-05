@@ -30,8 +30,8 @@ importers:
         specifier: ^5.2.11
         version: 5.2.11(next@14.2.5(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@clerk/themes':
-        specifier: ^2.1.15
-        version: 2.1.15
+        specifier: ^2.1.16
+        version: 2.1.16
       '@kduprey/config':
         specifier: workspace:*
         version: link:../../packages/config
@@ -1265,12 +1265,16 @@ packages:
       react-dom:
         optional: true
 
-  '@clerk/themes@2.1.15':
-    resolution: {integrity: sha512-JpT82KfeZIABXcKZhvPObOymh0JleEHJv8wP62EHtVJFFGfU0Tny7Jmn7kA8e1Zjrp8kGkqx6+1m4woSr2pGbw==}
+  '@clerk/themes@2.1.16':
+    resolution: {integrity: sha512-ln+Un52L3ibx0Y0PUIDhYwUeCjdkTEL5vPfPxs78rTskCal9orVZ52YXwEs1+I/GIUBstFVB4cOLsuMKdkpdCw==}
     engines: {node: '>=18.17.0'}
 
   '@clerk/types@4.10.0':
     resolution: {integrity: sha512-Yy4m+aCrvVHT8BVNGDi40hcSUTwMf5o+cBHhAQQTofzCikc+DRI6yL7aYT6nf2YJ5gfm7WdeUwPM8Zz08TDzNA==}
+    engines: {node: '>=18.17.0'}
+
+  '@clerk/types@4.11.0':
+    resolution: {integrity: sha512-sMp3ATIH5ZoZ9veu9/LNH68GvahDm7sPLJf8xYyjc9hJYILz85xzI0JbwS6iFJw2NpTssvyl9viL7tgBrw46iA==}
     engines: {node: '>=18.17.0'}
 
   '@codemirror/autocomplete@6.17.0':
@@ -11243,12 +11247,16 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@clerk/themes@2.1.15':
+  '@clerk/themes@2.1.16':
     dependencies:
-      '@clerk/types': 4.10.0
+      '@clerk/types': 4.11.0
       tslib: 2.4.1
 
   '@clerk/types@4.10.0':
+    dependencies:
+      csstype: 3.1.1
+
+  '@clerk/types@4.11.0':
     dependencies:
       csstype: 3.1.1
 
