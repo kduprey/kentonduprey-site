@@ -27,7 +27,7 @@
     "@kduprey/tsconfig": "workspace:*",
     "@types/node": "^22.1.0",
     "@types/react": "18.3.3",
-    "postcss": "^8.4.40",
+    "postcss": "^8.4.41",
     "postcss-preset-mantine": "1.17.0",
     "postcss-simple-vars": "^7.0.1",
     "stylelint": "^16.8.1",
