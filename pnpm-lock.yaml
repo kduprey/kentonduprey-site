@@ -420,8 +420,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       eslint-plugin-perfectionist:
-        specifier: ^3.1.1
-        version: 3.1.1(eslint@8.57.0)(typescript@5.5.4)
+        specifier: ^3.1.2
+        version: 3.1.2(eslint@8.57.0)(typescript@5.5.4)
       eslint-plugin-storybook:
         specifier: ^0.8.0
         version: 0.8.0(eslint@8.57.0)(typescript@5.5.4)
@@ -5604,8 +5604,8 @@ packages:
     resolution: {integrity: sha512-2tktqUAT+Q3hCAU0iSf4xAN1k9zOpjK5WO8104mB0rT/dGhOa09582HN5HlbxNbPRZ0THV7nLGvzugcNOSjzfA==}
     engines: {node: '>=6'}
 
-  eslint-plugin-perfectionist@3.1.1:
-    resolution: {integrity: sha512-joaAPd2gVNV+Gm+xU6tqOxy9WlBcb/6TSCUaHLNSdhot/KcsyiKSzeTVToasrCPIxgqgGwcOy+AJaGaBhBwblw==}
+  eslint-plugin-perfectionist@3.1.2:
+    resolution: {integrity: sha512-YeqJBqDzbJdYy9u1Tc9ntVEziMiJ2nZ0dpG2DJCWEYpI0UkGKuiTGVep+5ZgQn8nn2/EeC6RSzfysmKiUesGPQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       astro-eslint-parser: ^1.0.2
@@ -16513,7 +16513,7 @@ snapshots:
 
   eslint-plugin-only-warn@1.1.0: {}
 
-  eslint-plugin-perfectionist@3.1.1(eslint@8.57.0)(typescript@5.5.4):
+  eslint-plugin-perfectionist@3.1.2(eslint@8.57.0)(typescript@5.5.4):
     dependencies:
       '@typescript-eslint/types': 8.0.0
       '@typescript-eslint/utils': 8.0.0(eslint@8.57.0)(typescript@5.5.4)
