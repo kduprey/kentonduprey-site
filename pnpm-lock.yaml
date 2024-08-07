@@ -91,8 +91,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/tsconfig
       '@prisma/nextjs-monorepo-workaround-plugin':
-        specifier: ^5.17.0
-        version: 5.17.0
+        specifier: ^5.18.0
+        version: 5.18.0
       '@storybook/addon-essentials':
         specifier: ^8.2.7
         version: 8.2.7(storybook@8.2.7(@babel/preset-env@7.24.7(@babel/core@7.25.2)))
@@ -2475,8 +2475,8 @@ packages:
   '@prisma/instrumentation@5.16.1':
     resolution: {integrity: sha512-4m5gRFWnQb8s/yTyGbMZkL7A5uJgqOWcWJxapwcAD0T0kh5sGPEVSQl/zTQvE9aduXhFAxOtC3gO+R8Hb5xO1Q==}
 
-  '@prisma/nextjs-monorepo-workaround-plugin@5.17.0':
-    resolution: {integrity: sha512-kZ7RA2NhANbgQXWb2T/QmeRW5+I+9XZRcWG6c2nFnA7YhAidXDv2QBctKhtB369m86HBy8m2TFa9fCfo/pmEYQ==}
+  '@prisma/nextjs-monorepo-workaround-plugin@5.18.0':
+    resolution: {integrity: sha512-BRTytLDKe0JR/+uOrGJTeGJA+EhdgBbDM5Su+AML7t0Pz5Zi+5bjE5nHxcFLIVm/bJjDXd06P8UVkTdK6PW0VQ==}
 
   '@radix-ui/primitive@1.1.0':
     resolution: {integrity: sha512-4Z8dn6Upk0qk4P74xBhZ6Hd/w0mPEzOOLxy4xiPXOXqjF7jZS0VAKk7/x/H6FyY2zCkYJqePf1G5KmkmNJ4RBA==}
@@ -12441,7 +12441,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@prisma/nextjs-monorepo-workaround-plugin@5.17.0': {}
+  '@prisma/nextjs-monorepo-workaround-plugin@5.18.0': {}
 
   '@radix-ui/primitive@1.1.0': {}
 
