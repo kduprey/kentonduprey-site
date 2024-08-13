@@ -251,8 +251,8 @@ importers:
         specifier: ^1.6.19
         version: 1.6.19(@sanity/client@6.21.1)
       '@sanity/react-loader':
-        specifier: ^1.10.5
-        version: 1.10.5(@sanity/client@6.21.1)(react@18.3.1)
+        specifier: ^1.10.6
+        version: 1.10.6(@sanity/client@6.21.1)(react@18.3.1)
       '@sanity/webhook':
         specifier: ^4.0.4
         version: 4.0.4
@@ -2775,11 +2775,11 @@ packages:
     resolution: {integrity: sha512-2TjYEvOftD0v7ukx3Csdh9QIu44P2z7NDJtlC3qITJRYV36J7R6Vfd3trVhFnN77/7CZrGjqngrtohv8VqO5nw==}
     engines: {node: '>=18.0.0'}
 
-  '@sanity/core-loader@1.6.21':
-    resolution: {integrity: sha512-eGoBGBRcH6cV8WoGnltaxOfUqCGRFRfWjACQbGG2oRSN5prEFi8cGHWnXp6otQpetfrj34p8QE5T42No8fIISg==}
+  '@sanity/core-loader@1.6.22':
+    resolution: {integrity: sha512-GBZy7zwn478BQ6QuH5SO2QCjnmTG/bvUKSNiGN0WNktvjfA2ACG3v5ORCTo9ParQ4Njc0SyobxjTmMxce0DyOA==}
     engines: {node: '>=18'}
     peerDependencies:
-      '@sanity/client': ^6.21.1
+      '@sanity/client': ^6.21.2
 
   '@sanity/diff-match-patch@3.1.1':
     resolution: {integrity: sha512-dSZqGeYjHKGIkqAzGqLcG92LZyJGX+nYbs/FWawhBbTBDWi21kvQ0hsL3DJThuFVWtZMWTQijN3z6Cnd44Pf2g==}
@@ -2892,11 +2892,11 @@ packages:
     peerDependencies:
       '@sanity/client': ^6.21.1
 
-  '@sanity/react-loader@1.10.5':
-    resolution: {integrity: sha512-VQ2f37aT9kb0MxA2OnO6R7bavvWJpYokj+MRyJgTPhlrrb3abeNnALjV/XwsN1mCEabq30CmQi7WP4PNMc1Cbw==}
+  '@sanity/react-loader@1.10.6':
+    resolution: {integrity: sha512-kQOIzChygYLGFE/cmVQfWaNWJLPEXz8j3cRkzLKcekSjnHNz304pIkGD8Lp+RQa9VYsmyx2+Vv0HTfE5GDbQXA==}
     engines: {node: '>=18'}
     peerDependencies:
-      '@sanity/client': ^6.21.1
+      '@sanity/client': ^6.21.2
       react: ^18.3 || >=19.0.0-rc
 
   '@sanity/schema@3.53.0':
@@ -12722,7 +12722,7 @@ snapshots:
 
   '@sanity/color@3.0.6': {}
 
-  '@sanity/core-loader@1.6.21(@sanity/client@6.21.1)':
+  '@sanity/core-loader@1.6.22(@sanity/client@6.21.1)':
     dependencies:
       '@sanity/client': 6.21.1(debug@4.3.6)
 
@@ -12901,10 +12901,10 @@ snapshots:
       '@sanity/client': 6.21.1(debug@4.3.6)
       '@sanity/uuid': 3.0.2
 
-  '@sanity/react-loader@1.10.5(@sanity/client@6.21.1)(react@18.3.1)':
+  '@sanity/react-loader@1.10.6(@sanity/client@6.21.1)(react@18.3.1)':
     dependencies:
       '@sanity/client': 6.21.1(debug@4.3.6)
-      '@sanity/core-loader': 1.6.21(@sanity/client@6.21.1)
+      '@sanity/core-loader': 1.6.22(@sanity/client@6.21.1)
       react: 18.3.1
 
   '@sanity/schema@3.53.0(debug@4.3.6)':
