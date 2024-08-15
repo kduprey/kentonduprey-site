@@ -28,7 +28,7 @@
     "barrelsby": "^2.8.1",
     "concurrently": "^8.2.2",
     "dotenv-cli": "^7.4.2",
-    "turbo": "^2.0.12"
+    "turbo": "^2.0.13"
   },
   "packageManager": "pnpm@9.5.0",
   "prisma": {
