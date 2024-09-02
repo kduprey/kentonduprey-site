@@ -30,7 +30,7 @@
     "@mantine/core": "7.12.1",
     "@mantine/form": "^7.12.2",
     "@mantine/hooks": "7.12.2",
-    "@mantine/notifications": "^7.12.1",
+    "@mantine/notifications": "^7.12.2",
     "@next/bundle-analyzer": "^14.2.7",
     "@tabler/icons": "^3.14.0",
     "@tabler/icons-react": "^3.14.0",
