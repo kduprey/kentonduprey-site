@@ -60,8 +60,8 @@ importers:
         specifier: ^14.2.8
         version: 14.2.8
       '@tabler/icons':
-        specifier: ^3.14.0
-        version: 3.14.0
+        specifier: ^3.15.0
+        version: 3.15.0
       '@tabler/icons-react':
         specifier: ^3.15.0
         version: 3.15.0(react@18.3.1)
@@ -3537,9 +3537,6 @@ packages:
     resolution: {integrity: sha512-EXIedaHiM4XcdZ8ml3pZeo5p/jetpXbwhDq9Zv3UVM8E3YACSww9TfCtEv3iBI74NI7mNz7Uua2qpNwwWljarg==}
     peerDependencies:
       react: '>= 16'
-
-  '@tabler/icons@3.14.0':
-    resolution: {integrity: sha512-OakKjK1kuDWKoNwdnHHVMt11kTZAC10iZpN/8o/CSYdeBH7S3v5n8IyqAYynFxLI8yBGTyBvljtvWdmWh57zSg==}
 
   '@tabler/icons@3.15.0':
     resolution: {integrity: sha512-Pzo7g8znsCgCcnSLCfukEV+kcfr0/VjBoCLXJtrOtaY94gtvYjWC2hrKzazf511asUflRuk/+dxztdKYJgpe4g==}
@@ -14043,8 +14040,6 @@ snapshots:
     dependencies:
       '@tabler/icons': 3.15.0
       react: 18.3.1
-
-  '@tabler/icons@3.14.0': {}
 
   '@tabler/icons@3.15.0': {}
 
