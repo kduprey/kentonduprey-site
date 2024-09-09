@@ -35,7 +35,7 @@
     "@next/bundle-analyzer": "^14.2.8",
     "@types/node": "^22.5.4",
     "@types/react": "18.3.5",
-    "sanity": "^3.57.0",
+    "sanity": "^3.57.1",
     "styled-components": "^6.1.13",
     "typescript": "5.5.4"
   }
