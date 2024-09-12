@@ -106,8 +106,8 @@ importers:
         specifier: ^8.3.0
         version: 8.3.0(esbuild@0.21.5)(next@14.2.10(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.25.2)))(type-fest@4.21.0)(typescript@5.6.2)(webpack-hot-middleware@2.26.1)(webpack@5.92.1(esbuild@0.21.5))
       '@storybook/preview-api':
-        specifier: ^8.2.9
-        version: 8.2.9(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.25.2)))
+        specifier: ^8.3.0
+        version: 8.3.0(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.25.2)))
       '@storybook/react':
         specifier: ^8.3.0
         version: 8.3.0(@storybook/test@8.3.0(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.25.2))))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.25.2)))(typescript@5.6.2)
@@ -3297,11 +3297,6 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
-
-  '@storybook/preview-api@8.2.9':
-    resolution: {integrity: sha512-D8/t+a78OJqQAcT/ABa1C4YM/OaLGQ9IvCsp3Q9ruUqDCwuZBj8bG3D4477dlY4owX2ycC0rWYu3VvuK0EmJjA==}
-    peerDependencies:
-      storybook: ^8.2.9
 
   '@storybook/preview-api@8.3.0':
     resolution: {integrity: sha512-pHq/T7oWBfzc9TCIPYyJQUXuiUiFfmdrcYvuZE1kf46i7wXh9Q2/Kd3BUJWSCpBXUMoYfAxg9YysGljMII8LWA==}
@@ -13697,10 +13692,6 @@ snapshots:
       - supports-color
       - uglify-js
       - webpack-cli
-
-  '@storybook/preview-api@8.2.9(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.25.2)))':
-    dependencies:
-      storybook: 8.2.9(@babel/preset-env@7.24.7(@babel/core@7.25.2))
 
   '@storybook/preview-api@8.3.0(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.25.2)))':
     dependencies:
