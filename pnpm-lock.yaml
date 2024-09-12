@@ -304,16 +304,16 @@ importers:
         version: 8.1.0(typescript@5.6.2)
       '@tailwindcss/aspect-ratio':
         specifier: ^0.4.2
-        version: 0.4.2(tailwindcss@3.4.10)
+        version: 0.4.2(tailwindcss@3.4.11)
       '@tailwindcss/forms':
         specifier: ^0.5.9
-        version: 0.5.9(tailwindcss@3.4.10)
+        version: 0.5.9(tailwindcss@3.4.11)
       '@tailwindcss/line-clamp':
         specifier: ^0.4.4
-        version: 0.4.4(tailwindcss@3.4.10)
+        version: 0.4.4(tailwindcss@3.4.11)
       '@tailwindcss/typography':
         specifier: ^0.5.15
-        version: 0.5.15(tailwindcss@3.4.10)
+        version: 0.5.15(tailwindcss@3.4.11)
       '@types/jsonwebtoken':
         specifier: ^9.0.6
         version: 9.0.6
@@ -333,8 +333,8 @@ importers:
         specifier: ^8.4.45
         version: 8.4.45
       tailwindcss:
-        specifier: ^3.4.10
-        version: 3.4.10
+        specifier: ^3.4.11
+        version: 3.4.11
       typescript:
         specifier: ^5.6.2
         version: 5.6.2
@@ -7551,10 +7551,6 @@ packages:
   micromark@4.0.0:
     resolution: {integrity: sha512-o/sd0nMof8kYff+TqcDx3VSrgBTcZpSvYcAHIfHhv5VAuNmisCxjhx6YmxS8PFEpb9z5WKWKPdzf0jM23ro3RQ==}
 
-  micromatch@4.0.7:
-    resolution: {integrity: sha512-LPP/3KorzCwBxfeUuZmaR6bG2kdeHSbe0P2tY3FLRU4vYrjYz5hI4QZwV0njUx3jeuKe67YukQ1LSPZBKDqO/Q==}
-    engines: {node: '>=8.6'}
-
   micromatch@4.0.8:
     resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
     engines: {node: '>=8.6'}
@@ -8335,10 +8331,6 @@ packages:
 
   postcss-selector-parser@6.0.10:
     resolution: {integrity: sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w==}
-    engines: {node: '>=4'}
-
-  postcss-selector-parser@6.1.1:
-    resolution: {integrity: sha512-b4dlw/9V8A71rLIDsSwVmak9z2DuBUB7CA1/wSdelNEzqsjoSPeADTWNO09lpH49Diy3/JIZ2bSPB1dI3LJCHg==}
     engines: {node: '>=4'}
 
   postcss-selector-parser@6.1.2:
@@ -9502,8 +9494,8 @@ packages:
     resolution: {integrity: sha512-w2sfv80nrAh2VCbqR5AK27wswXhqcck2AhfnNW76beQXskGZ1V12GwS//yYVa3d3fcvAip2OUnbDAjW2k3v9fA==}
     engines: {node: '>=10.0.0'}
 
-  tailwindcss@3.4.10:
-    resolution: {integrity: sha512-KWZkVPm7yJRhdu4SRSl9d4AK2wM3a50UsvgHZO7xY77NQr2V+fIrEuoDGQcbvswWvFGbS2f6e+jC/6WJm1Dl0w==}
+  tailwindcss@3.4.11:
+    resolution: {integrity: sha512-qhEuBcLemjSJk5ajccN9xJFtM/h0AVCPaA6C92jNP+M2J8kX+eMJHI7R2HFKUvvAsMpcfLILMCFYSeDwpMmlUg==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -12022,7 +12014,7 @@ snapshots:
       jest-util: 29.7.0
       jest-validate: 29.7.0
       jest-watcher: 29.7.0
-      micromatch: 4.0.7
+      micromatch: 4.0.8
       pretty-format: 29.7.0
       slash: 3.0.0
       strip-ansi: 6.0.1
@@ -14040,26 +14032,26 @@ snapshots:
 
   '@tabler/icons@3.16.0': {}
 
-  '@tailwindcss/aspect-ratio@0.4.2(tailwindcss@3.4.10)':
+  '@tailwindcss/aspect-ratio@0.4.2(tailwindcss@3.4.11)':
     dependencies:
-      tailwindcss: 3.4.10
+      tailwindcss: 3.4.11
 
-  '@tailwindcss/forms@0.5.9(tailwindcss@3.4.10)':
+  '@tailwindcss/forms@0.5.9(tailwindcss@3.4.11)':
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 3.4.10
+      tailwindcss: 3.4.11
 
-  '@tailwindcss/line-clamp@0.4.4(tailwindcss@3.4.10)':
+  '@tailwindcss/line-clamp@0.4.4(tailwindcss@3.4.11)':
     dependencies:
-      tailwindcss: 3.4.10
+      tailwindcss: 3.4.11
 
-  '@tailwindcss/typography@0.5.15(tailwindcss@3.4.10)':
+  '@tailwindcss/typography@0.5.15(tailwindcss@3.4.11)':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.4.10
+      tailwindcss: 3.4.11
 
   '@tanstack/react-table@8.19.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -18365,7 +18357,7 @@ snapshots:
       chalk: 4.1.2
       flow-parser: 0.239.0
       graceful-fs: 4.2.11
-      micromatch: 4.0.7
+      micromatch: 4.0.8
       neo-async: 2.6.2
       node-dir: 0.1.17
       recast: 0.23.9
@@ -19081,11 +19073,6 @@ snapshots:
       micromark-util-types: 2.0.0
     transitivePeerDependencies:
       - supports-color
-
-  micromatch@4.0.7:
-    dependencies:
-      braces: 3.0.3
-      picomatch: 2.3.1
 
   micromatch@4.0.8:
     dependencies:
@@ -19855,11 +19842,6 @@ snapshots:
       postcss: 8.4.45
 
   postcss-selector-parser@6.0.10:
-    dependencies:
-      cssesc: 3.0.0
-      util-deprecate: 1.0.2
-
-  postcss-selector-parser@6.1.1:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
@@ -21443,7 +21425,7 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
 
-  tailwindcss@3.4.10:
+  tailwindcss@3.4.11:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
@@ -21455,7 +21437,7 @@ snapshots:
       is-glob: 4.0.3
       jiti: 1.21.6
       lilconfig: 2.1.0
-      micromatch: 4.0.7
+      micromatch: 4.0.8
       normalize-path: 3.0.0
       object-hash: 3.0.0
       picocolors: 1.0.1
@@ -21464,7 +21446,7 @@ snapshots:
       postcss-js: 4.0.1(postcss@8.4.45)
       postcss-load-config: 4.0.2(postcss@8.4.45)
       postcss-nested: 6.0.1(postcss@8.4.45)
-      postcss-selector-parser: 6.1.1
+      postcss-selector-parser: 6.1.2
       resolve: 1.22.8
       sucrase: 3.35.0
     transitivePeerDependencies:
