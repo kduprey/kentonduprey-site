@@ -100,8 +100,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0(webpack@5.92.1(esbuild@0.23.0))
       '@storybook/blocks':
-        specifier: ^8.3.0
-        version: 8.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.1)
+        specifier: ^8.3.1
+        version: 8.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.1)
       '@storybook/nextjs':
         specifier: ^8.3.0
         version: 8.3.0(esbuild@0.23.0)(next@14.2.11(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.1)(type-fest@4.21.0)(typescript@5.6.2)(webpack-hot-middleware@2.26.1)(webpack@5.92.1(esbuild@0.23.0))
@@ -3146,6 +3146,18 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
       storybook: ^8.3.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+
+  '@storybook/blocks@8.3.1':
+    resolution: {integrity: sha512-/wNLRVWR/edzHQAFvSW68VxHYmBcfXpL/XdO46I5Z1X/tXUd0rtgGZmliQ2jZ242FqxcT8guqqFGehbeYUns5w==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+      storybook: ^8.3.1
     peerDependenciesMeta:
       react:
         optional: true
@@ -13124,6 +13136,27 @@ snapshots:
       storybook: 8.3.1
 
   '@storybook/blocks@8.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.1)':
+    dependencies:
+      '@storybook/csf': 0.1.11
+      '@storybook/global': 5.0.0
+      '@storybook/icons': 1.2.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@types/lodash': 4.17.6
+      color-convert: 2.0.1
+      dequal: 2.0.3
+      lodash: 4.17.21
+      markdown-to-jsx: 7.4.7(react@18.3.1)
+      memoizerific: 1.11.3
+      polished: 4.3.1
+      react-colorful: 5.6.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      storybook: 8.3.1
+      telejson: 7.2.0
+      ts-dedent: 2.2.0
+      util-deprecate: 1.0.2
+    optionalDependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@storybook/blocks@8.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.1)':
     dependencies:
       '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
