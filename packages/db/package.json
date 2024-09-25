@@ -20,7 +20,7 @@
   },
   "prettier": "@kduprey/eslint-config/prettier",
   "dependencies": {
-    "@prisma/client": "5.19.1"
+    "@prisma/client": "5.20.0"
   },
   "devDependencies": {
     "@kduprey/eslint-config": "workspace:*",
