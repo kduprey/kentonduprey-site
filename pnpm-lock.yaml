@@ -106,8 +106,8 @@ importers:
         specifier: ^8.3.2
         version: 8.3.2(esbuild@0.23.0)(next@14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.2)(type-fest@4.21.0)(typescript@5.6.2)(webpack-hot-middleware@2.26.1)(webpack@5.92.1(esbuild@0.23.0))
       '@storybook/preview-api':
-        specifier: ^8.3.2
-        version: 8.3.2(storybook@8.3.2)
+        specifier: ^8.3.3
+        version: 8.3.3(storybook@8.3.2)
       '@storybook/react':
         specifier: ^8.3.2
         version: 8.3.2(@storybook/test@8.3.2(storybook@8.3.2))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.2)(typescript@5.6.2)
@@ -3261,10 +3261,10 @@ packages:
       typescript:
         optional: true
 
-  '@storybook/preview-api@8.3.2':
-    resolution: {integrity: sha512-bZvqahrS5oXkiVmqt9rPhlpo/xYLKT7QUWKKIDBRJDp+1mYbQhgsP5NhjUtUdaC+HSofAFzJmVFmixyquYsoGw==}
+  '@storybook/preview-api@8.3.3':
+    resolution: {integrity: sha512-GP2QlaF3BBQGAyo248N7549YkTQjCentsc1hUvqPnFWU4xfjkejbnFk8yLaIw0VbYbL7jfd7npBtjZ+6AnphMQ==}
     peerDependencies:
-      storybook: ^8.3.2
+      storybook: ^8.3.3
 
   '@storybook/react-docgen-typescript-plugin@1.0.6--canary.9.0c3f3b7.0':
     resolution: {integrity: sha512-KUqXC3oa9JuQ0kZJLBhVdS4lOneKTOopnNBK4tUAgoxWQ3u/IjzdueZjFr7gyBrXMoU6duutk3RQR9u8ZpYJ4Q==}
@@ -13404,7 +13404,7 @@ snapshots:
       - uglify-js
       - webpack-cli
 
-  '@storybook/preview-api@8.3.2(storybook@8.3.2)':
+  '@storybook/preview-api@8.3.3(storybook@8.3.2)':
     dependencies:
       storybook: 8.3.2
 
@@ -13433,7 +13433,7 @@ snapshots:
       '@storybook/components': 8.3.2(storybook@8.3.2)
       '@storybook/global': 5.0.0
       '@storybook/manager-api': 8.3.2(storybook@8.3.2)
-      '@storybook/preview-api': 8.3.2(storybook@8.3.2)
+      '@storybook/preview-api': 8.3.3(storybook@8.3.2)
       '@storybook/react-dom-shim': 8.3.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.2)
       '@storybook/theming': 8.3.2(storybook@8.3.2)
       '@types/escodegen': 0.0.6
