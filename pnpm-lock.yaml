@@ -373,8 +373,8 @@ importers:
   packages/db:
     dependencies:
       '@prisma/client':
-        specifier: 5.19.1
-        version: 5.19.1(prisma@5.20.0)
+        specifier: 5.20.0
+        version: 5.20.0(prisma@5.20.0)
     devDependencies:
       '@kduprey/eslint-config':
         specifier: workspace:*
@@ -2414,8 +2414,8 @@ packages:
     resolution: {integrity: sha512-5xk5MSyQU9CrDho3Rsguj38jhijhD36Mk8S6mZo3huv6PM+t4M/5kJN2KFIxgvt4ONpvOEs1pVIZAV0cL0Vi+Q==}
     engines: {node: ^14.13.1 || >=16.0.0 || >=18.0.0}
 
-  '@prisma/client@5.19.1':
-    resolution: {integrity: sha512-x30GFguInsgt+4z5I4WbkZP2CGpotJMUXy+Gl/aaUjHn2o1DnLYNTA+q9XdYmAQZM8fIIkvUiA2NpgosM3fneg==}
+  '@prisma/client@5.20.0':
+    resolution: {integrity: sha512-CLv55ZuMuUawMsxoqxGtLT3bEZoa2W8L3Qnp6rDIFWy+ZBrUcOFKdoeGPSnbBqxc3SkdxJrF+D1veN/WNynZYA==}
     engines: {node: '>=16.13'}
     peerDependencies:
       prisma: '*'
@@ -12172,7 +12172,7 @@ snapshots:
 
   '@portabletext/types@2.0.13': {}
 
-  '@prisma/client@5.19.1(prisma@5.20.0)':
+  '@prisma/client@5.20.0(prisma@5.20.0)':
     optionalDependencies:
       prisma: 5.20.0
 
