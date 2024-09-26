@@ -49,7 +49,7 @@
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.15",
     "@types/jsonwebtoken": "^9.0.7",
-    "@types/node": "^22.7.0",
+    "@types/node": "^22.7.2",
     "@types/react": "^18.3.9",
     "@vercel/style-guide": "^6.0.0",
     "autoprefixer": "^10.4.20",
