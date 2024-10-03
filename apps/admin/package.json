@@ -41,7 +41,7 @@
     "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.2",
+    "@babel/core": "^7.25.7",
     "@kduprey/eslint-config": "workspace:*",
     "@kduprey/tsconfig": "workspace:*",
     "@prisma/nextjs-monorepo-workaround-plugin": "^5.20.0",
