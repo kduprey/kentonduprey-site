@@ -46,16 +46,16 @@ importers:
         version: link:../../packages/utils
       '@mantine/core':
         specifier: 7.13.2
-        version: 7.13.2(@mantine/hooks@7.13.1(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 7.13.2(@mantine/hooks@7.13.2(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@mantine/form':
         specifier: ^7.13.1
         version: 7.13.1(react@18.3.1)
       '@mantine/hooks':
-        specifier: 7.13.1
-        version: 7.13.1(react@18.3.1)
+        specifier: 7.13.2
+        version: 7.13.2(react@18.3.1)
       '@mantine/notifications':
         specifier: ^7.13.2
-        version: 7.13.2(@mantine/core@7.13.2(@mantine/hooks@7.13.1(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mantine/hooks@7.13.1(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 7.13.2(@mantine/core@7.13.2(@mantine/hooks@7.13.2(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mantine/hooks@7.13.2(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@next/bundle-analyzer':
         specifier: ^14.2.14
         version: 14.2.14
@@ -70,7 +70,7 @@ importers:
         version: 2.1.1
       mantine-datatable:
         specifier: ^7.12.4
-        version: 7.12.4(@mantine/core@7.13.2(@mantine/hooks@7.13.1(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mantine/hooks@7.13.1(react@18.3.1))(clsx@2.1.1)(react@18.3.1)
+        version: 7.12.4(@mantine/core@7.13.2(@mantine/hooks@7.13.2(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mantine/hooks@7.13.2(react@18.3.1))(clsx@2.1.1)(react@18.3.1)
       next:
         specifier: 14.2.14
         version: 14.2.14(@babel/core@7.25.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -445,10 +445,10 @@ importers:
     dependencies:
       '@mantine/core':
         specifier: 7.13.2
-        version: 7.13.2(@mantine/hooks@7.13.1(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 7.13.2(@mantine/hooks@7.13.2(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@mantine/hooks':
-        specifier: 7.13.1
-        version: 7.13.1(react@18.3.1)
+        specifier: 7.13.2
+        version: 7.13.2(react@18.3.1)
       '@tabler/icons-react':
         specifier: ^3.19.0
         version: 3.19.0(react@18.3.1)
@@ -2098,8 +2098,8 @@ packages:
     peerDependencies:
       react: ^18.2.0
 
-  '@mantine/hooks@7.13.1':
-    resolution: {integrity: sha512-Hfd4v380pPJUKDbARk+egdAanx7bpGZmaOn8G3QBZjwDufVopxip0WPkifUKUIMeYY1CTboa+1go9l56ZWrrSg==}
+  '@mantine/hooks@7.13.2':
+    resolution: {integrity: sha512-NKfGl2sKZw6zF//AfAFJrVDftjg7DKCn0h8rwJBIZCKi9axhwlV0Mvlqe2dep8QuM7O/uLLJSymSKIv1gaxIJg==}
     peerDependencies:
       react: ^18.2.0
 
@@ -3163,18 +3163,6 @@ packages:
     resolution: {integrity: sha512-FSWydoPiVWFXEittG7O1YgvuaqoU9Vb+qoq9XfP/hvQHHMDcMZvC40JaV8AnJeTXaM7ngIjcn9XDEfGbFfOzXw==}
     peerDependencies:
       storybook: ^8.3.5
-
-  '@storybook/blocks@8.3.4':
-    resolution: {integrity: sha512-1g4aCrd5CcN+pVhF2ATu9ZRVvAIgBMb2yF9KkCuTpdvqKDuDNK3sGb0CxjS7jp3LOvyjJr9laTOQsz8v8MQc5A==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
-      storybook: ^8.3.4
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
 
   '@storybook/blocks@8.3.5':
     resolution: {integrity: sha512-8cHTdTywolTHlgwN8I7YH7saWAIjGzV617AwjhJ95AKlC0VtpO1gAFcAgCqr4DU9eMc+LZuvbnaU/RSvA5eCCQ==}
@@ -11834,10 +11822,10 @@ snapshots:
     dependencies:
       '@lezer/common': 1.2.1
 
-  '@mantine/core@7.13.2(@mantine/hooks@7.13.1(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@mantine/core@7.13.2(@mantine/hooks@7.13.2(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@floating-ui/react': 0.26.19(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@mantine/hooks': 7.13.1(react@18.3.1)
+      '@mantine/hooks': 7.13.2(react@18.3.1)
       clsx: 2.1.1
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -11854,14 +11842,14 @@ snapshots:
       klona: 2.0.6
       react: 18.3.1
 
-  '@mantine/hooks@7.13.1(react@18.3.1)':
+  '@mantine/hooks@7.13.2(react@18.3.1)':
     dependencies:
       react: 18.3.1
 
-  '@mantine/notifications@7.13.2(@mantine/core@7.13.2(@mantine/hooks@7.13.1(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mantine/hooks@7.13.1(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@mantine/notifications@7.13.2(@mantine/core@7.13.2(@mantine/hooks@7.13.2(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mantine/hooks@7.13.2(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@mantine/core': 7.13.2(@mantine/hooks@7.13.1(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@mantine/hooks': 7.13.1(react@18.3.1)
+      '@mantine/core': 7.13.2(@mantine/hooks@7.13.2(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@mantine/hooks': 7.13.2(react@18.3.1)
       '@mantine/store': 7.13.2(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -13176,27 +13164,6 @@ snapshots:
     dependencies:
       memoizerific: 1.11.3
       storybook: 8.3.4
-
-  '@storybook/blocks@8.3.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)':
-    dependencies:
-      '@storybook/csf': 0.1.11
-      '@storybook/global': 5.0.0
-      '@storybook/icons': 1.2.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@types/lodash': 4.17.6
-      color-convert: 2.0.1
-      dequal: 2.0.3
-      lodash: 4.17.21
-      markdown-to-jsx: 7.4.7(react@18.3.1)
-      memoizerific: 1.11.3
-      polished: 4.3.1
-      react-colorful: 5.6.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      storybook: 8.3.4
-      telejson: 7.2.0
-      ts-dedent: 2.2.0
-      util-deprecate: 1.0.2
-    optionalDependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
 
   '@storybook/blocks@8.3.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)':
     dependencies:
@@ -18211,10 +18178,10 @@ snapshots:
     dependencies:
       tmpl: 1.0.5
 
-  mantine-datatable@7.12.4(@mantine/core@7.13.2(@mantine/hooks@7.13.1(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mantine/hooks@7.13.1(react@18.3.1))(clsx@2.1.1)(react@18.3.1):
+  mantine-datatable@7.12.4(@mantine/core@7.13.2(@mantine/hooks@7.13.2(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mantine/hooks@7.13.2(react@18.3.1))(clsx@2.1.1)(react@18.3.1):
     dependencies:
-      '@mantine/core': 7.13.2(@mantine/hooks@7.13.1(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@mantine/hooks': 7.13.1(react@18.3.1)
+      '@mantine/core': 7.13.2(@mantine/hooks@7.13.2(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@mantine/hooks': 7.13.2(react@18.3.1)
       clsx: 2.1.1
       react: 18.3.1
 
