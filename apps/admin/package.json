@@ -29,7 +29,7 @@
     "@kduprey/utils": "workspace:*",
     "@mantine/core": "7.13.2",
     "@mantine/form": "^7.13.1",
-    "@mantine/hooks": "7.13.1",
+    "@mantine/hooks": "7.13.2",
     "@mantine/notifications": "^7.13.2",
     "@next/bundle-analyzer": "^14.2.14",
     "@tabler/icons": "^3.19.0",
