@@ -345,8 +345,8 @@ importers:
         specifier: ^2.3.1
         version: 2.3.1
       stripe:
-        specifier: ^16.12.0
-        version: 16.12.0
+        specifier: ^17.1.0
+        version: 17.1.0
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -9046,8 +9046,8 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
 
-  stripe@16.12.0:
-    resolution: {integrity: sha512-H7eFVLDxeTNNSn4JTRfL2//LzCbDrMSZ+2q1c7CanVWgK2qIW5TwS+0V7N9KcKZZNpYh/uCqK0PyZh/2UsaAtQ==}
+  stripe@17.1.0:
+    resolution: {integrity: sha512-sNRsJx7LPP2Gg6cBJoHJqhr+UoBVZZRes2BDqbrg+1FDBxJc4Yn+LkrpJ/VnL3XQ3+6I5GrOUnSSFfE/joDFjw==}
     engines: {node: '>=12.*'}
 
   style-loader@3.3.4:
@@ -20560,7 +20560,7 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  stripe@16.12.0:
+  stripe@17.1.0:
     dependencies:
       '@types/node': 22.7.4
       qs: 6.12.2

@@ -17,7 +17,7 @@
     "publishContent": "pnpm --filter @kduprey/cms publishContent",
     "pullContent": "pnpm --filter @kduprey/cms pullContent",
     "start": "pnpm dlx turbo start",
-    "start:db:local": "docker-compose up -d && prisma migrate dev",
+    "start:db:local": "docker-compose up -d && dotenv -- pnpm --filter @kduprey/db migrate",
     "stop:db:local": "docker-compose down",
     "stripe:listen": "stripe listen -f $STRIPE_WEBHOOK_FW_URL -a",
     "test": "echo \"Error: no test specified\" && exit 1"
