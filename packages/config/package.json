@@ -16,7 +16,7 @@
   "prettier": "@kduprey/eslint-config/prettier",
   "dependencies": {
     "@bdsqqq/try": "^2.3.1",
-    "stripe": "^17.1.0",
+    "stripe": "^17.5.0",
     "zod": "^3.24.1"
   },
   "devDependencies": {
