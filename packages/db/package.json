@@ -27,7 +27,7 @@
     "@kduprey/tsconfig": "workspace:*",
     "@types/node": "^22.7.4",
     "prisma": "^5.20.0",
-    "tsup": "^8.3.0",
+    "tsup": "^8.3.5",
     "typescript": "^5.7.2"
   },
   "prisma": {

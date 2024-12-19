@@ -24,7 +24,7 @@
     "@kduprey/eslint-config": "workspace:*",
     "@kduprey/tsconfig": "workspace:*",
     "@types/node": "^22.7.4",
-    "tsup": "^8.3.0",
+    "tsup": "^8.3.5",
     "typescript": "5.7.2"
   }
 }
