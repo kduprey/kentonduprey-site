@@ -248,8 +248,8 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2
       '@sanity/preview-url-secret':
-        specifier: ^1.6.21
-        version: 1.6.21(@sanity/client@6.24.1)
+        specifier: ^2.0.5
+        version: 2.0.5(@sanity/client@6.24.1)
       '@sanity/react-loader':
         specifier: ^1.10.30
         version: 1.10.30(react@18.3.1)
@@ -3042,12 +3042,6 @@ packages:
     peerDependenciesMeta:
       react:
         optional: true
-
-  '@sanity/preview-url-secret@1.6.20':
-    resolution: {integrity: sha512-+UB02o1it0Dg7r73ewe+gyDAX/McmyJYcbEQYaEvwOi8VAxXUSyugyjJVKDIlljiyEkG8K4g3DV1tz2SL3N+tw==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      '@sanity/client': ^6.21.2
 
   '@sanity/preview-url-secret@1.6.21':
     resolution: {integrity: sha512-ZAIT4I5Nrsax+RBQVhSBY4PnnHgaI+eybSd5aHhjZi97+ziMTtTLnL1Hsg+ViLtPqJWwX0GiB0l8nSfGAt7+QA==}
@@ -13438,11 +13432,6 @@ snapshots:
     optionalDependencies:
       react: 18.3.1
 
-  '@sanity/preview-url-secret@1.6.20(@sanity/client@6.24.1)':
-    dependencies:
-      '@sanity/client': 6.24.1(debug@4.3.6)
-      '@sanity/uuid': 3.0.2
-
   '@sanity/preview-url-secret@1.6.21(@sanity/client@6.24.1)':
     dependencies:
       '@sanity/client': 6.24.1(debug@4.3.6)
@@ -20902,7 +20891,7 @@ snapshots:
     dependencies:
       '@sanity/icons': 2.11.8(react@18.3.1)
       '@sanity/incompatible-plugin': 1.0.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@sanity/preview-url-secret': 1.6.20(@sanity/client@6.24.1)
+      '@sanity/preview-url-secret': 1.6.21(@sanity/client@6.24.1)
       '@sanity/ui': 2.6.1(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       framer-motion: 11.0.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
