@@ -31,7 +31,7 @@
     "@mantine/form": "^7.15.1",
     "@mantine/hooks": "7.13.2",
     "@mantine/notifications": "^7.13.2",
-    "@next/bundle-analyzer": "^14.2.14",
+    "@next/bundle-analyzer": "^15.1.2",
     "@tabler/icons": "^3.26.0",
     "@tabler/icons-react": "^3.19.0",
     "clsx": "^2.1.1",
