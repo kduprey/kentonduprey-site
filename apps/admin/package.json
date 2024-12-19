@@ -44,7 +44,7 @@
     "@babel/core": "^7.26.0",
     "@kduprey/eslint-config": "workspace:*",
     "@kduprey/tsconfig": "workspace:*",
-    "@prisma/nextjs-monorepo-workaround-plugin": "^5.20.0",
+    "@prisma/nextjs-monorepo-workaround-plugin": "^6.1.0",
     "@storybook/addon-essentials": "^8.3.5",
     "@storybook/addon-styling-webpack": "^1.0.1",
     "@storybook/blocks": "^8.3.5",
