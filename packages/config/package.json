@@ -17,7 +17,7 @@
   "dependencies": {
     "@bdsqqq/try": "^2.3.1",
     "stripe": "^17.1.0",
-    "zod": "^3.23.8"
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@kduprey/eslint-config": "workspace:*",
