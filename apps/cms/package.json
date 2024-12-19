@@ -28,7 +28,7 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "sanity-plugin-iframe-pane": "^3.1.6",
-    "zod": "^3.23.8"
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@kduprey/eslint-config": "workspace:*",
