@@ -60,8 +60,8 @@ importers:
         specifier: ^14.2.14
         version: 14.2.14
       '@tabler/icons':
-        specifier: ^3.19.0
-        version: 3.19.0
+        specifier: ^3.26.0
+        version: 3.26.0
       '@tabler/icons-react':
         specifier: ^3.19.0
         version: 3.19.0(react@18.3.1)
@@ -3424,6 +3424,9 @@ packages:
 
   '@tabler/icons@3.19.0':
     resolution: {integrity: sha512-A4WEWqpdbTfnpFEtwXqwAe9qf9sp1yRPvzppqAuwcoF0q5YInqB+JkJtSFToCyBpPVeLxJUxxkapLvt2qQgnag==}
+
+  '@tabler/icons@3.26.0':
+    resolution: {integrity: sha512-oO3D4ss+DxzxqU1aDy0f1HmToyrO0gcQWIMpzHAfV1quPUx0BZYvNm5xz1DQb4DxNm/+xNvbBGLJy4pzTLYWag==}
 
   '@tailwindcss/aspect-ratio@0.4.2':
     resolution: {integrity: sha512-8QPrypskfBa7QIMuKHg2TA7BqES6vhBrDLOv8Unb6FcFyd3TjKbc6lcmb9UPQHxfl24sXoJ41ux/H7qQQvfaSQ==}
@@ -13616,6 +13619,8 @@ snapshots:
       react: 18.3.1
 
   '@tabler/icons@3.19.0': {}
+
+  '@tabler/icons@3.26.0': {}
 
   '@tailwindcss/aspect-ratio@0.4.2(tailwindcss@3.4.13)':
     dependencies:
