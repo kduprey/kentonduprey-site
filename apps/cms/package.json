@@ -21,7 +21,7 @@
     "@kduprey/config": "workspace:*",
     "@kduprey/tsconfig": "workspace:*",
     "@sanity/icons": "^3.5.6",
-    "@sanity/image-url": "^1.0.2",
+    "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.68.3",
     "next": "14.2.15",
     "next-sanity": "^9.8.28",
