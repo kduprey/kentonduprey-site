@@ -23,7 +23,7 @@
     "@icons-pack/react-simple-icons": "^10.0.0",
     "@kduprey/config": "workspace:*",
     "@kduprey/db": "workspace:*",
-    "@sanity/image-url": "^1.0.2",
+    "@sanity/image-url": "^1.1.0",
     "@sanity/preview-url-secret": "^2.0.5",
     "@sanity/react-loader": "^1.10.31",
     "@sanity/webhook": "^4.0.4",
