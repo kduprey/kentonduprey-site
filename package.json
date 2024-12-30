@@ -26,7 +26,7 @@
   "devDependencies": {
     "@kduprey/eslint-config": "workspace:*",
     "barrelsby": "^2.8.1",
-    "concurrently": "^9.1.0",
+    "concurrently": "^9.1.1",
     "dotenv-cli": "^8.0.0",
     "turbo": "^2.3.3"
   },
