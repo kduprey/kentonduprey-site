@@ -33,7 +33,7 @@
   "devDependencies": {
     "@kduprey/eslint-config": "workspace:*",
     "@next/bundle-analyzer": "^15.1.3",
-    "@types/node": "^22.10.2",
+    "@types/node": "^22.10.3",
     "@types/react": "18.3.11",
     "sanity": "^3.68.3",
     "styled-components": "^6.1.13",
