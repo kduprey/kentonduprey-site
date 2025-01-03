@@ -193,8 +193,8 @@ importers:
         specifier: 14.2.15
         version: 14.2.15(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-sanity:
-        specifier: ^9.8.30
-        version: 9.8.30(@sanity/client@6.24.1)(@sanity/icons@3.5.7(react@18.3.1))(@sanity/types@3.68.3(@types/react@18.3.11))(@sanity/ui@2.10.12(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(next@14.2.15(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sanity@3.68.3(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/node@22.10.5)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sugarss@4.0.1(postcss@8.4.49))(terser@5.31.1))(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+        specifier: ^9.8.31
+        version: 9.8.31(@sanity/client@6.24.1)(@sanity/icons@3.5.7(react@18.3.1))(@sanity/types@3.68.3(@types/react@18.3.11))(@sanity/ui@2.10.12(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(next@14.2.15(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sanity@3.68.3(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/node@22.10.5)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sugarss@4.0.1(postcss@8.4.49))(terser@5.31.1))(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -269,8 +269,8 @@ importers:
         specifier: ^14.2.15
         version: 14.2.15(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-sanity:
-        specifier: ^9.8.30
-        version: 9.8.30(@sanity/client@6.24.1)(@sanity/icons@3.5.7(react@18.3.1))(@sanity/types@3.68.3(@types/react@18.3.11))(@sanity/ui@2.10.12(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(next@14.2.15(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sanity@3.68.3(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/node@22.10.5)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sugarss@4.0.1(postcss@8.4.49))(terser@5.31.1))(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+        specifier: ^9.8.31
+        version: 9.8.31(@sanity/client@6.24.1)(@sanity/icons@3.5.7(react@18.3.1))(@sanity/types@3.68.3(@types/react@18.3.11))(@sanity/ui@2.10.12(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(next@14.2.15(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sanity@3.68.3(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/node@22.10.5)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sugarss@4.0.1(postcss@8.4.49))(terser@5.31.1))(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -3105,8 +3105,8 @@ packages:
       react: ^18 || ^19.0.0
       styled-components: ^6.1
 
-  '@sanity/visual-editing@2.11.2':
-    resolution: {integrity: sha512-sRPRKz9wgoTWapOLSojQq84xx3caHmDyte8HgjxzakuEl56dXKByUyX8CEuspV53UVaBtp0IAx+LkxZBCbuSbA==}
+  '@sanity/visual-editing@2.11.4':
+    resolution: {integrity: sha512-KN3Q7rYgCtFuLUlKFqVzIek0epPpmPwhYN6MGfE2ZVNa4/i0qiHkiU2rAQeXpX+9B2aaCeWfr/OoWKSgyWlJ2A==}
     engines: {node: '>=18'}
     peerDependencies:
       '@remix-run/react': '>= 2'
@@ -7721,12 +7721,12 @@ packages:
   neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
 
-  next-sanity@9.8.30:
-    resolution: {integrity: sha512-dvuGK35fZQww9hvxT3xFTyc3Zb5+8jEaVCYdOy6P282wmq/fju4Nop314vOfq+cUkuM6n4w+dR6V4oaeyzHnwA==}
+  next-sanity@9.8.31:
+    resolution: {integrity: sha512-5eofJX/35Rz1RU6UV0vhr+oeLoO9nUMONdQ23SavR9/8XAUVM3TWovWjOaa4nrAwih/veSVXOw50XvlNI7nTfg==}
     engines: {node: '>=18.18'}
     peerDependencies:
       '@sanity/client': ^6.24.1
-      '@sanity/icons': ^3.5.5
+      '@sanity/icons': ^3.5.6
       '@sanity/types': ^3.68.1
       '@sanity/ui': ^2.10.12
       next: ^14.2 || ^15.0.0-0
@@ -13525,7 +13525,7 @@ snapshots:
       - react-dom
       - react-is
 
-  '@sanity/visual-editing@2.11.2(@sanity/client@6.24.1)(next@14.2.15(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@sanity/visual-editing@2.11.4(@sanity/client@6.24.1)(next@14.2.15(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@sanity/comlink': 2.0.3
       '@sanity/mutate': 0.11.0-canary.4(xstate@5.19.0)
@@ -13533,7 +13533,6 @@ snapshots:
       '@vercel/stega': 0.1.2
       get-random-values-esm: 1.0.2
       react: 18.3.1
-      react-compiler-runtime: 19.0.0-beta-201e55d-20241215(react@18.3.1)
       react-dom: 18.3.1(react@18.3.1)
       rxjs: 7.8.1
       scroll-into-view-if-needed: 3.1.0
@@ -19423,7 +19422,7 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  next-sanity@9.8.30(@sanity/client@6.24.1)(@sanity/icons@3.5.7(react@18.3.1))(@sanity/types@3.68.3(@types/react@18.3.11))(@sanity/ui@2.10.12(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(next@14.2.15(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sanity@3.68.3(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/node@22.10.5)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sugarss@4.0.1(postcss@8.4.49))(terser@5.31.1))(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)):
+  next-sanity@9.8.31(@sanity/client@6.24.1)(@sanity/icons@3.5.7(react@18.3.1))(@sanity/types@3.68.3(@types/react@18.3.11))(@sanity/ui@2.10.12(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(next@14.2.15(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sanity@3.68.3(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/node@22.10.5)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sugarss@4.0.1(postcss@8.4.49))(terser@5.31.1))(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)):
     dependencies:
       '@portabletext/react': 3.2.0(react@18.3.1)
       '@sanity/client': 6.24.1(debug@4.4.0)
@@ -19433,7 +19432,7 @@ snapshots:
       '@sanity/preview-url-secret': 2.0.5(@sanity/client@6.24.1)
       '@sanity/types': 3.68.3(@types/react@18.3.11)(debug@4.4.0)
       '@sanity/ui': 2.10.12(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      '@sanity/visual-editing': 2.11.2(@sanity/client@6.24.1)(next@14.2.15(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@sanity/visual-editing': 2.11.4(@sanity/client@6.24.1)(next@14.2.15(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       groq: 3.68.3
       history: 5.3.0
       next: 14.2.15(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
