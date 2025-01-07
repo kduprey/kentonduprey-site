@@ -27,7 +27,7 @@
     "@kduprey/db": "workspace:*",
     "@kduprey/ui": "workspace:*",
     "@kduprey/utils": "workspace:*",
-    "@mantine/core": "7.15.2",
+    "@mantine/core": "7.15.3",
     "@mantine/form": "^7.15.2",
     "@mantine/hooks": "7.15.2",
     "@mantine/notifications": "^7.15.3",
