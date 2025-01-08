@@ -10099,10 +10099,6 @@ packages:
     resolution: {integrity: sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==}
     hasBin: true
 
-  uuid@11.0.3:
-    resolution: {integrity: sha512-d0z310fCWv5dJwnX1Y/MncBAqGMKEzlBb1AOf7z9K8ALnd0utBX/msg/fA0+sbyN1ihbMsLhrBlnl1ak7Wa0rg==}
-    hasBin: true
-
   uuid@11.0.4:
     resolution: {integrity: sha512-IzL6VtTTYcAhA/oghbFJ1Dkmqev+FpQWnCBaKq/gUluLxliWvO8DPFWfIviRmYbtaavtSQe4WBL++rFjdcGWEg==}
     hasBin: true
@@ -13115,7 +13111,7 @@ snapshots:
   '@sanity/comlink@2.0.3':
     dependencies:
       rxjs: 7.8.1
-      uuid: 11.0.3
+      uuid: 11.0.4
       xstate: 5.19.0
 
   '@sanity/comlink@2.0.4':
@@ -13332,7 +13328,7 @@ snapshots:
       rxjs: 7.8.1
       treeify: 1.1.0
       typescript: 5.7.2
-      uuid: 11.0.3
+      uuid: 11.0.4
       zod: 3.24.1
       zod-validation-error: 3.4.0(zod@3.24.1)
     transitivePeerDependencies:
@@ -22232,8 +22228,6 @@ snapshots:
   utila@0.4.0: {}
 
   uuid@10.0.0: {}
-
-  uuid@11.0.3: {}
 
   uuid@11.0.4: {}
 
