@@ -20,7 +20,7 @@
     "@mantine/hooks": "7.15.3",
     "@tabler/icons-react": "^3.28.1",
     "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react-dom": "19.0.0"
   },
   "devDependencies": {
     "@kduprey/eslint-config": "workspace:*",
