@@ -60,8 +60,8 @@ importers:
         specifier: ^15.1.4
         version: 15.1.4
       '@tabler/icons':
-        specifier: ^3.28.0
-        version: 3.28.0
+        specifier: ^3.28.1
+        version: 3.28.1
       '@tabler/icons-react':
         specifier: ^3.27.1
         version: 3.27.1(react@18.3.1)
@@ -3634,8 +3634,8 @@ packages:
   '@tabler/icons@3.27.1':
     resolution: {integrity: sha512-Utt80OeExBV/Pi9m9Z7ZRHOHQPapMO8t4mCSMb/n5oiLWCEU2HX+9mGzo772SVxyDZ3YQBgmzIYnGKhL3tUSSQ==}
 
-  '@tabler/icons@3.28.0':
-    resolution: {integrity: sha512-qLHCJsrMOqvxXG5rwlKxbbZ6HVBEzQQKpt4iVXQ00LbcgYek/tXfrqQiJ3wFGengfBvFZAPlSKYuifTPGiXRSw==}
+  '@tabler/icons@3.28.1':
+    resolution: {integrity: sha512-h7nqKEvFooLtFxhMOC1/2eiV+KRXhBUuDUUJrJlt6Ft6tuMw2eU/9GLQgrTk41DNmIEzp/LI83K9J9UUU8YBYQ==}
 
   '@tailwindcss/aspect-ratio@0.4.2':
     resolution: {integrity: sha512-8QPrypskfBa7QIMuKHg2TA7BqES6vhBrDLOv8Unb6FcFyd3TjKbc6lcmb9UPQHxfl24sXoJ41ux/H7qQQvfaSQ==}
@@ -14303,7 +14303,7 @@ snapshots:
 
   '@tabler/icons@3.27.1': {}
 
-  '@tabler/icons@3.28.0': {}
+  '@tabler/icons@3.28.1': {}
 
   '@tailwindcss/aspect-ratio@0.4.2(tailwindcss@3.4.17)':
     dependencies:
