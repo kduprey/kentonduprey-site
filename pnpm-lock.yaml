@@ -251,8 +251,8 @@ importers:
         specifier: ^2.0.7
         version: 2.0.7(@sanity/client@6.24.1)
       '@sanity/react-loader':
-        specifier: ^1.10.32
-        version: 1.10.32(react@18.3.1)
+        specifier: ^1.10.34
+        version: 1.10.34(react@18.3.1)
       '@sanity/webhook':
         specifier: ^4.0.4
         version: 4.0.4
@@ -2902,12 +2902,12 @@ packages:
     resolution: {integrity: sha512-ibYxXGlAssMZUHgL958W28rOetHuXSJjzhfj3T+ipI+scDhsGOZ9AjN5Gd3XENk2RdAE9hhzBJPttJKLpTw5YQ==}
     engines: {node: '>=18'}
 
-  '@sanity/comlink@2.0.4':
-    resolution: {integrity: sha512-ODjmZZJ4a4hiSK4TaQk2ysppIweIj6UNZ7o+fAkh7hotwcLxh+qTo8Rpb5yW2UfqGSAWTQDMcta9/4HAMWGfUA==}
+  '@sanity/comlink@3.0.0':
+    resolution: {integrity: sha512-R6oUq5GrLIldCCHFpVZbZt4Zuw9QWUeA1A1YhRJxifarTj+RDETIfDGenioKGvUAZeeVhADMooG33xzyQor45w==}
     engines: {node: '>=18'}
 
-  '@sanity/core-loader@1.7.23':
-    resolution: {integrity: sha512-vHZCy7uXboMk8PP1Vu3wRcrqFBnTHoiL1jUym70TNvwk+RtD/Hgmu6TnL5JT72DFL2h7NpXpFDx+KtOgdPGAjA==}
+  '@sanity/core-loader@1.7.25':
+    resolution: {integrity: sha512-0lj+wLjzaME2RSp1lXbZO3MBAfPCZ2M3rDfseb2S7dltDdhUxsphfobFqGC7DHWiAxKuhm4Ke8jskcejcfctSQ==}
     engines: {node: '>=18'}
 
   '@sanity/diff-match-patch@3.1.2':
@@ -3053,8 +3053,8 @@ packages:
     peerDependencies:
       '@sanity/client': ^6.24.1
 
-  '@sanity/react-loader@1.10.32':
-    resolution: {integrity: sha512-gBbb0gCr0dWDTdCulok9QGijBS67J8x3/On9IX3bD0xT7G/Pe/Fan8YuJ0KSe18g5IVI6d7Gbh//XtB+dy1qDg==}
+  '@sanity/react-loader@1.10.34':
+    resolution: {integrity: sha512-hr1HTnXIFEyx+ZrHmuvKo9HQeQkK9J4l07/x0oF6BzZsTqpf0J4DIFo7T04WnthSKWEGs1W/hwjdxOoOBUZ/Sw==}
     engines: {node: '>=18'}
     peerDependencies:
       react: ^18.3 || >=19.0.0-rc
@@ -13089,16 +13089,16 @@ snapshots:
       uuid: 11.0.4
       xstate: 5.19.0
 
-  '@sanity/comlink@2.0.4':
+  '@sanity/comlink@3.0.0':
     dependencies:
       rxjs: 7.8.1
       uuid: 11.0.4
       xstate: 5.19.1
 
-  '@sanity/core-loader@1.7.23':
+  '@sanity/core-loader@1.7.25':
     dependencies:
       '@sanity/client': 6.24.1(debug@4.4.0)
-      '@sanity/comlink': 2.0.4
+      '@sanity/comlink': 3.0.0
     transitivePeerDependencies:
       - debug
 
@@ -13369,10 +13369,10 @@ snapshots:
       '@sanity/client': 6.24.1(debug@4.4.0)
       '@sanity/uuid': 3.0.2
 
-  '@sanity/react-loader@1.10.32(react@18.3.1)':
+  '@sanity/react-loader@1.10.34(react@18.3.1)':
     dependencies:
       '@sanity/client': 6.24.1(debug@4.4.0)
-      '@sanity/core-loader': 1.7.23
+      '@sanity/core-loader': 1.7.25
       react: 18.3.1
     transitivePeerDependencies:
       - debug
