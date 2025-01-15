@@ -251,8 +251,8 @@ importers:
         specifier: ^2.1.0
         version: 2.1.0(@sanity/client@6.24.3)
       '@sanity/react-loader':
-        specifier: ^1.10.34
-        version: 1.10.34(react@18.3.1)
+        specifier: ^1.10.35
+        version: 1.10.35(react@18.3.1)
       '@sanity/webhook':
         specifier: ^4.0.4
         version: 4.0.4
@@ -2892,10 +2892,6 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  '@sanity/client@6.24.1':
-    resolution: {integrity: sha512-k5aW5C8RdqVGnvuX0KZ+AAIlhYueb6sx3edhKkIMmr2UfD8vSTSW3oAXVt+/WlBstlMIqvkc5RCLLWZQcF3gaA==}
-    engines: {node: '>=14.18'}
-
   '@sanity/client@6.24.3':
     resolution: {integrity: sha512-WfF6Gq2rCxv7n9IcWYRvtGpCYq4398MT303HJhwP/jf3jeU81OxWZ+ApGat37BOJ37tDZmhHxG3Pb1boDxA0EQ==}
     engines: {node: '>=14.18'}
@@ -2912,8 +2908,8 @@ packages:
     resolution: {integrity: sha512-R6oUq5GrLIldCCHFpVZbZt4Zuw9QWUeA1A1YhRJxifarTj+RDETIfDGenioKGvUAZeeVhADMooG33xzyQor45w==}
     engines: {node: '>=18'}
 
-  '@sanity/core-loader@1.7.25':
-    resolution: {integrity: sha512-0lj+wLjzaME2RSp1lXbZO3MBAfPCZ2M3rDfseb2S7dltDdhUxsphfobFqGC7DHWiAxKuhm4Ke8jskcejcfctSQ==}
+  '@sanity/core-loader@1.7.26':
+    resolution: {integrity: sha512-wNUYxeLX2lGlplybdQWI705fSmkQhXXwEXeflSwbGDT0dCobfEGStmiLHmq/cgxnOV00u2GVEyZ88q1f07k5wg==}
     engines: {node: '>=18'}
 
   '@sanity/diff-match-patch@3.1.2':
@@ -3059,8 +3055,8 @@ packages:
     peerDependencies:
       '@sanity/client': ^6.24.1
 
-  '@sanity/react-loader@1.10.34':
-    resolution: {integrity: sha512-hr1HTnXIFEyx+ZrHmuvKo9HQeQkK9J4l07/x0oF6BzZsTqpf0J4DIFo7T04WnthSKWEGs1W/hwjdxOoOBUZ/Sw==}
+  '@sanity/react-loader@1.10.35':
+    resolution: {integrity: sha512-6aDRJGJmiCbWciFzXvnOSP0ttvTM9WOdhcwoL4GKMK+zKJvvJwuTDa0R1d/8SRhay9NdMw4OUO40tpR2R4PGbQ==}
     engines: {node: '>=18'}
     peerDependencies:
       react: ^18.3 || >=19.0.0-rc
@@ -13072,14 +13068,6 @@ snapshots:
       - supports-color
       - typescript
 
-  '@sanity/client@6.24.1':
-    dependencies:
-      '@sanity/eventsource': 5.0.2
-      get-it: 8.6.6(debug@4.4.0)
-      rxjs: 7.8.1
-    transitivePeerDependencies:
-      - debug
-
   '@sanity/client@6.24.3(debug@4.4.0)':
     dependencies:
       '@sanity/eventsource': 5.0.2
@@ -13116,7 +13104,7 @@ snapshots:
       uuid: 11.0.4
       xstate: 5.19.1
 
-  '@sanity/core-loader@1.7.25':
+  '@sanity/core-loader@1.7.26':
     dependencies:
       '@sanity/client': 6.24.3(debug@4.4.0)
       '@sanity/comlink': 3.0.0
@@ -13392,10 +13380,10 @@ snapshots:
       '@sanity/client': 6.24.3(debug@4.4.0)
       '@sanity/uuid': 3.0.2
 
-  '@sanity/react-loader@1.10.34(react@18.3.1)':
+  '@sanity/react-loader@1.10.35(react@18.3.1)':
     dependencies:
-      '@sanity/client': 6.24.1
-      '@sanity/core-loader': 1.7.25
+      '@sanity/client': 6.24.3(debug@4.4.0)
+      '@sanity/core-loader': 1.7.26
       react: 18.3.1
     transitivePeerDependencies:
       - debug
