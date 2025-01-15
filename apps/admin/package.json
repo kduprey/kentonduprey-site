@@ -28,7 +28,7 @@
     "@kduprey/ui": "workspace:*",
     "@kduprey/utils": "workspace:*",
     "@mantine/core": "7.15.3",
-    "@mantine/form": "^7.15.3",
+    "@mantine/form": "^7.16.0",
     "@mantine/hooks": "7.15.3",
     "@mantine/notifications": "^7.15.3",
     "@next/bundle-analyzer": "^15.1.4",
