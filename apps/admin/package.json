@@ -45,7 +45,7 @@
     "@kduprey/eslint-config": "workspace:*",
     "@kduprey/tsconfig": "workspace:*",
     "@prisma/nextjs-monorepo-workaround-plugin": "^6.2.1",
-    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-essentials": "^8.5.0",
     "@storybook/addon-styling-webpack": "^1.0.1",
     "@storybook/blocks": "^8.4.7",
     "@storybook/nextjs": "^8.5.0",
