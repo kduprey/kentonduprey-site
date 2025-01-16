@@ -22,7 +22,7 @@
   "devDependencies": {
     "@kduprey/eslint-config": "workspace:*",
     "@kduprey/tsconfig": "workspace:*",
-    "@types/node": "^22.10.6",
+    "@types/node": "^22.10.7",
     "barrelsby": "^2.8.1",
     "tsup": "^8.3.5",
     "typescript": "^5.7.3"
