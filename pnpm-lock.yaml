@@ -248,8 +248,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       '@sanity/preview-url-secret':
-        specifier: ^2.1.0
-        version: 2.1.0(@sanity/client@6.25.0)
+        specifier: ^2.1.2
+        version: 2.1.2(@sanity/client@6.25.0)
       '@sanity/react-loader':
         specifier: ^1.10.37
         version: 1.10.37(@sanity/types@3.71.0(@types/react@18.3.11))(react@18.3.1)
@@ -3785,6 +3785,12 @@ packages:
     engines: {node: '>=18'}
     peerDependencies:
       '@sanity/client': ^6.24.1
+
+  '@sanity/preview-url-secret@2.1.2':
+    resolution: {integrity: sha512-oKxb5ugvTrwNePr9in7QdoXgORggj/ghWE74jykI89i8g5VbrAAM6Mp0p0K43o8/gPhEvqtja4GGzJpf4iBH5A==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@sanity/client': ^6.27.0
 
   '@sanity/react-loader@1.10.37':
     resolution: {integrity: sha512-CIg6/E+aWhgtkFK7fFg0SkFg8M2vMDvNxtMauT/SJcDR7/e1RDZXbJ4xajxElEdu4AjKXMEiOaJx7QsYh1kHTA==}
@@ -15149,6 +15155,11 @@ snapshots:
       '@sanity/client': 6.25.0(debug@4.4.0)
       '@sanity/uuid': 3.0.2
 
+  '@sanity/preview-url-secret@2.1.2(@sanity/client@6.25.0)':
+    dependencies:
+      '@sanity/client': 6.25.0(debug@4.4.0)
+      '@sanity/uuid': 3.0.2
+
   '@sanity/react-loader@1.10.37(@sanity/types@3.71.0(@types/react@18.3.11))(react@18.3.1)':
     dependencies:
       '@sanity/client': 6.25.0(debug@4.4.0)
@@ -15327,7 +15338,7 @@ snapshots:
       '@sanity/comlink': 3.0.1
       '@sanity/mutate': 0.11.0-canary.4(xstate@5.19.2)
       '@sanity/presentation-comlink': 1.0.1(@sanity/client@6.25.0)(@sanity/types@3.71.0(@types/react@18.3.11))
-      '@sanity/preview-url-secret': 2.1.0(@sanity/client@6.25.0)
+      '@sanity/preview-url-secret': 2.1.2(@sanity/client@6.25.0)
       '@sanity/visual-editing-csm': 1.0.0(@sanity/client@6.25.0)(@sanity/types@3.71.0(@types/react@18.3.11))
       '@vercel/stega': 0.1.2
       get-random-values-esm: 1.0.2
