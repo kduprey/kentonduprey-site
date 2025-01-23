@@ -25,7 +25,7 @@
     "@kduprey/db": "workspace:*",
     "@sanity/image-url": "^1.1.0",
     "@sanity/preview-url-secret": "^2.1.2",
-    "@sanity/react-loader": "^1.10.37",
+    "@sanity/react-loader": "^1.10.39",
     "@sanity/webhook": "^4.0.4",
     "@sentry/nextjs": "^8",
     "axios": "^1.7.9",
