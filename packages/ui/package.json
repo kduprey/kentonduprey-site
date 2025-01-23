@@ -19,14 +19,14 @@
     "@mantine/core": "7.16.1",
     "@mantine/hooks": "7.16.1",
     "@tabler/icons-react": "^3.29.0",
-    "react": "18.3.1",
+    "react": "19.0.0",
     "react-dom": "18.3.1"
   },
   "devDependencies": {
     "@kduprey/eslint-config": "workspace:*",
     "@kduprey/tsconfig": "workspace:*",
     "@types/node": "^22.10.9",
-    "@types/react": "18.3.11",
+    "@types/react": "19.0.7",
     "postcss": "^8.5.1",
     "postcss-preset-mantine": "1.17.0",
     "postcss-simple-vars": "^7.0.1",
