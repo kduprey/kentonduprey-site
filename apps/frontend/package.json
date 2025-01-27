@@ -20,7 +20,7 @@
   "prettier": "@kduprey/eslint-config/prettier",
   "dependencies": {
     "@bdsqqq/try": "^2.3.1",
-    "@icons-pack/react-simple-icons": "^11.1.0",
+    "@icons-pack/react-simple-icons": "^11.2.0",
     "@kduprey/config": "workspace:*",
     "@kduprey/db": "workspace:*",
     "@sanity/image-url": "^1.1.0",
