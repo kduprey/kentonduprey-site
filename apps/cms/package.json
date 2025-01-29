@@ -27,7 +27,7 @@
     "next-sanity": "^9.8.43",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "sanity-plugin-iframe-pane": "^3.1.6",
+    "sanity-plugin-iframe-pane": "^3.2.0",
     "zod": "^3.24.1"
   },
   "devDependencies": {
