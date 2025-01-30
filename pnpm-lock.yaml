@@ -30,8 +30,8 @@ importers:
         specifier: ^5.7.1
         version: 5.7.1(next@14.2.15(@babel/core@7.26.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@clerk/themes':
-        specifier: ^2.2.13
-        version: 2.2.13
+        specifier: ^2.2.14
+        version: 2.2.14
       '@kduprey/config':
         specifier: workspace:*
         version: link:../../packages/config
@@ -1692,16 +1692,16 @@ packages:
       react-dom:
         optional: true
 
-  '@clerk/themes@2.2.13':
-    resolution: {integrity: sha512-OIB5fiA7G60/jNIvjHoTwJhWWXVHCXD7Ww1DD939uCScJUmway5ThVH2idjg3Qo3R3gg1dBFFnxwOkY3jzSHQA==}
+  '@clerk/themes@2.2.14':
+    resolution: {integrity: sha512-7Kbk/cjWfKAZx/ZcYJOB4wJNUma5s0X6POmF1zOokI3LmTUi/PqFWXMuii1AFbMgk0PAm+l6m3I8xnx7HpwXUw==}
     engines: {node: '>=18.17.0'}
 
   '@clerk/types@4.25.0':
     resolution: {integrity: sha512-p2IyJ0q5WF1e976L1pS1J6Mb5ducfkUC31DR1EvMjPwJkrlWJdAMCPc+zqRRAePVy/JBVK2gEKbUVtJ6/jrpag==}
     engines: {node: '>=18.17.0'}
 
-  '@clerk/types@4.44.1':
-    resolution: {integrity: sha512-CP+ABOzzHkVVbFMTZpcf/hC2rewtVJOxeFBbvmK0p2emDJwp3tkyGhw03mrt4yiEpeEgdD3n+N0weEadVFu3mw==}
+  '@clerk/types@4.44.2':
+    resolution: {integrity: sha512-s0Nznnf7RjnkvkVXG+ahty88HfCPIoxLKMa6YfMt0alQ7KXeDouQlLKXexX5c1sX3FhcokYmBukVsbeoZAZdqA==}
     engines: {node: '>=18.17.0'}
 
   '@codemirror/autocomplete@6.18.4':
@@ -3612,15 +3612,6 @@ packages:
     resolution: {integrity: sha512-nl28J8RS6i8fBIhXUZv2bGU5FHEWQMvb175N00eCvbbZnhv/nvGGd/3OD83kPCuoMYnKM4440kj4+lRsjowbMg==}
     peerDependencies:
       '@types/react': 18 || 19
-
-  '@sanity/ui@2.11.4':
-    resolution: {integrity: sha512-QyIJbyzu2aC7ZE0XriTUvGxgbVJvMwxQfgUr7ctKqYJaDH34syzDpPfYUlBsWlHfNE+19js0wQnxQqkrn3DCig==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      react: ^18 || >=19.0.0-0
-      react-dom: ^18 || >=19.0.0-0
-      react-is: ^18 || >=19.0.0-0
-      styled-components: ^5.2 || ^6
 
   '@sanity/ui@2.11.7':
     resolution: {integrity: sha512-kXj5REjd3/gqGzNT4uwW+3VIdBZ+ytyHXLhQo+Y9Pyf4CGXE+B6jFx+F3vxafZrFd52uVavqPfgaV6zCwMhiTA==}
@@ -9188,11 +9179,6 @@ packages:
     peerDependencies:
       react: ^17.0.0 || ^18.0.0 || ^19.0.0 || ^0.0.0-experimental
 
-  react-compiler-runtime@19.0.0-beta-decd7b8-20250118:
-    resolution: {integrity: sha512-zHquorz7ZnawI9qNQd13mLecJiExZAiJgkrOkio+qmAZ+hJ1l1Bq9N8vmkc2wZ55ui/BlU3ylWH/pech3T93Rw==}
-    peerDependencies:
-      react: ^17.0.0 || ^18.0.0 || ^19.0.0 || ^0.0.0-experimental
-
   react-docgen-typescript@2.2.2:
     resolution: {integrity: sha512-tvg2ZtOpOi6QDwsb3GZhOjDkkX0h8Z2gipvTg6OVMUyoYoURhEiRNePT8NZItTVCDh39JJHnLdfCOkzoLbFnTg==}
     peerDependencies:
@@ -12670,16 +12656,16 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@clerk/themes@2.2.13':
+  '@clerk/themes@2.2.14':
     dependencies:
-      '@clerk/types': 4.44.1
+      '@clerk/types': 4.44.2
       tslib: 2.4.1
 
   '@clerk/types@4.25.0':
     dependencies:
       csstype: 3.1.1
 
-  '@clerk/types@4.44.1':
+  '@clerk/types@4.44.2':
     dependencies:
       csstype: 3.1.1
 
@@ -14752,23 +14738,6 @@ snapshots:
       '@types/react': 18.3.11
     transitivePeerDependencies:
       - debug
-
-  '@sanity/ui@2.11.4(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
-    dependencies:
-      '@floating-ui/react-dom': 2.1.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@sanity/color': 3.0.6
-      '@sanity/icons': 3.5.7(react@18.3.1)
-      csstype: 3.1.3
-      framer-motion: 11.18.2(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-compiler-runtime: 19.0.0-beta-decd7b8-20250118(react@18.3.1)
-      react-dom: 18.3.1(react@18.3.1)
-      react-is: 18.3.1
-      react-refractor: 2.2.0(react@18.3.1)
-      styled-components: 6.1.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      use-effect-event: 1.0.2(react@18.3.1)
-    transitivePeerDependencies:
-      - '@emotion/is-prop-valid'
 
   '@sanity/ui@2.11.7(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
     dependencies:
@@ -21688,10 +21657,6 @@ snapshots:
       react: 18.3.1
 
   react-compiler-runtime@19.0.0-beta-27714ef-20250124(react@18.3.1):
-    dependencies:
-      react: 18.3.1
-
-  react-compiler-runtime@19.0.0-beta-decd7b8-20250118(react@18.3.1):
     dependencies:
       react: 18.3.1
 
