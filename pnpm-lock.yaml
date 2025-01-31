@@ -251,8 +251,8 @@ importers:
         specifier: ^2.1.4
         version: 2.1.4(@sanity/client@6.27.2)
       '@sanity/react-loader':
-        specifier: ^1.10.40
-        version: 1.10.40(@sanity/types@3.72.1(@types/react@18.3.11))(react@18.3.1)
+        specifier: ^1.10.41
+        version: 1.10.41(@sanity/types@3.72.1(@types/react@18.3.11))(react@18.3.1)
       '@sanity/webhook':
         specifier: ^4.0.4
         version: 4.0.4
@@ -3464,8 +3464,8 @@ packages:
     resolution: {integrity: sha512-I1F57GKL69xoJUF9/4XTMvXFJZ7BnaFmTBIaiRvXaovJEZ677p5f+UkURPG/dd9L63+OnTV0SNmhTjIIzNexdw==}
     engines: {node: '>=18'}
 
-  '@sanity/core-loader@1.7.31':
-    resolution: {integrity: sha512-AwVDPUR0/kkRW+iXaATed3yvMUmnzBZoBSiopT3nyg8okv8G9t30Wo6gnuh066xh0fVIfulQzGrAIj6GSUOBMA==}
+  '@sanity/core-loader@1.7.32':
+    resolution: {integrity: sha512-gWxTvzXVPCcIWkTZ07oLq2D5/ngAWutfFyndQglds7GrIC2OJeTwslA0VLXJhWmW5hfmnlmT/RINwQYAlSrlHg==}
     engines: {node: '>=18'}
 
   '@sanity/diff-match-patch@3.2.0':
@@ -3583,8 +3583,8 @@ packages:
     peerDependencies:
       '@sanity/client': ^6.27.2
 
-  '@sanity/react-loader@1.10.40':
-    resolution: {integrity: sha512-PJRgKibOD9nlD1lDEoVCr2dg5mtFDs2pdveL144lj+3Hj8UBhxGIkUiKM5XwdD+mls9n7tIU78CO4XDRzBgWhA==}
+  '@sanity/react-loader@1.10.41':
+    resolution: {integrity: sha512-HkY7VOkk+7HgHye/e4BX5+UJxHarbWdlUXsHLExsIeSG9kwO0YhjefszEE2SFx9Tu8sHbCL/cuLuCgLyl0Hk+w==}
     engines: {node: '>=18'}
     peerDependencies:
       react: ^18.3 || >=19.0.0-rc
@@ -14440,7 +14440,7 @@ snapshots:
       uuid: 11.0.5
       xstate: 5.19.2
 
-  '@sanity/core-loader@1.7.31(@sanity/types@3.72.1(@types/react@18.3.11))':
+  '@sanity/core-loader@1.7.32(@sanity/types@3.72.1(@types/react@18.3.11))':
     dependencies:
       '@sanity/client': 6.27.2(debug@4.4.0)
       '@sanity/comlink': 3.0.1
@@ -14679,10 +14679,10 @@ snapshots:
       '@sanity/client': 6.27.2(debug@4.4.0)
       '@sanity/uuid': 3.0.2
 
-  '@sanity/react-loader@1.10.40(@sanity/types@3.72.1(@types/react@18.3.11))(react@18.3.1)':
+  '@sanity/react-loader@1.10.41(@sanity/types@3.72.1(@types/react@18.3.11))(react@18.3.1)':
     dependencies:
       '@sanity/client': 6.27.2(debug@4.4.0)
-      '@sanity/core-loader': 1.7.31(@sanity/types@3.72.1(@types/react@18.3.11))
+      '@sanity/core-loader': 1.7.32(@sanity/types@3.72.1(@types/react@18.3.11))
       '@sanity/visual-editing-csm': 2.0.2(@sanity/client@6.27.2)(@sanity/types@3.72.1(@types/react@18.3.11))
       react: 18.3.1
     transitivePeerDependencies:
