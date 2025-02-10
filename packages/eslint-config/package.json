@@ -26,7 +26,7 @@
     "eslint-plugin-only-warn": "^1.1.0",
     "eslint-plugin-perfectionist": "^4.8.0",
     "eslint-plugin-storybook": "^0.11.2",
-    "prettier": "^3.4.2",
+    "prettier": "^3.5.0",
     "prettier-plugin-groq": "^0.2.5",
     "prettier-plugin-packagejson": "^2.5.8"
   }
