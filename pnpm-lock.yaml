@@ -57,8 +57,8 @@ importers:
         specifier: ^7.16.3
         version: 7.16.3(@mantine/core@7.16.3(@mantine/hooks@7.16.3(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mantine/hooks@7.16.3(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@next/bundle-analyzer':
-        specifier: ^15.1.6
-        version: 15.1.6
+        specifier: ^15.1.7
+        version: 15.1.7
       '@tabler/icons':
         specifier: ^3.30.0
         version: 3.30.0
@@ -212,8 +212,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/eslint-config
       '@next/bundle-analyzer':
-        specifier: ^15.1.6
-        version: 15.1.6
+        specifier: ^15.1.7
+        version: 15.1.7
       '@types/node':
         specifier: ^22.13.1
         version: 22.13.1
@@ -2479,8 +2479,8 @@ packages:
   '@microsoft/tsdoc@0.15.1':
     resolution: {integrity: sha512-4aErSrCR/On/e5G2hDP0wjooqDdauzEbIq8hIkIe5pXV0rtWJZvdCEKL0ykZxex+IxIwBp0eGeV48hQN07dXtw==}
 
-  '@next/bundle-analyzer@15.1.6':
-    resolution: {integrity: sha512-hGzQyDqJzFHcHNCyTqM3o05BpVq5tGnRODccZBVJDBf5Miv/26UJPMB0wh9L9j3ylgHC+0/v8BaBnBBek1rC6Q==}
+  '@next/bundle-analyzer@15.1.7':
+    resolution: {integrity: sha512-tESiAwTUEpzzxKMLDbQuPHvD+PFDjY+0O3R4T5bpjIo0cr5fvppbbllQbtksQbBEquT55Eu8JmDoOlc9YFv6Kw==}
 
   '@next/env@14.2.15':
     resolution: {integrity: sha512-S1qaj25Wru2dUpcIZMjxeMVSwkt8BK4dmWHHiBuRstcIyOsMapqT4A4jSB6onvqeygkSSmOkyny9VVx8JIGamQ==}
@@ -13677,7 +13677,7 @@ snapshots:
 
   '@microsoft/tsdoc@0.15.1': {}
 
-  '@next/bundle-analyzer@15.1.6':
+  '@next/bundle-analyzer@15.1.7':
     dependencies:
       webpack-bundle-analyzer: 4.10.1
     transitivePeerDependencies:
