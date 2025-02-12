@@ -25,7 +25,7 @@
     "@sanity/vision": "^3.74.1",
     "next": "14.2.15",
     "next-sanity": "^9.8.55",
-    "react": "18.3.1",
+    "react": "19.0.0",
     "react-dom": "18.3.1",
     "sanity-plugin-iframe-pane": "^3.2.1",
     "zod": "^3.24.2"
@@ -34,7 +34,7 @@
     "@kduprey/eslint-config": "workspace:*",
     "@next/bundle-analyzer": "^15.1.7",
     "@types/node": "^22.13.1",
-    "@types/react": "18.3.11",
+    "@types/react": "19.0.8",
     "sanity": "^3.74.1",
     "styled-components": "^6.1.15",
     "typescript": "5.7.3"
