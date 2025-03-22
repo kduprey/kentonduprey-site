@@ -28,7 +28,7 @@ importers:
     dependencies:
       '@clerk/nextjs':
         specifier: ^5.7.1
-        version: 5.7.1(next@14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 5.7.1(next@14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@clerk/themes':
         specifier: ^2.2.17
         version: 2.2.19
@@ -72,8 +72,8 @@ importers:
         specifier: ^7.15.1
         version: 7.15.1(@mantine/core@7.16.3(@mantine/hooks@7.16.3(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mantine/hooks@7.16.3(react@18.3.1))(clsx@2.1.1)(react@18.3.1)
       next:
-        specifier: 14.2.15
-        version: 14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 14.2.25
+        version: 14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -104,7 +104,7 @@ importers:
         version: 8.5.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.5.8(prettier@3.5.2))
       '@storybook/nextjs':
         specifier: ^8.5.4
-        version: 8.5.8(esbuild@0.24.2)(next@14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.5.8(prettier@3.5.2))(type-fest@4.33.0)(typescript@5.7.3)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(esbuild@0.24.2))
+        version: 8.5.8(esbuild@0.24.2)(next@14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.5.8(prettier@3.5.2))(type-fest@4.33.0)(typescript@5.7.3)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(esbuild@0.24.2))
       '@storybook/preview-api':
         specifier: ^8.5.3
         version: 8.5.8(storybook@8.5.8(prettier@3.5.2))
@@ -190,11 +190,11 @@ importers:
         specifier: ^3.75.0
         version: 3.77.0(@babel/runtime@7.26.7)(@codemirror/lint@6.8.4)(@codemirror/theme-one-dark@6.1.2)(@emotion/is-prop-valid@1.2.2)(codemirror@6.0.1)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       next:
-        specifier: 14.2.15
-        version: 14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 14.2.25
+        version: 14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-sanity:
         specifier: ^9.8.55
-        version: 9.8.59(@emotion/is-prop-valid@1.2.2)(@sanity/client@6.28.1)(@sanity/icons@3.5.7(react@18.3.1))(@sanity/types@3.77.0(@types/react@18.3.11))(@sanity/ui@2.14.3(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(next@14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(sanity@3.77.0(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/node@22.13.5)(@types/react@18.3.11)(jiti@1.21.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sugarss@4.0.1(postcss@8.5.3))(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+        version: 9.8.59(@emotion/is-prop-valid@1.2.2)(@sanity/client@6.28.1)(@sanity/icons@3.5.7(react@18.3.1))(@sanity/types@3.77.0(@types/react@18.3.11))(@sanity/ui@2.14.3(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(next@14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(sanity@3.77.0(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/node@22.13.5)(@types/react@18.3.11)(jiti@1.21.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sugarss@4.0.1(postcss@8.5.3))(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -258,7 +258,7 @@ importers:
         version: 4.0.4
       '@sentry/nextjs':
         specifier: ^9
-        version: 9.2.0(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(next@14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(webpack@5.97.1)
+        version: 9.2.0(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(next@14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(webpack@5.97.1)
       axios:
         specifier: ^1.8.2
         version: 1.8.2
@@ -266,11 +266,11 @@ importers:
         specifier: ^9.0.2
         version: 9.0.2
       next:
-        specifier: ^14.2.15
-        version: 14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^14.2.25
+        version: 14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-sanity:
         specifier: ^9.8.55
-        version: 9.8.59(@emotion/is-prop-valid@1.2.2)(@sanity/client@6.28.1)(@sanity/icons@3.6.0(react@18.3.1))(@sanity/types@3.77.0(@types/react@18.3.11))(@sanity/ui@2.14.3(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(next@14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(sanity@3.77.0(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/node@22.13.5)(@types/react@18.3.11)(jiti@1.21.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sugarss@4.0.1(postcss@8.5.3))(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+        version: 9.8.59(@emotion/is-prop-valid@1.2.2)(@sanity/client@6.28.1)(@sanity/icons@3.6.0(react@18.3.1))(@sanity/types@3.77.0(@types/react@18.3.11))(@sanity/ui@2.14.3(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(next@14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(sanity@3.77.0(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/node@22.13.5)(@types/react@18.3.11)(jiti@1.21.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sugarss@4.0.1(postcss@8.5.3))(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -398,8 +398,8 @@ importers:
   packages/eslint-config:
     dependencies:
       next:
-        specifier: 14.2.15
-        version: 14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 14.2.25
+        version: 14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
       '@next/eslint-plugin-next':
         specifier: ^15.1.7
@@ -438,8 +438,8 @@ importers:
   packages/tsconfig:
     dependencies:
       next:
-        specifier: 14.2.15
-        version: 14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 14.2.25
+        version: 14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
   packages/ui:
     dependencies:
@@ -2520,8 +2520,8 @@ packages:
   '@next/bundle-analyzer@15.1.7':
     resolution: {integrity: sha512-tESiAwTUEpzzxKMLDbQuPHvD+PFDjY+0O3R4T5bpjIo0cr5fvppbbllQbtksQbBEquT55Eu8JmDoOlc9YFv6Kw==}
 
-  '@next/env@14.2.15':
-    resolution: {integrity: sha512-S1qaj25Wru2dUpcIZMjxeMVSwkt8BK4dmWHHiBuRstcIyOsMapqT4A4jSB6onvqeygkSSmOkyny9VVx8JIGamQ==}
+  '@next/env@14.2.25':
+    resolution: {integrity: sha512-JnzQ2cExDeG7FxJwqAksZ3aqVJrHjFwZQAEJ9gQZSoEhIow7SNoKZzju/AwQ+PLIR4NY8V0rhcVozx/2izDO0w==}
 
   '@next/eslint-plugin-next@14.2.14':
     resolution: {integrity: sha512-kV+OsZ56xhj0rnTn6HegyTGkoa16Mxjrpk7pjWumyB2P8JVQb8S9qtkjy/ye0GnTr4JWtWG4x/2qN40lKZ3iVQ==}
@@ -2529,56 +2529,56 @@ packages:
   '@next/eslint-plugin-next@15.1.7':
     resolution: {integrity: sha512-kRP7RjSxfTO13NE317ek3mSGzoZlI33nc/i5hs1KaWpK+egs85xg0DJ4p32QEiHnR0mVjuUfhRIun7awqfL7pQ==}
 
-  '@next/swc-darwin-arm64@14.2.15':
-    resolution: {integrity: sha512-Rvh7KU9hOUBnZ9TJ28n2Oa7dD9cvDBKua9IKx7cfQQ0GoYUwg9ig31O2oMwH3wm+pE3IkAQ67ZobPfEgurPZIA==}
+  '@next/swc-darwin-arm64@14.2.25':
+    resolution: {integrity: sha512-09clWInF1YRd6le00vt750s3m7SEYNehz9C4PUcSu3bAdCTpjIV4aTYQZ25Ehrr83VR1rZeqtKUPWSI7GfuKZQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
 
-  '@next/swc-darwin-x64@14.2.15':
-    resolution: {integrity: sha512-5TGyjFcf8ampZP3e+FyCax5zFVHi+Oe7sZyaKOngsqyaNEpOgkKB3sqmymkZfowy3ufGA/tUgDPPxpQx931lHg==}
+  '@next/swc-darwin-x64@14.2.25':
+    resolution: {integrity: sha512-V+iYM/QR+aYeJl3/FWWU/7Ix4b07ovsQ5IbkwgUK29pTHmq+5UxeDr7/dphvtXEq5pLB/PucfcBNh9KZ8vWbug==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
 
-  '@next/swc-linux-arm64-gnu@14.2.15':
-    resolution: {integrity: sha512-3Bwv4oc08ONiQ3FiOLKT72Q+ndEMyLNsc/D3qnLMbtUYTQAmkx9E/JRu0DBpHxNddBmNT5hxz1mYBphJ3mfrrw==}
+  '@next/swc-linux-arm64-gnu@14.2.25':
+    resolution: {integrity: sha512-LFnV2899PJZAIEHQ4IMmZIgL0FBieh5keMnriMY1cK7ompR+JUd24xeTtKkcaw8QmxmEdhoE5Mu9dPSuDBgtTg==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
 
-  '@next/swc-linux-arm64-musl@14.2.15':
-    resolution: {integrity: sha512-k5xf/tg1FBv/M4CMd8S+JL3uV9BnnRmoe7F+GWC3DxkTCD9aewFRH1s5rJ1zkzDa+Do4zyN8qD0N8c84Hu96FQ==}
+  '@next/swc-linux-arm64-musl@14.2.25':
+    resolution: {integrity: sha512-QC5y5PPTmtqFExcKWKYgUNkHeHE/z3lUsu83di488nyP0ZzQ3Yse2G6TCxz6nNsQwgAx1BehAJTZez+UQxzLfw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
 
-  '@next/swc-linux-x64-gnu@14.2.15':
-    resolution: {integrity: sha512-kE6q38hbrRbKEkkVn62reLXhThLRh6/TvgSP56GkFNhU22TbIrQDEMrO7j0IcQHcew2wfykq8lZyHFabz0oBrA==}
+  '@next/swc-linux-x64-gnu@14.2.25':
+    resolution: {integrity: sha512-y6/ML4b9eQ2D/56wqatTJN5/JR8/xdObU2Fb1RBidnrr450HLCKr6IJZbPqbv7NXmje61UyxjF5kvSajvjye5w==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
 
-  '@next/swc-linux-x64-musl@14.2.15':
-    resolution: {integrity: sha512-PZ5YE9ouy/IdO7QVJeIcyLn/Rc4ml9M2G4y3kCM9MNf1YKvFY4heg3pVa/jQbMro+tP6yc4G2o9LjAz1zxD7tQ==}
+  '@next/swc-linux-x64-musl@14.2.25':
+    resolution: {integrity: sha512-sPX0TSXHGUOZFvv96GoBXpB3w4emMqKeMgemrSxI7A6l55VBJp/RKYLwZIB9JxSqYPApqiREaIIap+wWq0RU8w==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
 
-  '@next/swc-win32-arm64-msvc@14.2.15':
-    resolution: {integrity: sha512-2raR16703kBvYEQD9HNLyb0/394yfqzmIeyp2nDzcPV4yPjqNUG3ohX6jX00WryXz6s1FXpVhsCo3i+g4RUX+g==}
+  '@next/swc-win32-arm64-msvc@14.2.25':
+    resolution: {integrity: sha512-ReO9S5hkA1DU2cFCsGoOEp7WJkhFzNbU/3VUF6XxNGUCQChyug6hZdYL/istQgfT/GWE6PNIg9cm784OI4ddxQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
 
-  '@next/swc-win32-ia32-msvc@14.2.15':
-    resolution: {integrity: sha512-fyTE8cklgkyR1p03kJa5zXEaZ9El+kDNM5A+66+8evQS5e/6v0Gk28LqA0Jet8gKSOyP+OTm/tJHzMlGdQerdQ==}
+  '@next/swc-win32-ia32-msvc@14.2.25':
+    resolution: {integrity: sha512-DZ/gc0o9neuCDyD5IumyTGHVun2dCox5TfPQI/BJTYwpSNYM3CZDI4i6TOdjeq1JMo+Ug4kPSMuZdwsycwFbAw==}
     engines: {node: '>= 10'}
     cpu: [ia32]
     os: [win32]
 
-  '@next/swc-win32-x64-msvc@14.2.15':
-    resolution: {integrity: sha512-SzqGbsLsP9OwKNUG9nekShTwhj6JSB9ZLMWQ8g1gG6hdE5gQLncbnbymrwy2yVmH9nikSLYRYxYMFu78Ggp7/g==}
+  '@next/swc-win32-x64-msvc@14.2.25':
+    resolution: {integrity: sha512-KSznmS6eFjQ9RJ1nEc66kJvtGIL1iZMYmGEXsZPh2YtnLtqrgdVvKXJY2ScjjoFnG6nGLyPFR0UiEvDwVah4Tw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -5436,11 +5436,8 @@ packages:
   caniuse-lite@1.0.30001649:
     resolution: {integrity: sha512-fJegqZZ0ZX8HOWr6rcafGr72+xcgJKI9oWfDW5DrD7ExUtgZC7a7R7ZYmZqplh7XDocFdGeIFn7roAxhOeYrPQ==}
 
-  caniuse-lite@1.0.30001666:
-    resolution: {integrity: sha512-gD14ICmoV5ZZM1OdzPWmpx+q4GyefaK06zi8hmfHV5xe4/2nOQX3+Dw5o+fSqOws2xVwL9j+anOPFwHzdEdV4g==}
-
-  caniuse-lite@1.0.30001695:
-    resolution: {integrity: sha512-vHyLade6wTgI2u1ec3WQBxv+2BrTERV28UXQu9LO6lZ9pYeMk34vjXFLOxo1A4UBA8XTL4njRQZdno/yYaSmWw==}
+  caniuse-lite@1.0.30001706:
+    resolution: {integrity: sha512-3ZczoTApMAZwPKYWmwVbQMFpXBDds3/0VciVoUwPUbldlYyVLmRVuRs/PcUZtHpbLRpzzDvrvnFuREsGt6lUug==}
 
   case-sensitive-paths-webpack-plugin@2.4.0:
     resolution: {integrity: sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==}
@@ -8435,13 +8432,18 @@ packages:
     resolution: {integrity: sha512-zoTNyBafxG0+F5PP3T3j1PKMr7gedriSdYRhLFLRFCz0OnQfQ6BkVk9peXVF30hz633Bw0Zh5McleOrXPjWYCQ==}
     engines: {node: '>=18'}
 
+  nanoid@3.3.11:
+    resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==}
+    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
+    hasBin: true
+
   nanoid@3.3.8:
     resolution: {integrity: sha512-WNLf5Sd8oZxOm+TzppcYk8gVOgP+l58xNy58D0nbUnOxOWRWvlcCV4kUF7ltmI6PsrLl/BgKEyS4mqsGChFN0w==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  nanoid@5.0.9:
-    resolution: {integrity: sha512-Aooyr6MXU6HpvvWXKoVoXwKMs/KyVakWwg7xQfv5/S/RIgJMy0Ifa45H9qqYy7pTCszrHzP21Uk4PZq2HpEM8Q==}
+  nanoid@5.1.5:
+    resolution: {integrity: sha512-Ir/+ZpE9fDsNH0hQ3C68uyThDXzYcim2EqcZ8zn8Chtt1iylPT9xXJB0kPCnqzgcEGikO9RxSrh63MsmVCU7Fw==}
     engines: {node: ^18 || >=20}
     hasBin: true
 
@@ -8468,8 +8470,8 @@ packages:
       sanity: ^3.76.1
       styled-components: ^6.1
 
-  next@14.2.15:
-    resolution: {integrity: sha512-h9ctmOokpoDphRvMGnwOJAedT6zKhwqyZML9mDtspgf4Rh3Pn7UTYKqePNoDvhsWBAO5GoPNYshnAUGIazVGmw==}
+  next@14.2.25:
+    resolution: {integrity: sha512-N5M7xMc4wSb4IkPvEV5X2BRRXUmhVHNyaXwEM86+voXthSZz8ZiRyQW4p9mwAoAPIm6OzuVZtn7idgEJeAJN3Q==}
     engines: {node: '>=18.17.0'}
     hasBin: true
     peerDependencies:
@@ -12795,14 +12797,14 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       tslib: 2.4.1
 
-  '@clerk/nextjs@5.7.1(next@14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@clerk/nextjs@5.7.1(next@14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@clerk/backend': 1.13.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@clerk/clerk-react': 5.11.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@clerk/shared': 2.9.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@clerk/types': 4.25.0
       crypto-js: 4.2.0
-      next: 14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next: 14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       server-only: 0.0.1
@@ -13638,7 +13640,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@next/env@14.2.15': {}
+  '@next/env@14.2.25': {}
 
   '@next/eslint-plugin-next@14.2.14':
     dependencies:
@@ -13649,31 +13651,31 @@ snapshots:
     dependencies:
       fast-glob: 3.3.1
 
-  '@next/swc-darwin-arm64@14.2.15':
+  '@next/swc-darwin-arm64@14.2.25':
     optional: true
 
-  '@next/swc-darwin-x64@14.2.15':
+  '@next/swc-darwin-x64@14.2.25':
     optional: true
 
-  '@next/swc-linux-arm64-gnu@14.2.15':
+  '@next/swc-linux-arm64-gnu@14.2.25':
     optional: true
 
-  '@next/swc-linux-arm64-musl@14.2.15':
+  '@next/swc-linux-arm64-musl@14.2.25':
     optional: true
 
-  '@next/swc-linux-x64-gnu@14.2.15':
+  '@next/swc-linux-x64-gnu@14.2.25':
     optional: true
 
-  '@next/swc-linux-x64-musl@14.2.15':
+  '@next/swc-linux-x64-musl@14.2.25':
     optional: true
 
-  '@next/swc-win32-arm64-msvc@14.2.15':
+  '@next/swc-win32-arm64-msvc@14.2.25':
     optional: true
 
-  '@next/swc-win32-ia32-msvc@14.2.15':
+  '@next/swc-win32-ia32-msvc@14.2.25':
     optional: true
 
-  '@next/swc-win32-x64-msvc@14.2.15':
+  '@next/swc-win32-x64-msvc@14.2.25':
     optional: true
 
   '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
@@ -14096,7 +14098,7 @@ snapshots:
 
   '@polka/url@1.0.0-next.28': {}
 
-  '@portabletext/block-tools@1.1.9(@sanity/types@3.77.0(@types/react@18.3.11))(@types/react@18.3.11)':
+  '@portabletext/block-tools@1.1.9(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))(@types/react@18.3.11)':
     dependencies:
       '@sanity/types': 3.77.0(@types/react@18.3.11)(debug@4.4.0)
       '@types/react': 18.3.11
@@ -14105,7 +14107,7 @@ snapshots:
 
   '@portabletext/editor@1.35.4(@sanity/schema@3.77.0(@types/react@18.3.11)(debug@4.4.0))(@sanity/types@3.77.0(@types/react@18.3.11))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rxjs@7.8.1)':
     dependencies:
-      '@portabletext/block-tools': 1.1.9(@sanity/types@3.77.0(@types/react@18.3.11))(@types/react@18.3.11)
+      '@portabletext/block-tools': 1.1.9(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))(@types/react@18.3.11)
       '@portabletext/patches': 1.1.3
       '@portabletext/to-html': 2.0.14
       '@sanity/schema': 3.77.0(@types/react@18.3.11)(debug@4.4.0)
@@ -14662,7 +14664,7 @@ snapshots:
     dependencies:
       '@sanity/client': 6.28.1(debug@4.4.0)
       '@sanity/comlink': 3.0.1
-      '@sanity/presentation-comlink': 1.0.8(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))
+      '@sanity/presentation-comlink': 1.0.8(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))
       '@sanity/visual-editing-csm': 2.0.6(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))
     transitivePeerDependencies:
       - '@sanity/types'
@@ -14748,7 +14750,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@sanity/insert-menu@1.1.3(@emotion/is-prop-valid@1.2.2)(@sanity/types@3.77.0(@types/react@18.3.11))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
+  '@sanity/insert-menu@1.1.3(@emotion/is-prop-valid@1.2.2)(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
     dependencies:
       '@sanity/icons': 3.6.0(react@18.3.1)
       '@sanity/types': 3.77.0(@types/react@18.3.11)(debug@4.4.0)
@@ -14804,7 +14806,7 @@ snapshots:
       hotscript: 1.0.13
       lodash: 4.17.21
       mendoza: 3.0.8
-      nanoid: 5.0.9
+      nanoid: 5.1.5
       rxjs: 7.8.1
     transitivePeerDependencies:
       - debug
@@ -14820,12 +14822,12 @@ snapshots:
       - '@types/react'
       - supports-color
 
-  '@sanity/next-loader@1.3.2(@sanity/types@3.77.0(@types/react@18.3.11))(next@14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
+  '@sanity/next-loader@1.3.2(@sanity/types@3.77.0(@types/react@18.3.11))(next@14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@sanity/client': 6.28.1(debug@4.4.0)
       '@sanity/comlink': 3.0.1
-      '@sanity/presentation-comlink': 1.0.8(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))
-      next: 14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@sanity/presentation-comlink': 1.0.8(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))
+      next: 14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       use-effect-event: 1.0.2(react@18.3.1)
     transitivePeerDependencies:
@@ -14882,11 +14884,11 @@ snapshots:
       - debug
       - supports-color
 
-  '@sanity/presentation-comlink@1.0.8(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))':
+  '@sanity/presentation-comlink@1.0.8(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))':
     dependencies:
       '@sanity/client': 6.28.1(debug@4.4.0)
       '@sanity/comlink': 3.0.1
-      '@sanity/visual-editing-types': 1.0.8(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))
+      '@sanity/visual-editing-types': 1.0.8(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))
     transitivePeerDependencies:
       - '@sanity/types'
 
@@ -14894,7 +14896,7 @@ snapshots:
     dependencies:
       '@sanity/client': 6.28.1(debug@4.4.0)
       '@sanity/comlink': 3.0.1
-      '@sanity/presentation-comlink': 1.0.8(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))
+      '@sanity/presentation-comlink': 1.0.8(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))
       mendoza: 3.0.8
     optionalDependencies:
       react: 18.3.1
@@ -15066,24 +15068,24 @@ snapshots:
   '@sanity/visual-editing-csm@2.0.6(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))':
     dependencies:
       '@sanity/client': 6.28.1(debug@4.4.0)
-      '@sanity/visual-editing-types': 1.0.8(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))
+      '@sanity/visual-editing-types': 1.0.8(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))
       valibot: 0.31.1
     transitivePeerDependencies:
       - '@sanity/types'
 
-  '@sanity/visual-editing-types@1.0.8(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))':
+  '@sanity/visual-editing-types@1.0.8(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))':
     dependencies:
       '@sanity/client': 6.28.1(debug@4.4.0)
     optionalDependencies:
       '@sanity/types': 3.77.0(@types/react@18.3.11)(debug@4.4.0)
 
-  '@sanity/visual-editing@2.13.5(@emotion/is-prop-valid@1.2.2)(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))(next@14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
+  '@sanity/visual-editing@2.13.5(@emotion/is-prop-valid@1.2.2)(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))(next@14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
     dependencies:
       '@sanity/comlink': 3.0.1
       '@sanity/icons': 3.6.0(react@18.3.1)
-      '@sanity/insert-menu': 1.1.3(@emotion/is-prop-valid@1.2.2)(@sanity/types@3.77.0(@types/react@18.3.11))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+      '@sanity/insert-menu': 1.1.3(@emotion/is-prop-valid@1.2.2)(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@sanity/mutate': 0.11.0-canary.4(xstate@5.19.2)
-      '@sanity/presentation-comlink': 1.0.8(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))
+      '@sanity/presentation-comlink': 1.0.8(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))
       '@sanity/preview-url-secret': 2.1.4(@sanity/client@6.28.1)
       '@sanity/ui': 2.14.3(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@sanity/visual-editing-csm': 2.0.6(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))
@@ -15101,7 +15103,7 @@ snapshots:
       xstate: 5.19.2
     optionalDependencies:
       '@sanity/client': 6.28.1(debug@4.4.0)
-      next: 14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next: 14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@sanity/types'
@@ -15221,7 +15223,7 @@ snapshots:
 
   '@sentry/core@9.2.0': {}
 
-  '@sentry/nextjs@9.2.0(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(next@14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(webpack@5.97.1)':
+  '@sentry/nextjs@9.2.0(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(next@14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(webpack@5.97.1)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/semantic-conventions': 1.28.0
@@ -15234,7 +15236,7 @@ snapshots:
       '@sentry/vercel-edge': 9.2.0
       '@sentry/webpack-plugin': 3.1.2(webpack@5.97.1)
       chalk: 3.0.0
-      next: 14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next: 14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       resolve: 1.22.8
       rollup: 3.29.5
       stacktrace-parser: 0.1.10
@@ -15589,7 +15591,7 @@ snapshots:
     dependencies:
       storybook: 8.5.8(prettier@3.5.2)
 
-  '@storybook/nextjs@8.5.8(esbuild@0.24.2)(next@14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.5.8(prettier@3.5.2))(type-fest@4.33.0)(typescript@5.7.3)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(esbuild@0.24.2))':
+  '@storybook/nextjs@8.5.8(esbuild@0.24.2)(next@14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.5.8(prettier@3.5.2))(type-fest@4.33.0)(typescript@5.7.3)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(esbuild@0.24.2))':
     dependencies:
       '@babel/core': 7.26.9
       '@babel/plugin-syntax-bigint': 7.8.3(@babel/core@7.26.9)
@@ -15615,7 +15617,7 @@ snapshots:
       find-up: 5.0.0
       image-size: 1.2.0
       loader-utils: 3.3.1
-      next: 14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next: 14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       node-polyfill-webpack-plugin: 2.0.1(webpack@5.97.1(esbuild@0.24.2))
       pnp-webpack-plugin: 1.7.0(typescript@5.7.3)
       postcss: 8.5.3
@@ -17252,14 +17254,14 @@ snapshots:
 
   browserslist@4.23.3:
     dependencies:
-      caniuse-lite: 1.0.30001666
+      caniuse-lite: 1.0.30001649
       electron-to-chromium: 1.5.4
       node-releases: 2.0.18
       update-browserslist-db: 1.1.0(browserslist@4.23.3)
 
   browserslist@4.24.4:
     dependencies:
-      caniuse-lite: 1.0.30001695
+      caniuse-lite: 1.0.30001706
       electron-to-chromium: 1.5.88
       node-releases: 2.0.19
       update-browserslist-db: 1.1.2(browserslist@4.24.4)
@@ -17376,9 +17378,7 @@ snapshots:
 
   caniuse-lite@1.0.30001649: {}
 
-  caniuse-lite@1.0.30001666: {}
-
-  caniuse-lite@1.0.30001695: {}
+  caniuse-lite@1.0.30001706: {}
 
   case-sensitive-paths-webpack-plugin@2.4.0: {}
 
@@ -21119,9 +21119,11 @@ snapshots:
 
   nano-pubsub@3.0.0: {}
 
+  nanoid@3.3.11: {}
+
   nanoid@3.3.8: {}
 
-  nanoid@5.0.9: {}
+  nanoid@5.1.5: {}
 
   natural-compare@1.4.0: {}
 
@@ -21129,20 +21131,20 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  next-sanity@9.8.59(@emotion/is-prop-valid@1.2.2)(@sanity/client@6.28.1)(@sanity/icons@3.5.7(react@18.3.1))(@sanity/types@3.77.0(@types/react@18.3.11))(@sanity/ui@2.14.3(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(next@14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(sanity@3.77.0(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/node@22.13.5)(@types/react@18.3.11)(jiti@1.21.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sugarss@4.0.1(postcss@8.5.3))(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)):
+  next-sanity@9.8.59(@emotion/is-prop-valid@1.2.2)(@sanity/client@6.28.1)(@sanity/icons@3.5.7(react@18.3.1))(@sanity/types@3.77.0(@types/react@18.3.11))(@sanity/ui@2.14.3(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(next@14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(sanity@3.77.0(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/node@22.13.5)(@types/react@18.3.11)(jiti@1.21.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sugarss@4.0.1(postcss@8.5.3))(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)):
     dependencies:
       '@portabletext/react': 3.2.1(react@18.3.1)
       '@sanity/client': 6.28.1(debug@4.4.0)
       '@sanity/icons': 3.5.7(react@18.3.1)
-      '@sanity/next-loader': 1.3.2(@sanity/types@3.77.0(@types/react@18.3.11))(next@14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      '@sanity/next-loader': 1.3.2(@sanity/types@3.77.0(@types/react@18.3.11))(next@14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@sanity/preview-kit': 5.2.7(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))(react@18.3.1)
       '@sanity/preview-url-secret': 2.1.4(@sanity/client@6.28.1)
       '@sanity/types': 3.77.0(@types/react@18.3.11)(debug@4.4.0)
       '@sanity/ui': 2.14.3(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      '@sanity/visual-editing': 2.13.5(@emotion/is-prop-valid@1.2.2)(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))(next@14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+      '@sanity/visual-editing': 2.13.5(@emotion/is-prop-valid@1.2.2)(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))(next@14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       groq: 3.77.0
       history: 5.3.0
-      next: 14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next: 14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       sanity: 3.77.0(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/node@22.13.5)(@types/react@18.3.11)(jiti@1.21.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sugarss@4.0.1(postcss@8.5.3))(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0)
       styled-components: 6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -21156,20 +21158,20 @@ snapshots:
       - react-router
       - svelte
 
-  next-sanity@9.8.59(@emotion/is-prop-valid@1.2.2)(@sanity/client@6.28.1)(@sanity/icons@3.6.0(react@18.3.1))(@sanity/types@3.77.0(@types/react@18.3.11))(@sanity/ui@2.14.3(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(next@14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(sanity@3.77.0(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/node@22.13.5)(@types/react@18.3.11)(jiti@1.21.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sugarss@4.0.1(postcss@8.5.3))(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)):
+  next-sanity@9.8.59(@emotion/is-prop-valid@1.2.2)(@sanity/client@6.28.1)(@sanity/icons@3.6.0(react@18.3.1))(@sanity/types@3.77.0(@types/react@18.3.11))(@sanity/ui@2.14.3(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(next@14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(sanity@3.77.0(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/node@22.13.5)(@types/react@18.3.11)(jiti@1.21.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sugarss@4.0.1(postcss@8.5.3))(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)):
     dependencies:
       '@portabletext/react': 3.2.1(react@18.3.1)
       '@sanity/client': 6.28.1(debug@4.4.0)
       '@sanity/icons': 3.6.0(react@18.3.1)
-      '@sanity/next-loader': 1.3.2(@sanity/types@3.77.0(@types/react@18.3.11))(next@14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      '@sanity/next-loader': 1.3.2(@sanity/types@3.77.0(@types/react@18.3.11))(next@14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@sanity/preview-kit': 5.2.7(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))(react@18.3.1)
       '@sanity/preview-url-secret': 2.1.4(@sanity/client@6.28.1)
       '@sanity/types': 3.77.0(@types/react@18.3.11)(debug@4.4.0)
       '@sanity/ui': 2.14.3(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      '@sanity/visual-editing': 2.13.5(@emotion/is-prop-valid@1.2.2)(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))(next@14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+      '@sanity/visual-editing': 2.13.5(@emotion/is-prop-valid@1.2.2)(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))(next@14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       groq: 3.77.0
       history: 5.3.0
-      next: 14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next: 14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       sanity: 3.77.0(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/node@22.13.5)(@types/react@18.3.11)(jiti@1.21.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sugarss@4.0.1(postcss@8.5.3))(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0)
       styled-components: 6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -21183,27 +21185,27 @@ snapshots:
       - react-router
       - svelte
 
-  next@14.2.15(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  next@14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
-      '@next/env': 14.2.15
+      '@next/env': 14.2.25
       '@swc/helpers': 0.5.5
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001666
+      caniuse-lite: 1.0.30001706
       graceful-fs: 4.2.11
       postcss: 8.4.31
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       styled-jsx: 5.1.1(@babel/core@7.26.9)(react@18.3.1)
     optionalDependencies:
-      '@next/swc-darwin-arm64': 14.2.15
-      '@next/swc-darwin-x64': 14.2.15
-      '@next/swc-linux-arm64-gnu': 14.2.15
-      '@next/swc-linux-arm64-musl': 14.2.15
-      '@next/swc-linux-x64-gnu': 14.2.15
-      '@next/swc-linux-x64-musl': 14.2.15
-      '@next/swc-win32-arm64-msvc': 14.2.15
-      '@next/swc-win32-ia32-msvc': 14.2.15
-      '@next/swc-win32-x64-msvc': 14.2.15
+      '@next/swc-darwin-arm64': 14.2.25
+      '@next/swc-darwin-x64': 14.2.25
+      '@next/swc-linux-arm64-gnu': 14.2.25
+      '@next/swc-linux-arm64-musl': 14.2.25
+      '@next/swc-linux-x64-gnu': 14.2.25
+      '@next/swc-linux-x64-musl': 14.2.25
+      '@next/swc-win32-arm64-msvc': 14.2.25
+      '@next/swc-win32-ia32-msvc': 14.2.25
+      '@next/swc-win32-x64-msvc': 14.2.25
       '@opentelemetry/api': 1.9.0
     transitivePeerDependencies:
       - '@babel/core'
@@ -21800,7 +21802,7 @@ snapshots:
 
   postcss@8.4.31:
     dependencies:
-      nanoid: 3.3.8
+      nanoid: 3.3.11
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
@@ -22571,7 +22573,7 @@ snapshots:
       '@dnd-kit/sortable': 7.0.2(@dnd-kit/core@6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@dnd-kit/utilities': 3.2.2(react@18.3.1)
       '@juggle/resize-observer': 3.4.0
-      '@portabletext/block-tools': 1.1.9(@sanity/types@3.77.0(@types/react@18.3.11))(@types/react@18.3.11)
+      '@portabletext/block-tools': 1.1.9(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))(@types/react@18.3.11)
       '@portabletext/editor': 1.35.4(@sanity/schema@3.77.0(@types/react@18.3.11)(debug@4.4.0))(@sanity/types@3.77.0(@types/react@18.3.11))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rxjs@7.8.1)
       '@portabletext/react': 3.2.0(react@18.3.1)
       '@portabletext/toolkit': 2.0.16
@@ -22590,11 +22592,11 @@ snapshots:
       '@sanity/icons': 3.6.0(react@18.3.1)
       '@sanity/image-url': 1.1.0
       '@sanity/import': 3.37.9(@types/react@18.3.11)
-      '@sanity/insert-menu': 1.1.3(@emotion/is-prop-valid@1.2.2)(@sanity/types@3.77.0(@types/react@18.3.11))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+      '@sanity/insert-menu': 1.1.3(@emotion/is-prop-valid@1.2.2)(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@sanity/logos': 2.1.13(@sanity/color@3.0.6)(react@18.3.1)
       '@sanity/migrate': 3.77.0(@types/react@18.3.11)
       '@sanity/mutator': 3.77.0(@types/react@18.3.11)
-      '@sanity/presentation-comlink': 1.0.8(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11))
+      '@sanity/presentation-comlink': 1.0.8(@sanity/client@6.28.1)(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))
       '@sanity/preview-url-secret': 2.1.4(@sanity/client@6.28.1)
       '@sanity/schema': 3.77.0(@types/react@18.3.11)(debug@4.4.0)
       '@sanity/telemetry': 0.7.9(react@18.3.1)
@@ -23964,7 +23966,7 @@ snapshots:
     dependencies:
       browserslist: 4.23.3
       escalade: 3.2.0
-      picocolors: 1.1.1
+      picocolors: 1.0.1
 
   update-browserslist-db@1.1.2(browserslist@4.24.4):
     dependencies:
