@@ -16,7 +16,7 @@
   },
   "prettier": "@kduprey/eslint-config/prettier",
   "dependencies": {
-    "@mantine/core": "7.16.3",
+    "@mantine/core": "7.17.2",
     "@mantine/hooks": "7.17.2",
     "@tabler/icons-react": "^3.31.0",
     "react": "18.3.1",
