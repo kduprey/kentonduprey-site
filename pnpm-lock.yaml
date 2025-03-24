@@ -69,8 +69,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       mantine-datatable:
-        specifier: ^7.15.1
-        version: 7.15.1(@mantine/core@7.17.2(@mantine/hooks@7.17.2(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mantine/hooks@7.17.2(react@18.3.1))(clsx@2.1.1)(react@18.3.1)
+        specifier: ^7.17.1
+        version: 7.17.1(@mantine/core@7.17.2(@mantine/hooks@7.17.2(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mantine/hooks@7.17.2(react@18.3.1))(clsx@2.1.1)(react@18.3.1)
       next:
         specifier: 14.2.25
         version: 14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -8596,8 +8596,8 @@ packages:
   makeerror@1.0.12:
     resolution: {integrity: sha512-JmqCvUhmt43madlpFzG4BQzG2Z3m6tvQDNKdClZnO3VbIudJYmxsT0FNJMeiB2+JTSlTQTSbU8QdesVmwJcmLg==}
 
-  mantine-datatable@7.15.1:
-    resolution: {integrity: sha512-MwehjtkdT6FQfuPgTXmGA2Y3DmHdCdLzcl4G4LoccSpG2ul2RwEdCO/dQmrPBsNo4mMepNN9dE3/1vSuYsU+7Q==}
+  mantine-datatable@7.17.1:
+    resolution: {integrity: sha512-5GBpSTZyvVGqe2TqEaBYrZQyQjLgHuMqkb2wry+wPvwalRY0oFKG1kdFd43bxch9FOG0K0CREEa6+cYIDby55Q==}
     peerDependencies:
       '@mantine/core': '>=7.14'
       '@mantine/hooks': '>=7.14'
@@ -14780,7 +14780,7 @@ snapshots:
 
   '@polka/url@1.0.0-next.28': {}
 
-  '@portabletext/block-tools@1.1.9(@sanity/types@3.77.0(@types/react@18.3.11))(@types/react@18.3.11)':
+  '@portabletext/block-tools@1.1.9(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))(@types/react@18.3.11)':
     dependencies:
       '@sanity/types': 3.77.0(@types/react@18.3.11)(debug@4.4.0)
       '@types/react': 18.3.11
@@ -14789,7 +14789,7 @@ snapshots:
 
   '@portabletext/editor@1.35.4(@sanity/schema@3.77.0(@types/react@18.3.11)(debug@4.4.0))(@sanity/types@3.77.0(@types/react@18.3.11))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rxjs@7.8.1)':
     dependencies:
-      '@portabletext/block-tools': 1.1.9(@sanity/types@3.77.0(@types/react@18.3.11))(@types/react@18.3.11)
+      '@portabletext/block-tools': 1.1.9(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))(@types/react@18.3.11)
       '@portabletext/patches': 1.1.3
       '@portabletext/to-html': 2.0.14
       '@sanity/schema': 3.77.0(@types/react@18.3.11)(debug@4.4.0)
@@ -15560,7 +15560,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@sanity/insert-menu@1.1.3(@emotion/is-prop-valid@1.2.2)(@sanity/types@3.77.0(@types/react@18.3.11))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
+  '@sanity/insert-menu@1.1.3(@emotion/is-prop-valid@1.2.2)(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
     dependencies:
       '@sanity/icons': 3.6.0(react@18.3.1)
       '@sanity/types': 3.77.0(@types/react@18.3.11)(debug@4.4.0)
@@ -21637,7 +21637,7 @@ snapshots:
     dependencies:
       tmpl: 1.0.5
 
-  mantine-datatable@7.15.1(@mantine/core@7.17.2(@mantine/hooks@7.17.2(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mantine/hooks@7.17.2(react@18.3.1))(clsx@2.1.1)(react@18.3.1):
+  mantine-datatable@7.17.1(@mantine/core@7.17.2(@mantine/hooks@7.17.2(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mantine/hooks@7.17.2(react@18.3.1))(clsx@2.1.1)(react@18.3.1):
     dependencies:
       '@mantine/core': 7.17.2(@mantine/hooks@7.17.2(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@mantine/hooks': 7.17.2(react@18.3.1)
@@ -23691,7 +23691,7 @@ snapshots:
       '@dnd-kit/sortable': 7.0.2(@dnd-kit/core@6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@dnd-kit/utilities': 3.2.2(react@18.3.1)
       '@juggle/resize-observer': 3.4.0
-      '@portabletext/block-tools': 1.1.9(@sanity/types@3.77.0(@types/react@18.3.11))(@types/react@18.3.11)
+      '@portabletext/block-tools': 1.1.9(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))(@types/react@18.3.11)
       '@portabletext/editor': 1.35.4(@sanity/schema@3.77.0(@types/react@18.3.11)(debug@4.4.0))(@sanity/types@3.77.0(@types/react@18.3.11))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rxjs@7.8.1)
       '@portabletext/react': 3.2.0(react@18.3.1)
       '@portabletext/toolkit': 2.0.16
@@ -23710,7 +23710,7 @@ snapshots:
       '@sanity/icons': 3.6.0(react@18.3.1)
       '@sanity/image-url': 1.1.0
       '@sanity/import': 3.37.9(@types/react@18.3.11)
-      '@sanity/insert-menu': 1.1.3(@emotion/is-prop-valid@1.2.2)(@sanity/types@3.77.0(@types/react@18.3.11))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+      '@sanity/insert-menu': 1.1.3(@emotion/is-prop-valid@1.2.2)(@sanity/types@3.77.0(@types/react@18.3.11)(debug@4.4.0))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@sanity/logos': 2.1.13(@sanity/color@3.0.6)(react@18.3.1)
       '@sanity/migrate': 3.77.0(@types/react@18.3.11)
       '@sanity/mutator': 3.77.0(@types/react@18.3.11)
