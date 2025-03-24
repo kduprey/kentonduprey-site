@@ -24,7 +24,7 @@
     "eslint-plugin-json-files": "^4.4.2",
     "eslint-plugin-mdx": "^3.2.0",
     "eslint-plugin-only-warn": "^1.1.0",
-    "eslint-plugin-perfectionist": "^4.8.0",
+    "eslint-plugin-perfectionist": "^4.10.1",
     "eslint-plugin-storybook": "^0.11.6",
     "prettier": "^3.5.0",
     "prettier-plugin-groq": "^0.2.5",
