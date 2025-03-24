@@ -24,7 +24,7 @@
     "@kduprey/tsconfig": "workspace:*",
     "@types/node": "^22.13.1",
     "barrelsby": "^2.8.1",
-    "tsup": "^8.3.6",
+    "tsup": "^8.4.0",
     "typescript": "^5.8.2"
   }
 }
