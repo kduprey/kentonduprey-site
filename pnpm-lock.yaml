@@ -106,8 +106,8 @@ importers:
         specifier: ^8.5.4
         version: 8.5.8(esbuild@0.24.2)(next@14.2.25(@babel/core@7.26.9)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.5.8(prettier@3.5.2))(type-fest@4.33.0)(typescript@5.7.3)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(esbuild@0.24.2))
       '@storybook/preview-api':
-        specifier: ^8.5.3
-        version: 8.5.8(storybook@8.5.8(prettier@3.5.2))
+        specifier: ^8.6.8
+        version: 8.6.8(storybook@8.5.8(prettier@3.5.2))
       '@storybook/react':
         specifier: ^8.5.4
         version: 8.5.8(@storybook/test@8.5.8(storybook@8.5.8(prettier@3.5.2)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.5.8(prettier@3.5.2))(typescript@5.7.3)
@@ -4107,6 +4107,11 @@ packages:
 
   '@storybook/preview-api@8.5.8':
     resolution: {integrity: sha512-HJoz2o28VVprnU5OG6JO6CHrD3ah6qVPWixbnmyUKd0hOYF5dayK5ptmeLyUpYX56Eb2KoYcuVaeQqAby4RkNw==}
+    peerDependencies:
+      storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
+
+  '@storybook/preview-api@8.6.8':
+    resolution: {integrity: sha512-c5Hc6Knmun+aBEesEjD+5LPuqFTQMCSLg+zS41JncH7B+agrUiihX3opma4OVZ4GibWIIq1YvIeXBLqj1MoIUw==}
     peerDependencies:
       storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
 
@@ -15717,6 +15722,10 @@ snapshots:
       - webpack-cli
 
   '@storybook/preview-api@8.5.8(storybook@8.5.8(prettier@3.5.2))':
+    dependencies:
+      storybook: 8.5.8(prettier@3.5.2)
+
+  '@storybook/preview-api@8.6.8(storybook@8.5.8(prettier@3.5.2))':
     dependencies:
       storybook: 8.5.8(prettier@3.5.2)
 
