@@ -25,7 +25,7 @@
   "devDependencies": {
     "@kduprey/eslint-config": "workspace:*",
     "@kduprey/tsconfig": "workspace:*",
-    "@types/node": "^22.13.1",
+    "@types/node": "^22.13.13",
     "prisma": "^6.5.0",
     "tsup": "^8.4.0",
     "typescript": "^5.8.2"
