@@ -20,7 +20,7 @@
   "dependencies": {
     "@kduprey/config": "workspace:*",
     "@kduprey/tsconfig": "workspace:*",
-    "@sanity/icons": "^3.5.7",
+    "@sanity/icons": "^3.7.0",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.80.1",
     "next": "14.2.25",
