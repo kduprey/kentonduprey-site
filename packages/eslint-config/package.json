@@ -28,6 +28,6 @@
     "eslint-plugin-storybook": "^0.11.2",
     "prettier": "^3.5.0",
     "prettier-plugin-groq": "^0.2.5",
-    "prettier-plugin-packagejson": "^2.5.8"
+    "prettier-plugin-packagejson": "^2.5.10"
   }
 }
