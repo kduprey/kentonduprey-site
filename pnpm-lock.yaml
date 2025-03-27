@@ -30,8 +30,8 @@ importers:
         specifier: ^5.7.1
         version: 5.7.1(next@14.2.25(@babel/core@7.26.10)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@clerk/themes':
-        specifier: ^2.2.24
-        version: 2.2.24
+        specifier: ^2.2.25
+        version: 2.2.25
       '@kduprey/config':
         specifier: workspace:*
         version: link:../../packages/config
@@ -1717,16 +1717,16 @@ packages:
       react-dom:
         optional: true
 
-  '@clerk/themes@2.2.24':
-    resolution: {integrity: sha512-Tfu5K7jhb6Utgdv5E2DTKy7eZs07cLp/0OcjBQ94I4E3i4UA3GQWYlpZZPeaXunNMV4U48owMNz0CTvDQk0bZg==}
+  '@clerk/themes@2.2.25':
+    resolution: {integrity: sha512-BWeAnzRUE0rXNHPZMtCI+KwpzZo/1eGhsaUxZR84i98vIh1QpcTEzzw1cPol53P94vRkksYDDEsXCLjAYlnt+w==}
     engines: {node: '>=18.17.0'}
 
   '@clerk/types@4.25.0':
     resolution: {integrity: sha512-p2IyJ0q5WF1e976L1pS1J6Mb5ducfkUC31DR1EvMjPwJkrlWJdAMCPc+zqRRAePVy/JBVK2gEKbUVtJ6/jrpag==}
     engines: {node: '>=18.17.0'}
 
-  '@clerk/types@4.49.2':
-    resolution: {integrity: sha512-b4LR3Xsegqe0S6ZkaSJ1skO5a36EIiYRCFBzrJIbJX58vh25FFbOs4VHcK71uCLGJ1Jm1bViPi8QPGYoqYAUuw==}
+  '@clerk/types@4.50.0':
+    resolution: {integrity: sha512-hiuD7/HBPyDvyegcbqi++iUbX7gL9k24qiLrEpr9uFP61ZupFrzjHYTaRK7y0kAJWtfrEJ3+29u1odCqwYazQQ==}
     engines: {node: '>=18.17.0'}
 
   '@codemirror/autocomplete@6.18.6':
@@ -12980,16 +12980,16 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@clerk/themes@2.2.24':
+  '@clerk/themes@2.2.25':
     dependencies:
-      '@clerk/types': 4.49.2
+      '@clerk/types': 4.50.0
       tslib: 2.8.1
 
   '@clerk/types@4.25.0':
     dependencies:
       csstype: 3.1.1
 
-  '@clerk/types@4.49.2':
+  '@clerk/types@4.50.0':
     dependencies:
       csstype: 3.1.3
 
