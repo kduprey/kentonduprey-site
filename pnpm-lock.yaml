@@ -345,8 +345,8 @@ importers:
         specifier: ^2.3.1
         version: 2.3.1
       stripe:
-        specifier: ^17.1.0
-        version: 17.1.0
+        specifier: ^18.0.0
+        version: 18.0.0
       zod:
         specifier: ^3.24.2
         version: 3.24.2
@@ -4667,8 +4667,8 @@ packages:
   '@types/node@22.13.13':
     resolution: {integrity: sha512-ClsL5nMwKaBRwPcCvH8E7+nU4GxHVx1axNvMZTFHMEfNI7oahimt26P5zjVCRrjiIWj6YFXfE1v3dEp94wLcGQ==}
 
-  '@types/node@22.13.15':
-    resolution: {integrity: sha512-imAbQEEbVni6i6h6Bd5xkCRwLqFc8hihCsi2GbtDoAtUcAFQ6Zs4pFXTZUUbroTkXdImczWM9AI8eZUuybXE3w==}
+  '@types/node@22.13.17':
+    resolution: {integrity: sha512-nAJuQXoyPj04uLgu+obZcSmsfOenUg6DxPKogeUy6yNCFwWaj5sBF8/G/pNo8EtBJjAfSVgfIlugR/BCOleO+g==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -9536,10 +9536,6 @@ packages:
   pure-rand@6.1.0:
     resolution: {integrity: sha512-bVWawvoZoBYpp6yIoQtQXHZjmz35RSVHnUOTefl8Vcjr8snTPY1wnpSPMWekcFwbxI6gtmT7rSYPFvz71ldiOA==}
 
-  qs@6.12.2:
-    resolution: {integrity: sha512-x+NLUpx9SYrcwXtX7ob1gnkSems4i/mGZX5SlYxwIau6RrUSODO89TR/XDGGpn5RPWSYIB+aSfuSlV5+CmbTBg==}
-    engines: {node: '>=0.6'}
-
   qs@6.14.0:
     resolution: {integrity: sha512-YWWTjgABSKcvs/nWBi9PycY/JiPJqOD4JA6o9Sej2AtvSGarXxKC3OQSk4pAarbdQlKAh5D4FCQkJNkW+GAn3w==}
     engines: {node: '>=0.6'}
@@ -10428,8 +10424,8 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
 
-  stripe@17.1.0:
-    resolution: {integrity: sha512-sNRsJx7LPP2Gg6cBJoHJqhr+UoBVZZRes2BDqbrg+1FDBxJc4Yn+LkrpJ/VnL3XQ3+6I5GrOUnSSFfE/joDFjw==}
+  stripe@18.0.0:
+    resolution: {integrity: sha512-3Fs33IzKUby//9kCkCa1uRpinAoTvj6rJgQ2jrBEysoxEvfsclvXdna1amyEYbA2EKkjynuB4+L/kleCCaWTpA==}
     engines: {node: '>=12.*'}
 
   style-loader@3.3.4:
@@ -13818,7 +13814,7 @@ snapshots:
   '@jest/console@29.7.0':
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
       chalk: 4.1.2
       jest-message-util: 29.7.0
       jest-util: 29.7.0
@@ -13903,7 +13899,7 @@ snapshots:
       '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
       '@jridgewell/trace-mapping': 0.3.25
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
       chalk: 4.1.2
       collect-v8-coverage: 1.0.2
       exit: 0.1.2
@@ -16239,7 +16235,7 @@ snapshots:
     dependencies:
       '@storybook/client-logger': 8.1.11
       memoizerific: 1.11.3
-      qs: 6.12.2
+      qs: 6.14.0
 
   '@storybook/test@8.6.11(storybook@8.6.11(prettier@3.5.3))':
     dependencies:
@@ -16502,15 +16498,15 @@ snapshots:
   '@types/body-parser@1.19.5':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
 
   '@types/concat-stream@2.0.3':
     dependencies:
-      '@types/node': 22.13.15
+      '@types/node': 22.13.17
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
 
   '@types/debug@4.1.12':
     dependencies:
@@ -16542,7 +16538,7 @@ snapshots:
 
   '@types/express-serve-static-core@4.19.5':
     dependencies:
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
       '@types/qs': 6.9.15
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
@@ -16556,16 +16552,16 @@ snapshots:
 
   '@types/follow-redirects@1.14.4':
     dependencies:
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
 
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 22.13.15
+      '@types/node': 22.13.17
 
   '@types/graceful-fs@4.1.9':
     dependencies:
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
 
   '@types/hast@2.3.10':
     dependencies:
@@ -16627,13 +16623,13 @@ snapshots:
 
   '@types/mysql@2.15.26':
     dependencies:
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
 
   '@types/node@22.13.13':
     dependencies:
       undici-types: 6.20.0
 
-  '@types/node@22.13.15':
+  '@types/node@22.13.17':
     dependencies:
       undici-types: 6.20.0
 
@@ -16647,13 +16643,13 @@ snapshots:
 
   '@types/pg@8.6.1':
     dependencies:
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
       pg-protocol: 1.8.0
       pg-types: 2.2.0
 
   '@types/progress-stream@2.0.5':
     dependencies:
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
 
   '@types/prop-types@15.7.12': {}
 
@@ -16681,12 +16677,12 @@ snapshots:
   '@types/send@0.17.4':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
 
   '@types/serve-static@1.15.7':
     dependencies:
       '@types/http-errors': 2.0.4
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
       '@types/send': 0.17.4
 
   '@types/shallow-equals@1.0.3': {}
@@ -16707,7 +16703,7 @@ snapshots:
 
   '@types/tedious@4.0.14':
     dependencies:
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
 
   '@types/tough-cookie@4.0.5': {}
 
@@ -18430,7 +18426,7 @@ snapshots:
       object-keys: 1.1.1
       object.assign: 4.1.7
       regexp.prototype.flags: 1.5.2
-      side-channel: 1.0.6
+      side-channel: 1.1.0
       which-boxed-primitive: 1.0.2
       which-collection: 1.0.2
       which-typed-array: 1.1.19
@@ -20117,7 +20113,7 @@ snapshots:
     dependencies:
       es-errors: 1.3.0
       hasown: 2.0.2
-      side-channel: 1.0.6
+      side-channel: 1.1.0
 
   is-alphabetical@1.0.4: {}
 
@@ -20438,7 +20434,7 @@ snapshots:
       '@jest/expect': 29.7.0
       '@jest/test-result': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
       chalk: 4.1.2
       co: 4.6.0
       dedent: 1.5.3
@@ -20546,7 +20542,7 @@ snapshots:
       '@jest/environment': 29.7.0
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
       jest-mock: 29.7.0
       jest-util: 29.7.0
 
@@ -20556,7 +20552,7 @@ snapshots:
     dependencies:
       '@jest/types': 29.6.3
       '@types/graceful-fs': 4.1.9
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
       anymatch: 3.1.3
       fb-watchman: 2.0.2
       graceful-fs: 4.2.11
@@ -20630,7 +20626,7 @@ snapshots:
       '@jest/test-result': 29.7.0
       '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
       chalk: 4.1.2
       emittery: 0.13.1
       graceful-fs: 4.2.11
@@ -20658,7 +20654,7 @@ snapshots:
       '@jest/test-result': 29.7.0
       '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
       chalk: 4.1.2
       cjs-module-lexer: 1.4.3
       collect-v8-coverage: 1.0.2
@@ -20723,7 +20719,7 @@ snapshots:
     dependencies:
       '@jest/test-result': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       emittery: 0.13.1
@@ -20732,13 +20728,13 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 22.13.13
+      '@types/node': 22.13.17
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
@@ -22490,10 +22486,6 @@ snapshots:
 
   pure-rand@6.1.0: {}
 
-  qs@6.12.2:
-    dependencies:
-      side-channel: 1.0.6
-
   qs@6.14.0:
     dependencies:
       side-channel: 1.1.0
@@ -23724,10 +23716,10 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  stripe@17.1.0:
+  stripe@18.0.0:
     dependencies:
-      '@types/node': 22.13.13
-      qs: 6.12.2
+      '@types/node': 22.13.17
+      qs: 6.14.0
 
   style-loader@3.3.4(webpack@5.98.0(esbuild@0.25.2)):
     dependencies:
@@ -24378,7 +24370,7 @@ snapshots:
       '@types/concat-stream': 2.0.3
       '@types/debug': 4.1.12
       '@types/is-empty': 1.2.3
-      '@types/node': 22.13.15
+      '@types/node': 22.13.17
       '@types/unist': 3.0.3
       concat-stream: 2.0.0
       debug: 4.4.0(supports-color@8.1.1)
