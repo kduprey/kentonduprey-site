@@ -25,6 +25,6 @@
     "@types/node": "^22.13.13",
     "barrelsby": "^2.8.1",
     "tsup": "^8.4.0",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   }
 }
