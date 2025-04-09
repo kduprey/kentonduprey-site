@@ -18,7 +18,7 @@
     "next": "14.2.25"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^15.2.4",
+    "@next/eslint-plugin-next": "^15.2.5",
     "@vercel/style-guide": "^6.0.0",
     "eslint-config-turbo": "^2.5.0",
     "eslint-plugin-json-files": "^4.4.2",
