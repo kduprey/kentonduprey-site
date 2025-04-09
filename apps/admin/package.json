@@ -21,7 +21,7 @@
   },
   "prettier": "@kduprey/eslint-config/prettier",
   "dependencies": {
-    "@clerk/nextjs": "^5.7.1",
+    "@clerk/nextjs": "^6.14.1",
     "@clerk/themes": "^2.2.29",
     "@kduprey/config": "workspace:*",
     "@kduprey/db": "workspace:*",
