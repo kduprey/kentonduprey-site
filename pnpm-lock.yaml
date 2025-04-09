@@ -187,8 +187,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       '@sanity/vision':
-        specifier: ^3.82.0
-        version: 3.82.0(@babel/runtime@7.27.0)(@codemirror/lint@6.8.5)(@codemirror/theme-one-dark@6.1.2)(@emotion/is-prop-valid@1.2.2)(codemirror@6.0.1)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.17(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+        specifier: ^3.83.0
+        version: 3.83.0(@babel/runtime@7.27.0)(@codemirror/lint@6.8.5)(@codemirror/theme-one-dark@6.1.2)(@emotion/is-prop-valid@1.2.2)(codemirror@6.0.1)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.17(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       next:
         specifier: 14.2.25
         version: 14.2.25(@babel/core@7.26.10)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -4075,8 +4075,8 @@ packages:
   '@sanity/uuid@3.0.2':
     resolution: {integrity: sha512-vzdhqOrX7JGbMyK40KuIwwyXHm7GMLOGuYgn3xlC09e4ZVNofUO5mgezQqnRv0JAMthIRhofqs9f6ufUjMKOvw==}
 
-  '@sanity/vision@3.82.0':
-    resolution: {integrity: sha512-5IdiZOQa09pDHh7lXgXAW2ki9cE/9/XO4GVHFDzTGnk3rz42NlnhXmpFYsP+MMDw/cJ27nCJcVAUfC3FfxPrxQ==}
+  '@sanity/vision@3.83.0':
+    resolution: {integrity: sha512-ZhOxpu5FgEJN6FWz3b9LdT480khzbHGoTxf+lmsa42WpDmlcCbHK0Umrqlpy1ooYezM4yaKddKjPxoWn+X873w==}
     peerDependencies:
       react: ^18 || ^19.0.0
       styled-components: ^6.1.15
@@ -9666,6 +9666,11 @@ packages:
 
   react-compiler-runtime@19.0.0-beta-e993439-20250328:
     resolution: {integrity: sha512-bdLTxDSnjHb8iwkAal+vNb1NK1l7MlsG02/Kc47AkQL0lmszOHRSV5wkeprCVnT2pYAI8721TOeO6e1/Wfgvuw==}
+    peerDependencies:
+      react: ^17.0.0 || ^18.0.0 || ^19.0.0 || ^0.0.0-experimental
+
+  react-compiler-runtime@19.0.0-beta-e993439-20250405:
+    resolution: {integrity: sha512-uTvtVgJR21Xy7XAthYbC3R9V00V/U7xP3BWrwpSvcmHgtar8+TweghRIankQJLps/g7HIYxy+dnXCGBy0cKv5w==}
     peerDependencies:
       react: ^17.0.0 || ^18.0.0 || ^19.0.0 || ^0.0.0-experimental
 
@@ -15620,7 +15625,7 @@ snapshots:
       '@types/uuid': 8.3.4
       uuid: 8.3.2
 
-  '@sanity/vision@3.82.0(@babel/runtime@7.27.0)(@codemirror/lint@6.8.5)(@codemirror/theme-one-dark@6.1.2)(@emotion/is-prop-valid@1.2.2)(codemirror@6.0.1)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.17(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
+  '@sanity/vision@3.83.0(@babel/runtime@7.27.0)(@codemirror/lint@6.8.5)(@codemirror/theme-one-dark@6.1.2)(@emotion/is-prop-valid@1.2.2)(codemirror@6.0.1)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.17(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
     dependencies:
       '@codemirror/autocomplete': 6.18.6
       '@codemirror/commands': 6.8.1
@@ -15643,7 +15648,7 @@ snapshots:
       lodash: 4.17.21
       quick-lru: 5.1.1
       react: 18.3.1
-      react-compiler-runtime: 19.0.0-beta-e993439-20250328(react@18.3.1)
+      react-compiler-runtime: 19.0.0-beta-e993439-20250405(react@18.3.1)
       react-fast-compare: 3.2.2
       styled-components: 6.1.17(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       use-effect-event: 1.0.2(react@18.3.1)
@@ -22563,6 +22568,10 @@ snapshots:
       react: 18.3.1
 
   react-compiler-runtime@19.0.0-beta-e993439-20250328(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+
+  react-compiler-runtime@19.0.0-beta-e993439-20250405(react@18.3.1):
     dependencies:
       react: 18.3.1
 
