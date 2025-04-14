@@ -236,8 +236,8 @@ importers:
         specifier: ^2.3.1
         version: 2.3.1
       '@icons-pack/react-simple-icons':
-        specifier: ^12.5.0
-        version: 12.5.0(react@18.3.1)
+        specifier: ^12.6.0
+        version: 12.6.0(react@18.3.1)
       '@kduprey/config':
         specifier: workspace:*
         version: link:../../packages/config
@@ -2302,6 +2302,12 @@ packages:
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
 
+  '@eslint-community/eslint-utils@4.6.0':
+    resolution: {integrity: sha512-WhCn7Z7TauhBtmzhvKpoQs0Wwb/kBcy4CwpuI0/eEIr2Lx2auxmulAzLr91wVZJaz47iUZdkXOK7WlAfxGKCnA==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
+
   '@eslint-community/regexpp@4.11.0':
     resolution: {integrity: sha512-G/M/tIiMrTAxEWRfLfQJMmGNX28IxBg4PBz8XqQhqUHLFI6TL2htpIB1iQCj144V5ee/JaKyT9/WZ0MGZWfA7A==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
@@ -2360,8 +2366,8 @@ packages:
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     deprecated: Use @eslint/object-schema instead
 
-  '@icons-pack/react-simple-icons@12.5.0':
-    resolution: {integrity: sha512-pjaK1q07KYMJ9haymuyNJneJkBO5HqZlLdKNdOJp3ArqowV5dS3nMwaOEsyOYbzdQ4t7ql4++zHtkBhfw2xSVw==}
+  '@icons-pack/react-simple-icons@12.6.0':
+    resolution: {integrity: sha512-CQJbCvJHn1GpnyJQrkXNVXSS5ct/MPzcmr2m8HUe7gCHUVG7Hl2PwrIIAvCcJ5hZ+3CAYi4WoWERoFj8DzGl/A==}
     peerDependencies:
       react: ^16.13 || ^17 || ^18 || ^19
 
@@ -13665,6 +13671,11 @@ snapshots:
       eslint: 8.57.0
       eslint-visitor-keys: 3.4.3
 
+  '@eslint-community/eslint-utils@4.6.0(eslint@8.57.0)':
+    dependencies:
+      eslint: 8.57.0
+      eslint-visitor-keys: 3.4.3
+
   '@eslint-community/regexpp@4.11.0': {}
 
   '@eslint-community/regexpp@4.12.1': {}
@@ -13726,7 +13737,7 @@ snapshots:
 
   '@humanwhocodes/object-schema@2.0.3': {}
 
-  '@icons-pack/react-simple-icons@12.5.0(react@18.3.1)':
+  '@icons-pack/react-simple-icons@12.6.0(react@18.3.1)':
     dependencies:
       react: 18.3.1
 
@@ -19380,7 +19391,7 @@ snapshots:
 
   eslint@8.57.0:
     dependencies:
-      '@eslint-community/eslint-utils': 4.5.1(eslint@8.57.0)
+      '@eslint-community/eslint-utils': 4.6.0(eslint@8.57.0)
       '@eslint-community/regexpp': 4.12.1
       '@eslint/eslintrc': 2.1.4
       '@eslint/js': 8.57.0
