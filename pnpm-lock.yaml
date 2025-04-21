@@ -236,8 +236,8 @@ importers:
         specifier: ^2.3.1
         version: 2.3.1
       '@icons-pack/react-simple-icons':
-        specifier: ^12.6.0
-        version: 12.6.0(react@18.3.1)
+        specifier: ^12.7.0
+        version: 12.7.0(react@18.3.1)
       '@kduprey/config':
         specifier: workspace:*
         version: link:../../packages/config
@@ -2366,8 +2366,8 @@ packages:
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     deprecated: Use @eslint/object-schema instead
 
-  '@icons-pack/react-simple-icons@12.6.0':
-    resolution: {integrity: sha512-CQJbCvJHn1GpnyJQrkXNVXSS5ct/MPzcmr2m8HUe7gCHUVG7Hl2PwrIIAvCcJ5hZ+3CAYi4WoWERoFj8DzGl/A==}
+  '@icons-pack/react-simple-icons@12.7.0':
+    resolution: {integrity: sha512-XpG7e8buAco8AbvCar+4LX5do0L98d/NaeHoTuW4awyUH33id7HQiiMomK+cS1MRxfLNMmhW2W0223/fMC0unw==}
     peerDependencies:
       react: ^16.13 || ^17 || ^18 || ^19
 
@@ -13742,7 +13742,7 @@ snapshots:
 
   '@humanwhocodes/object-schema@2.0.3': {}
 
-  '@icons-pack/react-simple-icons@12.6.0(react@18.3.1)':
+  '@icons-pack/react-simple-icons@12.7.0(react@18.3.1)':
     dependencies:
       react: 18.3.1
 
