@@ -8,7 +8,7 @@ Sentry.init({
   // Setting this option to true will print useful information to the console while you're setting up Sentry.
   debug: false,
 
-  dsn: "https://87c4e7e5059c86c8021eb11bdc8cc9c2@o1091546.ingest.us.sentry.io/4506956612632576",
+  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN!,
 
   // You can remove this option if you're not planning to use the Sentry Session Replay feature:
   integrations: [

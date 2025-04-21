@@ -33,5 +33,16 @@
   "packageManager": "pnpm@10.4.1",
   "prisma": {
     "schema": "./packages/db/prisma/schema.prisma"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/client",
+      "@prisma/engines",
+      "@sentry/cli",
+      "core-js-pure",
+      "esbuild",
+      "prisma",
+      "sharp"
+    ]
   }
 }

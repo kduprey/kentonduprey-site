@@ -8,7 +8,7 @@ Sentry.init({
   // Setting this option to true will print useful information to the console while you're setting up Sentry.
   debug: false,
 
-  dsn: "https://5262bb791199e68acec91d97608833f3@o1091546.ingest.us.sentry.io/4507523620864000",
+  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN!,
 
   // Adjust this value in production, or use tracesSampler for greater control
   tracesSampleRate: 1,
