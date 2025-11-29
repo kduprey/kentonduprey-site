@@ -9,30 +9,27 @@
     "build": "tsc",
     "clean": "rm -rf dist",
     "dev": "tsc --watch",
-    "generate-barrels": "barrelsby -c barrelsby.config.json",
-    "lint": "eslint src/",
-    "test": "jest",
+    "check": "pnpx ultracite@latest check",
+    "fix": "pnpx ultracite@latest fix",
     "typecheck": "tsc --noEmit"
   },
-  "prettier": "@kduprey/eslint-config/prettier",
   "dependencies": {
-    "@mantine/core": "7.17.4",
-    "@mantine/hooks": "7.17.4",
-    "@tabler/icons-react": "^3.31.0",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "@mantine/core": "8.3.9",
+    "@mantine/hooks": "8.3.9",
+    "@tabler/icons-react": "^3.35.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
   },
   "devDependencies": {
-    "@kduprey/eslint-config": "workspace:*",
     "@kduprey/tsconfig": "workspace:*",
-    "@types/node": "^22.13.13",
-    "@types/react": "18.3.11",
-    "postcss": "^8.5.2",
-    "postcss-preset-mantine": "1.17.0",
+    "@types/node": "^24.10.1",
+    "@types/react": "19.2.7",
+    "postcss": "^8.5.6",
+    "postcss-preset-mantine": "1.18.0",
     "postcss-simple-vars": "^7.0.1",
-    "stylelint": "^16.18.0",
-    "stylelint-config-standard-scss": "^14.0.0",
-    "tsup": "^8.4.0",
-    "typescript": "^5.8.3"
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard-scss": "^16.0.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
   }
 }

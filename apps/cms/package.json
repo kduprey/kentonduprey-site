@@ -6,37 +6,34 @@
     "analyze": "ANALYZE=true next build",
     "build": "next build",
     "dev": "next dev -p 3402",
-    "generate-barrels": "barrelsby -c barrelsby.config.json",
-    "lint": "next lint",
-    "prettier:check": "prettier --check \"**/*.{ts,tsx}\"",
-    "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",
+    "check": "pnpx ultracite@latest check",
+    "fix": "pnpx ultracite@latest fix",
     "publishContent": "sanity dataset export staging . --overwrite && sanity dataset import staging.tar.gz production --replace",
     "pullContent": "sanity dataset export production . --overwrite && sanity dataset import production.tar.gz staging --replace",
     "start": "next start",
-    "test": "npm run prettier:check && npm run lint && npm run typecheck",
+    "test": "npm run check && npm run typecheck",
     "typecheck": "tsc --noEmit"
   },
-  "prettier": "@kduprey/eslint-config/prettier",
+
   "dependencies": {
     "@kduprey/config": "workspace:*",
     "@kduprey/tsconfig": "workspace:*",
-    "@sanity/icons": "^3.7.0",
-    "@sanity/image-url": "^1.1.0",
-    "@sanity/vision": "^3.86.0",
-    "next": "14.2.25",
-    "next-sanity": "^9.10.2",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "sanity-plugin-iframe-pane": "^3.2.1",
-    "zod": "^3.24.3"
+    "@sanity/icons": "^3.7.4",
+    "@sanity/image-url": "^2.0.1",
+    "@sanity/vision": "^4.19.0",
+    "next": "16.0.5",
+    "next-sanity": "^11.6.10",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "sanity-plugin-iframe-pane": "^4.0.0",
+    "zod": "^4.1.13"
   },
   "devDependencies": {
-    "@kduprey/eslint-config": "workspace:*",
-    "@next/bundle-analyzer": "^15.3.1",
-    "@types/node": "^22.13.13",
-    "@types/react": "18.3.11",
-    "sanity": "^3.86.0",
-    "styled-components": "^6.1.17",
-    "typescript": "5.8.3"
+    "@next/bundle-analyzer": "^16.0.5",
+    "@types/node": "^24.10.1",
+    "@types/react": "19.2.7",
+    "sanity": "^4.19.0",
+    "styled-components": "^6.1.19",
+    "typescript": "5.9.3"
   }
 }

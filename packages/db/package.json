@@ -12,23 +12,22 @@
     "dev": "tsup src/* --watch",
     "format": "prisma format",
     "generate": "prisma generate",
-    "lint": "eslint . --max-warnings 0",
+    "check": "pnpx ultracite@latest check",
+    "fix": "pnpx ultracite@latest fix",
     "migrate": "prisma migrate dev",
     "push": "prisma db push --skip-generate",
     "seed": "prisma db seed",
     "studio": "prisma studio"
   },
-  "prettier": "@kduprey/eslint-config/prettier",
   "dependencies": {
-    "@prisma/client": "6.6.0"
+    "@prisma/client": "7.0.1"
   },
   "devDependencies": {
-    "@kduprey/eslint-config": "workspace:*",
     "@kduprey/tsconfig": "workspace:*",
-    "@types/node": "^22.13.13",
-    "prisma": "^6.6.0",
-    "tsup": "^8.4.0",
-    "typescript": "^5.8.3"
+    "@types/node": "^24.10.1",
+    "prisma": "^7.0.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
   },
   "prisma": {
     "schema": "./prisma/schema.prisma"

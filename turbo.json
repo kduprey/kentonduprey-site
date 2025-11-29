@@ -34,7 +34,7 @@
       ]
     },
     "deploy": {
-      "dependsOn": ["build", "test", "lint"]
+      "dependsOn": ["build", "test", "check"]
     },
     "test": {
       "dependsOn": ["build"],
@@ -49,7 +49,8 @@
         ".env"
       ]
     },
-    "lint": {},
+    "check": {},
+    "fix": {},
     "dev": {
       "cache": false,
       "persistent": true,
@@ -60,9 +61,6 @@
         ".env.development",
         ".env"
       ]
-    },
-    "db:generate": {
-      "cache": false
     },
     "db:push": {
       "cache": false
