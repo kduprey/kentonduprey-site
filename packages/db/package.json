@@ -20,6 +20,7 @@
   },
   "prettier": "@kduprey/eslint-config/prettier",
   "dependencies": {
+    "@prisma/adapter-pg": "^7.0.1",
     "@prisma/client": "7.0.1",
     "dotenv": "^17.2.3"
   },
@@ -27,6 +28,7 @@
     "@kduprey/eslint-config": "workspace:*",
     "@kduprey/tsconfig": "workspace:*",
     "@types/node": "^22.13.13",
+    "dotenv-cli": "^8.0.0",
     "prisma": "^7.0.1",
     "tsup": "^8.4.0",
     "typescript": "^5.8.3"
