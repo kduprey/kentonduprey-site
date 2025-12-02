@@ -1,4 +1,4 @@
-import { type PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 
 export const metadata = {
   title: "DJ Alex Cohen - CMS",
@@ -6,19 +6,17 @@ export const metadata = {
   keywords: "Alex Cohen, DJ, NYC",
 };
 
-const RootLayout = ({ children }: Readonly<PropsWithChildren>) => {
-  return (
-    <html lang="en">
-      <head>
-        <link href="/favicon.svg" rel="shortcut icon" />
-        <meta
-          content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
-          name="viewport"
-        />
-      </head>
-      <body>{children}</body>
-    </html>
-  );
-};
+const RootLayout = ({ children }: Readonly<PropsWithChildren>) => (
+  <html lang="en">
+    <head>
+      <link href="/favicon.svg" rel="shortcut icon" />
+      <meta
+        content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
+        name="viewport"
+      />
+    </head>
+    <body>{children}</body>
+  </html>
+);
 
 export default RootLayout;

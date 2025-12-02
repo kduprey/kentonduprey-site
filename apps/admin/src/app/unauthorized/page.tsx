@@ -10,7 +10,7 @@ const Page = () => {
   // After 5 seconds, sign out the user
   useEffect(() => {
     const timeout = setTimeout(() => {
-      void signOut();
+      signOut();
     }, 3000);
 
     return () => {

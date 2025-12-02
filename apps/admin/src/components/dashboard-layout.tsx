@@ -1,5 +1,6 @@
 "use client";
 
+import { SignedIn, UserButton } from "@clerk/nextjs";
 import {
   Anchor,
   AppShell,
@@ -13,11 +14,10 @@ import {
   Title,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { type PropsWithChildren } from "react";
-import { SignedIn, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { links } from "@/src/data";
+import type { PropsWithChildren } from "react";
+import { links } from "~/data/links";
 
 export const DashboardLayout = ({ children }: PropsWithChildren) => {
   const [opened, { toggle }] = useDisclosure();
@@ -39,11 +39,11 @@ export const DashboardLayout = ({ children }: PropsWithChildren) => {
 
           <Anchor component={Link} href="/dashboard" underline="never">
             <Title
-              order={1}
               c="white"
+              mx={{ base: "auto", sm: 0 }}
+              order={1}
               style={{ lineClamp: 0 }}
               ta={{ base: "center", sm: "left" }}
-              mx={{ base: "auto", sm: 0 }}
             >
               Haus of Web, LLC.
             </Title>
@@ -54,11 +54,11 @@ export const DashboardLayout = ({ children }: PropsWithChildren) => {
         <AppShellSection grow>
           {links.map((link) => (
             <NavLink
-              key={link.href}
-              href={link.href}
-              label={link.label}
-              component={Link}
               active={path === link.href}
+              component={Link}
+              href={link.href}
+              key={link.href}
+              label={link.label}
               onClick={toggle}
             />
           ))}

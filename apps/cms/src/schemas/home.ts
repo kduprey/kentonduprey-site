@@ -1,5 +1,12 @@
 import { HomeIcon } from "@sanity/icons";
-import { defineType, defineField } from "sanity";
+import { defineField, defineType } from "sanity";
+
+const instagramUrlPattern =
+  /^(https?:\/\/)?(www\.)?instagram.com\/[a-zA-Z0-9_.]+\/?$/;
+const twitterUrlPattern =
+  /^(https?:\/\/)?(www\.)?twitter.com\/[a-zA-Z0-9_.]+\/?$/;
+const githubUrlPattern =
+  /^(https?:\/\/)?(www\.)?github.com\/[a-zA-Z0-9_.]+\/?$/;
 
 export const homeSchema = defineType({
   name: "home",
@@ -171,30 +178,21 @@ export const homeSchema = defineType({
           title: "Instagram Link",
           type: "string",
           description: "This is the link to your Instagram profile.",
-          validation: (Rule) =>
-            Rule.regex(
-              /^(https?:\/\/)?(www\.)?instagram.com\/[a-zA-Z0-9_.]+\/?$/,
-            ).required(),
+          validation: (Rule) => Rule.regex(instagramUrlPattern).required(),
         }),
         defineField({
           name: "twitterLink",
           title: "Twitter Link",
           type: "string",
           description: "This is the link to your Twitter profile.",
-          validation: (Rule) =>
-            Rule.regex(
-              /^(https?:\/\/)?(www\.)?twitter.com\/[a-zA-Z0-9_.]+\/?$/,
-            ).required(),
+          validation: (Rule) => Rule.regex(twitterUrlPattern).required(),
         }),
         defineField({
           name: "githubLink",
           title: "GitHub Link",
           type: "string",
           description: "This is the link to your GitHub profile.",
-          validation: (Rule) =>
-            Rule.regex(
-              /^(https?:\/\/)?(www\.)?github.com\/[a-zA-Z0-9_.]+\/?$/,
-            ).required(),
+          validation: (Rule) => Rule.regex(githubUrlPattern).required(),
         }),
       ],
     }),

@@ -1,14 +1,13 @@
-import type { QueryParams, ResponseQueryOptions } from "next-sanity";
-
 import { draftMode } from "next/headers";
+import type { QueryParams, ResponseQueryOptions } from "next-sanity";
 import "server-only";
 import { z } from "zod";
 
 import { client } from "../config/sanity.client";
 import {
   type HomeType,
-  type SettingsType,
   homeQuery,
+  type SettingsType,
   settingsQuery,
 } from "../data";
 import { queryStore } from "./createQueryStore";
@@ -30,22 +29,25 @@ const serverClient = client.withConfig({
 queryStore.setServerClient(serverClient);
 const usingCdn = serverClient.config().useCdn;
 
-export const loadQuery = (<T>(
+export const loadQuery = (async <T>(
   query: string,
   params: QueryParams = DEFAULT_PARAMS,
   options: Pick<
     ResponseQueryOptions,
     "cache" | "next" | "perspective" | "stega" | "useCdn"
-  > = {},
+  > = {}
 ) => {
   const {
-    perspective = draftMode().isEnabled ? "previewDrafts" : "published",
+    perspective = (await draftMode()).isEnabled ? "previewDrafts" : "published",
   } = options;
   // Don't cache by default
   let revalidate: NextFetchRequestConfig["revalidate"] = 0;
   // If `next.tags` is set, and we're not using the CDN, then it's safe to cache
-  if (!usingCdn && Array.isArray(options.next?.tags)) revalidate = false;
-  else if (usingCdn) revalidate = 3600;
+  if (!usingCdn && Array.isArray(options.next?.tags)) {
+    revalidate = false;
+  } else if (usingCdn) {
+    revalidate = 3600;
+  }
 
   return queryStore.loadQuery<T>(query, params, {
     ...options,
@@ -56,7 +58,7 @@ export const loadQuery = (<T>(
     },
     perspective,
     // Enable stega if in Draft Mode, to enable overlays when outside Sanity Studio
-    stega: draftMode().isEnabled,
+    stega: (await draftMode()).isEnabled,
   });
 }) satisfies typeof queryStore.loadQuery;
 
@@ -68,7 +70,7 @@ export const loadHomePage = () =>
       next: {
         tags: ["home"],
       },
-    },
+    }
   );
 
 export const loadSettings = () =>
@@ -79,5 +81,5 @@ export const loadSettings = () =>
       next: {
         tags: ["siteSettings"],
       },
-    },
+    }
   );

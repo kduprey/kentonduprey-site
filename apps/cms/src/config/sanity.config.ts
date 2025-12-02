@@ -1,15 +1,16 @@
-import * as schemas from "@/schemas";
 import { PUBLIC_SITE_URL } from "@kduprey/config";
 import { visionTool } from "@sanity/vision";
-import { type WorkspaceOptions, defineConfig } from "sanity";
+import { defineConfig, type WorkspaceOptions } from "sanity";
 import { presentationTool } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
+// biome-ignore lint/performance/noNamespaceImport: Required for schema export
+import * as schemas from "~/schemas";
 
 import {
   deskStructure,
   documentActions,
   schemaTemplatesFilter,
-} from "./deskStructure";
+} from "./desk-structure";
 import { locate, mainDocuments } from "./locate";
 
 const schemaTypes = Object.values(schemas);
@@ -76,5 +77,5 @@ export default defineConfig(
   process.env.VERCEL_ENV === "production" ||
     process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
     ? [production, staging]
-    : [staging, production],
+    : [staging, production]
 );

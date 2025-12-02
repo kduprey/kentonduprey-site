@@ -1,8 +1,8 @@
 "use client";
 
-import { type HomeType, homeQuery } from "@/sanity/data";
-import { useQuery } from "@/sanity/utils/useQuery";
-import { type QueryResponseInitial } from "@sanity/react-loader";
+import type { QueryResponseInitial } from "@sanity/react-loader";
+import { type HomeType, homeQuery } from "~/sanity/data";
+import { useQuery } from "~/sanity/utils/use-query";
 
 import { HomeLayout } from "./HomeLayout";
 
@@ -15,7 +15,7 @@ const HomePagePreview = (props: Readonly<HomePagePreviewProps>) => {
   const { data, encodeDataAttribute } = useQuery<HomeType>(
     homeQuery,
     {},
-    { initial },
+    { initial }
   );
 
   return (

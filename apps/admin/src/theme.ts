@@ -1,16 +1,16 @@
 "use client";
 
 import {
-  type CSSVariablesResolver,
   Card,
+  type CSSVariablesResolver,
   createTheme,
-  type MantineThemeOverride,
-  type VariantColorsResolver,
-  defaultVariantColorsResolver,
-  rem,
   DEFAULT_THEME,
+  defaultVariantColorsResolver,
+  type MantineThemeOverride,
   mergeMantineTheme,
+  rem,
   rgba,
+  type VariantColorsResolver,
 } from "@mantine/core";
 import { Raleway } from "next/font/google";
 

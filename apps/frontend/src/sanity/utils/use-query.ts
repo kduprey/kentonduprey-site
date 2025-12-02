@@ -1,9 +1,9 @@
 import { PUBLIC_CMS_URL } from "@kduprey/config";
 import {
+  type EncodeDataAttributeFunction,
   type QueryParams,
   type QueryStoreState,
   type UseQueryOptionsDefinedInitial,
-  type WithEncodeDataAttribute,
   useEncodeDataAttribute,
 } from "@sanity/react-loader";
 
@@ -18,25 +18,27 @@ export const useQuery = <
 >(
   query: string,
   params?: QueryParams,
-  options?: UseQueryOptionsDefinedInitial<QueryResponseResult>,
+  options?: UseQueryOptionsDefinedInitial<QueryResponseResult>
 ): {
   data: QueryResponseResult;
 } & Omit<QueryStoreState<QueryResponseResult, QueryResponseError>, "data"> &
-  WithEncodeDataAttribute => {
+  EncodeDataAttributeFunction => {
   const snapshot = queryStore.useQuery<QueryResponseResult, QueryResponseError>(
     query,
     params,
-    options,
+    options
   );
 
   const encodeDataAttribute = useEncodeDataAttribute(
     snapshot.data,
     snapshot.sourceMap,
-    PUBLIC_CMS_URL,
+    PUBLIC_CMS_URL
   );
 
   // Always throw errors if there are any
-  if (snapshot.error) throw new Error("Snapshow Error", snapshot.error);
+  if (snapshot.error) {
+    throw new Error("Snapshow Error", snapshot.error);
+  }
 
   return {
     ...snapshot,

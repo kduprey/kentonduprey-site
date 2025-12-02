@@ -4,7 +4,7 @@ import { Iframe } from "sanity-plugin-iframe-pane";
 
 export const defaultDocumentNode: DefaultDocumentNodeResolver = (
   S,
-  { schemaType },
+  { schemaType }
 ) => {
   switch (schemaType) {
     case "home":
