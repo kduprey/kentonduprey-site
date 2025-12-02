@@ -31,9 +31,6 @@
     "turbo": "^2.5.0"
   },
   "packageManager": "pnpm@10.4.1",
-  "prisma": {
-    "schema": "./packages/db/prisma/schema.prisma"
-  },
   "pnpm": {
     "onlyBuiltDependencies": [
       "@clerk/shared",
