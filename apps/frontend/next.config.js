@@ -31,6 +31,7 @@ module.exports = {
     optimizePackageImports: ["@kduprey/config"],
     instrumentationHook: true,
   },
+  transpilePackages: ["@kduprey/db"]
 };
 
 // Injected content via Sentry wizard below
