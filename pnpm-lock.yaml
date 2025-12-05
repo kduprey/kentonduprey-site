@@ -20,6 +20,9 @@ importers:
       dotenv-cli:
         specifier: ^8.0.0
         version: 8.0.0
+      prettier-plugin-packagejson:
+        specifier: ^2.5.10
+        version: 2.5.20(prettier@3.7.2)
       turbo:
         specifier: ^2.5.0
         version: 2.6.1
@@ -408,14 +411,14 @@ importers:
     dependencies:
       next:
         specifier: 14.2.25
-        version: 14.2.25(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        version: 14.2.25(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
     devDependencies:
       '@next/eslint-plugin-next':
         specifier: ^15.3.1
         version: 15.5.6
       '@vercel/style-guide':
         specifier: ^6.0.0
-        version: 6.0.0(@next/eslint-plugin-next@15.5.6)(eslint@8.57.1)(jest@30.2.0(@types/node@22.19.1)(esbuild-register@3.6.0(esbuild@0.27.0)))(prettier@3.7.2)(typescript@5.9.3)
+        version: 6.0.0(@next/eslint-plugin-next@15.5.6)(eslint@8.57.1)(jest@30.2.0(esbuild-register@3.6.0(esbuild@0.27.0)))(prettier@3.7.2)(typescript@5.9.3)
       eslint-config-turbo:
         specifier: ^2.5.0
         version: 2.6.1(eslint@8.57.1)(turbo@2.6.1)
@@ -448,7 +451,7 @@ importers:
     dependencies:
       next:
         specifier: 14.2.25
-        version: 14.2.25(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        version: 14.2.25(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
 
   packages/ui:
     dependencies:
@@ -18587,7 +18590,7 @@ snapshots:
 
   '@vercel/stega@0.1.2': {}
 
-  '@vercel/style-guide@6.0.0(@next/eslint-plugin-next@15.5.6)(eslint@8.57.1)(jest@30.2.0(@types/node@22.19.1)(esbuild-register@3.6.0(esbuild@0.27.0)))(prettier@3.7.2)(typescript@5.9.3)':
+  '@vercel/style-guide@6.0.0(@next/eslint-plugin-next@15.5.6)(eslint@8.57.1)(jest@30.2.0(esbuild-register@3.6.0(esbuild@0.27.0)))(prettier@3.7.2)(typescript@5.9.3)':
     dependencies:
       '@babel/core': 7.28.5
       '@babel/eslint-parser': 7.28.5(@babel/core@7.28.5)(eslint@8.57.1)
@@ -18599,9 +18602,9 @@ snapshots:
       eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1)
       eslint-plugin-eslint-comments: 3.2.0(eslint@8.57.1)
       eslint-plugin-import: 2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)
-      eslint-plugin-jest: 27.9.0(@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(jest@30.2.0(@types/node@22.19.1)(esbuild-register@3.6.0(esbuild@0.27.0)))(typescript@5.9.3)
+      eslint-plugin-jest: 27.9.0(@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(jest@30.2.0(esbuild-register@3.6.0(esbuild@0.27.0)))(typescript@5.9.3)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@8.57.1)
-      eslint-plugin-playwright: 1.8.3(eslint-plugin-jest@27.9.0(@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(jest@30.2.0(@types/node@22.19.1)(esbuild-register@3.6.0(esbuild@0.27.0)))(typescript@5.9.3))(eslint@8.57.1)
+      eslint-plugin-playwright: 1.8.3(eslint-plugin-jest@27.9.0(@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(jest@30.2.0(esbuild-register@3.6.0(esbuild@0.27.0)))(typescript@5.9.3))(eslint@8.57.1)
       eslint-plugin-react: 7.37.5(eslint@8.57.1)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.1)
       eslint-plugin-testing-library: 6.5.0(eslint@8.57.1)(typescript@5.9.3)
@@ -20589,7 +20592,7 @@ snapshots:
 
   eslint-import-resolver-alias@1.1.2(eslint-plugin-import@2.32.0):
     dependencies:
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)
 
   eslint-import-resolver-node@0.3.9:
     dependencies:
@@ -20610,7 +20613,7 @@ snapshots:
       tinyglobby: 0.2.15
       unrs-resolver: 1.11.1
     optionalDependencies:
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -20731,7 +20734,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-jest@27.9.0(@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(jest@30.2.0(@types/node@22.19.1)(esbuild-register@3.6.0(esbuild@0.27.0)))(typescript@5.9.3):
+  eslint-plugin-jest@27.9.0(@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(jest@30.2.0(esbuild-register@3.6.0(esbuild@0.27.0)))(typescript@5.9.3):
     dependencies:
       '@typescript-eslint/utils': 5.62.0(eslint@8.57.1)(typescript@5.9.3)
       eslint: 8.57.1
@@ -20808,12 +20811,12 @@ snapshots:
     optionalDependencies:
       eslint-plugin-jest: 27.9.0(@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.8.3))(eslint@8.57.1)(typescript@5.8.3))(eslint@8.57.1)(jest@30.2.0(@types/node@22.19.1)(esbuild-register@3.6.0(esbuild@0.27.0)))(typescript@5.8.3)
 
-  eslint-plugin-playwright@1.8.3(eslint-plugin-jest@27.9.0(@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(jest@30.2.0(@types/node@22.19.1)(esbuild-register@3.6.0(esbuild@0.27.0)))(typescript@5.9.3))(eslint@8.57.1):
+  eslint-plugin-playwright@1.8.3(eslint-plugin-jest@27.9.0(@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(jest@30.2.0(esbuild-register@3.6.0(esbuild@0.27.0)))(typescript@5.9.3))(eslint@8.57.1):
     dependencies:
       eslint: 8.57.1
       globals: 13.24.0
     optionalDependencies:
-      eslint-plugin-jest: 27.9.0(@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(jest@30.2.0(@types/node@22.19.1)(esbuild-register@3.6.0(esbuild@0.27.0)))(typescript@5.9.3)
+      eslint-plugin-jest: 27.9.0(@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(jest@30.2.0(esbuild-register@3.6.0(esbuild@0.27.0)))(typescript@5.9.3)
 
   eslint-plugin-react-hooks@4.6.2(eslint@8.57.1):
     dependencies:
@@ -23953,7 +23956,7 @@ snapshots:
       - '@babel/core'
       - babel-plugin-macros
 
-  next@14.2.25(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+  next@14.2.25(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
     dependencies:
       '@next/env': 14.2.25
       '@swc/helpers': 0.5.5
@@ -23963,7 +23966,7 @@ snapshots:
       postcss: 8.4.31
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
-      styled-jsx: 5.1.1(@babel/core@7.28.5)(react@19.2.0)
+      styled-jsx: 5.1.1(react@19.2.0)
     optionalDependencies:
       '@next/swc-darwin-arm64': 14.2.25
       '@next/swc-darwin-x64': 14.2.25
@@ -26399,12 +26402,10 @@ snapshots:
     optionalDependencies:
       '@babel/core': 7.28.5
 
-  styled-jsx@5.1.1(@babel/core@7.28.5)(react@19.2.0):
+  styled-jsx@5.1.1(react@19.2.0):
     dependencies:
       client-only: 0.0.1
       react: 19.2.0
-    optionalDependencies:
-      '@babel/core': 7.28.5
 
   styled-jsx@5.1.6(@babel/core@7.28.5)(react@18.3.1):
     dependencies:

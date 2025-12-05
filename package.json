@@ -25,6 +25,7 @@
   "prettier": "./packages/eslint-config/prettier.js",
   "devDependencies": {
     "@kduprey/eslint-config": "workspace:*",
+    "prettier-plugin-packagejson": "^2.5.10",
     "barrelsby": "^2.8.1",
     "concurrently": "^9.1.2",
     "dotenv-cli": "^8.0.0",
