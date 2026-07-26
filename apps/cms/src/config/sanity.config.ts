@@ -1,18 +1,21 @@
-import * as schemas from "@/schemas";
 import { PUBLIC_SITE_URL } from "@kduprey/config";
 import { visionTool } from "@sanity/vision";
-import { type WorkspaceOptions, defineConfig } from "sanity";
+import { defineConfig, type WorkspaceOptions } from "sanity";
 import { presentationTool } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
+import { homeSchema } from "@/schemas/home";
+import { project } from "@/schemas/project";
+import { siteSettings } from "@/schemas/site-settings";
+import { skill } from "@/schemas/skill";
 
 import {
   deskStructure,
   documentActions,
   schemaTemplatesFilter,
-} from "./deskStructure";
+} from "./desk-structure";
 import { locate, mainDocuments } from "./locate";
 
-const schemaTypes = Object.values(schemas);
+const schemaTypes = [homeSchema, project, siteSettings, skill];
 
 export const PROJECT_ID = "b6x3by70";
 
@@ -39,9 +42,14 @@ const production: WorkspaceOptions = {
   name: "production",
   plugins: [
     presentationTool({
+      allowOrigins: [
+        "https://kentonduprey.com",
+        "https://www.kentonduprey.com",
+        "https://kd.kduprey.dev",
+      ],
       previewUrl: {
         draftMode: {
-          enable: "https://kentonduprey.com/api/draft",
+          enable: "https://kentonduprey.com/api/draft-mode/enable",
         },
       },
       resolve: { locations: locate, mainDocuments },
@@ -59,9 +67,14 @@ const staging: WorkspaceOptions = {
   name: "staging",
   plugins: [
     presentationTool({
+      allowOrigins: [
+        "https://kentonduprey.com",
+        "https://www.kentonduprey.com",
+        "https://kd-test.kduprey.dev",
+      ],
       previewUrl: {
         draftMode: {
-          enable: `${PUBLIC_SITE_URL}/api/draft`,
+          enable: `${PUBLIC_SITE_URL}/api/draft-mode/enable`,
         },
       },
       resolve: { locations: locate, mainDocuments },
@@ -76,5 +89,5 @@ export default defineConfig(
   process.env.VERCEL_ENV === "production" ||
     process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
     ? [production, staging]
-    : [staging, production],
+    : [staging, production]
 );

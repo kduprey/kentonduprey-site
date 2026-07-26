@@ -1,3 +1,4 @@
+"use strict";
 const nextJest = require("next/jest");
 
 const createJestConfig = nextJest({
@@ -5,13 +6,13 @@ const createJestConfig = nextJest({
 });
 
 const customJestConfig = {
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.cjs"],
+  moduledirectories: ["node_modules", __dirname, "test-utils"],
   moduleNameMapper: {
     "^@/components/(.*)$": "<rootDir>/components/$1",
     "^@/pages/(.*)$": "<rootDir>/pages/$1",
   },
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.cjs"],
   testEnvironment: "jest-environment-jsdom",
-  moduledirectories: ["node_modules", __dirname, "test-utils"],
 };
 
 module.exports = createJestConfig(customJestConfig);

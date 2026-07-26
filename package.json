@@ -1,18 +1,19 @@
 {
+  "devDependencies": {
+    "@biomejs/biome": "2.5.3",
+    "concurrently": "^9.1.2",
+    "dotenv-cli": "^8.0.0",
+    "prettier-plugin-packagejson": "^2.5.10",
+    "turbo": "^2.5.0",
+    "ultracite": "7.9.4"
+  },
   "name": "@kduprey/apps",
-  "version": "1.0.0",
-  "keywords": [],
-  "author": "Kenton Duprey",
   "scripts": {
     "build": "pnpm dlx turbo build",
     "build:local": "pnpm start:db:local && dotenv -- pnpm dlx turbo build && pnpm stop:db:local",
     "predev": "pnpm start:db:local",
     "dev": "dotenv -- concurrently 'pnpm dlx turbo dev' 'pnpm stripe:listen'",
     "postdev": "pnpm stop:db:local",
-    "generate-barrels": "pnpm run generate-barrels:admin && pnpm run generate-barrels:cms && pnpm run generate-barrels:frontend",
-    "generate-barrels:admin": "pnpm --filter @kduprey/admin generate-barrels",
-    "generate-barrels:cms": "pnpm --filter @kduprey/cms generate-barrels",
-    "generate-barrels:frontend": "pnpm --filter @kduprey/frontend generate-barrels",
     "lint": "pnpm dlx turbo lint",
     "publishContent": "pnpm --filter @kduprey/cms publishContent",
     "pullContent": "pnpm --filter @kduprey/cms pullContent",
@@ -20,17 +21,13 @@
     "start:db:local": "docker-compose up -d && dotenv -- pnpm --filter @kduprey/db migrate",
     "stop:db:local": "docker-compose down",
     "stripe:listen": "stripe listen -f $STRIPE_WEBHOOK_FW_URL -a",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check": "ultracite check",
+    "fix": "ultracite fix"
   },
-  "prettier": "./packages/eslint-config/prettier.js",
-  "devDependencies": {
-    "@kduprey/eslint-config": "workspace:*",
-    "prettier-plugin-packagejson": "^2.5.10",
-    "barrelsby": "^2.8.1",
-    "concurrently": "^9.1.2",
-    "dotenv-cli": "^8.0.0",
-    "turbo": "^2.5.0"
-  },
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "Kenton Duprey",
   "packageManager": "pnpm@10.24.0",
   "pnpm": {
     "onlyBuiltDependencies": [
@@ -42,6 +39,10 @@
       "esbuild",
       "prisma",
       "sharp"
-    ]
+    ],
+    "overrides": {
+      "@sanity/visual-editing>@types/react": "19.2.17",
+      "@sanity/visual-editing>@types/react-dom": "19.2.3"
+    }
   }
 }

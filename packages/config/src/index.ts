@@ -1,3 +1,3 @@
-export * from "./publicConstants";
-export * from "./serverConstants";
+export * from "./public-constants";
+export * from "./server-constants";
 export * from "./stripe";

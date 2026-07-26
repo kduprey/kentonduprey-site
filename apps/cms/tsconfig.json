@@ -2,12 +2,15 @@
   "extends": "@kduprey/tsconfig/nextjs.json",
   "compilerOptions": {
     "types": ["node"],
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*", "./src/*"],
-      "test-utils": ["./src/test-utils"]
+      "@/*": ["./*", "./src/*"]
     },
-    "plugins": [{ "name": "next" }]
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",

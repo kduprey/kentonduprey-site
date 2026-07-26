@@ -12,7 +12,12 @@
       "@/*": ["./*", "./src/*"],
       "test-utils": ["./src/test-utils"]
     },
-    "plugins": [{ "name": "next" }]
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",

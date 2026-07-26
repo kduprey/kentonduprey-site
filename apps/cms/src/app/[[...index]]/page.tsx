@@ -20,8 +20,6 @@ export const viewport: Viewport = {
 
 export const dynamic = "force-static";
 
-const StudioPage = () => {
-  return <Studio />;
-};
+const StudioPage = () => <Studio />;
 
 export default StudioPage;

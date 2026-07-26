@@ -6,21 +6,19 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 export default withBundleAnalyzer({
-  webpack: (config, { isServer }) => {
-    if (isServer) {
-      config.plugins.push(new PrismaPlugin());
-    } else config.resolve.fallback.fs = false;
-    return config;
-  },
-  reactStrictMode: false,
   eslint: {
     ignoreDuringBuilds: true,
   },
   experimental: {
-    optimizePackageImports: [
-      "@mantine/core",
-      "@mantine/hooks",
-      "@kduprey/ui",
-    ],
+    optimizePackageImports: ["@mantine/core", "@mantine/hooks", "@kduprey/ui"],
+  },
+  reactStrictMode: false,
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.plugins.push(new PrismaPlugin());
+    } else {
+      config.resolve.fallback.fs = false;
+    }
+    return config;
   },
 });

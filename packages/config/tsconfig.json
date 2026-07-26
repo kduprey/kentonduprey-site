@@ -3,7 +3,8 @@
   "extends": "@kduprey/tsconfig/base.json",
   "compilerOptions": {
     "types": ["node"],
-    "outDir": "dist"
+    "outDir": "dist",
+    "strictNullChecks": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "tsup.config.ts"],
   "exclude": ["node_modules", "dist"]

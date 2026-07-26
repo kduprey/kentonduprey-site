@@ -1,6 +1,5 @@
-import type { IconBaseProps } from "react-icons";
-
 import dynamic from "next/dynamic";
+import type { IconBaseProps } from "react-icons";
 import { FaRegCircle } from "react-icons/fa";
 import { FiCircle } from "react-icons/fi";
 import { SiReact } from "react-icons/si";
@@ -21,7 +20,7 @@ export const Icon = ({ color, iconName, size }: IconProps) => {
           .then((mod) => mod[iconName])
           .then((e) => e ?? FaRegCircle) as Promise<
           React.ComponentType<IconBaseProps>
-        >,
+        >
     ),
     fi: dynamic(
       () =>
@@ -29,7 +28,7 @@ export const Icon = ({ color, iconName, size }: IconProps) => {
           .then((mod) => mod[iconName])
           .then((e) => e ?? FiCircle) as Promise<
           React.ComponentType<IconBaseProps>
-        >,
+        >
     ),
     si: dynamic(
       () =>
@@ -37,7 +36,7 @@ export const Icon = ({ color, iconName, size }: IconProps) => {
           .then((mod) => mod[iconName])
           .then((e) => e ?? SiReact) as Promise<
           React.ComponentType<IconBaseProps>
-        >,
+        >
     ),
   };
   const DynamicIcon = iconName ? Icons.si : null;

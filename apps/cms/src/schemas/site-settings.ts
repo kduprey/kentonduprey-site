@@ -1,24 +1,13 @@
 import { defineField, defineType } from "sanity";
 
 export const siteSettings = defineType({
-  name: "siteSettings",
-  title: "Site Settings",
-  type: "document",
-  preview: {
-    select: {
-      title: "title",
-    },
-    prepare: () => ({
-      title: "Site Settings",
-    }),
-  },
   fields: [
     defineField({
+      hidden: true,
+      initialValue: "Site Settings",
       name: "title",
       title: "Title",
       type: "string",
-      initialValue: "Site Settings",
-      hidden: true,
     }),
     defineField({
       name: "siteTitle",
@@ -32,18 +21,29 @@ export const siteSettings = defineType({
     }),
     defineField({
       name: "keywords",
+      of: [{ type: "string" }],
       title: "Site Keywords",
       type: "array",
-      of: [{ type: "string" }],
     }),
     defineField({
-      name: "ogImage",
-      title: "Open Graph Image",
-      type: "image",
       description: "Displayed on social cards and search engine results.",
+      name: "ogImage",
       options: {
         hotspot: true,
       },
+      title: "Open Graph Image",
+      type: "image",
     }),
   ],
+  name: "siteSettings",
+  preview: {
+    prepare: () => ({
+      title: "Site Settings",
+    }),
+    select: {
+      title: "title",
+    },
+  },
+  title: "Site Settings",
+  type: "document",
 });

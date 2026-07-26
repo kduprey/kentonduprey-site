@@ -1,7 +1,0 @@
-{
-  "baseurl": "./src",
-  "delete": true,
-  "directory": "./src",
-  "exclude": [".*Prices.*"],
-  "noHeader": true
-}

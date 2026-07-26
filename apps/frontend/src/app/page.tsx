@@ -1,17 +1,15 @@
-import dynamic from "next/dynamic";
-import { draftMode } from "next/headers";
-
-import { loadHomePage } from "../sanity";
+import { sanityFetch } from "@/sanity/config/sanity.live";
+import {
+  homeQuery,
+  homeSchema,
+} from "@/sanity/data/queries/pageQueries/home.queries";
 import { HomeLayout } from "./HomeLayout";
 
-const HomePagePreview = dynamic(() => import("./preview"));
-
 const Page = async () => {
-  const homeData = await loadHomePage();
+  const { data } = await sanityFetch({ query: homeQuery });
+  const homeData = homeSchema.parse(data);
 
-  if (draftMode().isEnabled) return <HomePagePreview initial={homeData} />;
-
-  return <HomeLayout homeData={homeData.data} />;
+  return <HomeLayout homeData={homeData} />;
 };
 
 export default Page;

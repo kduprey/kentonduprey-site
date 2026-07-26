@@ -1,4 +1,4 @@
-import type { SkillType } from "@/sanity";
+import type { SkillType } from "@/sanity/data/queries/pageQueries/home.queries";
 
 import { Skill } from "../Skill";
 
@@ -7,22 +7,18 @@ interface SkillsProps {
   skills: SkillType[];
 }
 
-export const Skills = ({ headerText, skills }: SkillsProps) => {
-  return (
-    <section className="flex w-full flex-col items-center">
-      <h2 className="pb-5 text-center font-bold">{headerText}</h2>
-      <div className="flex w-full max-w-screen-lg flex-wrap items-center justify-evenly">
-        {skills.map((skill) => {
-          return (
-            <Skill
-              iconName={skill.iconSlug}
-              key={skill.title}
-              project={false}
-              title={skill.title}
-            />
-          );
-        })}
-      </div>
-    </section>
-  );
-};
+export const Skills = ({ headerText, skills }: SkillsProps) => (
+  <section className="flex w-full flex-col items-center">
+    <h2 className="pb-5 text-center font-bold">{headerText}</h2>
+    <div className="flex w-full max-w-screen-lg flex-wrap items-center justify-evenly">
+      {skills.map((skill) => (
+        <Skill
+          iconName={skill.iconSlug}
+          key={skill.title}
+          project={false}
+          title={skill.title}
+        />
+      ))}
+    </div>
+  </section>
+);

@@ -7,7 +7,8 @@
     "types": ["node"],
     "paths": {
       "@/*": ["./*", "./src/*"]
-    }
+    },
+    "strictNullChecks": true
   },
   "include": ["src", "tsup.config.ts"],
   "exclude": ["node_modules", "dist"]

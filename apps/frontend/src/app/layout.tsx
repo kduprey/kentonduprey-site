@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { VisualEditing } from "next-sanity/visual-editing";
 import type { PropsWithChildren } from "react";
 
-import { Inter } from "next/font/google";
-import { draftMode } from "next/headers";
-import { VisualEditing } from "next-sanity";
-
 import "./globals.css";
+import { draftMode } from "next/headers";
+import { SanityLive } from "@/sanity/config/sanity.live";
 
 export const metadata: Metadata = {
   description: "Building elegant web solutions for clients and companies",
@@ -18,7 +18,9 @@ const inter = Inter({
   variable: "--font-raleway",
 });
 
-const rootLayout = ({ children }: PropsWithChildren) => {
+const rootLayout = async ({ children }: PropsWithChildren) => {
+  const { isEnabled } = await draftMode();
+
   return (
     <html className={inter.variable} lang="en">
       <head>
@@ -29,8 +31,10 @@ const rootLayout = ({ children }: PropsWithChildren) => {
         />
       </head>
       <body>
-        {children}
-        {draftMode().isEnabled ? <VisualEditing /> : null}
+        {/* biome-ignore lint/suspicious/noExplicitAny: pnpm resolves a duplicate @types/react instance here, so `children`'s ReactNode isn't nominally the same as the ambient JSX namespace expects */}
+        {children as any}
+        <SanityLive />
+        {isEnabled ? <VisualEditing /> : null}
       </body>
     </html>
   );

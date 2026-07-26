@@ -1,6 +1,10 @@
-import { env } from "prisma/config";
-import { Prisma, PrismaClient } from "./generated/prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
+import { env } from "prisma/config";
+import { type Prisma, PrismaClient } from "./generated/prisma/client";
+
+declare global {
+  var prisma: PrismaClient | undefined;
+}
 
 const connectionString = env("DATABASE_URL");
 
@@ -8,14 +12,14 @@ export const prismaConfig: Prisma.PrismaClientOptions =
   process.env.NODE_ENV === "production"
     ? {
         adapter: new PrismaPg({ connectionString }),
+        errorFormat: "minimal",
 
         log: ["query", "info", "warn", "error"],
-        errorFormat: "minimal",
       }
     : {
         adapter: new PrismaPg({ connectionString }),
-        log: ["query", "info", "warn", "error"],
         errorFormat: "pretty",
+        log: ["query", "info", "warn", "error"],
       };
 
 export const prisma =
@@ -24,4 +28,6 @@ export const prisma =
     ...prismaConfig,
   });
 
-if (process.env.NODE_ENV !== "production") global.prisma = prisma;
+if (process.env.NODE_ENV !== "production") {
+  global.prisma = prisma;
+}

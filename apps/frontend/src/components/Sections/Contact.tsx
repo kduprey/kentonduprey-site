@@ -1,13 +1,12 @@
 "use client";
 
+import axios from "axios";
 import type {
   ChangeEvent,
   ChangeEventHandler,
   FormEvent,
   FormEventHandler,
 } from "react";
-
-import axios from "axios";
 import { useState } from "react";
 import { CgSpinner } from "react-icons/cg";
 
@@ -26,7 +25,7 @@ export const Contact = () => {
   const [usrMsg, setUsrMsg] = useState("");
 
   const handleChange: ChangeEventHandler = (
-    e: ChangeEvent<HTMLInputElement>,
+    e: ChangeEvent<HTMLInputElement>
   ) => {
     const { name, value } = e.target;
     switch (name) {
@@ -121,7 +120,7 @@ export const Contact = () => {
           />
 
           <button
-            className="m-2 flex "
+            className="m-2 flex"
             disabled={loading}
             id="btn-submit"
             type="submit"

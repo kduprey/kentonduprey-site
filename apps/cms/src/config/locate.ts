@@ -54,63 +54,63 @@ export const mainDocuments = defineDocuments([
 ]);
 
 export const locate: DocumentLocationResolvers = {
-  siteSettings: defineLocations({
-    message: "This document is used on all pages",
-    tone: "caution",
-  }),
-  home: defineLocations({
-    message: "This document is used to render the front page",
-    tone: "positive",
-    locations: [{ title: "Home Page", href: resolveHref("home") }],
-  }),
   about: defineLocations({
     locations: [
       {
-        title: "About Page",
         href: resolveHref("about"),
+        title: "About Page",
       },
     ],
     message: "This document is used to render the about page",
     tone: "positive",
   }),
-  "photo-and-video": defineLocations({
+  contact: defineLocations({
     locations: [
       {
-        title: "Photo and Video Page",
-        href: resolveHref("photoAndVideo"),
+        href: resolveHref("contact"),
+        title: "Contact Section",
       },
     ],
-    message: "This document is used to render the photo and video page",
-    tone: "positive",
-  }),
-  links: defineLocations({
-    locations: [
-      {
-        title: "Links Page",
-        href: resolveHref("links"),
-      },
-    ],
-    message: "This document is used to render the links page",
+    message: "This document is used to render the contact section",
     tone: "positive",
   }),
   events: defineLocations({
     locations: [
       {
-        title: "Events Page",
         href: resolveHref("events"),
+        title: "Events Page",
       },
     ],
     message: "This document is used to render the events page",
     tone: "positive",
   }),
-  contact: defineLocations({
+  home: defineLocations({
+    locations: [{ href: resolveHref("home"), title: "Home Page" }],
+    message: "This document is used to render the front page",
+    tone: "positive",
+  }),
+  links: defineLocations({
     locations: [
       {
-        title: "Contact Section",
-        href: resolveHref("contact"),
+        href: resolveHref("links"),
+        title: "Links Page",
       },
     ],
-    message: "This document is used to render the contact section",
+    message: "This document is used to render the links page",
     tone: "positive",
+  }),
+  "photo-and-video": defineLocations({
+    locations: [
+      {
+        href: resolveHref("photoAndVideo"),
+        title: "Photo and Video Page",
+      },
+    ],
+    message: "This document is used to render the photo and video page",
+    tone: "positive",
+  }),
+  siteSettings: defineLocations({
+    message: "This document is used on all pages",
+    tone: "caution",
   }),
 };

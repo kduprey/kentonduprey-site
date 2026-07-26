@@ -4,7 +4,9 @@ import { redirect } from "next/navigation";
 const HomePage = () => {
   const { userId } = auth();
 
-  if (userId) redirect("/dashboard");
+  if (userId) {
+    redirect("/dashboard");
+  }
 
   redirect("/sign-in");
 };
