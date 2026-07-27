@@ -1,3 +1,4 @@
+import { H3 } from "@/components/Typography";
 import { Icon } from "./Icon";
 
 interface SkillProps {
@@ -16,7 +17,7 @@ export const Skill = ({ iconName, project, title }: SkillProps) => {
       <div className="pb-3 text-3xl">
         <Icon iconName={iconName} />
       </div>
-      <h3 className="text-center">{title}</h3>
+      <H3 className="text-center">{title}</H3>
     </div>
   );
 };

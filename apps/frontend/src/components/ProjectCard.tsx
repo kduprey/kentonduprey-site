@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { H3, P } from "@/components/Typography";
 import type { ProjectType } from "@/sanity/data/queries/pageQueries/home.queries";
 
 import { Skill } from "./Skill";
@@ -25,12 +26,8 @@ export const ProjectCard = ({
       width={projectImage.dimensions.width}
     />
     <div className="flex flex-col justify-between gap-3 space-y-3 p-3">
-      <h3 className="font-medium text-black text-xl leading-tight hover:underline md:text-2xl dark:text-white">
-        {title}
-      </h3>
-      <p className="text-gray-500 md:text-lg dark:text-gray-200">
-        {description}
-      </p>
+      <H3 className="text-black hover:underline dark:text-white">{title}</H3>
+      <P>{description}</P>
       <div className="flex justify-evenly text-xl md:text-3xl" id="skills">
         {projectSkills.map((skill) => (
           <Skill
