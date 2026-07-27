@@ -1,20 +1,21 @@
-require('@testing-library/jest-dom');
+"use strict";
+require("@testing-library/jest-dom");
 
 const { getComputedStyle } = window;
 window.getComputedStyle = (elt) => getComputedStyle(elt);
 
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
+Object.defineProperty(window, "matchMedia", {
   value: jest.fn().mockImplementation((query) => ({
+    addEventListener: jest.fn(),
+    addListener: jest.fn(),
+    dispatchEvent: jest.fn(),
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(),
-    removeListener: jest.fn(),
-    addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
+    removeListener: jest.fn(),
   })),
+  writable: true,
 });
 
 class ResizeObserver {

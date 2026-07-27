@@ -1,0 +1,110 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": [
+    "ultracite/biome/core",
+    "ultracite/biome/react",
+    "ultracite/biome/next"
+  ],
+  "files": {
+    "includes": ["!packages/db/src/generated"]
+  },
+  "overrides": [
+    {
+      // Workspace package public entrypoints (@kduprey/db, @kduprey/ui, etc.) —
+      // a single index.ts is the declared package.json "exports" entry, not an
+      // internal barrelsby-style re-export.
+      "includes": ["packages/*/src/index.ts"],
+      "linter": {
+        "rules": {
+          "performance": {
+            "noBarrelFile": "off"
+          }
+        }
+      }
+    },
+    {
+      // Standard testing-library custom-render pattern, not a barrelsby barrel.
+      "includes": [
+        "apps/admin/test-utils/index.ts",
+        "apps/admin/test-utils/render.tsx"
+      ],
+      "linter": {
+        "rules": {
+          "performance": {
+            "noBarrelFile": "off"
+          }
+        }
+      }
+    },
+    {
+      // Tailwind v3 directives (@tailwind, @apply, @screen) aren't standard CSS
+      // at-rules, so Biome's CSS linter flags them as unknown.
+      "includes": ["apps/frontend/src/app/globals.css"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noUnknownAtRules": "off"
+          }
+        }
+      }
+    },
+    {
+      // React component files are named to match their exported component
+      // (PascalCase), which is a standard, widely-used convention distinct
+      // from Biome's default kebab-case filename rule.
+      "includes": ["**/*.tsx"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useFilenamingConvention": "off"
+          }
+        }
+      }
+    },
+    {
+      // Switches on plain runtime strings (env vars, DOM event target names)
+      // that Biome's switch-exhaustiveness analysis mistakenly narrows,
+      // reporting every case after the first as unreachable.
+      "includes": [
+        "packages/config/src/public-constants.ts",
+        "packages/config/src/server-constants.ts",
+        "apps/frontend/src/components/Sections/Contact.tsx"
+      ],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noUnnecessaryConditions": "off"
+          }
+        }
+      }
+    },
+    {
+      // Jest test setup: `jest` is a Jest global, and the empty methods are
+      // deliberate no-op mocks for ResizeObserver.
+      "includes": ["apps/admin/jest.setup.cjs"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUndeclaredVariables": "off"
+          },
+          "suspicious": {
+            "noEmptyBlockStatements": "off"
+          }
+        }
+      }
+    },
+    {
+      // Prisma's documented HMR-safe singleton pattern: `var prisma` in
+      // `declare global` (ambient global scope) and `export const prisma`
+      // (module scope) are different bindings, not a real redeclaration.
+      "includes": ["packages/db/src/client.ts"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noRedeclare": "off"
+          }
+        }
+      }
+    }
+  ]
+}

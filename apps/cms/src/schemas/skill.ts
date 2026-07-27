@@ -1,11 +1,7 @@
-import { BoltIcon } from "@sanity/icons";
+import { BoltIcon } from "@sanity/icons/Bolt";
 import { defineField, defineType } from "sanity";
 
 export const skill = defineType({
-  name: "skill",
-  title: "Skill",
-  type: "document",
-  icon: BoltIcon,
   fields: [
     defineField({
       name: "title",
@@ -20,4 +16,8 @@ export const skill = defineType({
       validation: (Rule) => Rule.required(),
     }),
   ],
+  icon: BoltIcon,
+  name: "skill",
+  title: "Skill",
+  type: "document",
 });

@@ -7,6 +7,7 @@ export const SvgIcon = ({ iconName }: SvgIconProps) => {
     case "phone":
       return (
         <svg
+          aria-hidden="true"
           fill="currentColor"
           height="24"
           viewBox="0 0 24 24"
@@ -20,6 +21,7 @@ export const SvgIcon = ({ iconName }: SvgIconProps) => {
     case "email":
       return (
         <svg
+          aria-hidden="true"
           fill="currentColor"
           height="24"
           viewBox="0 0 24 24"
@@ -36,6 +38,7 @@ export const SvgIcon = ({ iconName }: SvgIconProps) => {
     case "work":
       return (
         <svg
+          aria-hidden="true"
           fill="currentColor"
           height="24"
           viewBox="0 0 24 24"
@@ -52,6 +55,7 @@ export const SvgIcon = ({ iconName }: SvgIconProps) => {
     case "website":
       return (
         <svg
+          aria-hidden="true"
           fill="currentColor"
           height="24"
           viewBox="0 0 24 24"
@@ -68,6 +72,7 @@ export const SvgIcon = ({ iconName }: SvgIconProps) => {
     case "addContact":
       return (
         <svg
+          aria-hidden="true"
           fill="currentColor"
           height="30"
           viewBox="0 0 24 24"

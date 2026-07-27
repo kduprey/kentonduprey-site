@@ -1,98 +1,90 @@
-import { HomeIcon } from "@sanity/icons";
-import { defineType, defineField } from "sanity";
+import { HomeIcon } from "@sanity/icons/Home";
+import { defineField, defineType } from "sanity";
+
+const INSTAGRAM_URL_PATTERN =
+  /^(https?:\/\/)?(www\.)?instagram.com\/[a-zA-Z0-9_.]+\/?$/;
+const TWITTER_URL_PATTERN =
+  /^(https?:\/\/)?(www\.)?twitter.com\/[a-zA-Z0-9_.]+\/?$/;
+const GITHUB_URL_PATTERN =
+  /^(https?:\/\/)?(www\.)?github.com\/[a-zA-Z0-9_.]+\/?$/;
 
 export const homeSchema = defineType({
-  name: "home",
-  title: "Home Page",
-  type: "document",
-  icon: HomeIcon,
-  preview: {
-    select: {
-      title: "title",
-    },
-    prepare: () => ({
-      title: "Home Page",
-    }),
-  },
   fields: [
     defineField({
+      hidden: true,
+      initialValue: "Home Page",
       name: "title",
       title: "Title",
       type: "string",
-      initialValue: "Home Page",
-      hidden: true,
     }),
     defineField({
-      name: "heroSection",
-      title: "Hero Section",
-      type: "object",
       fields: [
         defineField({
+          description:
+            "This is the text that will be displayed below the navbar.",
           name: "headerText",
           title: "Header Text",
           type: "string",
-          description:
-            "This is the text that will be displayed below the navbar.",
           validation: (Rule) => Rule.required(),
         }),
         defineField({
+          description:
+            "This is the text that will be displayed below the header text.",
           name: "subHeaderText",
           title: "Subheader Text",
           type: "string",
-          description:
-            "This is the text that will be displayed below the header text.",
           validation: (Rule) => Rule.required(),
         }),
         defineField({
+          description: "This is the text that will be displayed on the button.",
           name: "buttonText",
           title: "Button Text",
           type: "string",
-          description: "This is the text that will be displayed on the button.",
           validation: (Rule) => Rule.required(),
         }),
       ],
+      name: "heroSection",
+      title: "Hero Section",
+      type: "object",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: "projectsSection",
-      title: "Projects Section",
-      type: "object",
       fields: [
         defineField({
+          description:
+            "This is the text that will be displayed above the projects.",
           name: "headerText",
           title: "Header",
           type: "string",
-          description:
-            "This is the text that will be displayed above the projects.",
           validation: (Rule) => Rule.required(),
         }),
         defineField({
-          name: "projects",
-          title: "Projects",
-          type: "array",
-          of: [
-            {
-              type: "reference",
-              to: [{ type: "project" }],
-            },
-          ],
           description:
             "This is the list of projects that will be displayed on the page.",
+          name: "projects",
+          of: [
+            {
+              to: [{ type: "project" }],
+              type: "reference",
+            },
+          ],
+          title: "Projects",
+          type: "array",
           validation: (Rule) => Rule.required(),
         }),
       ],
+      name: "projectsSection",
+      title: "Projects Section",
+      type: "object",
     }),
     defineField({
-      name: "aboutSection",
-      title: "About Section",
-      type: "object",
       fields: [
         defineField({
+          description:
+            "This is the text that will be displayed above the bio image.",
           name: "headerText",
           title: "Header",
           type: "string",
-          description:
-            "This is the text that will be displayed above the bio image.",
           validation: (Rule) => Rule.required(),
         }),
         defineField({
@@ -102,101 +94,107 @@ export const homeSchema = defineType({
           validation: (Rule) => Rule.required(),
         }),
         defineField({
-          name: "bioImage",
-          title: "Bio Image",
-          type: "image",
           fields: [
             defineField({
+              description:
+                "This is the text that will be read by screen readers and search engines.",
               name: "alt",
               title: "Alternative Text",
               type: "string",
-              description:
-                "This is the text that will be read by screen readers and search engines.",
               validation: (Rule) => Rule.required(),
             }),
           ],
+          name: "bioImage",
+          title: "Bio Image",
+          type: "image",
           validation: (Rule) => Rule.required(),
         }),
       ],
+      name: "aboutSection",
+      title: "About Section",
+      type: "object",
     }),
     defineField({
-      name: "skillsSection",
-      title: "Skills Section",
-      type: "object",
       fields: [
         defineField({
+          description:
+            "This is the text that will be displayed above the skills.",
           name: "headerText",
           title: "Header",
           type: "string",
-          description:
-            "This is the text that will be displayed above the skills.",
           validation: (Rule) => Rule.required(),
         }),
         defineField({
           name: "skills",
-          title: "Skills",
-          type: "array",
           of: [
             {
-              type: "reference",
               to: [{ type: "skill" }],
+              type: "reference",
             },
           ],
+          title: "Skills",
+          type: "array",
         }),
       ],
+      name: "skillsSection",
+      title: "Skills Section",
+      type: "object",
     }),
     defineField({
-      name: "contactSection",
-      title: "Contact Section",
-      type: "object",
       fields: [
         defineField({
+          description:
+            "This is the text that will be used as the header of the footer.",
+          initialValue: "Contact",
           name: "headerText",
           title: "Header",
           type: "string",
-          description:
-            "This is the text that will be used as the header of the footer.",
           validation: (Rule) => Rule.required(),
-          initialValue: "Contact",
         }),
       ],
+      name: "contactSection",
+      title: "Contact Section",
+      type: "object",
     }),
     defineField({
-      name: "linksSection",
-      title: "Links Section",
-      type: "object",
       fields: [
         defineField({
+          description: "This is the link to your Instagram profile.",
           name: "instagramLink",
           title: "Instagram Link",
           type: "string",
-          description: "This is the link to your Instagram profile.",
-          validation: (Rule) =>
-            Rule.regex(
-              /^(https?:\/\/)?(www\.)?instagram.com\/[a-zA-Z0-9_.]+\/?$/,
-            ).required(),
+          validation: (Rule) => Rule.regex(INSTAGRAM_URL_PATTERN).required(),
         }),
         defineField({
+          description: "This is the link to your Twitter profile.",
           name: "twitterLink",
           title: "Twitter Link",
           type: "string",
-          description: "This is the link to your Twitter profile.",
-          validation: (Rule) =>
-            Rule.regex(
-              /^(https?:\/\/)?(www\.)?twitter.com\/[a-zA-Z0-9_.]+\/?$/,
-            ).required(),
+          validation: (Rule) => Rule.regex(TWITTER_URL_PATTERN).required(),
         }),
         defineField({
+          description: "This is the link to your GitHub profile.",
           name: "githubLink",
           title: "GitHub Link",
           type: "string",
-          description: "This is the link to your GitHub profile.",
-          validation: (Rule) =>
-            Rule.regex(
-              /^(https?:\/\/)?(www\.)?github.com\/[a-zA-Z0-9_.]+\/?$/,
-            ).required(),
+          validation: (Rule) => Rule.regex(GITHUB_URL_PATTERN).required(),
         }),
       ],
+      name: "linksSection",
+      title: "Links Section",
+      type: "object",
     }),
   ],
+  icon: HomeIcon,
+  name: "home",
+  preview: {
+    prepare: () => ({
+      title: "Home Page",
+    }),
+    select: {
+      title: "title",
+    },
+  },
+  title: "Home Page",
+  type: "document",
 });

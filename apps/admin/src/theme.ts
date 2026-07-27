@@ -1,16 +1,16 @@
 "use client";
 
 import {
-  type CSSVariablesResolver,
   Card,
+  type CSSVariablesResolver,
   createTheme,
-  type MantineThemeOverride,
-  type VariantColorsResolver,
-  defaultVariantColorsResolver,
-  rem,
   DEFAULT_THEME,
+  defaultVariantColorsResolver,
+  type MantineThemeOverride,
   mergeMantineTheme,
+  rem,
   rgba,
+  type VariantColorsResolver,
 } from "@mantine/core";
 import { Raleway } from "next/font/google";
 
@@ -26,9 +26,9 @@ const variantColorResolver: VariantColorsResolver = (input) => {
     return {
       ...defaultResolvedColors,
       background: "none",
-      hover: rgba(theme.colors.red[6], 0.2),
-      color: "var(--mantine-color-red-6)",
       border: `${rem(1)} solid var(--mantine-color-red-6)`,
+      color: "var(--mantine-color-red-6)",
+      hover: rgba(theme.colors.red[6], 0.2),
     };
   }
 
@@ -56,15 +56,15 @@ const themeOverride: MantineThemeOverride = createTheme({
 });
 
 export const resolver: CSSVariablesResolver = () => ({
-  variables: {
+  dark: {
     "--mantine-color-default-border": "#fff",
+    "--mantine-color-text": "#fff",
   },
   light: {
     "--mantine-color-default-border": "#fff",
   },
-  dark: {
+  variables: {
     "--mantine-color-default-border": "#fff",
-    "--mantine-color-text": "#fff",
   },
 });
 

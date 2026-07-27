@@ -12,6 +12,6 @@ export const POST = () => {
     {},
     {
       status: 200,
-    },
+    }
   );
 };

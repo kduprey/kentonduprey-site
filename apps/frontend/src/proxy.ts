@@ -6,7 +6,7 @@ export const config = {
   matcher: "/api/stripe/billing/meter_events/(.*)",
 };
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const secret = z
     .string({
       message: "Environment variable JWT_SECRET is required",

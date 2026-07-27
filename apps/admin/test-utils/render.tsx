@@ -1,15 +1,15 @@
-import { render, type RenderOptions } from "@testing-library/react";
 import { MantineProvider } from "@mantine/core";
+import { type RenderOptions, render } from "@testing-library/react";
 import type { ReactElement } from "react";
 import { theme } from "../src/theme";
 
-const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
-  return <MantineProvider theme={theme}>{children}</MantineProvider>;
-};
+const AllTheProviders = ({ children }: { children: React.ReactNode }) => (
+  <MantineProvider theme={theme}>{children}</MantineProvider>
+);
 
 export const customRender = (
   ui: ReactElement,
-  options?: Omit<RenderOptions, "wrapper">,
+  options?: Omit<RenderOptions, "wrapper">
 ): ReturnType<typeof render> =>
   render(ui, { wrapper: AllTheProviders, ...options });
 

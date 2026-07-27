@@ -11,17 +11,15 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "generate-barrels": "barrelsby -c barrelsby.config.json",
-    "lint": "eslint src/",
+    "lint": "ultracite check .",
+    "lint:fix": "ultracite fix .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "typecheck": "tsc --noEmit"
   },
-  "prettier": "@kduprey/eslint-config/prettier",
   "dependencies": {
     "zod": "^3.24.3"
   },
   "devDependencies": {
-    "@kduprey/eslint-config": "workspace:*",
     "@kduprey/tsconfig": "workspace:*",
     "@types/node": "^22.13.13",
     "tsup": "^8.4.0",

@@ -135,5 +135,5 @@ dist
 .turbo
 
 # prisma client
-packages/db/prisma/client
+packages/db/src/generated*
 *.tar.gz

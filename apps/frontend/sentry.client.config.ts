@@ -2,27 +2,30 @@
 // The config you add here will be used whenever a users loads a page in their browser.
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
-import * as Sentry from "@sentry/nextjs";
+import {
+  browserTracingIntegration,
+  init,
+  replayIntegration,
+} from "@sentry/nextjs";
 
-Sentry.init({
+const NETWORK_CAPTURE_ALL_URLS = /.*/;
+
+init({
   // Setting this option to true will print useful information to the console while you're setting up Sentry.
   debug: false,
 
-  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN!,
+  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
 
   // You can remove this option if you're not planning to use the Sentry Session Replay feature:
   integrations: [
-    Sentry.replayIntegration({
+    replayIntegration({
       blockAllMedia: false,
       // Additional Replay configuration goes in here, for example:
       maskAllText: false,
       networkCaptureBodies: true,
-      networkDetailAllowUrls: [
-        // Allow all network requests
-        /.*/,
-      ],
+      networkDetailAllowUrls: [NETWORK_CAPTURE_ALL_URLS],
     }),
-    Sentry.browserTracingIntegration(),
+    browserTracingIntegration(),
   ],
 
   replaysOnErrorSampleRate: 1.0,

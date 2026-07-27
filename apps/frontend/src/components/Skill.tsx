@@ -12,7 +12,7 @@ export const Skill = ({ iconName, project, title }: SkillProps) => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center ">
+    <div className="flex flex-col items-center justify-center">
       <div className="pb-3 text-3xl">
         <Icon iconName={iconName} />
       </div>

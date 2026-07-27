@@ -5,11 +5,8 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 export default withBundleAnalyzer({
-  reactStrictMode: false,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   experimental: {
     optimizePackageImports: ["@kduprey/config"],
   },
+  reactStrictMode: false,
 });

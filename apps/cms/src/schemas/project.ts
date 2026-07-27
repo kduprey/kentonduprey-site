@@ -1,11 +1,7 @@
-import { RocketIcon } from "@sanity/icons";
+import { RocketIcon } from "@sanity/icons/Rocket";
 import { defineField, defineType } from "sanity";
 
 export const project = defineType({
-  name: "project",
-  title: "Project",
-  type: "document",
-  icon: RocketIcon,
   fields: [
     defineField({
       name: "title",
@@ -26,32 +22,36 @@ export const project = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: "projectImage",
-      title: "Project Image",
-      type: "image",
       fields: [
         defineField({
+          description:
+            "This is the text that will be read by screen readers and search engines.",
           name: "alt",
           title: "Alternative Text",
           type: "string",
-          description:
-            "This is the text that will be read by screen readers and search engines.",
           validation: (Rule) => Rule.required(),
         }),
       ],
+      name: "projectImage",
+      title: "Project Image",
+      type: "image",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "projectSkills",
-      title: "Project Skills",
-      type: "array",
       of: [
         {
-          type: "reference",
           to: [{ type: "skill" }],
+          type: "reference",
         },
       ],
+      title: "Project Skills",
+      type: "array",
       validation: (Rule) => Rule.required(),
     }),
   ],
+  icon: RocketIcon,
+  name: "project",
+  title: "Project",
+  type: "document",
 });

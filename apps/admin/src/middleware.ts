@@ -5,14 +5,9 @@ const isProtectedRoute = createRouteMatcher(["/dashboard(.*)"]);
 export default clerkMiddleware((auth, req) => {
   const { userId } = auth();
   if (isProtectedRoute(req)) {
-    auth().protect(
-      () => {
-        return userId === process.env.ADMIN_USER_ID;
-      },
-      {
-        unauthorizedUrl: new URL("/unauthorized", req.url).toString(),
-      },
-    );
+    auth().protect(() => userId === process.env.ADMIN_USER_ID, {
+      unauthorizedUrl: new URL("/unauthorized", req.url).toString(),
+    });
   }
 });
 

@@ -1,7 +1,7 @@
-import { revalidateSecret } from "@/sanity";
 import { revalidateTag } from "next/cache";
 import { type NextRequest, NextResponse } from "next/server";
 import { parseBody } from "next-sanity/webhook";
+import { revalidateSecret } from "@/sanity/config/sanity.api";
 
 interface WebhookPayload {
   _type: string;
@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
   try {
     const { body, isValidSignature } = await parseBody<WebhookPayload>(
       req,
-      revalidateSecret,
+      revalidateSecret
     );
 
     if (!isValidSignature) {
@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
 
     // If the `_type` is `page`, then all `client.fetch` calls with
     // `{next: {tags: ['page']}}` will be revalidated
-    revalidateTag(body._type);
+    revalidateTag(body._type, "max");
 
     return NextResponse.json({ body });
   } catch (err) {

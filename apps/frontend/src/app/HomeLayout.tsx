@@ -1,27 +1,27 @@
-import type { HomeType } from "@/sanity";
-import type { EncodeDataAttributeCallback } from "@sanity/react-loader";
-
-import { About, Contact, Hero, Navbar, Projects, Skills } from "@/components";
+import { About } from "@/components/Sections/About";
+import { Contact } from "@/components/Sections/Contact";
+import { Hero } from "@/components/Sections/Hero";
+import { Navbar } from "@/components/Sections/Navbar";
+import { Projects } from "@/components/Sections/Projects";
+import { Skills } from "@/components/Sections/Skills";
+import type { HomeType } from "@/sanity/data/queries/pageQueries/home.queries";
 
 interface HomeLayoutProps {
-  encodeDataAttribute?: EncodeDataAttributeCallback;
   homeData: HomeType;
 }
 
-export const HomeLayout = ({ homeData }: HomeLayoutProps) => {
-  return (
-    <main className="flex size-full flex-col items-center gap-10 p-6 font-display dark:bg-black dark:text-white">
-      <Navbar />
-      <Hero />
-      <Projects {...homeData.projectsSection} />
+export const HomeLayout = ({ homeData }: HomeLayoutProps) => (
+  <main className="flex size-full flex-col items-center gap-10 p-6 font-display dark:bg-black dark:text-white">
+    <Navbar />
+    <Hero />
+    <Projects {...homeData.projectsSection} />
 
-      <About {...homeData.aboutSection} />
-      <Skills {...homeData.skillsSection} />
-      <Contact />
+    <About {...homeData.aboutSection} />
+    <Skills {...homeData.skillsSection} />
+    <Contact />
 
-      <p className="text-center dark:text-gray-400">
-        &copy; Haus of Web, LLC {new Date().getFullYear()}
-      </p>
-    </main>
-  );
-};
+    <p className="text-center dark:text-gray-400">
+      &copy; Haus of Web, LLC {new Date().getFullYear()}
+    </p>
+  </main>
+);

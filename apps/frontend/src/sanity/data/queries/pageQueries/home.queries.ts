@@ -103,9 +103,13 @@ export const AboutSectionSchema = z.object({
   headerText: z.string(),
 });
 
+export const ContactSectionSchema = z.object({
+  headerText: z.string(),
+});
+
 export const homeSchema = z.object({
   aboutSection: AboutSectionSchema,
-  contactSection: z.null(),
+  contactSection: ContactSectionSchema,
   heroSection: z.object({
     buttonText: z.string(),
     headerText: z.string(),
@@ -129,3 +133,4 @@ export type SkillType = z.infer<typeof SkillSchema>;
 export type ImageType = z.infer<typeof ImageSchema>;
 export type ProjectSectionType = z.infer<typeof ProjectSectionSchema>;
 export type AboutSectionType = z.infer<typeof AboutSectionSchema>;
+export type ContactSectionType = z.infer<typeof ContactSectionSchema>;

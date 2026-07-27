@@ -9,14 +9,15 @@ export const client = createClient({
   perspective: "published",
   projectId,
   stega: {
-    enabled: false,
     filter: (props) => {
-      if (props.sourcePath.at(-1) === "title") return true;
+      if (props.sourcePath.at(-1) === "title") {
+        return true;
+      }
 
       return props.filterDefault(props);
     },
     logger: console,
     studioUrl: () => ({ baseUrl: SERVER_CMS_URL, workspace: dataset }),
   },
-  useCdn: false,
+  useCdn: true,
 });
