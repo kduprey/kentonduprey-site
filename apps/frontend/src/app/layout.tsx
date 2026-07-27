@@ -5,6 +5,7 @@ import type { PropsWithChildren } from "react";
 
 import "./globals.css";
 import { draftMode } from "next/headers";
+import { cn } from "@/lib/utils";
 import { SanityLive } from "@/sanity/config/sanity.live";
 
 export const metadata: Metadata = {
@@ -15,14 +16,14 @@ export const metadata: Metadata = {
 const inter = Inter({
   style: ["normal"],
   subsets: ["latin"],
-  variable: "--font-raleway",
+  variable: "--font-sans",
 });
 
 const rootLayout = async ({ children }: PropsWithChildren) => {
   const { isEnabled } = await draftMode();
 
   return (
-    <html className={inter.variable} lang="en">
+    <html className={cn("font-sans", inter.variable)} lang="en">
       <head>
         <link href="/favicon.svg" rel="shortcut icon" />
         <meta
