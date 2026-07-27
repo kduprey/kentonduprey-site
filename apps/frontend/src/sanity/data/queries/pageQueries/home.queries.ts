@@ -1,3 +1,4 @@
+import type { PortableTextBlock } from "@portabletext/react";
 import { groq } from "next-sanity";
 import { z } from "zod";
 
@@ -99,7 +100,7 @@ export const ProjectSectionSchema = z.object({
 
 export const AboutSectionSchema = z.object({
   bioImage: ImageSchema,
-  content: z.string(),
+  content: z.custom<PortableTextBlock[]>(),
   headerText: z.string(),
 });
 

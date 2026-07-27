@@ -21,6 +21,7 @@
     "@kduprey/config": "workspace:*",
     "@kduprey/db": "workspace:*",
     "@kduprey/ui": "workspace:*",
+    "@portabletext/react": "^7.0.1",
     "@sanity/image-url": "^2.1.1",
     "@sanity/webhook": "^4.0.4",
     "@sentry/nextjs": "^10.65.0",
