@@ -11,7 +11,7 @@ export const ProjectCard = ({
   projectSkills,
   title,
 }: ProjectType) => (
-  <div className="max-w-md rounded-xl bg-white shadow-md ring-2 ring-slate-100 md:max-w-lg dark:border dark:border-gray-300 dark:bg-black">
+  <div className="w-full max-w-md rounded-xl bg-white shadow-md ring-2 ring-slate-100 dark:border dark:border-gray-300 dark:bg-black">
     <Image
       alt={title}
       height={projectImage.dimensions.height}
