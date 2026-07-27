@@ -1,5 +1,5 @@
 import { trytm } from "@bdsqqq/try";
-import { stripe } from "@kduprey/config";
+import { getStripe } from "@kduprey/config";
 import { verify } from "jsonwebtoken";
 import { type NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
@@ -45,7 +45,7 @@ export const POST = async (req: NextRequest) => {
   }
 
   const [stripeRes, stripeErr] = await trytm(
-    stripe.billing.meterEvents.create({
+    getStripe().billing.meterEvents.create({
       event_name: body.data.event_name,
       payload: {
         stripe_customer_id: body.data.stripe_customer_id,
