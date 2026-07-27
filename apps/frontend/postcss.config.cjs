@@ -3,7 +3,6 @@
 // https://tailwindcss.com/docs/using-with-preprocessors
 module.exports = {
   plugins: {
-    autoprefixer: {},
-    tailwindcss: {},
+    "@tailwindcss/postcss": {},
   },
 };
