@@ -2,7 +2,7 @@
 
 Create a new migration:
 
-```
+```bash
 pnpm --filter @kduprey/cms migration:create -- my-migration-name
 ```
 
@@ -16,7 +16,7 @@ same ID and silently collide on merge.
 
 Run all pending migrations, in timestamp order, against a dataset:
 
-```
+```bash
 pnpm --filter @kduprey/cms migration            # dry run against staging (preview only)
 pnpm --filter @kduprey/cms migration:live        # apply against staging
 pnpm --filter @kduprey/cms migration:prod        # dry run against production (preview only)
