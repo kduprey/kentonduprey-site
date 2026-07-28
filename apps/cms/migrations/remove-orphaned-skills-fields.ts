@@ -5,8 +5,8 @@ import { at, defineMigration, unset } from "sanity/migrate";
  * project.projectSkills) but left the data on existing documents, which Studio
  * now flags as "field not defined in schema". Unsets both fields.
  *
- * Run with: sanity migration run remove-orphaned-skills-fields --project b6x3by70 --dataset <dataset> --no-dry-run
- * (omitting --no-dry-run only prints the mutations, it does not apply them)
+ * Run with: pnpm --filter @kduprey/cms migrate -- --dataset <dataset>
+ * (runs every migration in this directory; add --dry-run to preview first)
  */
 export default defineMigration({
   documentTypes: ["home", "project"],

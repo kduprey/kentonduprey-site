@@ -5,8 +5,8 @@ import { at, defineMigration, set } from "sanity/migrate";
  * aboutSection.content used to be a plain string; it's now a Portable Text
  * block array. Wraps any remaining string values in a single normal block.
  *
- * Run with: sanity migration run convert-about-content-to-portable-text --project b6x3by70 --dataset <dataset> --no-dry-run
- * (omitting --no-dry-run only prints the mutations, it does not apply them)
+ * Run with: pnpm --filter @kduprey/cms migrate -- --dataset <dataset>
+ * (runs every migration in this directory; add --dry-run to preview first)
  */
 export default defineMigration({
   documentTypes: ["home"],

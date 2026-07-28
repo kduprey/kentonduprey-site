@@ -8,6 +8,7 @@
     "dev": "next dev -p 3402",
     "lint": "ultracite check .",
     "lint:fix": "ultracite fix .",
+    "migrate": "node scripts/run-migrations.mjs",
     "publishContent": "sanity dataset export staging . --overwrite && sanity dataset import staging.tar.gz production --replace",
     "pullContent": "sanity dataset export production . --overwrite && sanity dataset import production.tar.gz staging --replace",
     "start": "next start",
