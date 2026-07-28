@@ -1,4 +1,4 @@
-import { H2 } from "@/components/Typography";
+import { H2 } from "@kduprey/ui";
 import type { SkillType } from "@/sanity/data/queries/pageQueries/home.queries";
 
 import { Skill } from "../Skill";

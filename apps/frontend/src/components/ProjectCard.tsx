@@ -1,6 +1,6 @@
+import { H3, P } from "@kduprey/ui";
 import Image from "next/image";
 import Link from "next/link";
-import { H3, P } from "@/components/Typography";
 import type { ProjectType } from "@/sanity/data/queries/pageQueries/home.queries";
 
 import { Skill } from "./Skill";

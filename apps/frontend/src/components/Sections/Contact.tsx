@@ -1,5 +1,6 @@
 "use client";
 
+import { H2 } from "@kduprey/ui";
 import axios from "axios";
 import type {
   ChangeEvent,
@@ -9,8 +10,6 @@ import type {
 } from "react";
 import { useState } from "react";
 import { CgSpinner } from "react-icons/cg";
-
-import { H2 } from "@/components/Typography";
 import { Socials } from "./Socials";
 
 export const Contact = () => {

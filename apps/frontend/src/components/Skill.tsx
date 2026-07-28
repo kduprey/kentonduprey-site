@@ -1,4 +1,4 @@
-import { H3 } from "@/components/Typography";
+import { H3 } from "@kduprey/ui";
 import { Icon } from "./Icon";
 
 interface SkillProps {
