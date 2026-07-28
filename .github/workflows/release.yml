@@ -56,13 +56,25 @@ jobs:
         run: |
           gh release create "$RELEASE_TAG" --title "$RELEASE_TAG" --notes-file "$NOTES_FILE" --target "$GITHUB_SHA"
 
-      - name: Create Sentry release
+      - name: Create Sentry release (site)
         if: steps.release.outputs.released == 'true'
         uses: getsentry/action-release@v3
         env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
           SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+          SENTRY_URL: ${{ vars.SENTRY_URL }}
+        with:
+          environment: production
+          version: ${{ steps.release.outputs.tag }}
+
+      - name: Create Sentry release (admin)
+        if: steps.release.outputs.released == 'true'
+        uses: getsentry/action-release@v3
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: kentonduprey-admin
           SENTRY_URL: ${{ vars.SENTRY_URL }}
         with:
           environment: production
