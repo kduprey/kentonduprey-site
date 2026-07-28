@@ -4,6 +4,7 @@
 
 import {
   browserTracingIntegration,
+  captureRouterTransitionStart,
   init,
   replayIntegration,
 } from "@sentry/nextjs";
@@ -37,3 +38,5 @@ init({
   // Adjust this value in production, or use tracesSampler for greater control
   tracesSampleRate: 1,
 });
+
+export const onRouterTransitionStart = captureRouterTransitionStart;

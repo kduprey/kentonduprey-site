@@ -1,8 +1,7 @@
-// @ts-check
+import { withSentryConfig } from "@sentry/nextjs";
+import type { NextConfig } from "next";
 
-/** @type {import("next").NextConfig} */
-
-module.exports = {
+const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["@kduprey/config"],
   },
@@ -26,11 +25,7 @@ module.exports = {
   transpilePackages: ["@kduprey/db"],
 };
 
-// Injected content via Sentry wizard below
-
-const { withSentryConfig } = require("@sentry/nextjs");
-
-module.exports = withSentryConfig(module.exports, {
+export default withSentryConfig(nextConfig, {
   // Enables automatic instrumentation of Vercel Cron Monitors. (Does not yet work with App Router route handlers.)
   // See the following for more information:
   // https://docs.sentry.io/product/crons/
@@ -46,7 +41,7 @@ module.exports = withSentryConfig(module.exports, {
   project: "kentonduprey-site",
   sentryUrl: "https://sentry.hausofweb.com",
   // Only print logs for uploading source maps in CI
-  silent: true,
+  silent: !process.env.CI,
 
   // Route browser requests to Sentry through a Next.js rewrite to circumvent ad-blockers.
   // This can increase your server load as well as your hosting bill.
