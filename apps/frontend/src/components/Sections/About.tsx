@@ -19,6 +19,11 @@ const bioComponents: PortableTextComponents = {
   },
 };
 
+// aboutSection.content used to be a plain string before it became Portable
+// Text (HOW-191); documents not yet migrated still have the old shape.
+const isLegacyStringContent = (value: unknown): value is string =>
+  typeof value === "string";
+
 export const About = ({ bioImage, content, headerText }: AboutSectionType) => (
   <div
     className="flex w-full flex-col items-center justify-center gap-5"
@@ -40,7 +45,11 @@ export const About = ({ bioImage, content, headerText }: AboutSectionType) => (
         />
       </div>
       <div className="max-w-md space-y-3 p-3">
-        <PortableText components={bioComponents} value={content} />
+        {isLegacyStringContent(content) ? (
+          <p>{content}</p>
+        ) : (
+          <PortableText components={bioComponents} value={content} />
+        )}
       </div>
     </div>
   </div>
