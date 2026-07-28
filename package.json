@@ -44,7 +44,8 @@
       "core-js-pure",
       "esbuild",
       "prisma",
-      "sharp"
+      "sharp",
+      "unrs-resolver"
     ],
     "overrides": {
       "@sanity/visual-editing>@types/react": "19.2.17",
