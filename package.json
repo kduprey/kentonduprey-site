@@ -1,10 +1,11 @@
 {
   "devDependencies": {
-    "@biomejs/biome": "2.5.3",
-    "concurrently": "^9.1.2",
-    "dotenv-cli": "^8.0.0",
-    "prettier-plugin-packagejson": "^2.5.10",
-    "turbo": "^2.5.0",
+    "@biomejs/biome": "2.5.4",
+    "concurrently": "^10.0.4",
+    "dotenv-cli": "^11.0.0",
+    "prettier-plugin-packagejson": "^3.0.2",
+    "release-please": "^17.10.3",
+    "turbo": "^2.10.5",
     "ultracite": "7.9.4"
   },
   "name": "@kduprey/apps",
@@ -43,7 +44,8 @@
       "core-js-pure",
       "esbuild",
       "prisma",
-      "sharp"
+      "sharp",
+      "unrs-resolver"
     ],
     "overrides": {
       "@sanity/visual-editing>@types/react": "19.2.17",

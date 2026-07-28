@@ -16,6 +16,7 @@ const assertValue = <T>(v: T | undefined, errorMessage: string): T => {
 // This controls what dataset is used when fetching documents
 export const dataset =
   process.env.VERCEL_ENV === "preview" ||
+  process.env.VERCEL_ENV === "staging" ||
   process.env.VERCEL_ENV === "production"
     ? "production"
     : "staging";

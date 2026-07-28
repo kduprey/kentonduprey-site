@@ -16,7 +16,7 @@ export const getStripe = (): Stripe => {
         })
         .parse(process.env.STRIPE_SECRET_KEY),
       {
-        apiVersion: "2025-02-24.acacia",
+        apiVersion: "2026-06-24.dahlia",
         appInfo: {
           name: "Haus of Web, LLC - kentonduprey.com",
           url: SERVER_SITE_URL,
