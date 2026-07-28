@@ -106,29 +106,29 @@ export const Contact = () => {
           type="email"
           value={inputData.email}
         />
-        <div className="mx-auto flex flex-col items-center gap-4">
-          <Textarea
-            disabled={loading}
-            name="message"
-            onChange={handleChange}
-            placeholder="Message"
-            required
-            value={inputData.message}
+        <Textarea
+          className="field-sizing-fixed"
+          disabled={loading}
+          name="message"
+          onChange={handleChange}
+          placeholder="Message"
+          required
+          rows={5}
+          value={inputData.message}
+        />
+
+        <Button
+          className="m-2"
+          disabled={loading}
+          id="btn-submit"
+          type="submit"
+        >
+          {loading ? "Sending..." : "Send"}
+
+          <CgSpinner
+            className={`ml-1 size-6 animate-spin ${loading ? "" : "hidden"}`}
           />
-
-          <Button
-            className="m-2"
-            disabled={loading}
-            id="btn-submit"
-            type="submit"
-          >
-            {loading ? "Sending..." : "Send"}
-
-            <CgSpinner
-              className={`ml-1 size-6 animate-spin ${loading ? "" : "hidden"}`}
-            />
-          </Button>
-        </div>
+        </Button>
 
         <p
           className={`absolute -bottom-6 font-light transition-opacity ease-in md:-right-28 md:bottom-auto ${
