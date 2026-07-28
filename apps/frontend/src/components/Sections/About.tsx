@@ -1,6 +1,23 @@
-import { H2, P } from "@kduprey/ui";
+import { H2 } from "@kduprey/ui";
+import { PortableText, type PortableTextComponents } from "@portabletext/react";
 import Image from "next/image";
+import Link from "next/link";
 import type { AboutSectionType } from "@/sanity/data/queries/pageQueries/home.queries";
+
+const bioComponents: PortableTextComponents = {
+  marks: {
+    link: ({ children, value }) => (
+      <Link
+        className="underline hover:no-underline"
+        href={value.href}
+        rel="noopener"
+        target="_blank"
+      >
+        {children}
+      </Link>
+    ),
+  },
+};
 
 export const About = ({ bioImage, content, headerText }: AboutSectionType) => (
   <div
@@ -22,7 +39,9 @@ export const About = ({ bioImage, content, headerText }: AboutSectionType) => (
           width={bioImage.dimensions.width}
         />
       </div>
-      <P className="max-w-md p-3">{content}</P>
+      <div className="max-w-md space-y-3 p-3">
+        <PortableText components={bioComponents} value={content} />
+      </div>
     </div>
   </div>
 );

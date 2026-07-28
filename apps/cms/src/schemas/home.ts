@@ -89,8 +89,31 @@ export const homeSchema = defineType({
         }),
         defineField({
           name: "content",
+          of: [
+            {
+              marks: {
+                annotations: [
+                  {
+                    fields: [
+                      defineField({
+                        name: "href",
+                        title: "URL",
+                        type: "url",
+                        validation: (Rule) => Rule.required(),
+                      }),
+                    ],
+                    name: "link",
+                    title: "Link",
+                    type: "object",
+                  },
+                ],
+              },
+              styles: [],
+              type: "block",
+            },
+          ],
           title: "Content",
-          type: "text",
+          type: "array",
           validation: (Rule) => Rule.required(),
         }),
         defineField({
