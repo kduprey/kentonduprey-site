@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { existsSync, mkdirSync, readdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -9,9 +9,9 @@ const MIGRATIONS_DIR = path.join(
   "migrations"
 );
 
-const SEQUENCE_PREFIX = /^(\d{4})-/;
 const NON_ALPHANUMERIC = /[^a-z0-9]+/g;
 const LEADING_TRAILING_DASHES = /^-+|-+$/g;
+const NON_DIGIT = /\D/g;
 
 function toKebabCase(name) {
   return name
@@ -20,15 +20,11 @@ function toKebabCase(name) {
     .replace(LEADING_TRAILING_DASHES, "");
 }
 
-function nextSequenceNumber() {
-  if (!existsSync(MIGRATIONS_DIR)) {
-    return 1;
-  }
-  const numbers = readdirSync(MIGRATIONS_DIR)
-    .map((file) => file.match(SEQUENCE_PREFIX)?.[1])
-    .filter(Boolean)
-    .map(Number);
-  return numbers.length === 0 ? 1 : Math.max(...numbers) + 1;
+// Timestamp prefix (not an incrementing counter) so two branches creating a
+// migration off the same base don't collide on the same ID — matches the
+// convention used by packages/db/prisma/migrations.
+function timestampPrefix() {
+  return new Date().toISOString().replace(NON_DIGIT, "").slice(0, 14);
 }
 
 function titleCase(name) {
@@ -45,8 +41,7 @@ if (!rawName) {
 }
 
 const kebabName = toKebabCase(rawName);
-const sequenceNumber = String(nextSequenceNumber()).padStart(4, "0");
-const id = `${sequenceNumber}-${kebabName}`;
+const id = `${timestampPrefix()}-${kebabName}`;
 const filePath = path.join(MIGRATIONS_DIR, `${id}.ts`);
 
 mkdirSync(MIGRATIONS_DIR, { recursive: true });
@@ -57,7 +52,7 @@ const template = `import { at, defineMigration, set } from "sanity/migrate";
  * TODO: describe what this migration does and why.
  *
  * Run with: pnpm --filter @kduprey/cms migration[:live[:prod]]
- * (runs every migration in this directory, in sequence order — see apps/cms/migrations/README.md)
+ * (runs every migration in this directory, in timestamp order — see apps/cms/migrations/README.md)
  */
 export default defineMigration({
   documentTypes: ["TODO"],

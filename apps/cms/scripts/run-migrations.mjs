@@ -39,21 +39,23 @@ if (!dataset) {
 }
 
 const TS_EXTENSION = /\.ts$/;
-const SEQUENCE_PREFIX = /^\d{4}-/;
+const TIMESTAMP_PREFIX = /^\d{14}-/;
 
 const migrationFiles = readdirSync(MIGRATIONS_DIR).filter((file) =>
   file.endsWith(".ts")
 );
 
-const unprefixed = migrationFiles.filter((file) => !SEQUENCE_PREFIX.test(file));
+const unprefixed = migrationFiles.filter(
+  (file) => !TIMESTAMP_PREFIX.test(file)
+);
 if (unprefixed.length > 0) {
   console.error(
-    `Migration files must start with a 4-digit sequence number (e.g. 0001-my-migration.ts): ${unprefixed.join(", ")}\nUse "pnpm --filter @kduprey/cms migration:create -- <name>" to generate one.`
+    `Migration files must start with a 14-digit timestamp (e.g. 20260728120000-my-migration.ts): ${unprefixed.join(", ")}\nUse "pnpm --filter @kduprey/cms migration:create -- <name>" to generate one.`
   );
   process.exit(1);
 }
 
-// Sequence numbers determine run order, not alphabetical filename order.
+// Timestamp prefixes determine run order, not alphabetical filename order.
 const migrationIds = migrationFiles
   .map((file) => file.replace(TS_EXTENSION, ""))
   .sort();

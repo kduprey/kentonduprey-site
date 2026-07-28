@@ -6,13 +6,15 @@ Create a new migration:
 pnpm --filter @kduprey/cms migration:create -- my-migration-name
 ```
 
-This generates `migrations/NNNN-my-migration-name.ts` (a 4-digit sequence
-number followed by a kebab-case name) from a boilerplate template. The
-sequence number determines run order — it's what makes migrations that
-depend on an earlier one running first safe, since alphabetical filename
-order alone doesn't guarantee that once you're past migration 0009.
+This generates `migrations/YYYYMMDDHHMMSS-my-migration-name.ts` (a 14-digit
+UTC timestamp prefix followed by a kebab-case name — same idea as
+`packages/db/prisma/migrations`, dash instead of underscore since filenames
+here are linted as kebab-case) from a boilerplate template. The timestamp
+determines run order — using a timestamp instead of an incrementing counter
+means two branches creating a migration off the same base won't generate the
+same ID and silently collide on merge.
 
-Run all pending migrations, in sequence order, against a dataset:
+Run all pending migrations, in timestamp order, against a dataset:
 
 ```
 pnpm --filter @kduprey/cms migration            # dry run against staging (preview only)
