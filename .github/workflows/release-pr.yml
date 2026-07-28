@@ -1,0 +1,56 @@
+name: Release PR
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  release-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate a token
+        id: id-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ steps.id-token.outputs.token }}
+          persist-credentials: false
+
+      - name: Fetch production branch
+        env:
+          GH_TOKEN: ${{ steps.id-token.outputs.token }}
+        run: git fetch "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" production:refs/remotes/origin/production
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+
+      - name: Build release PR body
+        run: node scripts/build-release-pr-body.mjs > release-pr-body.md
+
+      - name: Open or update promotion PR
+        env:
+          GH_TOKEN: ${{ steps.id-token.outputs.token }}
+        run: |
+          PR_NUMBER=$(gh pr list --repo "$GITHUB_REPOSITORY" --base production --head main --state open --json number --jq '.[0].number // empty')
+          if [ -z "$PR_NUMBER" ]; then
+            gh pr create --repo "$GITHUB_REPOSITORY" \
+              --base production \
+              --head main \
+              --title "chore: promote main to production" \
+              --body-file release-pr-body.md
+          else
+            gh pr edit "$PR_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file release-pr-body.md
+          fi
