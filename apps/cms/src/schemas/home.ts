@@ -141,32 +141,6 @@ export const homeSchema = defineType({
       fields: [
         defineField({
           description:
-            "This is the text that will be displayed above the skills.",
-          name: "headerText",
-          title: "Header",
-          type: "string",
-          validation: (Rule) => Rule.required(),
-        }),
-        defineField({
-          name: "skills",
-          of: [
-            {
-              to: [{ type: "skill" }],
-              type: "reference",
-            },
-          ],
-          title: "Skills",
-          type: "array",
-        }),
-      ],
-      name: "skillsSection",
-      title: "Skills Section",
-      type: "object",
-    }),
-    defineField({
-      fields: [
-        defineField({
-          description:
             "This is the text that will be used as the header of the footer.",
           initialValue: "Contact",
           name: "headerText",
