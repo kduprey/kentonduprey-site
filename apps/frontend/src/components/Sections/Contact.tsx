@@ -10,6 +10,7 @@ import type {
 import { useState } from "react";
 import { CgSpinner } from "react-icons/cg";
 
+import { H2 } from "@/components/Typography";
 import { Socials } from "./Socials";
 
 export const Contact = () => {
@@ -74,7 +75,7 @@ export const Contact = () => {
 
   return (
     <div className="" id="contact">
-      <h2 className="py-3 text-center font-bold">Contact</h2>
+      <H2 className="py-3 text-center">Contact</H2>
       <form
         className="relative mx-auto flex w-full max-w-lg flex-wrap items-center justify-evenly gap-4"
         id="contact-form"

@@ -1,13 +1,12 @@
 import { FaArrowRight } from "react-icons/fa";
+import { H2, Lead } from "@/components/Typography";
 
 export const Hero = () => (
   <div className="flex flex-col items-center justify-around">
-    <p className="py-3 font-semibold text-black dark:text-white">
-      Hi, I&apos;m Kenton 👋
-    </p>
-    <h2 className="py-3 text-center font-bold leading-tight">
+    <Lead className="py-3">Hi, I&apos;m Kenton 👋</Lead>
+    <H2 className="py-3 text-center">
       Building elegant web solutions <br /> for clients and companies
-    </h2>
+    </H2>
 
     <button className="flex flex-row items-center justify-evenly" type="button">
       <a href="#contact">Connect with Me</a>

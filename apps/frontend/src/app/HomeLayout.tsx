@@ -4,6 +4,7 @@ import { Hero } from "@/components/Sections/Hero";
 import { Navbar } from "@/components/Sections/Navbar";
 import { Projects } from "@/components/Sections/Projects";
 import { Skills } from "@/components/Sections/Skills";
+import { Muted } from "@/components/Typography";
 import type { HomeType } from "@/sanity/data/queries/pageQueries/home.queries";
 
 interface HomeLayoutProps {
@@ -20,8 +21,8 @@ export const HomeLayout = ({ homeData }: HomeLayoutProps) => (
     <Skills {...homeData.skillsSection} />
     <Contact />
 
-    <p className="text-center dark:text-gray-400">
+    <Muted className="text-center dark:text-gray-400">
       &copy; Haus of Web, LLC {new Date().getFullYear()}
-    </p>
+    </Muted>
   </main>
 );

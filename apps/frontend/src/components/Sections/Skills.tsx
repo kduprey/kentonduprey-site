@@ -1,3 +1,4 @@
+import { H2 } from "@/components/Typography";
 import type { SkillType } from "@/sanity/data/queries/pageQueries/home.queries";
 
 import { Skill } from "../Skill";
@@ -9,7 +10,7 @@ interface SkillsProps {
 
 export const Skills = ({ headerText, skills }: SkillsProps) => (
   <section className="flex w-full flex-col items-center">
-    <h2 className="pb-5 text-center font-bold">{headerText}</h2>
+    <H2 className="pb-5 text-center">{headerText}</H2>
     <div className="flex w-full max-w-screen-lg flex-wrap items-center justify-evenly">
       {skills.map((skill) => (
         <Skill

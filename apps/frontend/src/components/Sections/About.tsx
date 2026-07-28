@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { H2, P } from "@/components/Typography";
 import type { AboutSectionType } from "@/sanity/data/queries/pageQueries/home.queries";
 
 export const About = ({ bioImage, content, headerText }: AboutSectionType) => (
@@ -6,7 +7,7 @@ export const About = ({ bioImage, content, headerText }: AboutSectionType) => (
     className="flex w-full flex-col items-center justify-center gap-5"
     id="about"
   >
-    <h2 className="text-center font-bold">{headerText}</h2>
+    <H2 className="text-center">{headerText}</H2>
     <div className="flex flex-col items-center justify-evenly gap-8 text-justify md:flex-row md:text-left">
       <div className="max-w-72">
         <Image
@@ -21,7 +22,7 @@ export const About = ({ bioImage, content, headerText }: AboutSectionType) => (
           width={bioImage.dimensions.width}
         />
       </div>
-      <p className="max-w-md p-3">{content}</p>
+      <P className="max-w-md p-3">{content}</P>
     </div>
   </div>
 );
