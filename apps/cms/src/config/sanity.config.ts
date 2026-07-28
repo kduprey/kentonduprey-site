@@ -44,7 +44,8 @@ const production: WorkspaceOptions = {
       allowOrigins: [
         "https://kentonduprey.com",
         "https://www.kentonduprey.com",
-        "https://kd.kduprey.dev",
+        "https://kd.hausofwebstage.dev",
+        "https://kd.hausofweb.dev",
       ],
       previewUrl: {
         draftMode: {
@@ -69,7 +70,8 @@ const staging: WorkspaceOptions = {
       allowOrigins: [
         "https://kentonduprey.com",
         "https://www.kentonduprey.com",
-        "https://kd-test.kduprey.dev",
+        "https://kd.hausofwebstage.dev",
+        "https://kd.hausofweb.dev",
       ],
       previewUrl: {
         draftMode: {
