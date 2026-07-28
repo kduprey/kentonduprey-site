@@ -155,8 +155,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/tsconfig
       '@sanity/icons':
-        specifier: ^5.1.0
-        version: 5.1.0(react@19.2.7)
+        specifier: ^5.2.0
+        version: 5.2.1(react@19.2.7)
       '@sanity/image-url':
         specifier: ^2.1.1
         version: 2.1.1
@@ -5354,12 +5354,6 @@ packages:
     engines: {node: '>=14.0.0'}
     peerDependencies:
       react: ^18.3 || ^19.0.0-0
-
-  '@sanity/icons@5.1.0':
-    resolution: {integrity: sha512-BPvLFBWnxpXCn9XKb5OgBzNNRZJI29TXRpuSXx1/nKJ8FaYuitFmKSAD0L8jC0kF/BKKUMThaY3TYJ0UuubbTQ==}
-    engines: {node: '>=22.12'}
-    peerDependencies:
-      react: ^19
 
   '@sanity/icons@5.2.1':
     resolution: {integrity: sha512-P5gY1HRungh4RgCcypdIpu/SKoTwRBTttpbHntZjdW1MO3MK6xEOs+pbAzSARyhh22OcN9PkBBEYk2FL34BvfQ==}
@@ -18517,10 +18511,6 @@ snapshots:
     dependencies:
       react: 19.2.7
 
-  '@sanity/icons@5.1.0(react@19.2.7)':
-    dependencies:
-      react: 19.2.7
-
   '@sanity/icons@5.2.1(react@19.2.7)':
     dependencies:
       react: 19.2.7
@@ -18882,7 +18872,7 @@ snapshots:
       '@rexxars/react-json-inspector': 9.0.1(react@19.2.7)
       '@rexxars/react-split-pane': 1.0.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@sanity/color': 3.0.6
-      '@sanity/icons': 5.1.0(react@19.2.7)
+      '@sanity/icons': 5.2.1(react@19.2.7)
       '@sanity/lezer-groq': 1.0.4
       '@sanity/ui': 3.3.5(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.7(react@19.2.7))(react-is@19.2.8)(react@19.2.7)(styled-components@6.4.4(css-to-react-native@3.2.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))
       '@sanity/uuid': 3.0.3
