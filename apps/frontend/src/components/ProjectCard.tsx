@@ -1,4 +1,4 @@
-import { H3, P } from "@kduprey/ui";
+import { Button, Card, CardContent, CardDescription, H3 } from "@kduprey/ui";
 import Image from "next/image";
 import Link from "next/link";
 import type { ProjectType } from "@/sanity/data/queries/pageQueries/home.queries";
@@ -12,7 +12,7 @@ export const ProjectCard = ({
   projectSkills,
   title,
 }: ProjectType) => (
-  <div className="max-w-md rounded-xl bg-white shadow-md ring-2 ring-slate-100 md:max-w-lg dark:border dark:border-gray-300 dark:bg-black">
+  <Card className="max-w-md md:max-w-lg">
     <Image
       alt={title}
       height={projectImage.dimensions.height}
@@ -25,9 +25,9 @@ export const ProjectCard = ({
       }}
       width={projectImage.dimensions.width}
     />
-    <div className="flex flex-col justify-between gap-3 space-y-3 p-3">
-      <H3 className="text-black hover:underline dark:text-white">{title}</H3>
-      <P>{description}</P>
+    <CardContent className="flex flex-col justify-between gap-3 space-y-3">
+      <H3>{title}</H3>
+      <CardDescription>{description}</CardDescription>
       <div className="flex justify-evenly text-xl md:text-3xl" id="skills">
         {projectSkills.map((skill) => (
           <Skill
@@ -38,9 +38,9 @@ export const ProjectCard = ({
           />
         ))}
       </div>
-      <button className="mx-auto" type="button">
+      <Button asChild className="mx-auto">
         <Link href={link}>Explore</Link>
-      </button>
-    </div>
-  </div>
+      </Button>
+    </CardContent>
+  </Card>
 );

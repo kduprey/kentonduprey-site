@@ -18,7 +18,9 @@
     "@mantine/core": "7.17.4",
     "@mantine/hooks": "7.17.4",
     "@tabler/icons-react": "^3.31.0",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "radix-ui": "^1.6.7",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "tailwind-merge": "^3.6.0"

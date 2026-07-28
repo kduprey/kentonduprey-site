@@ -1,6 +1,6 @@
 "use client";
 
-import { H2 } from "@kduprey/ui";
+import { Button, H2, Input, Textarea } from "@kduprey/ui";
 import axios from "axios";
 import type {
   ChangeEvent,
@@ -80,7 +80,7 @@ export const Contact = () => {
         id="contact-form"
         onSubmit={onSubmit}
       >
-        <input
+        <Input
           className="hidden"
           name="age"
           onChange={handleChange}
@@ -88,8 +88,7 @@ export const Contact = () => {
           type="text"
           value={inputData.age}
         />
-        <input
-          className="input form-input"
+        <Input
           disabled={loading}
           name="name"
           onChange={handleChange}
@@ -98,8 +97,7 @@ export const Contact = () => {
           type="text"
           value={inputData.name}
         />
-        <input
-          className="input form-input"
+        <Input
           disabled={loading}
           name="email"
           onChange={handleChange}
@@ -109,8 +107,7 @@ export const Contact = () => {
           value={inputData.email}
         />
         <div className="mx-auto flex flex-col items-center gap-4">
-          <textarea
-            className="input form-textarea"
+          <Textarea
             disabled={loading}
             name="message"
             onChange={handleChange}
@@ -119,8 +116,8 @@ export const Contact = () => {
             value={inputData.message}
           />
 
-          <button
-            className="m-2 flex"
+          <Button
+            className="m-2"
             disabled={loading}
             id="btn-submit"
             type="submit"
@@ -128,11 +125,9 @@ export const Contact = () => {
             {loading ? "Sending..." : "Send"}
 
             <CgSpinner
-              className={`ml-1 size-6 animate-spin text-gray-500 ${
-                loading ? "" : "hidden"
-              }`}
+              className={`ml-1 size-6 animate-spin ${loading ? "" : "hidden"}`}
             />
-          </button>
+          </Button>
         </div>
 
         <p
