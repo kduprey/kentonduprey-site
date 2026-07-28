@@ -13,9 +13,16 @@ jobs:
   release-pr:
     runs-on: ubuntu-latest
     steps:
+      - name: Generate a token
+        id: id-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
       - name: Open or update promotion PR
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ steps.id-token.outputs.token }}
         run: |
           PR_NUMBER=$(gh pr list --repo "$GITHUB_REPOSITORY" --base production --head main --state open --json number --jq '.[0].number // empty')
           if [ -z "$PR_NUMBER" ]; then
