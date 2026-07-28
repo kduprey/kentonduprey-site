@@ -5,8 +5,8 @@ import { at, defineMigration, set } from "sanity/migrate";
  * aboutSection.content used to be a plain string; it's now a Portable Text
  * block array. Wraps any remaining string values in a single normal block.
  *
- * Run with: pnpm --filter @kduprey/cms migrate -- --dataset <dataset>
- * (runs every migration in this directory; add --dry-run to preview first)
+ * Run with: pnpm --filter @kduprey/cms migration[:live[:prod]]
+ * (runs every migration in this directory — see apps/cms/migrations/README.md)
  */
 export default defineMigration({
   documentTypes: ["home"],

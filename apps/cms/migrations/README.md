@@ -3,12 +3,13 @@
 Run all pending migrations against a dataset:
 
 ```
-pnpm --filter @kduprey/cms migrate -- --dataset staging
-pnpm --filter @kduprey/cms migrate -- --dataset production
+pnpm --filter @kduprey/cms migration            # dry run against staging (preview only)
+pnpm --filter @kduprey/cms migration:live        # apply against staging
+pnpm --filter @kduprey/cms migration:live:prod   # apply against production
 ```
 
-Add `--dry-run` to preview mutations first. `--project` defaults to
-`NEXT_PUBLIC_SANITY_PROJECT_ID` from `.env`; pass it explicitly to override.
+`--project` defaults to `NEXT_PUBLIC_SANITY_PROJECT_ID` from `.env`; pass
+`-- --project <id>` to override.
 
 ## Order of operations
 

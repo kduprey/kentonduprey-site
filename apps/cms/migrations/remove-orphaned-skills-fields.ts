@@ -5,8 +5,8 @@ import { at, defineMigration, unset } from "sanity/migrate";
  * project.projectSkills) but left the data on existing documents, which Studio
  * now flags as "field not defined in schema". Unsets both fields.
  *
- * Run with: pnpm --filter @kduprey/cms migrate -- --dataset <dataset>
- * (runs every migration in this directory; add --dry-run to preview first)
+ * Run with: pnpm --filter @kduprey/cms migration[:live[:prod]]
+ * (runs every migration in this directory — see apps/cms/migrations/README.md)
  */
 export default defineMigration({
   documentTypes: ["home", "project"],
