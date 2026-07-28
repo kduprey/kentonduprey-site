@@ -11,6 +11,7 @@
     "migration": "node scripts/run-migrations.mjs --dataset staging --dry-run",
     "migration:live": "node scripts/run-migrations.mjs --dataset staging",
     "migration:live:prod": "node scripts/run-migrations.mjs --dataset production",
+    "migration:prod": "node scripts/run-migrations.mjs --dataset production --dry-run",
     "publishContent": "sanity dataset export staging . --overwrite && sanity dataset import staging.tar.gz production --replace",
     "pullContent": "sanity dataset export production . --overwrite && sanity dataset import production.tar.gz staging --replace",
     "start": "next start",
