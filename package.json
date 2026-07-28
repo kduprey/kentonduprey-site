@@ -16,6 +16,7 @@
     "postdev": "pnpm stop:db:local",
     "lint": "pnpm dlx turbo lint",
     "migration": "pnpm --filter @kduprey/cms migration",
+    "migration:create": "pnpm --filter @kduprey/cms migration:create",
     "migration:live": "pnpm --filter @kduprey/cms migration:live",
     "migration:prod": "pnpm --filter @kduprey/cms migration:prod",
     "migration:live:prod": "pnpm --filter @kduprey/cms migration:live:prod",

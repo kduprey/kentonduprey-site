@@ -1,10 +1,23 @@
 # Migrations
 
-Run all pending migrations against a dataset:
+Create a new migration:
+
+```
+pnpm --filter @kduprey/cms migration:create -- my-migration-name
+```
+
+This generates `migrations/NNNN-my-migration-name.ts` (a 4-digit sequence
+number followed by a kebab-case name) from a boilerplate template. The
+sequence number determines run order — it's what makes migrations that
+depend on an earlier one running first safe, since alphabetical filename
+order alone doesn't guarantee that once you're past migration 0009.
+
+Run all pending migrations, in sequence order, against a dataset:
 
 ```
 pnpm --filter @kduprey/cms migration            # dry run against staging (preview only)
 pnpm --filter @kduprey/cms migration:live        # apply against staging
+pnpm --filter @kduprey/cms migration:prod        # dry run against production (preview only)
 pnpm --filter @kduprey/cms migration:live:prod   # apply against production
 ```
 

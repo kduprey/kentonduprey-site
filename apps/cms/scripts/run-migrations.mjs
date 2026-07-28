@@ -39,10 +39,22 @@ if (!dataset) {
 }
 
 const TS_EXTENSION = /\.ts$/;
+const SEQUENCE_PREFIX = /^\d{4}-/;
 
-// ponytail: migrations run in filename order — prefix with a number if a later migration must run before an earlier one alphabetically
-const migrationIds = readdirSync(MIGRATIONS_DIR)
-  .filter((file) => file.endsWith(".ts"))
+const migrationFiles = readdirSync(MIGRATIONS_DIR).filter((file) =>
+  file.endsWith(".ts")
+);
+
+const unprefixed = migrationFiles.filter((file) => !SEQUENCE_PREFIX.test(file));
+if (unprefixed.length > 0) {
+  console.error(
+    `Migration files must start with a 4-digit sequence number (e.g. 0001-my-migration.ts): ${unprefixed.join(", ")}\nUse "pnpm --filter @kduprey/cms migration:create -- <name>" to generate one.`
+  );
+  process.exit(1);
+}
+
+// Sequence numbers determine run order, not alphabetical filename order.
+const migrationIds = migrationFiles
   .map((file) => file.replace(TS_EXTENSION, ""))
   .sort();
 
