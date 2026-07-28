@@ -2,10 +2,10 @@ import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
 const isProtectedRoute = createRouteMatcher(["/dashboard(.*)"]);
 
-export default clerkMiddleware((auth, req) => {
-  const { userId } = auth();
+export default clerkMiddleware(async (auth, req) => {
+  const { userId } = await auth();
   if (isProtectedRoute(req)) {
-    auth().protect(() => userId === process.env.ADMIN_USER_ID, {
+    await auth.protect(() => userId === process.env.ADMIN_USER_ID, {
       unauthorizedUrl: new URL("/unauthorized", req.url).toString(),
     });
   }

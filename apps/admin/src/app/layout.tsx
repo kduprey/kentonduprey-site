@@ -1,7 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
-import type { PropsWithChildren } from "react";
+import type { ComponentProps, PropsWithChildren } from "react";
 import "@mantine/core/styles.layer.css";
 import "mantine-datatable/styles.layer.css";
 import "./global.css";
@@ -13,12 +13,15 @@ export const metadata = {
   title: "Haus of Web - Admin",
 };
 
+// @clerk/themes' `dark` export types its own `theme` field as `X | undefined`,
+// which trips exactOptionalPropertyTypes against @clerk/nextjs's stricter
+// `Appearance<Theme>` type. The value itself is a valid appearance object.
+type ClerkAppearance = NonNullable<
+  ComponentProps<typeof ClerkProvider>["appearance"]
+>;
+
 const RootLayout = ({ children }: Readonly<PropsWithChildren>) => (
-  <ClerkProvider
-    appearance={{
-      baseTheme: dark,
-    }}
-  >
+  <ClerkProvider appearance={dark as ClerkAppearance}>
     <html lang="en">
       <head>
         <ColorSchemeScript defaultColorScheme="auto" />

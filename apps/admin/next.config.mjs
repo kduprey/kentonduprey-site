@@ -11,7 +11,6 @@ const nextConfig = withBundleAnalyzer({
     ignoreDuringBuilds: true,
   },
   experimental: {
-    instrumentationHook: true,
     optimizePackageImports: ["@mantine/core", "@mantine/hooks", "@kduprey/ui"],
   },
   reactStrictMode: false,
@@ -26,12 +25,16 @@ const nextConfig = withBundleAnalyzer({
 });
 
 export default withSentryConfig(nextConfig, {
-  automaticVercelMonitors: true,
-  disableLogger: false,
   org: "haus-of-web",
   project: "kentonduprey-admin",
   sentryUrl: "https://sentry.hausofweb.com",
   silent: !process.env.CI,
   tunnelRoute: "/monitoring",
+  webpack: {
+    automaticVercelMonitors: true,
+    treeshake: {
+      removeDebugLogging: false,
+    },
+  },
   widenClientFileUpload: true,
 });

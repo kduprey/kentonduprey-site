@@ -1,6 +1,6 @@
 "use client";
 
-import { SignedIn, UserButton } from "@clerk/nextjs";
+import { Show, UserButton } from "@clerk/nextjs";
 import {
   Anchor,
   AppShell,
@@ -64,9 +64,9 @@ export const DashboardLayout = ({ children }: PropsWithChildren) => {
           ))}
         </AppShellSection>
         <AppShellSection>
-          <SignedIn>
+          <Show when="signed-in">
             <UserButton showName />
-          </SignedIn>
+          </Show>
         </AppShellSection>
       </AppShellNavbar>
       <AppShellMain>{children}</AppShellMain>
