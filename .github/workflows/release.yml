@@ -1,0 +1,69 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - production
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Generate a token
+        id: id-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ steps.id-token.outputs.token }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Install dependencies
+        run: pnpm i
+
+      - name: Compute release version
+        id: release
+        env:
+          GITHUB_TOKEN: ${{ steps.id-token.outputs.token }}
+        run: node scripts/compute-release.mjs
+
+      - name: Tag and publish GitHub release
+        if: steps.release.outputs.released == 'true'
+        env:
+          GH_TOKEN: ${{ steps.id-token.outputs.token }}
+          NOTES_FILE: ${{ steps.release.outputs.notes_file }}
+          RELEASE_TAG: ${{ steps.release.outputs.tag }}
+        run: |
+          gh release create "$RELEASE_TAG" --title "$RELEASE_TAG" --notes-file "$NOTES_FILE" --target "$GITHUB_SHA"
+
+      - name: Create Sentry release
+        if: steps.release.outputs.released == 'true'
+        uses: getsentry/action-release@v3
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+          SENTRY_URL: ${{ vars.SENTRY_URL }}
+        with:
+          environment: production
+          version: ${{ steps.release.outputs.tag }}
