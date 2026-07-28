@@ -1,10 +1,10 @@
+import { Muted } from "@kduprey/ui";
 import { About } from "@/components/Sections/About";
 import { Contact } from "@/components/Sections/Contact";
 import { Hero } from "@/components/Sections/Hero";
 import { Navbar } from "@/components/Sections/Navbar";
 import { Projects } from "@/components/Sections/Projects";
 import { Skills } from "@/components/Sections/Skills";
-import { Muted } from "@/components/Typography";
 import type { HomeType } from "@/sanity/data/queries/pageQueries/home.queries";
 
 interface HomeLayoutProps {

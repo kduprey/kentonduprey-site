@@ -1,5 +1,6 @@
 "use client";
 
+import { Button, H2, Input, Textarea } from "@kduprey/ui";
 import axios from "axios";
 import type {
   ChangeEvent,
@@ -9,8 +10,6 @@ import type {
 } from "react";
 import { useState } from "react";
 import { CgSpinner } from "react-icons/cg";
-
-import { H2 } from "@/components/Typography";
 import { Socials } from "./Socials";
 
 export const Contact = () => {
@@ -81,7 +80,7 @@ export const Contact = () => {
         id="contact-form"
         onSubmit={onSubmit}
       >
-        <input
+        <Input
           className="hidden"
           name="age"
           onChange={handleChange}
@@ -89,8 +88,7 @@ export const Contact = () => {
           type="text"
           value={inputData.age}
         />
-        <input
-          className="input form-input"
+        <Input
           disabled={loading}
           name="name"
           onChange={handleChange}
@@ -99,8 +97,7 @@ export const Contact = () => {
           type="text"
           value={inputData.name}
         />
-        <input
-          className="input form-input"
+        <Input
           disabled={loading}
           name="email"
           onChange={handleChange}
@@ -109,32 +106,29 @@ export const Contact = () => {
           type="email"
           value={inputData.email}
         />
-        <div className="mx-auto flex flex-col items-center gap-4">
-          <textarea
-            className="input form-textarea"
-            disabled={loading}
-            name="message"
-            onChange={handleChange}
-            placeholder="Message"
-            required
-            value={inputData.message}
+        <Textarea
+          className="field-sizing-fixed"
+          disabled={loading}
+          name="message"
+          onChange={handleChange}
+          placeholder="Message"
+          required
+          rows={5}
+          value={inputData.message}
+        />
+
+        <Button
+          className="m-2"
+          disabled={loading}
+          id="btn-submit"
+          type="submit"
+        >
+          {loading ? "Sending..." : "Send"}
+
+          <CgSpinner
+            className={`ml-1 size-6 animate-spin ${loading ? "" : "hidden"}`}
           />
-
-          <button
-            className="m-2 flex"
-            disabled={loading}
-            id="btn-submit"
-            type="submit"
-          >
-            {loading ? "Sending..." : "Send"}
-
-            <CgSpinner
-              className={`ml-1 size-6 animate-spin text-gray-500 ${
-                loading ? "" : "hidden"
-              }`}
-            />
-          </button>
-        </div>
+        </Button>
 
         <p
           className={`absolute -bottom-6 font-light transition-opacity ease-in md:-right-28 md:bottom-auto ${

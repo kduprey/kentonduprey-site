@@ -1,5 +1,5 @@
+import { H2, P } from "@kduprey/ui";
 import Image from "next/image";
-import { H2, P } from "@/components/Typography";
 import type { AboutSectionType } from "@/sanity/data/queries/pageQueries/home.queries";
 
 export const About = ({ bioImage, content, headerText }: AboutSectionType) => (

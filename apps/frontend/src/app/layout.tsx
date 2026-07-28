@@ -4,8 +4,8 @@ import { VisualEditing } from "next-sanity/visual-editing";
 import type { PropsWithChildren } from "react";
 
 import "./globals.css";
+import { cn } from "@kduprey/ui";
 import { draftMode } from "next/headers";
-import { cn } from "@/lib/utils";
 import { SanityLive } from "@/sanity/config/sanity.live";
 
 export const metadata: Metadata = {

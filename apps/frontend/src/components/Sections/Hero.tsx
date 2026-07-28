@@ -1,5 +1,5 @@
+import { H2, Lead } from "@kduprey/ui";
 import { FaArrowRight } from "react-icons/fa";
-import { H2, Lead } from "@/components/Typography";
 
 export const Hero = () => (
   <div className="flex flex-col items-center justify-around">
