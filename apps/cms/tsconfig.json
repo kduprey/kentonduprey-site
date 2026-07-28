@@ -19,5 +19,5 @@
     ".next/types/**/*.ts",
     "jest.setup.cjs"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "migrations"]
 }
