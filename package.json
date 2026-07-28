@@ -1,11 +1,11 @@
 {
   "devDependencies": {
-    "@biomejs/biome": "2.5.3",
+    "@biomejs/biome": "2.5.4",
     "concurrently": "^9.1.2",
     "dotenv-cli": "^8.0.0",
     "prettier-plugin-packagejson": "^2.5.10",
     "release-please": "^17.10.3",
-    "turbo": "^2.5.0",
+    "turbo": "^2.10.5",
     "ultracite": "7.9.4"
   },
   "name": "@kduprey/apps",

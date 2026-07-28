@@ -20,15 +20,15 @@
     "studio": "prisma studio"
   },
   "dependencies": {
-    "@prisma/adapter-pg": "^7.8.0",
-    "@prisma/client": "7.8.0",
-    "dotenv": "^17.2.3"
+    "@prisma/adapter-pg": "^7.9.0",
+    "@prisma/client": "7.9.0",
+    "dotenv": "^17.4.2"
   },
   "devDependencies": {
     "@kduprey/tsconfig": "workspace:*",
     "@types/node": "^22.13.13",
     "dotenv-cli": "^8.0.0",
-    "prisma": "^7.8.0",
+    "prisma": "^7.9.0",
     "tsup": "^8.4.0",
     "typescript": "^5.8.3"
   }
