@@ -6,7 +6,6 @@ import { structureTool } from "sanity/structure";
 import { homeSchema } from "@/schemas/home";
 import { project } from "@/schemas/project";
 import { siteSettings } from "@/schemas/site-settings";
-import { skill } from "@/schemas/skill";
 
 import {
   deskStructure,
@@ -15,7 +14,7 @@ import {
 } from "./desk-structure";
 import { locate, mainDocuments } from "./locate";
 
-const schemaTypes = [homeSchema, project, siteSettings, skill];
+const schemaTypes = [homeSchema, project, siteSettings];
 
 export const PROJECT_ID = "b6x3by70";
 
