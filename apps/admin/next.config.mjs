@@ -11,7 +11,7 @@ const nextConfig = withBundleAnalyzer({
     ignoreDuringBuilds: true,
   },
   experimental: {
-    optimizePackageImports: ["@mantine/core", "@mantine/hooks", "@kduprey/ui"],
+    optimizePackageImports: ["@kduprey/ui"],
   },
   reactStrictMode: false,
   webpack: (config, { isServer }) => {

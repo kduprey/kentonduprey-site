@@ -17,12 +17,12 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "zod": "^3.24.3"
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@kduprey/tsconfig": "workspace:*",
-    "@types/node": "^22.13.13",
+    "@types/node": "^26.1.2",
     "tsup": "^8.4.0",
-    "typescript": "5.8.3"
+    "typescript": "5.9.3"
   }
 }
