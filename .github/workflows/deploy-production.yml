@@ -6,7 +6,44 @@ on:
       - production
 
 jobs:
+  migrate:
+    name: Apply database migrations
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Apply pending migrations
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID_ADMIN }}
+        run: |
+          npx vercel@latest pull --yes --environment=production --token="$VERCEL_TOKEN"
+          set -a
+          . ./.vercel/.env.production.local
+          set +a
+          pnpm --filter @kduprey/db migrate:deploy
+
   deploy:
+    needs: migrate
     strategy:
       matrix:
         include:
