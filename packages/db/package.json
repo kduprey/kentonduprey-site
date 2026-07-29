@@ -31,5 +31,8 @@
     "prisma": "^7.9.0",
     "tsup": "^8.4.0",
     "typescript": "^5.9.3"
+  },
+  "prisma": {
+    "schema": "./prisma/schema.prisma"
   }
 }

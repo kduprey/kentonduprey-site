@@ -21,8 +21,8 @@
     "migration:live": "pnpm --filter @kduprey/cms migration:live",
     "migration:prod": "pnpm --filter @kduprey/cms migration:prod",
     "migration:live:prod": "pnpm --filter @kduprey/cms migration:live:prod",
-    "publishContent": "pnpm --filter @kduprey/cms publishContent",
     "postinstall": "pnpm --filter @kduprey/db generate",
+    "publishContent": "pnpm --filter @kduprey/cms publishContent",
     "pullContent": "pnpm --filter @kduprey/cms pullContent",
     "start": "pnpm dlx turbo start",
     "start:db:local": "docker-compose up -d && dotenv -- pnpm --filter @kduprey/db migrate",
@@ -36,6 +36,9 @@
   "keywords": [],
   "author": "Kenton Duprey",
   "packageManager": "pnpm@10.24.0",
+  "prisma": {
+    "schema": "packages/db/prisma/schema.prisma"
+  },
   "pnpm": {
     "onlyBuiltDependencies": [
       "@clerk/shared",
