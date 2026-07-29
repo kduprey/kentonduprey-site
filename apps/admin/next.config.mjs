@@ -1,16 +1,17 @@
 import bundleAnalyzer from "@next/bundle-analyzer";
 import { PrismaPlugin } from "@prisma/nextjs-monorepo-workaround-plugin";
+import { withSentryConfig } from "@sentry/nextjs";
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
 });
 
-export default withBundleAnalyzer({
+const nextConfig = withBundleAnalyzer({
   eslint: {
     ignoreDuringBuilds: true,
   },
   experimental: {
-    optimizePackageImports: ["@mantine/core", "@mantine/hooks", "@kduprey/ui"],
+    optimizePackageImports: ["@kduprey/ui"],
   },
   reactStrictMode: false,
   webpack: (config, { isServer }) => {
@@ -21,4 +22,19 @@ export default withBundleAnalyzer({
     }
     return config;
   },
+});
+
+export default withSentryConfig(nextConfig, {
+  org: "haus-of-web",
+  project: "kentonduprey-admin",
+  sentryUrl: "https://sentry.hausofweb.com",
+  silent: !process.env.CI,
+  tunnelRoute: "/monitoring",
+  webpack: {
+    automaticVercelMonitors: true,
+    treeshake: {
+      removeDebugLogging: false,
+    },
+  },
+  widenClientFileUpload: true,
 });

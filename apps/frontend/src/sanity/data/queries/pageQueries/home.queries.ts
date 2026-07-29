@@ -1,3 +1,4 @@
+import type { PortableTextBlock } from "@portabletext/react";
 import { groq } from "next-sanity";
 import { z } from "zod";
 
@@ -26,11 +27,6 @@ export const homeQuery = groq`
             width
           }
         })
-      },
-      projectSkills[]-> {
-        _id,
-        title,
-        iconSlug
       }
     }
   },
@@ -48,14 +44,6 @@ export const homeQuery = groq`
           width
         }
       })
-    }
-  },
-  skillsSection {
-    headerText,
-    skills[]-> {
-      _id,
-      title,
-      iconSlug
     }
   },
   contactSection {
@@ -77,18 +65,11 @@ export const ImageSchema = z.object({
   src: z.string(),
 });
 
-export const SkillSchema = z.object({
-  _id: z.string(),
-  iconSlug: z.string(),
-  title: z.string(),
-});
-
 export const ProjectSchema = z.object({
   _id: z.string(),
   description: z.string(),
   link: z.string(),
   projectImage: ImageSchema,
-  projectSkills: z.array(SkillSchema),
   title: z.string(),
 });
 
@@ -99,7 +80,7 @@ export const ProjectSectionSchema = z.object({
 
 export const AboutSectionSchema = z.object({
   bioImage: ImageSchema,
-  content: z.string(),
+  content: z.custom<PortableTextBlock[]>(),
   headerText: z.string(),
 });
 
@@ -121,15 +102,10 @@ export const homeSchema = z.object({
     twitterLink: z.string(),
   }),
   projectsSection: ProjectSectionSchema,
-  skillsSection: z.object({
-    headerText: z.string(),
-    skills: z.array(SkillSchema),
-  }),
 });
 
 export type HomeType = z.infer<typeof homeSchema>;
 export type ProjectType = z.infer<typeof ProjectSchema>;
-export type SkillType = z.infer<typeof SkillSchema>;
 export type ImageType = z.infer<typeof ImageSchema>;
 export type ProjectSectionType = z.infer<typeof ProjectSectionSchema>;
 export type AboutSectionType = z.infer<typeof AboutSectionSchema>;

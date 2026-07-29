@@ -1,12 +1,35 @@
+import { H2 } from "@kduprey/ui";
+import { PortableText, type PortableTextComponents } from "@portabletext/react";
 import Image from "next/image";
+import Link from "next/link";
 import type { AboutSectionType } from "@/sanity/data/queries/pageQueries/home.queries";
+
+const bioComponents: PortableTextComponents = {
+  marks: {
+    link: ({ children, value }) => (
+      <Link
+        className="underline hover:no-underline"
+        href={value.href}
+        rel="noopener"
+        target="_blank"
+      >
+        {children}
+      </Link>
+    ),
+  },
+};
+
+// aboutSection.content used to be a plain string before it became Portable
+// Text (HOW-191); documents not yet migrated still have the old shape.
+const isLegacyStringContent = (value: unknown): value is string =>
+  typeof value === "string";
 
 export const About = ({ bioImage, content, headerText }: AboutSectionType) => (
   <div
     className="flex w-full flex-col items-center justify-center gap-5"
     id="about"
   >
-    <h2 className="text-center font-bold">{headerText}</h2>
+    <H2 className="text-center">{headerText}</H2>
     <div className="flex flex-col items-center justify-evenly gap-8 text-justify md:flex-row md:text-left">
       <div className="max-w-72">
         <Image
@@ -21,7 +44,13 @@ export const About = ({ bioImage, content, headerText }: AboutSectionType) => (
           width={bioImage.dimensions.width}
         />
       </div>
-      <p className="max-w-md p-3">{content}</p>
+      <div className="max-w-md space-y-3 p-3">
+        {isLegacyStringContent(content) ? (
+          <p>{content}</p>
+        ) : (
+          <PortableText components={bioComponents} value={content} />
+        )}
+      </div>
     </div>
   </div>
 );

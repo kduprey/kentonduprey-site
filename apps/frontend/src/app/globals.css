@@ -1,11 +1,10 @@
-@import 'tailwindcss';
-@plugin '@tailwindcss/forms';
+@import "@kduprey/ui/styles.css";
+@plugin "@tailwindcss/forms";
 
 @theme {
-  --font-*: initial;
   --font-display:
     var(--font-inter), ui-sans-serif, system-ui, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   --color-black: #000;
   --color-current: currentColor;
@@ -65,6 +64,9 @@
   input[type="reset"],
   input[type="button"] {
     @apply rounded-xs! bg-black! py-1! px-3! uppercase! text-white! transition! ease-in! hover:bg-white! hover:text-black! hover:ring-1! hover:ring-black! dark:border! dark:border-gray-300! dark:hover:bg-white! dark:hover:text-black!;
+  }
+  html {
+    @apply font-sans;
   }
 }
 

@@ -1,7 +1,6 @@
 "use client";
 
 import { useAuth } from "@clerk/nextjs";
-import { Box, Center, Text, Title } from "@mantine/core";
 import { useEffect } from "react";
 
 const Page = () => {
@@ -19,12 +18,12 @@ const Page = () => {
   });
 
   return (
-    <Center h="100dvh">
-      <Box>
-        <Title ta="center">Unauthorized</Title>
-        <Text>You are not authorized to view this page.</Text>
-      </Box>
-    </Center>
+    <div className="flex h-dvh items-center justify-center">
+      <div className="text-center">
+        <h1 className="font-semibold text-3xl">Unauthorized</h1>
+        <p>You are not authorized to view this page.</p>
+      </div>
+    </div>
   );
 };
 

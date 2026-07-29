@@ -37,18 +37,6 @@ export const project = defineType({
       type: "image",
       validation: (Rule) => Rule.required(),
     }),
-    defineField({
-      name: "projectSkills",
-      of: [
-        {
-          to: [{ type: "skill" }],
-          type: "reference",
-        },
-      ],
-      title: "Project Skills",
-      type: "array",
-      validation: (Rule) => Rule.required(),
-    }),
   ],
   icon: RocketIcon,
   name: "project",

@@ -22,8 +22,8 @@ export const POST = async (req: NextRequest) => {
 
   const token = z
     .string({
-      invalid_type_error: "Invalid JWT",
-      required_error: "No JWT present in request",
+      error: (issue) =>
+        issue.input === undefined ? "No JWT present in request" : "Invalid JWT",
     })
     .parse(authJWT.split(" ")[1]);
 

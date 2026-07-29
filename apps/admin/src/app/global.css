@@ -1,3 +1,2 @@
 @import "https://use.typekit.net/vik6drq.css";
-/* 👇 Make sure the styles are applied in the correct order */
-@layer mantine, mantine-datatable;
+@import "@kduprey/ui/styles.css";
