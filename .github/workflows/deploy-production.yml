@@ -28,6 +28,10 @@ jobs:
           node-version: 22.x
 
       - name: Install dependencies
+        env:
+          # Placeholder so prisma.config.ts can resolve DATABASE_URL during the
+          # postinstall `prisma generate` — no live DB connection needed for generate.
+          DATABASE_URL: "postgresql://placeholder:placeholder@localhost:5432/placeholder"
         run: pnpm install
 
       - name: Apply pending migrations
