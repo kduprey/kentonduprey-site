@@ -27,16 +27,24 @@ jobs:
         with:
           node-version: 22.x
 
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Apply pending migrations
+      - name: Pull Vercel environment
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID_ADMIN }}
+        run: npx vercel@latest pull --yes --environment=production --token="$VERCEL_TOKEN"
+
+      - name: Install dependencies
+        # DATABASE_URL must be set before install: packages/db's postinstall
+        # runs `prisma generate`, which resolves it eagerly via prisma.config.ts.
         run: |
-          npx vercel@latest pull --yes --environment=production --token="$VERCEL_TOKEN"
+          set -a
+          . ./.vercel/.env.production.local
+          set +a
+          pnpm install
+
+      - name: Apply pending migrations
+        run: |
           set -a
           . ./.vercel/.env.production.local
           set +a
