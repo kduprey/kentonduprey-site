@@ -21,7 +21,6 @@
     "migration:live": "pnpm --filter @kduprey/cms migration:live",
     "migration:prod": "pnpm --filter @kduprey/cms migration:prod",
     "migration:live:prod": "pnpm --filter @kduprey/cms migration:live:prod",
-    "postinstall": "pnpm --filter @kduprey/db generate",
     "publishContent": "pnpm --filter @kduprey/cms publishContent",
     "pullContent": "pnpm --filter @kduprey/cms pullContent",
     "start": "pnpm dlx turbo start",
