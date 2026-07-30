@@ -167,8 +167,8 @@ importers:
         specifier: 16.2.10
         version: 16.2.10(@babel/core@8.0.1)(@opentelemetry/api@1.9.1)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       next-sanity:
-        specifier: ^13.1.4
-        version: 13.1.4(737e4aa56f78dc65d7bb4d617498adc7)
+        specifier: ^13.1.7
+        version: 13.1.7(737e4aa56f78dc65d7bb4d617498adc7)
       react:
         specifier: 19.2.7
         version: 19.2.7
@@ -240,8 +240,8 @@ importers:
         specifier: ^16.2.10
         version: 16.2.10(@babel/core@8.0.1)(@opentelemetry/api@1.9.1)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       next-sanity:
-        specifier: ^13.1.4
-        version: 13.1.4(737e4aa56f78dc65d7bb4d617498adc7)
+        specifier: ^13.1.7
+        version: 13.1.7(737e4aa56f78dc65d7bb4d617498adc7)
       react:
         specifier: ^19.2.7
         version: 19.2.7
@@ -10200,8 +10200,8 @@ packages:
   neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
 
-  next-sanity@13.1.4:
-    resolution: {integrity: sha512-72iTgqZbdvCDXzXam7PTiVFux1lMtDz7aMq6W4uBwGoVKkNforv+1LvzqZ/GfhuChXesex8VCFa+ooqABGb5NA==}
+  next-sanity@13.1.7:
+    resolution: {integrity: sha512-i/QdYS9EnECYyUv1YjKFvLafrYa9OM6sDxm9GfgBO58HGyh9a7IdY2jdoIk9RFQRMZwJUi4goqDhBb+sg/MGKQ==}
     engines: {node: '>=20.19 <22 || >=22.12'}
     peerDependencies:
       '@sanity/client': ^7.24.0
@@ -22279,7 +22279,7 @@ snapshots:
 
   history@5.3.0:
     dependencies:
-      '@babel/runtime': 7.28.4
+      '@babel/runtime': 7.29.7
 
   hls.js@1.6.16: {}
 
@@ -23693,7 +23693,7 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  next-sanity@13.1.4(737e4aa56f78dc65d7bb4d617498adc7):
+  next-sanity@13.1.7(737e4aa56f78dc65d7bb4d617498adc7):
     dependencies:
       '@portabletext/react': 6.2.0(react@19.2.7)
       '@sanity/client': 7.25.0
