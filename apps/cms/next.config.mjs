@@ -5,6 +5,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 export default withBundleAnalyzer({
+  allowedDevOrigins: ["kd-cms.hausofweb.dev"],
   experimental: {
     optimizePackageImports: ["@kduprey/config"],
   },

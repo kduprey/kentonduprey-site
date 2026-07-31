@@ -2,6 +2,7 @@ import { withSentryConfig } from "@sentry/nextjs";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  allowedDevOrigins: ["kd.hausofweb.dev"],
   experimental: {
     optimizePackageImports: ["@kduprey/config"],
   },
