@@ -2,24 +2,26 @@ import { H2 } from "@kduprey/ui";
 import { PortableText, type PortableTextComponents } from "@portabletext/react";
 import Image from "next/image";
 import Link from "next/link";
-import type { PropsWithChildren } from "react";
+import type { PropsWithChildren, ReactNode } from "react";
 import type { AboutSectionType } from "@/sanity/data/queries/pageQueries/home.queries";
+
+const linkMark = ({
+  children,
+  value,
+}: PropsWithChildren<{ value?: { href: string } }>): ReactNode => (
+  <Link
+    className="underline hover:no-underline"
+    href={value?.href ?? ""}
+    rel="noopener"
+    target="_blank"
+  >
+    {children}
+  </Link>
+);
 
 const bioComponents: PortableTextComponents = {
   marks: {
-    link: ({
-      children,
-      value,
-    }: PropsWithChildren<{ value: { href: string } }>) => (
-      <Link
-        className="underline hover:no-underline"
-        href={value.href}
-        rel="noopener"
-        target="_blank"
-      >
-        {children}
-      </Link>
-    ),
+    link: linkMark,
   },
 };
 
