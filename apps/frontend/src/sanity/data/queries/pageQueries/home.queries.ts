@@ -88,22 +88,28 @@ export const ContactSectionSchema = z.object({
   headerText: z.string(),
 });
 
+export const heroSectionSchema = z.object({
+  buttonText: z.string(),
+  headerText: z.string().nullable().optional(),
+  subHeaderText: z.string(),
+});
+
+export const linksSectionSchema = z.object({
+  githubLink: z.string(),
+  instagramLink: z.string(),
+  twitterLink: z.string(),
+});
+
 export const homeSchema = z.object({
   aboutSection: AboutSectionSchema,
   contactSection: ContactSectionSchema,
-  heroSection: z.object({
-    buttonText: z.string(),
-    headerText: z.string(),
-    subHeaderText: z.string(),
-  }),
-  linksSection: z.object({
-    githubLink: z.string(),
-    instagramLink: z.string(),
-    twitterLink: z.string(),
-  }),
+  heroSection: heroSectionSchema,
+  linksSection: linksSectionSchema,
   projectsSection: ProjectSectionSchema,
 });
 
+export type HeroSectionType = z.infer<typeof heroSectionSchema>;
+export type LinksSectionType = z.infer<typeof linksSectionSchema>;
 export type HomeType = z.infer<typeof homeSchema>;
 export type ProjectType = z.infer<typeof ProjectSchema>;
 export type ImageType = z.infer<typeof ImageSchema>;

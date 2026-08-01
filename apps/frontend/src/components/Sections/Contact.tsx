@@ -5,10 +5,10 @@ import axios from "axios";
 import type {
   ChangeEvent,
   ChangeEventHandler,
-  FormEvent,
-  FormEventHandler,
+  SubmitEventHandler,
 } from "react";
 import { useState } from "react";
+import { IconContext } from "react-icons";
 import { CgSpinner } from "react-icons/cg";
 import { Socials } from "./Socials";
 
@@ -43,7 +43,7 @@ export const Contact = () => {
     }
   };
 
-  const onSubmit: FormEventHandler = (e: FormEvent) => {
+  const onSubmit: SubmitEventHandler = (e) => {
     e.preventDefault();
     setLoading(true);
 
@@ -73,8 +73,8 @@ export const Contact = () => {
   };
 
   return (
-    <div className="" id="contact">
-      <H2 className="py-3 text-center">Contact</H2>
+    <div id="contact">
+      <H2 className="pb-4 text-center">Contact</H2>
       <form
         className="relative mx-auto flex w-full max-w-lg flex-wrap items-center justify-evenly gap-4"
         id="contact-form"
@@ -124,10 +124,13 @@ export const Contact = () => {
           type="submit"
         >
           {loading ? "Sending..." : "Send"}
-
-          <CgSpinner
-            className={`ml-1 size-6 animate-spin ${loading ? "" : "hidden"}`}
-          />
+          <IconContext.Provider
+            value={{
+              className: `ml-1 size-6 animate-spin ${loading ? "" : "hidden"}`,
+            }}
+          >
+            <CgSpinner />
+          </IconContext.Provider>
         </Button>
 
         <p
