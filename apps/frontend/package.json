@@ -24,7 +24,7 @@
     "@portabletext/react": "^7.0.1",
     "@sanity/image-url": "^2.1.1",
     "@sanity/webhook": "^4.0.4",
-    "@sentry/nextjs": "^10.67.0",
+    "@sentry/nextjs": "^10.68.0",
     "axios": "^1.18.1",
     "jsonwebtoken": "^9.0.3",
     "next": "^16.2.12",
