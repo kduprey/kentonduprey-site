@@ -167,8 +167,8 @@ importers:
         specifier: 16.2.12
         version: 16.2.12(@babel/core@8.0.1)(@opentelemetry/api@1.9.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       next-sanity:
-        specifier: ^13.2.1
-        version: 13.2.1(fbf0df00939c81ec0420df4baff25510)
+        specifier: ^13.2.2
+        version: 13.2.2(fbf0df00939c81ec0420df4baff25510)
       react:
         specifier: 19.2.8
         version: 19.2.8
@@ -240,8 +240,8 @@ importers:
         specifier: ^16.2.12
         version: 16.2.12(@babel/core@8.0.1)(@opentelemetry/api@1.9.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       next-sanity:
-        specifier: ^13.2.1
-        version: 13.2.1(fbf0df00939c81ec0420df4baff25510)
+        specifier: ^13.2.2
+        version: 13.2.2(fbf0df00939c81ec0420df4baff25510)
       react:
         specifier: ^19.2.8
         version: 19.2.8
@@ -8576,6 +8576,10 @@ packages:
     resolution: {integrity: sha512-vRyooMBzoIdEbARGT3JcvWqMD67YzC5SKlMqofyfck1ebLh2zzlpD4hVQ3xiuuiADk4jNs0rTezVlxCMqOlZfA==}
     engines: {node: '>=14.0.0'}
 
+  get-it@8.8.3:
+    resolution: {integrity: sha512-IfkbWqOGO2kd2Ccgiz/NIzk3bcwjtVqBm3RNa3j/veHg2q7c1DgS3EXrCrvIWH0jbNTbhkdblnxBP7Dm8CiH+A==}
+    engines: {node: '>=14.0.0'}
+
   get-latest-version@6.0.1:
     resolution: {integrity: sha512-6Zub9FhioDbCJzGTZtetVvAkLeA5UnvQEbKfFZUc62hcZm3gO3Txr21oRGOcT6SdiKhjI0vWd/Jxct+wuLJgHA==}
     engines: {node: '>=20'}
@@ -10157,6 +10161,11 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
+  nanoid@3.3.17:
+    resolution: {integrity: sha512-xQLf0A3HOMlgHq0n247/LRuAOYmB7dXJ/DvAxGvsSBij45XtBSmQycu+F8ODbHwns/XyFZagyL1+J0Offw1E0g==}
+    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
+    hasBin: true
+
   nanoid@5.1.16:
     resolution: {integrity: sha512-kVrnsrJqMR8+oLJnGEmSWw9BivK5mt7H3FZatVRjrc5wGqFYuBxX1yG7+A7Gi5AefkX6t/oCkizcQgpu0cY1dQ==}
     engines: {node: ^18 || >=20}
@@ -10182,11 +10191,11 @@ packages:
   neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
 
-  next-sanity@13.2.1:
-    resolution: {integrity: sha512-luDsMhO8cTCt3RAdnTpafqG2ZmM9GY0Kyah7QepSzzxHB2LMJM1yVwCddpVYc4mC1WUeAk3yNtaFJzR+N/Ee9Q==}
+  next-sanity@13.2.2:
+    resolution: {integrity: sha512-LCRM+WP7nWV00jZ0rE9wW37ubuQPYpOnrZHiJtGdLQGccYmUkAcj0qayRDx64zVu/5/HhYWl3PC2spitlYfOcQ==}
     engines: {node: '>=20.19 <22 || >=22.12'}
     peerDependencies:
-      '@sanity/client': ^7.24.0
+      '@sanity/client': ^7.25.0
       next: ^16.0.0-0
       react: ^19.2.3
       react-dom: ^19.2.3
@@ -18139,8 +18148,8 @@ snapshots:
   '@sanity/client@7.26.0':
     dependencies:
       '@sanity/eventsource': 5.0.4
-      get-it: 8.8.0
-      nanoid: 3.3.16
+      get-it: 8.8.3
+      nanoid: 3.3.17
       rxjs: 7.8.2
 
   '@sanity/codegen@7.0.3(@oclif/core@4.13.2)(@sanity/cli-core@2.5.1(@noble/hashes@2.2.0)(@types/node@26.1.2)(esbuild@0.28.1)(sugarss@5.0.1(postcss@8.5.25))(terser@5.49.0)(yaml@2.9.0))(react@19.2.8)':
@@ -22020,6 +22029,13 @@ snapshots:
       through2: 4.0.2
       tunnel-agent: 0.6.0
 
+  get-it@8.8.3:
+    dependencies:
+      decompress-response: 7.0.0
+      is-retry-allowed: 2.2.0
+      through2: 4.0.2
+      tunnel-agent: 0.6.0
+
   get-latest-version@6.0.1:
     dependencies:
       get-it: 8.8.0
@@ -23657,6 +23673,8 @@ snapshots:
 
   nanoid@3.3.16: {}
 
+  nanoid@3.3.17: {}
+
   nanoid@5.1.16: {}
 
   nanoid@6.0.0: {}
@@ -23669,7 +23687,7 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  next-sanity@13.2.1(fbf0df00939c81ec0420df4baff25510):
+  next-sanity@13.2.2(fbf0df00939c81ec0420df4baff25510):
     dependencies:
       '@portabletext/react': 7.0.1(react@19.2.8)
       '@sanity/client': 7.26.0
