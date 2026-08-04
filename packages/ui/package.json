@@ -35,6 +35,6 @@
     "stylelint": "^17.14.1",
     "stylelint-config-standard-scss": "^17.0.0",
     "tsup": "^8.4.0",
-    "typescript": "^5.9.3"
+    "typescript": "^7.0.2"
   }
 }

@@ -23,6 +23,6 @@
     "@kduprey/tsconfig": "workspace:*",
     "@types/node": "^26.1.2",
     "tsup": "^8.4.0",
-    "typescript": "5.9.3"
+    "typescript": "7.0.2"
   }
 }
