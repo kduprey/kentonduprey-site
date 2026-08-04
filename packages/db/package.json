@@ -21,7 +21,7 @@
     "studio": "prisma studio"
   },
   "dependencies": {
-    "@prisma/adapter-pg": "^7.9.0",
+    "@prisma/adapter-pg": "^7.9.1",
     "@prisma/client": "7.9.0",
     "dotenv": "^17.4.2"
   },
