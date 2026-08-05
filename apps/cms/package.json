@@ -38,6 +38,6 @@
     "@types/react-dom": "19.2.3",
     "sanity": "^6.7.0",
     "styled-components": "^6.4.4",
-    "typescript": "5.9.3"
+    "typescript": "7.0.2"
   }
 }
