@@ -26,7 +26,7 @@
     "@sanity/image-url": "^2.1.1",
     "@sanity/vision": "^6.6.0",
     "next": "16.2.12",
-    "next-sanity": "^13.2.2",
+    "next-sanity": "^13.2.3",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "zod": "^4.4.3"
