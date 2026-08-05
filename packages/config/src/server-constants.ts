@@ -3,7 +3,7 @@ const getSiteUrl = (): string => {
     case "production":
       return "https://kentonduprey.com";
     case "preview":
-      return "https://kd-test.kduprey.dev";
+      return "https://kd.hausofwebstage.dev";
     case "development":
       return process.env.VERCEL_URL ?? "http://localhost:3400";
     default:
@@ -12,7 +12,7 @@ const getSiteUrl = (): string => {
       }
       return process.env.CI === "true"
         ? "http://localhost:3400"
-        : "https://kd.kduprey.dev";
+        : "https://kd.hausofweb.dev";
   }
 };
 
@@ -23,7 +23,7 @@ const getCmsUrl = (): string => {
     case "production":
       return "https://cms.kentonduprey.com";
     case "preview":
-      return "https://kd-cms-test.kduprey.dev";
+      return "https://kd-cms.hausofwebstage.dev";
     case "development":
       return process.env.VERCEL_URL ?? "http://localhost:3402";
     default:
@@ -32,7 +32,7 @@ const getCmsUrl = (): string => {
       }
       return process.env.CI === "true"
         ? "http://localhost:3402"
-        : "https://kd-cms.kduprey.dev";
+        : "https://kd-cms.hausofweb.dev";
   }
 };
 
