@@ -4,12 +4,13 @@
 
 import {
   browserTracingIntegration,
-  captureRouterTransitionStart,
   init,
   replayIntegration,
 } from "@sentry/nextjs";
 
-const NETWORK_CAPTURE_ALL_URLS = /.*/;
+export { captureRouterTransitionStart as onRouterTransitionStart } from "@sentry/nextjs";
+
+const NETWORK_CAPTURE_ALL_URLS = /.*/u;
 
 init({
   // Setting this option to true will print useful information to the console while you're setting up Sentry.
@@ -29,7 +30,7 @@ init({
     browserTracingIntegration(),
   ],
 
-  replaysOnErrorSampleRate: 1.0,
+  replaysOnErrorSampleRate: 1,
 
   // This sets the sample rate to be 10%. You may want this to be 100% while
   // in development and sample at a lower rate in production
@@ -38,5 +39,3 @@ init({
   // Adjust this value in production, or use tracesSampler for greater control
   tracesSampleRate: 1,
 });
-
-export const onRouterTransitionStart = captureRouterTransitionStart;

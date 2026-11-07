@@ -1,6 +1,8 @@
 import { PrismaPg } from "@prisma/adapter-pg";
 import { env } from "prisma/config";
-import { type Prisma, PrismaClient } from "./generated/prisma/client";
+
+import { PrismaClient } from "./generated/prisma/client";
+import type { Prisma } from "./generated/prisma/client";
 
 declare global {
   var prisma: PrismaClient | undefined;

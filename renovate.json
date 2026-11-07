@@ -1,0 +1,34 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "schedule": ["every weekday"],
+  "minimumReleaseAge": "7 days",
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 2,
+  "rebaseWhen": "conflicted",
+  "postUpdateOptions": ["pnpmDedupe"],
+  "labels": ["dependencies"],
+  "semanticCommits": "enabled",
+  "semanticCommitType": "fix",
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "semanticCommitType": "chore"
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch", "digest", "pin"],
+      "matchCurrentVersion": "!/^v?0\\./",
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": true
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    },
+    {
+      "matchDepTypes": ["packageManager"],
+      "automerge": false
+    }
+  ]
+}

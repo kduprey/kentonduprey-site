@@ -1,6 +1,6 @@
 export const Navbar = () => (
-  <nav className="flex flex-col items-center space-y-4 p-3 md:flex-row md:justify-center md:space-x-4 md:space-y-0 lg:w-4/5 lg:justify-between">
-    <h1 className="text-center font-semibold text-4xl">Kenton Duprey.</h1>
+  <nav className="flex flex-col items-center space-y-4 p-3 md:flex-row md:justify-center md:space-y-0 md:space-x-4 lg:w-4/5 lg:justify-between">
+    <h1 className="text-center text-4xl font-semibold">Kenton Duprey.</h1>
     <div className="flex w-full max-w-sm justify-evenly gap-2">
       <button type="button">
         <a href="#about">About</a>

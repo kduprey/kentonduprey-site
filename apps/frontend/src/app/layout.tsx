@@ -1,11 +1,12 @@
+import { cn } from "@kduprey/ui";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { VisualEditing } from "next-sanity/visual-editing";
-import type { PropsWithChildren } from "react";
+import { Inter } from "next/font/google";
 
 import "./globals.css";
-import { cn } from "@kduprey/ui";
 import { draftMode } from "next/headers";
+import type { PropsWithChildren } from "react";
+
 import { SanityLive } from "@/sanity/config/sanity.live";
 
 export const metadata: Metadata = {

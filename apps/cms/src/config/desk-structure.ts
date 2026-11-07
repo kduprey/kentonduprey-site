@@ -10,10 +10,20 @@ import type {
   ListItemBuilder,
   StructureBuilder,
 } from "sanity/structure";
+
 import { homeSchema } from "@/schemas/home";
 import { siteSettings } from "@/schemas/site-settings";
 
 export const singleTypes: SchemaTypeDefinition[] = [homeSchema, siteSettings];
+
+const singletonListItem = (
+  S: StructureBuilder,
+  type: SchemaTypeDefinition
+): ListItemBuilder =>
+  S.listItem()
+    .title(type.title ?? type.name)
+    .child(S.document().schemaType(type.name).documentId(type.name))
+    .icon(type.icon);
 
 export const deskStructure = (S: StructureBuilder): ListBuilder =>
   S.list()
@@ -31,19 +41,8 @@ export const deskStructure = (S: StructureBuilder): ListBuilder =>
         .child(
           S.document().schemaType("siteSettings").documentId("siteSettings")
         )
-        // biome-ignore lint/suspicious/noExplicitAny: a duplicate @types/react instance makes CogIcon's ComponentClass incompatible with sanity/structure's React types
-        .icon(CogIcon as any),
+        .icon(CogIcon),
     ]);
-
-const singletonListItem = (
-  S: StructureBuilder,
-  type: SchemaTypeDefinition
-): ListItemBuilder =>
-  S.listItem()
-    .title(type.title ?? type.name)
-    .child(S.document().schemaType(type.name).documentId(type.name))
-    // biome-ignore lint/suspicious/noExplicitAny: a duplicate @types/react instance makes schema icons' ComponentClass incompatible with sanity/structure's React types
-    .icon(type.icon as any);
 
 const singletonActions = new Set(["publish", "discardChanges", "restore"]);
 

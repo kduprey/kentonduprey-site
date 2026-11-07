@@ -1,4 +1,5 @@
 import { randomUUID } from "node:crypto";
+
 import { at, defineMigration, set } from "sanity/migrate";
 
 /**

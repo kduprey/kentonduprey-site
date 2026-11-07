@@ -3,6 +3,7 @@ import {
   metadata as studioMetadata,
   viewport as studioViewport,
 } from "next-sanity/studio";
+
 import { Studio } from "./Studio";
 
 // Set the right `viewport`, `robots` and `referer` meta tags

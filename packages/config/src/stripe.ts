@@ -1,5 +1,6 @@
-import Stripe from "stripe";
+import { Stripe } from "stripe";
 import { z } from "zod";
+
 import { SERVER_SITE_URL } from "./server-constants";
 
 let stripeClient: Stripe | undefined;
@@ -16,7 +17,7 @@ export const getStripe = (): Stripe => {
         })
         .parse(process.env.STRIPE_SECRET_KEY),
       {
-        apiVersion: "2026-06-24.dahlia",
+        apiVersion: "2026-10-28.endive",
         appInfo: {
           name: "Haus of Web, LLC - kentonduprey.com",
           url: SERVER_SITE_URL,

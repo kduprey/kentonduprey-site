@@ -1,12 +1,13 @@
 import { verify } from "jsonwebtoken";
-import { type NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 import { z } from "zod";
 
 export const config = {
   matcher: "/api/stripe/billing/meter_events/(.*)",
 };
 
-export function proxy(request: NextRequest) {
+export const proxy = (request: NextRequest) => {
   const secret = z
     .string({
       message: "Environment variable JWT_SECRET is required",
@@ -30,4 +31,4 @@ export function proxy(request: NextRequest) {
   }
 
   return NextResponse.next();
-}
+};

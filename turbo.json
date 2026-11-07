@@ -11,7 +11,6 @@
     "STRIPE_SECRET_KEY",
     "NEXT_PUBLIC_FATHOM_ID",
     "NEXT_PUBLIC_SANITY_PROJECT_ID",
-    "SANITY_REVALIDATE_SECRET",
     "NEXT_RUNTIME",
     "NEXT_PUBLIC_SANITY_DATASET",
     "DATABASE_URL",
@@ -22,7 +21,9 @@
     "SENTRY_ORG",
     "SENTRY_PROJECT",
     "SENTRY_URL",
-    "SENTRY_AUTH_TOKEN"
+    "SENTRY_AUTH_TOKEN",
+    "SENTRY_RELEASE",
+    "SENTRY_COMMIT_SHA"
   ],
   "globalDependencies": [".env"],
   "tasks": {

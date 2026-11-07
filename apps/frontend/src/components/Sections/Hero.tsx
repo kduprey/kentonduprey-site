@@ -1,6 +1,7 @@
 import { Button, H2, Lead } from "@kduprey/ui";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
+
 import type { HeroSectionType } from "@/sanity/data/queries/pageQueries/home.queries";
 
 export const Hero = ({

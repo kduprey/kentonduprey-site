@@ -1,5 +1,6 @@
 import { defineLive } from "next-sanity/live";
-import z from "zod";
+import { z } from "zod";
+
 import { client } from "@/sanity/config/sanity.client";
 
 export const token = z
