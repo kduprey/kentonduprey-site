@@ -1,6 +1,3 @@
-export const isPublicDev =
-  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY?.includes("test");
-
 const getSiteUrl = (): string => {
   switch (process.env.NEXT_PUBLIC_VERCEL_ENV) {
     case "production": {

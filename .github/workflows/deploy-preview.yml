@@ -40,27 +40,6 @@ jobs:
       should-deploy: ${{ needs.check-frontend.outputs.should_deploy == 'true' || inputs.force == true }}
       target: ${{ (github.head_ref || github.ref_name) == 'main' && 'staging' || '' }}
 
-  check-admin:
-    name: Check admin
-    permissions:
-      contents: read
-    uses: ./.github/workflows/turbo-affected-check.yml
-    with:
-      package: "@kduprey/admin"
-
-  deploy-admin:
-    name: Deploy admin to Vercel
-    needs: check-admin
-    permissions:
-      contents: read
-    uses: ./.github/workflows/vercel-deploy.yml
-    secrets:
-      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-    with:
-      vercel-project-id: ${{ vars.VERCEL_PROJECT_ID_ADMIN }}
-      should-deploy: ${{ needs.check-admin.outputs.should_deploy == 'true' || inputs.force == true }}
-      target: ${{ (github.head_ref || github.ref_name) == 'main' && 'staging' || '' }}
-
   check-cms:
     name: Check cms
     permissions:

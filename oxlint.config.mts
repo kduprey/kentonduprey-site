@@ -18,9 +18,8 @@ export default defineConfig({
   ],
   overrides: [
     {
-      // Workspace package entrypoints are the declared package.json "exports",
-      // and test-utils is the standard testing-library custom-render module.
-      files: ["packages/*/src/index.ts", "apps/admin/test-utils/index.ts"],
+      // Workspace package entrypoints are the declared package.json "exports".
+      files: ["packages/*/src/index.ts"],
       rules: { "oxc/no-barrel-file": "off" },
     },
   ],
