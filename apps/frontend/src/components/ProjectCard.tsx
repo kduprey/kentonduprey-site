@@ -9,7 +9,7 @@ export const ProjectCard = ({
   projectImage,
   title,
 }: ProjectType) => (
-  <Card className="w-md md:w-lg">
+  <Card className="w-md shrink-0">
     <Image
       alt={title}
       height={projectImage.dimensions.height}
@@ -22,12 +22,12 @@ export const ProjectCard = ({
       }}
       width={projectImage.dimensions.width}
     />
-    <CardContent className="flex flex-col justify-between gap-3 space-y-3">
-      <H3>{title}</H3>
+    <CardContent className="flex h-full flex-col justify-between gap-3 space-y-3">
+      <H3 className="text-balance text-center">{title}</H3>
       <CardDescription>{description}</CardDescription>
-      <Button asChild className="mx-auto">
-        <Link href={link}>Explore</Link>
-      </Button>
+      <Link className="mx-auto mt-auto" href={link} target="_blank">
+        <Button>Explore</Button>
+      </Link>
     </CardContent>
   </Card>
 );

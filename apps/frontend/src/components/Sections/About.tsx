@@ -2,20 +2,26 @@ import { H2 } from "@kduprey/ui";
 import { PortableText, type PortableTextComponents } from "@portabletext/react";
 import Image from "next/image";
 import Link from "next/link";
+import type { PropsWithChildren, ReactNode } from "react";
 import type { AboutSectionType } from "@/sanity/data/queries/pageQueries/home.queries";
+
+const linkMark = ({
+  children,
+  value,
+}: PropsWithChildren<{ value?: { href: string } }>): ReactNode => (
+  <Link
+    className="underline hover:no-underline"
+    href={value?.href ?? ""}
+    rel="noopener"
+    target="_blank"
+  >
+    {children}
+  </Link>
+);
 
 const bioComponents: PortableTextComponents = {
   marks: {
-    link: ({ children, value }) => (
-      <Link
-        className="underline hover:no-underline"
-        href={value.href}
-        rel="noopener"
-        target="_blank"
-      >
-        {children}
-      </Link>
-    ),
+    link: linkMark,
   },
 };
 
@@ -25,16 +31,13 @@ const isLegacyStringContent = (value: unknown): value is string =>
   typeof value === "string";
 
 export const About = ({ bioImage, content, headerText }: AboutSectionType) => (
-  <div
-    className="flex w-full flex-col items-center justify-center gap-5"
-    id="about"
-  >
+  <div className="flex w-full flex-col items-center justify-center" id="about">
     <H2 className="text-center">{headerText}</H2>
-    <div className="flex flex-col items-center justify-evenly gap-8 text-justify md:flex-row md:text-left">
-      <div className="max-w-72">
+    <div className="flex flex-col items-center justify-center gap-4 md:text-left lg:flex-row">
+      <div className="max-w-36 lg:min-w-48">
         <Image
           alt="Kenton Duprey"
-          className="rounded-full dark:border dark:border-white"
+          className="rounded-full border border-gray-200 dark:border-white"
           height={bioImage.dimensions.height}
           src={bioImage.src}
           style={{
@@ -44,7 +47,7 @@ export const About = ({ bioImage, content, headerText }: AboutSectionType) => (
           width={bioImage.dimensions.width}
         />
       </div>
-      <div className="max-w-md space-y-3 p-3">
+      <div className="min-w-0 max-w-3xl space-y-3 p-3 **:text-pretty">
         {isLegacyStringContent(content) ? (
           <p>{content}</p>
         ) : (

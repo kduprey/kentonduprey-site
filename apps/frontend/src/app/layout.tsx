@@ -32,8 +32,7 @@ const rootLayout = async ({ children }: PropsWithChildren) => {
         />
       </head>
       <body>
-        {/* biome-ignore lint/suspicious/noExplicitAny: pnpm resolves a duplicate @types/react instance here, so `children`'s ReactNode isn't nominally the same as the ambient JSX namespace expects */}
-        {children as any}
+        {children}
         <SanityLive />
         {isEnabled ? <VisualEditing /> : null}
       </body>

@@ -11,9 +11,9 @@ interface HomeLayoutProps {
 }
 
 export const HomeLayout = ({ homeData }: HomeLayoutProps) => (
-  <main className="flex size-full flex-col items-center gap-10 p-6 font-display dark:bg-black dark:text-white">
+  <main className="flex size-full flex-col items-center gap-6 p-6 font-display dark:bg-black dark:text-white">
     <Navbar />
-    <Hero />
+    <Hero {...homeData.heroSection} />
     <Projects {...homeData.projectsSection} />
 
     <About {...homeData.aboutSection} />

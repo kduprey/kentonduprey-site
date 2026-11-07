@@ -7,6 +7,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 const nextConfig = withBundleAnalyzer({
+  allowedDevOrigins: ["kd-admin.hausofweb.dev"],
   eslint: {
     ignoreDuringBuilds: true,
   },
