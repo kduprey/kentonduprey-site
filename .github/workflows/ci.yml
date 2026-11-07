@@ -1,0 +1,101 @@
+name: CI
+
+on: pull_request
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  commitlint:
+    name: Commitlint
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24.x
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          run_install: false
+
+      - name: Install commitlint
+        run: |
+          pnpm install conventional-changelog-conventionalcommits commitlint@latest -w
+
+      - name: Validate PR commits with commitlint
+        run: pnpm dlx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+
+  migration-immutability:
+    name: Migration immutability
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      # A merged migration's checksum is already recorded in every database's
+      # _prisma_migrations table, so editing it afterwards shows up as drift.
+      # New changes belong in a new migration.
+      - name: Check for edits to already-merged migrations
+        run: |
+          CHANGED=$(git diff --name-only --diff-filter=MDR -M "${{ github.event.pull_request.base.sha }}" "${{ github.event.pull_request.head.sha }}" -- 'packages/db/prisma/migrations/**/migration.sql')
+          if [ -n "$CHANGED" ]; then
+            echo "The following already-merged migration file(s) were modified, deleted, or renamed:"
+            echo "$CHANGED"
+            echo
+            echo "Migration files are immutable once merged to main. Create a new migration instead of editing an existing one."
+            exit 1
+          fi
+
+  quality:
+    name: Lint and typecheck
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    # prisma.config.ts requires DATABASE_URL for install-time and explicit
+    # `prisma generate`, neither of which connects to it.
+    env:
+      DATABASE_URL: postgresql://user:password@localhost:5432/db
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24.x
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          run_install: false
+
+      - name: Install dependencies
+        run: pnpm i
+
+      - name: Lint and format
+        run: pnpm exec ultracite check
+
+      - name: Generate Prisma client
+        run: pnpm --filter @kduprey/db generate
+
+      - name: Typecheck
+        run: pnpm -r typecheck

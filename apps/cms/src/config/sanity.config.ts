@@ -1,8 +1,10 @@
 import { PUBLIC_SITE_URL } from "@kduprey/config";
 import { visionTool } from "@sanity/vision";
-import { defineConfig, type WorkspaceOptions } from "sanity";
+import { defineConfig } from "sanity";
+import type { WorkspaceOptions } from "sanity";
 import { presentationTool } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
+
 import { homeSchema } from "@/schemas/home";
 import { project } from "@/schemas/project";
 import { siteSettings } from "@/schemas/site-settings";

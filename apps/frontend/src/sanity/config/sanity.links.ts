@@ -1,16 +1,20 @@
-export function resolveHref(
+export const resolveHref = (
   documentType?: string,
   slug?: string
-): string | undefined {
+): string | undefined => {
   switch (documentType) {
-    case "home":
+    case "home": {
       return "/";
-    case "page":
+    }
+    case "page": {
       return slug ? `/${slug}` : undefined;
-    case "project":
+    }
+    case "project": {
       return slug ? `/projects/${slug}` : undefined;
-    default:
+    }
+    default: {
       console.warn("Invalid document type:", documentType);
-      return;
+      return undefined;
+    }
   }
-}
+};

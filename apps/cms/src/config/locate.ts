@@ -1,30 +1,34 @@
 // ./sanity/presentation/locate.ts
 
-import {
-  type DocumentLocationResolvers,
-  defineDocuments,
-  defineLocations,
-} from "sanity/presentation";
+import { defineDocuments, defineLocations } from "sanity/presentation";
+import type { DocumentLocationResolvers } from "sanity/presentation";
 
-export function resolveHref(documentType?: string): string {
+export const resolveHref = (documentType?: string): string => {
   switch (documentType) {
-    case "home":
+    case "home": {
       return "/";
-    case "about":
+    }
+    case "about": {
       return "/about";
-    case "photoAndVideo":
+    }
+    case "photoAndVideo": {
       return "/photo-and-video";
-    case "links":
+    }
+    case "links": {
       return "/links";
-    case "events":
+    }
+    case "events": {
       return "/events";
-    case "contact":
+    }
+    case "contact": {
       return "/contact";
-    default:
+    }
+    default: {
       console.warn("Invalid document type:", documentType);
       return "";
+    }
   }
-}
+};
 
 export const mainDocuments = defineDocuments([
   {

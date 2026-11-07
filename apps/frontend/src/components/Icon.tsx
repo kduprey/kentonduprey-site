@@ -16,6 +16,7 @@ export const Icon = ({ color, iconName, size }: IconProps) => {
   const Icons: IconsMapping = {
     fa: dynamic(
       () =>
+        // oxlint-disable-next-line react/todo -- React Compiler can't lower import(); it must stay inline so next/dynamic's SWC transform can register the chunk
         import("react-icons/fa")
           .then((mod) => mod[iconName])
           .then((e) => e ?? FaRegCircle) as Promise<
@@ -24,6 +25,7 @@ export const Icon = ({ color, iconName, size }: IconProps) => {
     ),
     fi: dynamic(
       () =>
+        // oxlint-disable-next-line react/todo -- React Compiler can't lower import(); it must stay inline so next/dynamic's SWC transform can register the chunk
         import("react-icons/fi")
           .then((mod) => mod[iconName])
           .then((e) => e ?? FiCircle) as Promise<
@@ -32,6 +34,7 @@ export const Icon = ({ color, iconName, size }: IconProps) => {
     ),
     si: dynamic(
       () =>
+        // oxlint-disable-next-line react/todo -- React Compiler can't lower import(); it must stay inline so next/dynamic's SWC transform can register the chunk
         import("react-icons/si")
           .then((mod) => mod[iconName])
           .then((e) => e ?? SiReact) as Promise<

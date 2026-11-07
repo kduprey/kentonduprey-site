@@ -1,0 +1,116 @@
+name: Vercel Deploy
+
+on:
+  workflow_call:
+    inputs:
+      vercel-project-id:
+        required: true
+        type: string
+      prod:
+        required: false
+        type: boolean
+        default: false
+      sentry-release:
+        required: false
+        type: string
+        default: ""
+      should-deploy:
+        required: false
+        type: boolean
+        default: true
+      target:
+        required: false
+        type: string
+        default: ""
+    secrets:
+      VERCEL_TOKEN:
+        required: true
+    outputs:
+      deployment-url:
+        description: The URL of the deployment `vercel deploy` created, empty when should-deploy is false
+        value: ${{ jobs.deploy.outputs.deployment-url }}
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      deployment-url: ${{ steps.deploy.outputs.url }}
+    steps:
+      - name: Checkout repository
+        if: inputs.should-deploy
+        uses: actions/checkout@v7
+        with:
+          # pull_request's default checkout is a detached-HEAD merge commit,
+          # which loses the branch name. Vercel needs the real branch (e.g.
+          # "main") to update the branch alias domain - without it every
+          # deploy lands as an unaliased preview URL, since deploymentEnabled:
+          # false means Vercel's own git integration no longer sets it.
+          ref: ${{ github.head_ref || github.ref_name }}
+          persist-credentials: false
+
+      - name: Setup Node.js
+        if: inputs.should-deploy
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24.x
+
+      - name: Deploy to Vercel
+        if: inputs.should-deploy
+        id: deploy
+        # A plain `vercel deploy` uploads source and builds remotely inside
+        # Vercel's own build container, unlike `vercel pull` + `vercel
+        # build` + `vercel deploy --prebuilt`, which builds locally and
+        # can't resolve Sensitive Environment Variables (Vercel only
+        # decrypts those inside its own build container, never via any
+        # CLI read path - pull, env pull, and env run all hit the same
+        # wall).
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ inputs.vercel-project-id }}
+          VERCEL_DEPLOY_PROD: ${{ inputs.prod }}
+          VERCEL_DEPLOY_TARGET: ${{ inputs.target }}
+          SENTRY_RELEASE: ${{ inputs.sentry-release }}
+          SENTRY_COMMIT_SHA: ${{ github.sha }}
+        run: |
+          # Explicit rather than relying on the runner's default shell flags -
+          # required for the exit-code check below to see `vercel`'s status
+          # instead of `tee`'s.
+          set -o pipefail
+
+          args=(deploy --yes --token="$VERCEL_TOKEN")
+          if [ "$VERCEL_DEPLOY_PROD" = "true" ]; then
+            args+=(--prod)
+          elif [ -n "$VERCEL_DEPLOY_TARGET" ]; then
+            args+=(--target="$VERCEL_DEPLOY_TARGET")
+          fi
+          if [ -n "$SENTRY_RELEASE" ]; then
+            args+=(--build-env "SENTRY_RELEASE=$SENTRY_RELEASE")
+          fi
+          # setCommits: auto needs a local .git dir, which a remote `vercel
+          # deploy` build never has - pass the SHA explicitly instead.
+          args+=(--build-env "SENTRY_COMMIT_SHA=$SENTRY_COMMIT_SHA")
+          # `vercel deploy` prints the deployment URL as the last line of
+          # stdout - tee to stderr so it's still visible in the job log.
+          # `set -e` does NOT fail the script when a command substitution
+          # on the right side of an assignment (url=$(...)) fails - the
+          # exit code has to be checked explicitly, or a failed Vercel
+          # build silently reports this step as passing.
+          if ! url=$(npx vercel@59.18.0 "${args[@]}" | tee /dev/stderr); then
+            exit 1
+          fi
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+
+          # `vercel deploy`'s own exit code does NOT reliably reflect
+          # whether the remote build actually succeeded - it can print a
+          # build failure to the log and still exit 0. `vercel inspect
+          # --wait` polls the deployment's real state and exits non-zero
+          # if it ended up ERROR, which is the only trustworthy signal.
+          # --timeout defaults to 3m, shorter than some observed builds -
+          # set it well above the slowest build seen so far so this waits
+          # for Ready/Error instead of timing out on a still-building
+          # deployment.
+          npx vercel@59.18.0 inspect "$url" --token="$VERCEL_TOKEN" --wait --timeout=15m

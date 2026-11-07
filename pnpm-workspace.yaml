@@ -1,3 +1,25 @@
 packages:
-  - "packages/*"
-  - "apps/*"
+  - packages/*
+  - apps/*
+
+allowBuilds:
+  "@clerk/shared": true
+  "@parcel/watcher": true
+  "@prisma/client": true
+  "@prisma/engines": true
+  "@sentry/cli": true
+  core-js-pure: true
+  esbuild: true
+  prisma: true
+  sharp: true
+  unrs-resolver: true
+
+minimumReleaseAge: 10080
+
+overrides:
+  "@sanity/visual-editing>@types/react": 19.3.0
+  "@sanity/visual-editing>@types/react-dom": 19.3.0
+
+publicHoistPattern:
+  - "@types/react"
+  - "@types/react-dom"

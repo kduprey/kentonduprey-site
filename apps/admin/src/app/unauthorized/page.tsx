@@ -20,7 +20,7 @@ const Page = () => {
   return (
     <div className="flex h-dvh items-center justify-center">
       <div className="text-center">
-        <h1 className="font-semibold text-3xl">Unauthorized</h1>
+        <h1 className="text-3xl font-semibold">Unauthorized</h1>
         <p>You are not authorized to view this page.</p>
       </div>
     </div>

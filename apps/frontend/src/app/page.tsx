@@ -3,6 +3,7 @@ import {
   homeQuery,
   homeSchema,
 } from "@/sanity/data/queries/pageQueries/home.queries";
+
 import { HomeLayout } from "./HomeLayout";
 
 const Page = async () => {

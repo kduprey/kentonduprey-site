@@ -1,7 +1,5 @@
-import {
-  createImageUrlBuilder,
-  type SanityImageSource,
-} from "@sanity/image-url";
+import { createImageUrlBuilder } from "@sanity/image-url";
+import type { SanityImageSource } from "@sanity/image-url";
 
 import { dataset, projectId } from "./sanity.api";
 
@@ -18,6 +16,5 @@ export const urlForImage = (source: SanityImageSource | undefined) => {
   return null;
 };
 
-export function urlForOpenGraphImage(image: SanityImageSource | undefined) {
-  return urlForImage(image)?.width(1200).height(627).fit("crop").url();
-}
+export const urlForOpenGraphImage = (image: SanityImageSource | undefined) =>
+  urlForImage(image)?.width(1200).height(627).fit("crop").url();

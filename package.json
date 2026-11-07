@@ -1,14 +1,8 @@
 {
-  "devDependencies": {
-    "@biomejs/biome": "2.5.6",
-    "concurrently": "^10.0.4",
-    "dotenv-cli": "^11.0.0",
-    "prettier-plugin-packagejson": "^3.0.2",
-    "release-please": "^17.10.3",
-    "turbo": "^2.10.7",
-    "ultracite": "7.9.4"
-  },
   "name": "@kduprey/apps",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "Kenton Duprey",
   "scripts": {
     "build": "pnpm dlx turbo build",
     "build:local": "pnpm start:db:local && dotenv -- pnpm dlx turbo build && pnpm stop:db:local",
@@ -29,30 +23,64 @@
     "stripe:listen": "stripe listen -f $STRIPE_WEBHOOK_FW_URL -a",
     "test": "echo \"Error: no test specified\" && exit 1",
     "check": "ultracite check",
-    "fix": "ultracite fix"
+    "fix": "ultracite fix",
+    "prepare": "husky"
   },
-  "version": "1.0.0",
-  "keywords": [],
-  "author": "Kenton Duprey",
-  "packageManager": "pnpm@10.24.0",
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "concurrently": "^10.0.6",
+    "cz-conventional-changelog": "^3.3.0",
+    "dotenv-cli": "^11.1.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "oxfmt": "^0.75.0",
+    "oxlint": "^1.90.0",
+    "release-please": "^17.11.2",
+    "turbo": "^2.11.10",
+    "ultracite": "8.1.0"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "body-max-line-length": [
+        0
+      ],
+      "footer-max-line-length": [
+        0
+      ],
+      "header-max-length": [
+        0
+      ],
+      "subject-case": [
+        0
+      ]
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog",
+      "scopes": [
+        "admin",
+        "ci",
+        "cms",
+        "config",
+        "db",
+        "frontend",
+        "tsconfig",
+        "turbo",
+        "ui",
+        "utils"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "pnpm@12.17.0",
   "prisma": {
     "schema": "packages/db/prisma/schema.prisma"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@clerk/shared",
-      "@prisma/client",
-      "@prisma/engines",
-      "@sentry/cli",
-      "core-js-pure",
-      "esbuild",
-      "prisma",
-      "sharp",
-      "unrs-resolver"
-    ],
-    "overrides": {
-      "@sanity/visual-editing>@types/react": "19.2.17",
-      "@sanity/visual-editing>@types/react-dom": "19.2.3"
-    }
   }
 }

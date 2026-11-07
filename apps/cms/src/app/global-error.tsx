@@ -2,7 +2,8 @@
 
 import { captureException } from "@sentry/nextjs";
 import NextError from "next/error";
-import { type JSX, useEffect } from "react";
+import { useEffect } from "react";
+import type { JSX } from "react";
 
 const GlobalError = ({
   error,

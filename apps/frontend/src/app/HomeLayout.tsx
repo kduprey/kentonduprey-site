@@ -1,4 +1,5 @@
 import { Muted } from "@kduprey/ui";
+
 import { About } from "@/components/Sections/About";
 import { Contact } from "@/components/Sections/Contact";
 import { Hero } from "@/components/Sections/Hero";
@@ -11,7 +12,7 @@ interface HomeLayoutProps {
 }
 
 export const HomeLayout = ({ homeData }: HomeLayoutProps) => (
-  <main className="flex size-full flex-col items-center gap-6 p-6 font-display dark:bg-black dark:text-white">
+  <main className="font-display flex size-full flex-col items-center gap-6 p-6 dark:bg-black dark:text-white">
     <Navbar />
     <Hero {...homeData.heroSection} />
     <Projects {...homeData.projectsSection} />
@@ -20,7 +21,9 @@ export const HomeLayout = ({ homeData }: HomeLayoutProps) => (
     <Contact />
 
     <Muted className="text-center dark:text-gray-400">
-      &copy; Haus of Web, LLC {new Date().getFullYear()}
+      &copy; Haus of Web, LLC{" "}
+      {/* oxlint-disable-next-line react/purity -- Server Component rendered per request, so the copyright year must reflect the current date at render time */}
+      {new Date().getFullYear()}
     </Muted>
   </main>
 );

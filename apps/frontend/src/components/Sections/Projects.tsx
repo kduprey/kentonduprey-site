@@ -1,4 +1,5 @@
 import { H2 } from "@kduprey/ui";
+
 import type { ProjectSectionType } from "@/sanity/data/queries/pageQueries/home.queries";
 
 import { ProjectCard } from "../ProjectCard";
