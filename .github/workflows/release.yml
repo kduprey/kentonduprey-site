@@ -92,7 +92,7 @@ jobs:
           fi
 
   # Migrations run once here rather than inside each app's Vercel build, so
-  # three parallel builds never race on the same database.
+  # parallel builds never race on the same database.
   migrate:
     name: Apply database migrations
     needs: release
@@ -120,7 +120,7 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID_ADMIN }}
+          VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID_FRONTEND }}
         run: npx vercel@59.18.0 pull --yes --environment=production --token="$VERCEL_TOKEN"
 
       # DATABASE_URL must be set before install: prisma.config.ts resolves it
@@ -149,19 +149,6 @@ jobs:
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
     with:
       vercel-project-id: ${{ vars.VERCEL_PROJECT_ID_FRONTEND }}
-      prod: true
-      sentry-release: ${{ needs.release.outputs.tag }}
-
-  deploy-admin:
-    name: Deploy admin
-    needs: [release, migrate]
-    uses: ./.github/workflows/vercel-deploy.yml
-    permissions:
-      contents: read
-    secrets:
-      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-    with:
-      vercel-project-id: ${{ vars.VERCEL_PROJECT_ID_ADMIN }}
       prod: true
       sentry-release: ${{ needs.release.outputs.tag }}
 

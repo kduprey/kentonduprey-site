@@ -3,7 +3,6 @@ packages:
   - apps/*
 
 allowBuilds:
-  "@clerk/shared": true
   "@parcel/watcher": true
   "@prisma/client": true
   "@prisma/engines": true

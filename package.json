@@ -7,7 +7,7 @@
     "build": "pnpm dlx turbo build",
     "build:local": "pnpm start:db:local && dotenv -- pnpm dlx turbo build && pnpm stop:db:local",
     "predev": "pnpm start:db:local",
-    "dev": "dotenv -- concurrently 'pnpm dlx turbo dev' 'pnpm stripe:listen'",
+    "dev": "dotenv -- pnpm dlx turbo dev",
     "postdev": "pnpm stop:db:local",
     "lint": "pnpm dlx turbo lint",
     "migration": "pnpm --filter @kduprey/cms migration",
@@ -20,7 +20,6 @@
     "start": "pnpm dlx turbo start",
     "start:db:local": "docker-compose up -d && dotenv -- pnpm --filter @kduprey/db migrate",
     "stop:db:local": "docker-compose down",
-    "stripe:listen": "stripe listen -f $STRIPE_WEBHOOK_FW_URL -a",
     "test": "echo \"Error: no test specified\" && exit 1",
     "check": "ultracite check",
     "fix": "ultracite fix",
@@ -29,7 +28,6 @@
   "devDependencies": {
     "@commitlint/cli": "^21.2.4",
     "@commitlint/config-conventional": "^21.2.4",
-    "concurrently": "^10.0.6",
     "cz-conventional-changelog": "^3.3.0",
     "dotenv-cli": "^11.1.0",
     "husky": "^9.1.7",
@@ -63,7 +61,6 @@
     "commitizen": {
       "path": "cz-conventional-changelog",
       "scopes": [
-        "admin",
         "ci",
         "cms",
         "config",

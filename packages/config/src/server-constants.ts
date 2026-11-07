@@ -46,7 +46,5 @@ const getCmsUrl = (): string => {
 
 export const SERVER_CMS_URL = getCmsUrl();
 
-export const isDev = process.env.CLERK_SECRET_KEY?.includes("test") ?? false;
-
 export const INTERNAL_API_URL =
   process.env.INTERNAL_API_URL ?? "http://localhost:3400";
