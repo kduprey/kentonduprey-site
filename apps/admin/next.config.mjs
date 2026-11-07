@@ -36,7 +36,7 @@ export default withSentryConfig(nextConfig, {
       ? {
           setCommits: {
             commit: process.env.SENTRY_COMMIT_SHA,
-            repo: "kduprey/kentonduprey-site",
+            repo: "hausofweb/kentonduprey-site",
           },
         }
       : {}),
