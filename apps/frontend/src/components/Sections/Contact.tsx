@@ -7,9 +7,10 @@ import type {
   ChangeEventHandler,
   SubmitEventHandler,
 } from "react";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { IconContext } from "react-icons";
 import { CgSpinner } from "react-icons/cg";
+
 import { Socials } from "./Socials";
 
 export const Contact = () => {
@@ -29,47 +30,56 @@ export const Contact = () => {
   ) => {
     const { name, value } = e.target;
     switch (name) {
-      case "name":
+      case "name": {
         setInputData({ ...inputData, name: value });
         break;
-      case "email":
+      }
+      case "email": {
         setInputData({ ...inputData, email: value });
         break;
-      case "message":
+      }
+      case "message": {
         setInputData({ ...inputData, message: value });
         break;
-      default:
+      }
+      default: {
         break;
+      }
     }
   };
 
-  const onSubmit: SubmitEventHandler = (e) => {
+  const iconContextValue = useMemo(
+    () => ({
+      className: `ml-1 size-6 animate-spin ${loading ? "" : "hidden"}`,
+    }),
+    [loading]
+  );
+
+  const onSubmit: SubmitEventHandler = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    axios
-      .post("/api/contact", inputData)
-      .then((res) => {
-        if (res.status === 200) {
-          setUsrMsg("Your message has been sent!");
-        } else {
-          setUsrMsg("Something went wrong!");
-        }
-        setSuccess(true);
-        setInputData({
-          age: undefined,
-          email: "",
-          message: "",
-          name: "",
-        });
-        setLoading(false);
-        setTimeout(() => {
-          setSuccess(false);
-        }, 2000);
-      })
-      .catch((err: unknown) => {
-        console.error(err);
+    try {
+      const res = await axios.post("/api/contact", inputData);
+      if (res.status === 200) {
+        setUsrMsg("Your message has been sent!");
+      } else {
+        setUsrMsg("Something went wrong!");
+      }
+      setSuccess(true);
+      setInputData({
+        age: undefined,
+        email: "",
+        message: "",
+        name: "",
       });
+      setLoading(false);
+      setTimeout(() => {
+        setSuccess(false);
+      }, 2000);
+    } catch (error: unknown) {
+      console.error(error);
+    }
   };
 
   return (
@@ -124,11 +134,7 @@ export const Contact = () => {
           type="submit"
         >
           {loading ? "Sending..." : "Send"}
-          <IconContext.Provider
-            value={{
-              className: `ml-1 size-6 animate-spin ${loading ? "" : "hidden"}`,
-            }}
-          >
+          <IconContext.Provider value={iconContextValue}>
             <CgSpinner />
           </IconContext.Provider>
         </Button>

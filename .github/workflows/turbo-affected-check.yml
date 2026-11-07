@@ -1,0 +1,94 @@
+name: Turbo Affected Check
+
+on:
+  workflow_call:
+    inputs:
+      package:
+        required: true
+        type: string
+    outputs:
+      should_deploy:
+        value: ${{ jobs.check.outputs.should_deploy }}
+
+jobs:
+  check:
+    name: Check
+    runs-on: ubuntu-latest
+    outputs:
+      should_deploy: ${{ steps.check.outputs.should_deploy }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          # Without this, pull_request-triggered runs check out GitHub's
+          # ephemeral merge commit (refs/pull/N/merge), whose parents are
+          # [base tip, PR head] - so HEAD^1 below would resolve to main
+          # instead of the commit before the latest push, making --base
+          # diff the whole PR against main every time instead of just the
+          # newest commit.
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          # Full history: the resolved base below (event.before, or the PR's
+          # base branch tip) can be arbitrarily far back - a shallow clone
+          # might not contain it locally for turbo to diff against.
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24.x
+
+      - name: Check if a deploy is needed
+        id: check
+        env:
+          PACKAGE: ${{ inputs.package }}
+          # event.before is the branch tip before this push - present on
+          # "synchronize" and correctly spans every commit in a multi-commit
+          # push, unlike HEAD^1 (only the immediate parent of the newest
+          # commit). It's absent on a freshly "opened" PR or a
+          # workflow_dispatch call, so fall back to the PR's base branch tip,
+          # then to HEAD^1 if even that isn't available.
+          EVENT_BEFORE: ${{ github.event.before }}
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        # --exit-code: 1 = affected (deploy needed), 0 = not affected
+        # (skip), 2 = query itself failed - don't silently treat that as
+        # "deploy needed".
+        run: |
+          NULL_SHA="0000000000000000000000000000000000000000"
+          BASE=""
+          # A force-push (or rebase) leaves event.before pointing at a commit
+          # that's no longer reachable from any ref, so fetch-depth: 0 won't
+          # have fetched it - verify it exists locally before trusting it.
+          if [ -n "$EVENT_BEFORE" ] && [ "$EVENT_BEFORE" != "$NULL_SHA" ]; then
+            git cat-file -e "${EVENT_BEFORE}^{commit}" 2>/dev/null && BASE="$EVENT_BEFORE"
+          fi
+          if [ -z "$BASE" ] && [ -n "$PR_BASE_SHA" ]; then
+            BASE="$PR_BASE_SHA"
+          fi
+          if [ -z "$BASE" ]; then
+            BASE="HEAD^1"
+          fi
+
+          # turbo treats any changed file living outside every workspace
+          # package (e.g. a root-level AGENTS.md) as a global change
+          # affecting every package - short-circuit doc-only diffs before
+          # asking turbo, since a *.md change never has runtime impact.
+          CHANGED_FILES=$(git diff --name-only "$BASE" HEAD)
+          if ! printf '%s\n' "$CHANGED_FILES" | grep -qvE '\.md$'; then
+            echo "should_deploy=false" >> "$GITHUB_OUTPUT"
+            echo "All changed files are documentation (*.md) - skipping turbo affected check"
+            exit 0
+          fi
+
+          set +e
+          npx turbo query affected --packages "$PACKAGE" --base="$BASE" --exit-code
+          status=$?
+          set -e
+          if [ "$status" -eq 1 ]; then
+            echo "should_deploy=true" >> "$GITHUB_OUTPUT"
+          elif [ "$status" -eq 0 ]; then
+            echo "should_deploy=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "turbo query affected exited with unexpected status $status" >&2
+            exit "$status"
+          fi

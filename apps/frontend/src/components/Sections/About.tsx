@@ -1,8 +1,10 @@
 import { H2 } from "@kduprey/ui";
-import { PortableText, type PortableTextComponents } from "@portabletext/react";
+import { PortableText } from "@portabletext/react";
+import type { PortableTextComponents } from "@portabletext/react";
 import Image from "next/image";
 import Link from "next/link";
 import type { PropsWithChildren, ReactNode } from "react";
+
 import type { AboutSectionType } from "@/sanity/data/queries/pageQueries/home.queries";
 
 const linkMark = ({
@@ -47,7 +49,7 @@ export const About = ({ bioImage, content, headerText }: AboutSectionType) => (
           width={bioImage.dimensions.width}
         />
       </div>
-      <div className="min-w-0 max-w-3xl space-y-3 p-3 **:text-pretty">
+      <div className="max-w-3xl min-w-0 space-y-3 p-3 **:text-pretty">
         {isLegacyStringContent(content) ? (
           <p>{content}</p>
         ) : (

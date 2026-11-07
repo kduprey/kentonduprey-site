@@ -3,6 +3,7 @@ import { dark } from "@clerk/themes";
 import { cn } from "@kduprey/ui";
 import { Raleway } from "next/font/google";
 import type { ComponentProps, PropsWithChildren } from "react";
+
 import "./global.css";
 
 export const metadata = {

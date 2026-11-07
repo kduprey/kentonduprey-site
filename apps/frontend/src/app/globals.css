@@ -57,13 +57,13 @@
     }
   }
   p {
-    @apply text-gray-500 dark:text-gray-200 md:text-lg;
+    @apply text-gray-500 md:text-lg dark:text-gray-200;
   }
   button,
   input[type="submit"],
   input[type="reset"],
   input[type="button"] {
-    @apply rounded-xs! bg-black! py-1! px-3! uppercase! text-white! transition! ease-in! hover:bg-white! hover:text-black! hover:ring-1! hover:ring-black! dark:border! dark:border-gray-300! dark:hover:bg-white! dark:hover:text-black!;
+    @apply rounded-xs! bg-black! px-3! py-1! text-white! uppercase! transition! ease-in! hover:bg-white! hover:text-black! hover:ring-1! hover:ring-black! dark:border! dark:border-gray-300! dark:hover:bg-white! dark:hover:text-black!;
   }
   html {
     @apply font-sans;
@@ -71,7 +71,7 @@
 }
 
 @utility input {
-  @apply rounded-xs border-0 bg-gray-100 transition ease-in focus:border-black focus:bg-white focus:text-black focus:outline-hidden focus:ring-black dark:border dark:border-gray-300 dark:bg-black dark:text-white;
+  @apply rounded-xs border-0 bg-gray-100 transition ease-in focus:border-black focus:bg-white focus:text-black focus:ring-black focus:outline-hidden dark:border dark:border-gray-300 dark:bg-black dark:text-white;
 }
 
 @layer utilities {

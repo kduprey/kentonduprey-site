@@ -1,5 +1,7 @@
-import { withSentryConfig } from "@sentry/nextjs";
+import { withSentryConfig } from "@sentry/nextjs/config";
 import type { NextConfig } from "next";
+
+const isProduction = process.env.VERCEL_ENV === "production";
 
 const nextConfig: NextConfig = {
   allowedDevOrigins: ["kd.hausofweb.dev"],
@@ -14,7 +16,7 @@ const nextConfig: NextConfig = {
       { hostname: "cdn.sanity.io" },
     ],
   },
-  async redirects() {
+  redirects() {
     return [
       {
         destination: "/Kenton-Duprey.pdf",
@@ -31,9 +33,26 @@ export default withSentryConfig(nextConfig, {
   // https://github.com/getsentry/sentry-webpack-plugin#options
   org: "haus-of-web",
   project: "kentonduprey-site",
+  release: {
+    create: isProduction,
+    ...(process.env.SENTRY_RELEASE ? { name: process.env.SENTRY_RELEASE } : {}),
+    // `vercel deploy` builds remotely without a .git dir, so the deploying
+    // workflow passes the commit SHA in explicitly.
+    ...(process.env.SENTRY_COMMIT_SHA
+      ? {
+          setCommits: {
+            commit: process.env.SENTRY_COMMIT_SHA,
+            repo: "hausofweb/kentonduprey-site",
+          },
+        }
+      : {}),
+  },
   sentryUrl: "https://sentry.hausofweb.com",
   // Only print logs for uploading source maps in CI
   silent: !process.env.CI,
+  sourcemaps: {
+    disable: !isProduction,
+  },
 
   // Route browser requests to Sentry through a Next.js rewrite to circumvent ad-blockers.
   // This can increase your server load as well as your hosting bill.

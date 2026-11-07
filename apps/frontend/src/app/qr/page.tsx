@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+
 import { SvgIcon } from "@/components/SvgIcons/SvgIcon";
 
 import personalPhoto from "../../../public/me.png";
 
 const page = () => (
-  <main className="flex size-full flex-col items-center gap-10 p-6 font-display dark:bg-black dark:text-white">
+  <main className="font-display flex size-full flex-col items-center gap-10 p-6 dark:bg-black dark:text-white">
     <div className="flex h-screen flex-col">
       <div className="mb-3 flex w-full flex-col items-center space-y-3 bg-black sm:mb-0">
         <div
@@ -83,6 +84,7 @@ const page = () => (
         </div>
       </div>
 
+      {/* oxlint-disable-next-line nextjs/no-html-link-for-pages -- /contactcard.vcf is a static file download from public/, not a Next.js page */}
       <a href="/contactcard.vcf">
         <button
           aria-label="Download Contact Card"

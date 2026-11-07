@@ -1,11 +1,13 @@
+import { cn } from "@kduprey/ui";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { VisualEditing } from "next-sanity/visual-editing";
-import type { PropsWithChildren } from "react";
+import { Inter } from "next/font/google";
 
 import "./globals.css";
-import { cn } from "@kduprey/ui";
 import { draftMode } from "next/headers";
+import type { PropsWithChildren } from "react";
+
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { SanityLive } from "@/sanity/config/sanity.live";
 
 export const metadata: Metadata = {
@@ -23,7 +25,12 @@ const rootLayout = async ({ children }: PropsWithChildren) => {
   const { isEnabled } = await draftMode();
 
   return (
-    <html className={cn("font-sans", inter.variable)} lang="en">
+    // next-themes sets the `dark` class on <html> before hydration.
+    <html
+      className={cn("font-sans", inter.variable)}
+      lang="en"
+      suppressHydrationWarning
+    >
       <head>
         <link href="/favicon.svg" rel="shortcut icon" />
         <meta
@@ -32,7 +39,14 @@ const rootLayout = async ({ children }: PropsWithChildren) => {
         />
       </head>
       <body>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          disableTransitionOnChange
+          enableSystem
+        >
+          {children}
+        </ThemeProvider>
         <SanityLive />
         {isEnabled ? <VisualEditing /> : null}
       </body>

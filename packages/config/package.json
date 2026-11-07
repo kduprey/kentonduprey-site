@@ -15,13 +15,13 @@
   },
   "dependencies": {
     "@bdsqqq/try": "^2.3.1",
-    "stripe": "^22.3.2",
-    "zod": "^4.4.3"
+    "stripe": "^23.1.0",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@kduprey/tsconfig": "workspace:*",
-    "@types/node": "^26.1.2",
-    "tsup": "^8.4.0",
-    "typescript": "^5.9.3"
+    "@types/node": "^26.6.6",
+    "tsup": "^9.0.0",
+    "typescript": "^7.0.2"
   }
 }

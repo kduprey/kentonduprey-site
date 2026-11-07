@@ -4,7 +4,7 @@ interface SvgIconProps {
 
 export const SvgIcon = ({ iconName }: SvgIconProps) => {
   switch (iconName) {
-    case "phone":
+    case "phone": {
       return (
         <svg
           aria-hidden="true"
@@ -18,7 +18,8 @@ export const SvgIcon = ({ iconName }: SvgIconProps) => {
           <path d="M17.543 9.704c.302.728.457 1.508.457 2.296h-1.8A4.199 4.199 0 0012 7.8V6a6 6 0 015.543 3.704z" />
         </svg>
       );
-    case "email":
+    }
+    case "email": {
       return (
         <svg
           aria-hidden="true"
@@ -35,7 +36,8 @@ export const SvgIcon = ({ iconName }: SvgIconProps) => {
           />
         </svg>
       );
-    case "work":
+    }
+    case "work": {
       return (
         <svg
           aria-hidden="true"
@@ -52,7 +54,8 @@ export const SvgIcon = ({ iconName }: SvgIconProps) => {
           />
         </svg>
       );
-    case "website":
+    }
+    case "website": {
       return (
         <svg
           aria-hidden="true"
@@ -69,7 +72,8 @@ export const SvgIcon = ({ iconName }: SvgIconProps) => {
           />
         </svg>
       );
-    case "addContact":
+    }
+    case "addContact": {
       return (
         <svg
           aria-hidden="true"
@@ -87,7 +91,9 @@ export const SvgIcon = ({ iconName }: SvgIconProps) => {
           <path d="M11 14a1 1 0 011 1v6h2v-6a3 3 0 00-3-3H5a3 3 0 00-3 3v6h2v-6a1 1 0 011-1h6zM18 7h2v2h2v2h-2v2h-2v-2h-2V9h2V7z" />
         </svg>
       );
-    default:
+    }
+    default: {
       return null;
+    }
   }
 };

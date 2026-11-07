@@ -1,7 +1,8 @@
 import { trytm } from "@bdsqqq/try";
 import { getStripe } from "@kduprey/config";
 import { verify } from "jsonwebtoken";
-import { type NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 import { z } from "zod";
 
 const jwtPayload = z.object({

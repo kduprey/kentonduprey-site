@@ -1,5 +1,4 @@
 import type { NextComponentType } from "next";
-
 import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export const Socials: NextComponentType = () => (

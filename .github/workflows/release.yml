@@ -4,107 +4,176 @@ on:
   push:
     branches:
       - production
+      - next
+      - beta
+      - "*.x"
+  workflow_dispatch: {}
 
 permissions:
   contents: read
 
 jobs:
   release:
-    name: Release
+    name: Publish
     runs-on: ubuntu-latest
     permissions:
       contents: write
     outputs:
-      released: ${{ steps.release.outputs.released }}
-      tag: ${{ steps.release.outputs.tag }}
+      published_production: ${{ steps.tag.outputs.published_production }}
+      tag: ${{ steps.tag.outputs.tag }}
     steps:
       - name: Generate a token
         id: id-token
         uses: actions/create-github-app-token@v3
         with:
-          app-id: ${{ vars.APP_ID }}
-          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          app-id: ${{ vars.TOKEN_APP_ID }}
+          private-key: ${{ secrets.TOKEN_APP_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: read
 
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
           token: ${{ steps.id-token.outputs.token }}
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 22.x
+          node-version: 24.x
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v6.0.9
+        uses: pnpm/action-setup@v6
         with:
           run_install: false
 
       - name: Install dependencies
         run: pnpm i
 
+      - name: Audit dependencies for known vulnerabilities
+        run: pnpm audit || true
+
+      # The promotion PR lands as a merge commit (not squash), so every
+      # individual conventional commit from main is preserved in production's
+      # history - release-please walks them directly to compute the bump.
       - name: Compute release version
         id: release
         env:
           GITHUB_TOKEN: ${{ steps.id-token.outputs.token }}
         run: node scripts/compute-release.mjs
 
+      # workflow_dispatch on production re-targets the tag already published at
+      # HEAD, so a failed production deploy can be retried without a new release.
       - name: Tag and publish GitHub release
-        if: steps.release.outputs.released == 'true'
+        id: tag
+        if: steps.release.outputs.released == 'true' || (github.event_name == 'workflow_dispatch' && github.ref_name == 'production')
         env:
           GH_TOKEN: ${{ steps.id-token.outputs.token }}
           NOTES_FILE: ${{ steps.release.outputs.notes_file }}
           RELEASE_TAG: ${{ steps.release.outputs.tag }}
         run: |
-          gh release create "$RELEASE_TAG" --title "$RELEASE_TAG" --notes-file "$NOTES_FILE" --target "$GITHUB_SHA"
+          TAG="$RELEASE_TAG"
+          if [ -z "$TAG" ]; then
+            TAG=$(git describe --tags --abbrev=0)
+          fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
 
-  sentry-release-site:
-    name: Create Sentry release (site)
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" --title "$TAG" --notes-file "$NOTES_FILE" --target "$GITHUB_SHA" ${{ github.ref_name == 'beta' && '--prerelease' || '' }}
+          fi
+
+          if [ "$GITHUB_REF_NAME" = "production" ]; then
+            IS_DRAFT=$(gh release view "$TAG" --json isDraft --jq .isDraft)
+            IS_PRERELEASE=$(gh release view "$TAG" --json isPrerelease --jq .isPrerelease)
+            if [ "$IS_DRAFT" = "false" ] && [ "$IS_PRERELEASE" = "false" ]; then
+              echo "published_production=true" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+  # Migrations run once here rather than inside each app's Vercel build, so
+  # three parallel builds never race on the same database.
+  migrate:
+    name: Apply database migrations
     needs: release
-    if: needs.release.outputs.released == 'true'
+    if: needs.release.outputs.published_production == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: read
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v7
         with:
-          fetch-depth: 0
           persist-credentials: false
 
-      - name: Create Sentry release
-        uses: getsentry/action-release@v3
-        env:
-          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-          SENTRY_ORG: ${{ vars.SENTRY_ORG }}
-          SENTRY_PROJECT: ${{ vars.SENTRY_PROJECT_SITE }}
-          SENTRY_URL: ${{ vars.SENTRY_URL }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
         with:
-          environment: production
-          version: ${{ needs.release.outputs.tag }}
+          node-version: 24.x
 
-  sentry-release-admin:
-    name: Create Sentry release (admin)
-    needs: release
-    if: needs.release.outputs.released == 'true'
-    runs-on: ubuntu-latest
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          run_install: false
+
+      - name: Pull Vercel environment
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID_ADMIN }}
+        run: npx vercel@59.18.0 pull --yes --environment=production --token="$VERCEL_TOKEN"
+
+      # DATABASE_URL must be set before install: prisma.config.ts resolves it
+      # eagerly whenever an install-time `prisma generate` runs.
+      - name: Install dependencies
+        run: |
+          set -a
+          . ./.vercel/.env.production.local
+          set +a
+          pnpm i
+
+      - name: Apply pending migrations
+        run: |
+          set -a
+          . ./.vercel/.env.production.local
+          set +a
+          pnpm --filter @kduprey/db migrate:deploy
+
+  deploy-frontend:
+    name: Deploy frontend
+    needs: [release, migrate]
+    uses: ./.github/workflows/vercel-deploy.yml
     permissions:
       contents: read
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-        with:
-          fetch-depth: 0
-          persist-credentials: false
+    secrets:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    with:
+      vercel-project-id: ${{ vars.VERCEL_PROJECT_ID_FRONTEND }}
+      prod: true
+      sentry-release: ${{ needs.release.outputs.tag }}
 
-      - name: Create Sentry release
-        uses: getsentry/action-release@v3
-        env:
-          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-          SENTRY_ORG: ${{ vars.SENTRY_ORG }}
-          SENTRY_PROJECT: ${{ vars.SENTRY_PROJECT_ADMIN }}
-          SENTRY_URL: ${{ vars.SENTRY_URL }}
-        with:
-          environment: production
-          version: ${{ needs.release.outputs.tag }}
+  deploy-admin:
+    name: Deploy admin
+    needs: [release, migrate]
+    uses: ./.github/workflows/vercel-deploy.yml
+    permissions:
+      contents: read
+    secrets:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    with:
+      vercel-project-id: ${{ vars.VERCEL_PROJECT_ID_ADMIN }}
+      prod: true
+      sentry-release: ${{ needs.release.outputs.tag }}
+
+  deploy-cms:
+    name: Deploy cms
+    needs: [release, migrate]
+    uses: ./.github/workflows/vercel-deploy.yml
+    permissions:
+      contents: read
+    secrets:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    with:
+      vercel-project-id: ${{ vars.VERCEL_PROJECT_ID_CMS }}
+      prod: true
+      sentry-release: ${{ needs.release.outputs.tag }}

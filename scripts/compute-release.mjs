@@ -1,4 +1,5 @@
 import { appendFileSync, writeFileSync } from "node:fs";
+
 import { GitHub, Manifest } from "release-please";
 
 const { GITHUB_REPOSITORY, GITHUB_TOKEN, GITHUB_OUTPUT, GITHUB_REF_NAME } =
@@ -25,6 +26,7 @@ if (!GITHUB_REF_NAME) {
 
 const [owner, repo] = GITHUB_REPOSITORY.split("/");
 const targetBranch = GITHUB_REF_NAME;
+const isPrerelease = targetBranch === "beta";
 
 const github = await GitHub.create({
   defaultBranch: targetBranch,
@@ -34,6 +36,11 @@ const github = await GitHub.create({
 });
 
 const manifest = await Manifest.fromConfig(github, targetBranch, {
+  ...(isPrerelease && {
+    prerelease: true,
+    prereleaseType: "beta",
+    versioning: "prerelease",
+  }),
   releaseType: "simple",
 });
 

@@ -2,11 +2,11 @@ import { HomeIcon } from "@sanity/icons/Home";
 import { defineField, defineType } from "sanity";
 
 const INSTAGRAM_URL_PATTERN =
-  /^(https?:\/\/)?(www\.)?instagram.com\/[a-zA-Z0-9_.]+\/?$/;
+  /^(?:https?:\/\/)?(?:www\.)?instagram.com\/[a-zA-Z0-9_.]+\/?$/u;
 const TWITTER_URL_PATTERN =
-  /^(https?:\/\/)?(www\.)?twitter.com\/[a-zA-Z0-9_.]+\/?$/;
+  /^(?:https?:\/\/)?(?:www\.)?twitter.com\/[a-zA-Z0-9_.]+\/?$/u;
 const GITHUB_URL_PATTERN =
-  /^(https?:\/\/)?(www\.)?github.com\/[a-zA-Z0-9_.]+\/?$/;
+  /^(?:https?:\/\/)?(?:www\.)?github.com\/[a-zA-Z0-9_.]+\/?$/u;
 
 export const homeSchema = defineType({
   fields: [

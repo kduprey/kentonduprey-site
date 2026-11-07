@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export const POST = () => {
+export const POST = () =>
   // if (error) {
   // 	console.error(error);
   // 	return new NextResponse("Error message not set", {
@@ -8,10 +8,9 @@ export const POST = () => {
   // 	});
   // }
 
-  return NextResponse.json(
+  NextResponse.json(
     {},
     {
       status: 200,
     }
   );
-};

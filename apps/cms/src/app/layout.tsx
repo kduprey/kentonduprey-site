@@ -15,8 +15,7 @@ const RootLayout = ({ children }: Readonly<PropsWithChildren>) => (
         name="viewport"
       />
     </head>
-    {/* biome-ignore lint/suspicious/noExplicitAny: react-i18next's global JSX augmentation narrows body's children to ReactI18NextChildren, incompatible with a duplicate @types/react instance */}
-    <body>{children as any}</body>
+    <body>{children}</body>
   </html>
 );
 

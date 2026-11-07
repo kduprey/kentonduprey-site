@@ -1,0 +1,83 @@
+name: Deploy Preview
+
+# pull_request alone (no push): every branch with an open PR already fires
+# pull_request's synchronize event on every commit. Merges to main are covered
+# too, since the standing release PR (head: main, base: production) gets its
+# own synchronize event whenever main updates - those deploy to staging.
+on:
+  pull_request: {}
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Deploy every app even if turbo's affected-check finds no changes
+        required: false
+        type: boolean
+        default: false
+
+concurrency:
+  group: ${{ github.workflow }}-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  check-frontend:
+    name: Check frontend
+    permissions:
+      contents: read
+    uses: ./.github/workflows/turbo-affected-check.yml
+    with:
+      package: "@kduprey/frontend"
+
+  deploy-frontend:
+    name: Deploy frontend to Vercel
+    needs: check-frontend
+    permissions:
+      contents: read
+    uses: ./.github/workflows/vercel-deploy.yml
+    secrets:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    with:
+      vercel-project-id: ${{ vars.VERCEL_PROJECT_ID_FRONTEND }}
+      should-deploy: ${{ needs.check-frontend.outputs.should_deploy == 'true' || inputs.force == true }}
+      target: ${{ (github.head_ref || github.ref_name) == 'main' && 'staging' || '' }}
+
+  check-admin:
+    name: Check admin
+    permissions:
+      contents: read
+    uses: ./.github/workflows/turbo-affected-check.yml
+    with:
+      package: "@kduprey/admin"
+
+  deploy-admin:
+    name: Deploy admin to Vercel
+    needs: check-admin
+    permissions:
+      contents: read
+    uses: ./.github/workflows/vercel-deploy.yml
+    secrets:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    with:
+      vercel-project-id: ${{ vars.VERCEL_PROJECT_ID_ADMIN }}
+      should-deploy: ${{ needs.check-admin.outputs.should_deploy == 'true' || inputs.force == true }}
+      target: ${{ (github.head_ref || github.ref_name) == 'main' && 'staging' || '' }}
+
+  check-cms:
+    name: Check cms
+    permissions:
+      contents: read
+    uses: ./.github/workflows/turbo-affected-check.yml
+    with:
+      package: "@kduprey/cms"
+
+  deploy-cms:
+    name: Deploy cms to Vercel
+    needs: check-cms
+    permissions:
+      contents: read
+    uses: ./.github/workflows/vercel-deploy.yml
+    secrets:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    with:
+      vercel-project-id: ${{ vars.VERCEL_PROJECT_ID_CMS }}
+      should-deploy: ${{ needs.check-cms.outputs.should_deploy == 'true' || inputs.force == true }}
+      target: ${{ (github.head_ref || github.ref_name) == 'main' && 'staging' || '' }}
