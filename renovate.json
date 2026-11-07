@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
-  "schedule": ["every weekday"],
+  "schedule": ["* * * * *"],
   "minimumReleaseAge": "7 days",
   "prConcurrentLimit": 5,
   "prHourlyLimit": 2,
