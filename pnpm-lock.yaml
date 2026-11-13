@@ -192,8 +192,8 @@ importers:
         specifier: ^17.6.0
         version: 17.6.0
       oxfmt:
-        specifier: ^0.75.0
-        version: 0.75.0
+        specifier: ^0.77.0
+        version: 0.77.0
       oxlint:
         specifier: ^1.90.0
         version: 1.92.0
@@ -205,7 +205,7 @@ importers:
         version: 2.11.10
       ultracite:
         specifier: 8.1.1
-        version: 8.1.1(oxfmt@0.75.0)(oxlint@1.92.0)(prettier@3.9.6)(stylelint@17.16.0(supports-color@10.2.2)(typescript@7.0.2))
+        version: 8.1.1(oxfmt@0.77.0)(oxlint@1.92.0)(prettier@3.9.6)(stylelint@17.16.0(supports-color@10.2.2)(typescript@7.0.2))
 
   apps/admin:
     dependencies:
@@ -335,7 +335,7 @@ importers:
         version: 2.1.1
       '@sanity/vision':
         specifier: ^6.21.0
-        version: 6.22.0(6f37a73385ae94eb3a0027221f544361)
+        version: 6.22.0(455eb04a6e72357e7207f363c9f19619)
       '@sentry/nextjs':
         specifier: ^11.10.0
         version: 11.11.0(next@16.4.5(@babel/core@8.1.0)(@opentelemetry/api@1.9.1)(@types/node@26.6.6)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react@19.3.1)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))(webpack@5.109.2(clean-css@5.3.3)(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.32)(uglify-js@3.19.3))
@@ -344,7 +344,7 @@ importers:
         version: 16.4.5(@babel/core@8.1.0)(@opentelemetry/api@1.9.1)(@types/node@26.6.6)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       next-sanity:
         specifier: ^13.4.0
-        version: 13.4.0(1147ddabd0f7cd60f37b55e5f6549189)
+        version: 13.4.0(2e7c8ffe9722ad74be4e27e654488bab)
       react:
         specifier: 19.3.1
         version: 19.3.1
@@ -369,7 +369,7 @@ importers:
         version: 19.3.0(@types/react@19.3.0)
       sanity:
         specifier: ^6.21.0
-        version: 6.22.0(@babel/core@8.1.0)(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@rolldown/plugin-babel@0.2.4(@babel/core@8.1.0)(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@26.6.6)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(oxfmt@0.75.0)(prismjs@1.27.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(sugarss@5.0.1(postcss@8.5.32))(supports-color@8.1.1)(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)
+        version: 6.22.0(@babel/core@8.1.0)(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@rolldown/plugin-babel@0.2.4(@babel/core@8.1.0)(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@26.6.6)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(oxfmt@0.77.0)(prismjs@1.27.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(sugarss@5.0.1(postcss@8.5.32))(supports-color@8.1.1)(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)
       styled-components:
         specifier: ^6.6.0
         version: 6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
@@ -417,7 +417,7 @@ importers:
         version: 16.4.5(@babel/core@7.29.7(supports-color@10.2.2))(@opentelemetry/api@1.9.1)(@types/node@26.6.6)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       next-sanity:
         specifier: ^13.4.0
-        version: 13.4.0(@sanity/client@8.14.1)(@types/react@19.3.0)(next@16.4.5(@babel/core@7.29.7(supports-color@10.2.2))(@opentelemetry/api@1.9.1)(@types/node@26.6.6)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sanity@6.22.0(7518c3d97fb019917adf5d12dca2c078))(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@7.0.2)
+        version: 13.4.0(@sanity/client@8.14.1)(@types/react@19.3.0)(next@16.4.5(@babel/core@7.29.7(supports-color@10.2.2))(@opentelemetry/api@1.9.1)(@types/node@26.6.6)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sanity@6.22.0(181968cd276913c0fbce18413d2578dd))(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@7.0.2)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
@@ -3156,124 +3156,124 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@oxfmt/binding-android-arm-eabi@0.75.0':
-    resolution: {integrity: sha512-zHJ7LcTN46/5mtoLxsUu14pdF9ixFwDURtmxZ0CeNwqom5qB5NRVqU6o2GRZ7QPdNBW8G6j9UTJzQ+EDevMH0w==}
+  '@oxfmt/binding-android-arm-eabi@0.77.0':
+    resolution: {integrity: sha512-zmPiuOvkuu0csMx4U3gdMunIFWNcWulzikFMdAPBzLazVAA3LhdHzv9yzgUgAckv/zje5vz4XJcseNQKdSsWMw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm]
     os: [android]
 
-  '@oxfmt/binding-android-arm64@0.75.0':
-    resolution: {integrity: sha512-IdxsKZJvHZUvI7q6kLmzXdEFpFiBEDQw/WJtSp1QlzNXBw1JlLN3tY50WwWd4doPnq86XW4P+7BsQwu6meCW+w==}
+  '@oxfmt/binding-android-arm64@0.77.0':
+    resolution: {integrity: sha512-shXOIK9sj3bvt4H6K47qFWNKaYBwEhzj97iUwoLGyyRDrXt1OdAAuCiupCinG1i7ETL81knjEKeB+JmhOOfPew==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [android]
 
-  '@oxfmt/binding-darwin-arm64@0.75.0':
-    resolution: {integrity: sha512-vyiqZilO5jal/nXZ0143NyKcP6TkzjaQdVEWU/kwgyWqugAgIRgAbrnO3MOF+e6LkQu3CrtrkPoc3mrsZZY6cA==}
+  '@oxfmt/binding-darwin-arm64@0.77.0':
+    resolution: {integrity: sha512-lrTX0I54buv9CW2leEWchWLdfcrblZ5Rj8uAilKzBEyWif8CTN6zBHdFc12K1b6U2cnlvOFBd1LxdLdqLKX2EA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [darwin]
 
-  '@oxfmt/binding-darwin-x64@0.75.0':
-    resolution: {integrity: sha512-oua7eVqVe769mDam6ORcavygxTzG3ovo5QRQ1kJCPaEbnWXPYhtAiYDj8pajVmFjO7j8Elf3gInnWpTX0LLYtg==}
+  '@oxfmt/binding-darwin-x64@0.77.0':
+    resolution: {integrity: sha512-SD44K3x/Im8EsOtdHxjVmTBi0cafAaunRpCeq+w91tkD2keqYagR8oAvxkJHUK+KPg5NQk7JZqQnzGHnVEBrDw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [darwin]
 
-  '@oxfmt/binding-freebsd-x64@0.75.0':
-    resolution: {integrity: sha512-NWkbezhg7mx2Ep94g/TysR3c1bsISsU4lQ6t5xI4841PAk0Kqcn1+UEe+BoFH2/UK2YegPXq+OF+0bUcSvUalA==}
+  '@oxfmt/binding-freebsd-x64@0.77.0':
+    resolution: {integrity: sha512-N+gUflsCx3FAVkxi5sxGlL5LwO+7pv5NexHJufBqPyl3BcPv1rXpfwqhL/Vj+XfshfoxMFTBbzrbJgGVaPVkAw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [freebsd]
 
-  '@oxfmt/binding-linux-arm-gnueabihf@0.75.0':
-    resolution: {integrity: sha512-CAHX87kJplTq2E0OWP7opG8gEVlHc7CeLEi4nMJOyx3psuqBKf84HZ3UIkX2guWEJ5UljU2zJF0o46XylywVVA==}
+  '@oxfmt/binding-linux-arm-gnueabihf@0.77.0':
+    resolution: {integrity: sha512-DXGwP8818IUZ4cxcfugg9PXqnI6fVCWIqgCgBoUKdl/QhJF4Po+lucJBrnrX/b5BNKwVMc3xSrvbI9rl8+RrBA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm]
     os: [linux]
 
-  '@oxfmt/binding-linux-arm-musleabihf@0.75.0':
-    resolution: {integrity: sha512-jmxYOiQzx2fp+OwQb7717K1zI8AMKEykw04sfr95/mU8SIL/oKgQq8nXH42sEznEquBL2RU7nLY36eBnYFT+vg==}
+  '@oxfmt/binding-linux-arm-musleabihf@0.77.0':
+    resolution: {integrity: sha512-HUiJTgdV10PkCW41nHqVYYlW8Uc+39YBOoluZLfJE2MBPKVTNElhL+vpdSEuVaCGhGkzOGR6XyxM37gu31L1Qw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm]
     os: [linux]
 
-  '@oxfmt/binding-linux-arm64-gnu@0.75.0':
-    resolution: {integrity: sha512-eimaiAhx08dbOg12Fj3PYhymXY8vRbaiJB505vDXMy6ohne3Y1qTS0e5KEwFMq3LmDjEO+16BX38c/oXFI/SAQ==}
+  '@oxfmt/binding-linux-arm64-gnu@0.77.0':
+    resolution: {integrity: sha512-+w3V07y6yy8FdACnGtzgDsG/CHgA0Y/W2/bzZuPYgvBAa23Lap/nmvyNQmCiGKkSaChTPlY7QpIShGGAC7IGEQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
-  '@oxfmt/binding-linux-arm64-musl@0.75.0':
-    resolution: {integrity: sha512-bjSONIG1ba2xugr9oHQau0E6oPFYOMjPaa5hK/wpVC/Q1pcgf2BZMKwbuA8/cWzhWX5QV/UdPzD+rw1kQHpikQ==}
+  '@oxfmt/binding-linux-arm64-musl@0.77.0':
+    resolution: {integrity: sha512-FASxWQAuLW4WXFViDa77ybd3Y1lbkBx5DTtL4OGl+pL64/ymtydTFvJM0xz/0vnCirNzPUDAI6TiTBDGsFbEVg==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
-  '@oxfmt/binding-linux-ppc64-gnu@0.75.0':
-    resolution: {integrity: sha512-wDksWQXC/KZucISyqlhBtvpW+pyHh8z0Cjm6Qxiv22XlllM2Bx5gJGDnPYjV+H0lL+o1iqLlEli8jmBuRCLcjw==}
+  '@oxfmt/binding-linux-ppc64-gnu@0.77.0':
+    resolution: {integrity: sha512-WRdlgZahG35zCieq7Po7QU8mBgkFAIdEpgS5p3vVZrHt0FXTbFgzqC7xeBCceh9gpFGgr4VWblULNnU8gdw0DA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [ppc64]
     os: [linux]
     libc: [glibc]
 
-  '@oxfmt/binding-linux-riscv64-gnu@0.75.0':
-    resolution: {integrity: sha512-5JkNwViqaVuk4I+9+zgVrEYiHOAPXFxgDgP6iDnpdOBjm7XAHAOjSvolHZZAokWPx7CGOw8tKteXmn4WPIInaQ==}
+  '@oxfmt/binding-linux-riscv64-gnu@0.77.0':
+    resolution: {integrity: sha512-CVzNO94x/UzQe/INVUu9qt5X1MjLEooqwc/5VcQ88eyLXiEIIsjubpPQgwEMKwfWtAA5hnpFL2GF74zSdCg07Q==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [riscv64]
     os: [linux]
     libc: [glibc]
 
-  '@oxfmt/binding-linux-riscv64-musl@0.75.0':
-    resolution: {integrity: sha512-1EVqRIE0eZLB08j3ZCVN47Ors7LCXGmOI+3xJYgyoFUKUerD3Glxb+Q1Bp3lK8NeT5R3ZdS9uhX/wobNBYZ6jw==}
+  '@oxfmt/binding-linux-riscv64-musl@0.77.0':
+    resolution: {integrity: sha512-NrCcVheqL0kRUi9gptqjkQhxSFayotM+zycC3lSOSrsf5SroZq49u66ShyuZkHCCzKPHB0AT0pL/s+ET9R3qQQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [riscv64]
     os: [linux]
     libc: [musl]
 
-  '@oxfmt/binding-linux-s390x-gnu@0.75.0':
-    resolution: {integrity: sha512-UJWRVNT6Yuw4ssLv2BwaBUWU1GWtByE+EnoHu8I+P1t8Kn+WozYU5WYOqb5aj8gbXJJ8gGZt+w40Hi/7L6iVLw==}
+  '@oxfmt/binding-linux-s390x-gnu@0.77.0':
+    resolution: {integrity: sha512-LWDQ9T/Bo/kt/q223j9fYLiNTkUYyuMkk7ZrIsIAV7l19MmuKxgd/1tZ8xhoUuVIdsyET7sJrQ6X/vRG6V+bZQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [s390x]
     os: [linux]
     libc: [glibc]
 
-  '@oxfmt/binding-linux-x64-gnu@0.75.0':
-    resolution: {integrity: sha512-FHdvHhyz8ChBctBUvVGti49kSEwANd1PZQwlXUEoF9Ed4plxXxk/wWc0mfZmrze2lRgmME7ytDmVIOixYauQhg==}
+  '@oxfmt/binding-linux-x64-gnu@0.77.0':
+    resolution: {integrity: sha512-5JbOT3ucC/2kROUjyyOW06FjXO8trPjYb+kE7E7cLxmpGAnw0jjeU4Tjg4C8H9JR1MZ2oH4fXE1NqLNZ89ISnw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
-  '@oxfmt/binding-linux-x64-musl@0.75.0':
-    resolution: {integrity: sha512-6MjtsF96s9mSBV0GEwUe4pOFPP2Mz7ahcHPAit0DSKL5fM6oMM7RG1zvYxwB7+SBkIxsWBRhhxuqmy7pibNwsA==}
+  '@oxfmt/binding-linux-x64-musl@0.77.0':
+    resolution: {integrity: sha512-/q9p495bmmKtxqWlIrNiJ15hoddgk/jPvJwMW6Nh796UgVRMTCKD7yI+AAL7/7xWlC3+2ls5l1RPywuV4lOdlw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
-  '@oxfmt/binding-openharmony-arm64@0.75.0':
-    resolution: {integrity: sha512-1D6T6aL1Pj+U5GLxqwV1fKjUJ5+FFm+bn7UrqNDMveZmWs0jo/3vc+dzzuV/jF/FdVo12gowODk3SnAO2YOwLg==}
+  '@oxfmt/binding-openharmony-arm64@0.77.0':
+    resolution: {integrity: sha512-tmN3OEI38xXr48UeAkQMAX1jMHszVHv4I9lzh44DKrMlIFxEU0aBYl3Zs7PzRBuJOLR7h77m6bUlCh0E06MVXw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [openharmony]
 
-  '@oxfmt/binding-win32-arm64-msvc@0.75.0':
-    resolution: {integrity: sha512-RX2eUmy7J/nM8+tnM3nzR8t1eqkwj1q8Kgo7beA+4DVgKYYHHyrEa3qEmthxw7Z+HqpCCEOWuoqa+jelo9/w2Q==}
+  '@oxfmt/binding-win32-arm64-msvc@0.77.0':
+    resolution: {integrity: sha512-v//nJMk72xRT+/9QB9mJWEPV3/5XncMvxtYQAYbAsv5VcxLlRcbj2n2srQSERglVcTft4jI3MK30ceCoRcDTJg==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [win32]
 
-  '@oxfmt/binding-win32-ia32-msvc@0.75.0':
-    resolution: {integrity: sha512-UpKta0iSZmPLII0dYXYdbzdBTsGREUbSHLqgLdtKcqBvs40qjmUz+cgUcaU1smPx13DfbEG4XqnaSn5MoFN0og==}
+  '@oxfmt/binding-win32-ia32-msvc@0.77.0':
+    resolution: {integrity: sha512-D3SMXWBkVogzAlzd3RfMaFuHOTdPpRDFT+jVbtXszWwck9PCK4hYoRoncjuAjWZuWzRFND3/Mk91qFvJyoJbLA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [ia32]
     os: [win32]
 
-  '@oxfmt/binding-win32-x64-msvc@0.75.0':
-    resolution: {integrity: sha512-pjiLiCk0QMCWxs0n5XiNU85YLAKA+wJxPjxlDVygmr4bP4glcfTU2nOpso5nR4Rdi2Pxv5YwakD4UE+eh7M0BQ==}
+  '@oxfmt/binding-win32-x64-msvc@0.77.0':
+    resolution: {integrity: sha512-2vyyODjP1Sb830rTVgfFqZoIUYF8uYdGx9S/Usih+Av6gQ9QyxXzwEGXS7poxfsxxQftZW1IbcFlhvQkeDRekQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [win32]
@@ -9845,8 +9845,8 @@ packages:
   oxc-resolver@11.21.2:
     resolution: {integrity: sha512-w5tLwYN3Zo24w5EeWJjJWZOwhYqTtC8PS2B1tIt7BZUuqTIcU07sQValbDw+rq7+AuAGzOHklgK+ifsy4lpXfw==}
 
-  oxfmt@0.75.0:
-    resolution: {integrity: sha512-/ZKvY5asfsVi9hdkOmRIumqOPu6kxlTgiJSZf54uq29kKew+Gu1FFAnEkGePyvLVW+MAYu41D6XggnzoElQzPw==}
+  oxfmt@0.77.0:
+    resolution: {integrity: sha512-3bPDJwLZf4i6dOaQS+6GOI/YUFTHNif7qw4nknbZyzdB0uws57tD8jA/GLGC9J7kjyf6d/eVWm73b43VeMUqGw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -15587,61 +15587,61 @@ snapshots:
   '@oxc-resolver/binding-win32-x64-msvc@11.21.2':
     optional: true
 
-  '@oxfmt/binding-android-arm-eabi@0.75.0':
+  '@oxfmt/binding-android-arm-eabi@0.77.0':
     optional: true
 
-  '@oxfmt/binding-android-arm64@0.75.0':
+  '@oxfmt/binding-android-arm64@0.77.0':
     optional: true
 
-  '@oxfmt/binding-darwin-arm64@0.75.0':
+  '@oxfmt/binding-darwin-arm64@0.77.0':
     optional: true
 
-  '@oxfmt/binding-darwin-x64@0.75.0':
+  '@oxfmt/binding-darwin-x64@0.77.0':
     optional: true
 
-  '@oxfmt/binding-freebsd-x64@0.75.0':
+  '@oxfmt/binding-freebsd-x64@0.77.0':
     optional: true
 
-  '@oxfmt/binding-linux-arm-gnueabihf@0.75.0':
+  '@oxfmt/binding-linux-arm-gnueabihf@0.77.0':
     optional: true
 
-  '@oxfmt/binding-linux-arm-musleabihf@0.75.0':
+  '@oxfmt/binding-linux-arm-musleabihf@0.77.0':
     optional: true
 
-  '@oxfmt/binding-linux-arm64-gnu@0.75.0':
+  '@oxfmt/binding-linux-arm64-gnu@0.77.0':
     optional: true
 
-  '@oxfmt/binding-linux-arm64-musl@0.75.0':
+  '@oxfmt/binding-linux-arm64-musl@0.77.0':
     optional: true
 
-  '@oxfmt/binding-linux-ppc64-gnu@0.75.0':
+  '@oxfmt/binding-linux-ppc64-gnu@0.77.0':
     optional: true
 
-  '@oxfmt/binding-linux-riscv64-gnu@0.75.0':
+  '@oxfmt/binding-linux-riscv64-gnu@0.77.0':
     optional: true
 
-  '@oxfmt/binding-linux-riscv64-musl@0.75.0':
+  '@oxfmt/binding-linux-riscv64-musl@0.77.0':
     optional: true
 
-  '@oxfmt/binding-linux-s390x-gnu@0.75.0':
+  '@oxfmt/binding-linux-s390x-gnu@0.77.0':
     optional: true
 
-  '@oxfmt/binding-linux-x64-gnu@0.75.0':
+  '@oxfmt/binding-linux-x64-gnu@0.77.0':
     optional: true
 
-  '@oxfmt/binding-linux-x64-musl@0.75.0':
+  '@oxfmt/binding-linux-x64-musl@0.77.0':
     optional: true
 
-  '@oxfmt/binding-openharmony-arm64@0.75.0':
+  '@oxfmt/binding-openharmony-arm64@0.77.0':
     optional: true
 
-  '@oxfmt/binding-win32-arm64-msvc@0.75.0':
+  '@oxfmt/binding-win32-arm64-msvc@0.77.0':
     optional: true
 
-  '@oxfmt/binding-win32-ia32-msvc@0.75.0':
+  '@oxfmt/binding-win32-ia32-msvc@0.77.0':
     optional: true
 
-  '@oxfmt/binding-win32-x64-msvc@0.75.0':
+  '@oxfmt/binding-win32-x64-msvc@0.77.0':
     optional: true
 
   '@oxlint/binding-android-arm-eabi@1.92.0':
@@ -17124,33 +17124,33 @@ snapshots:
       jiti: 2.7.0
       vite: 8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)
 
-  '@sanity/blueprints@0.29.0(@sanity/cli-build@7.1.0(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(rolldown@1.2.16)(sanity@6.22.0(7518c3d97fb019917adf5d12dca2c078))(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1))(jiti@2.7.0)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))':
+  '@sanity/blueprints@0.29.0(@sanity/cli-build@7.1.0(788252baf8eb5926af85702d9f66a4ef))(jiti@2.7.0)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))':
     dependencies:
       parse-duration: 2.1.11
     optionalDependencies:
-      '@sanity/cli-build': 7.1.0(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(rolldown@1.2.16)(sanity@6.22.0(7518c3d97fb019917adf5d12dca2c078))(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)
+      '@sanity/cli-build': 7.1.0(788252baf8eb5926af85702d9f66a4ef)
       jiti: 2.7.0
       vite: 8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)
 
-  '@sanity/blueprints@0.29.0(@sanity/cli-build@7.1.0(b4cab1e4dfc414d7c5f6a69561e18e39))(jiti@2.7.0)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))':
+  '@sanity/blueprints@0.29.0(@sanity/cli-build@7.1.0(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(rolldown@1.2.16)(sanity@6.22.0(181968cd276913c0fbce18413d2578dd))(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1))(jiti@2.7.0)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))':
     dependencies:
       parse-duration: 2.1.11
     optionalDependencies:
-      '@sanity/cli-build': 7.1.0(b4cab1e4dfc414d7c5f6a69561e18e39)
+      '@sanity/cli-build': 7.1.0(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(rolldown@1.2.16)(sanity@6.22.0(181968cd276913c0fbce18413d2578dd))(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)
       jiti: 2.7.0
       vite: 8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)
 
-  '@sanity/cli-build@7.1.0(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(rolldown@1.2.16)(sanity@6.22.0(7518c3d97fb019917adf5d12dca2c078))(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)':
+  '@sanity/cli-build@7.1.0(788252baf8eb5926af85702d9f66a4ef)':
     dependencies:
       '@oclif/core': 4.14.0
-      '@rolldown/plugin-babel': 0.2.4(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))
+      '@rolldown/plugin-babel': 0.2.4(@babel/core@8.1.0)(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))
       '@sanity/cli-core': 3.14.1(@noble/hashes@2.2.0)(@types/node@26.6.6)(esbuild@0.28.2)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)
       '@sanity/generate-help-url': 4.0.0
       '@sanity/schema': 6.22.0(@types/react@19.3.0)
       '@sanity/telemetry': 1.1.0(react@19.3.1)
       '@sanity/types': 6.22.0(@types/react@19.3.0)
-      '@sanity/workbench-cli': 2.15.0(@noble/hashes@2.2.0)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(react@19.3.1)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)
-      '@vitejs/plugin-react': 6.1.2(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))
+      '@sanity/workbench-cli': 2.15.0(@noble/hashes@2.2.0)(@rolldown/plugin-babel@0.2.4(@babel/core@8.1.0)(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(react@19.3.1)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)
+      '@vitejs/plugin-react': 6.1.2(@rolldown/plugin-babel@0.2.4(@babel/core@8.1.0)(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))
       chokidar: 5.0.0
       cjs-module-lexer: 2.3.0
       dompurify: 3.4.17
@@ -17167,7 +17167,7 @@ snapshots:
       vite: 8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)
       zod: 4.6.7
     optionalDependencies:
-      sanity: 6.22.0(7518c3d97fb019917adf5d12dca2c078)
+      sanity: 6.22.0(@babel/core@8.1.0)(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@rolldown/plugin-babel@0.2.4(@babel/core@8.1.0)(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@26.6.6)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(oxfmt@0.77.0)(prismjs@1.27.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(sugarss@5.0.1(postcss@8.5.32))(supports-color@8.1.1)(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)
     transitivePeerDependencies:
       - '@babel/core'
       - '@babel/plugin-transform-runtime'
@@ -17197,17 +17197,17 @@ snapshots:
       - xstate
       - yaml
 
-  '@sanity/cli-build@7.1.0(b4cab1e4dfc414d7c5f6a69561e18e39)':
+  '@sanity/cli-build@7.1.0(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(rolldown@1.2.16)(sanity@6.22.0(181968cd276913c0fbce18413d2578dd))(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)':
     dependencies:
       '@oclif/core': 4.14.0
-      '@rolldown/plugin-babel': 0.2.4(@babel/core@8.1.0)(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))
+      '@rolldown/plugin-babel': 0.2.4(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))
       '@sanity/cli-core': 3.14.1(@noble/hashes@2.2.0)(@types/node@26.6.6)(esbuild@0.28.2)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)
       '@sanity/generate-help-url': 4.0.0
       '@sanity/schema': 6.22.0(@types/react@19.3.0)
       '@sanity/telemetry': 1.1.0(react@19.3.1)
       '@sanity/types': 6.22.0(@types/react@19.3.0)
-      '@sanity/workbench-cli': 2.15.0(@noble/hashes@2.2.0)(@rolldown/plugin-babel@0.2.4(@babel/core@8.1.0)(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(react@19.3.1)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)
-      '@vitejs/plugin-react': 6.1.2(@rolldown/plugin-babel@0.2.4(@babel/core@8.1.0)(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))
+      '@sanity/workbench-cli': 2.15.0(@noble/hashes@2.2.0)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(react@19.3.1)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)
+      '@vitejs/plugin-react': 6.1.2(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))
       chokidar: 5.0.0
       cjs-module-lexer: 2.3.0
       dompurify: 3.4.17
@@ -17224,7 +17224,7 @@ snapshots:
       vite: 8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)
       zod: 4.6.7
     optionalDependencies:
-      sanity: 6.22.0(@babel/core@8.1.0)(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@rolldown/plugin-babel@0.2.4(@babel/core@8.1.0)(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@26.6.6)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(oxfmt@0.75.0)(prismjs@1.27.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(sugarss@5.0.1(postcss@8.5.32))(supports-color@8.1.1)(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)
+      sanity: 6.22.0(181968cd276913c0fbce18413d2578dd)
     transitivePeerDependencies:
       - '@babel/core'
       - '@babel/plugin-transform-runtime'
@@ -17291,32 +17291,32 @@ snapshots:
       - vitest
       - yaml
 
-  '@sanity/cli@8.27.0(1b6d5f5e0891d6fd38c0f8d0b71137de)':
+  '@sanity/cli@8.27.0(8f82e38a5bb3f4cfb31337377026b381)':
     dependencies:
       '@oclif/core': 4.14.0
       '@oclif/plugin-help': 6.3.0
       '@oclif/plugin-not-found': 3.2.90(@types/node@26.6.6)
       '@sanity/blueprints': 0.28.0(jiti@2.7.0)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))
-      '@sanity/cli-build': 7.1.0(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(rolldown@1.2.16)(sanity@6.22.0(7518c3d97fb019917adf5d12dca2c078))(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)
+      '@sanity/cli-build': 7.1.0(788252baf8eb5926af85702d9f66a4ef)
       '@sanity/cli-core': 3.14.1(@noble/hashes@2.2.0)(@types/node@26.6.6)(esbuild@0.28.2)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)
       '@sanity/client': 8.14.1
-      '@sanity/codegen': 8.3.0(oxfmt@0.75.0)(react@19.3.1)(supports-color@10.2.2)(typescript@7.0.2)
+      '@sanity/codegen': 8.3.0(oxfmt@0.77.0)(react@19.3.1)(supports-color@8.1.1)(typescript@7.0.2)
       '@sanity/descriptors': 1.3.0
       '@sanity/export': 7.1.0
       '@sanity/generate-help-url': 4.0.0
       '@sanity/id-utils': 1.1.0
       '@sanity/import': 7.1.0(@sanity/client@8.14.1)(@types/react@19.3.0)
       '@sanity/migrate': 8.0.5(@types/react@19.3.0)(xstate@5.33.3)
-      '@sanity/runtime-cli': 17.18.0(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(rolldown@1.2.16)(sanity@6.22.0(7518c3d97fb019917adf5d12dca2c078))(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)
+      '@sanity/runtime-cli': 17.18.0(e0a7d1e174ee3e224464801644165fd5)
       '@sanity/schema': 6.22.0(@types/react@19.3.0)
       '@sanity/schema-descriptor-utils': 1.4.0
       '@sanity/telemetry': 1.1.0(react@19.3.1)
       '@sanity/template-validator': 3.1.1
       '@sanity/types': 6.22.0(@types/react@19.3.0)
-      '@sanity/workbench-cli': 2.15.0(@noble/hashes@2.2.0)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(react@19.3.1)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)
+      '@sanity/workbench-cli': 2.15.0(@noble/hashes@2.2.0)(@rolldown/plugin-babel@0.2.4(@babel/core@8.1.0)(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(react@19.3.1)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)
       '@sanity/worker-channels': 2.0.0
-      '@sanity/workflow-cli': 0.36.0(@sanity/cli-core@3.14.1(@noble/hashes@2.2.0)(@types/node@26.6.6)(esbuild@0.28.2)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@10.2.2)(typescript@7.0.2))(typescript@7.0.2))(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@10.2.2)(typescript@7.0.2))(react@19.3.1)
-      '@sanity/workflow-engine': 0.36.0(@types/react@19.3.0)(supports-color@10.2.2)(typescript@7.0.2)
+      '@sanity/workflow-cli': 0.36.0(@sanity/cli-core@3.14.1(@noble/hashes@2.2.0)(@types/node@26.6.6)(esbuild@0.28.2)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(react@19.3.1)
+      '@sanity/workflow-engine': 0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2)
       '@vercel/frameworks': 3.29.0
       chokidar: 5.0.0
       console-table-printer: 2.16.1
@@ -17392,32 +17392,32 @@ snapshots:
       - vue-tsc
       - xstate
 
-  '@sanity/cli@8.27.0(bd289f3709a6c7e1e12427c723e5b7f2)':
+  '@sanity/cli@8.27.0(bd135906612f32ab15d69ec1ab7f028f)':
     dependencies:
       '@oclif/core': 4.14.0
       '@oclif/plugin-help': 6.3.0
       '@oclif/plugin-not-found': 3.2.90(@types/node@26.6.6)
       '@sanity/blueprints': 0.28.0(jiti@2.7.0)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))
-      '@sanity/cli-build': 7.1.0(b4cab1e4dfc414d7c5f6a69561e18e39)
+      '@sanity/cli-build': 7.1.0(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(rolldown@1.2.16)(sanity@6.22.0(181968cd276913c0fbce18413d2578dd))(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)
       '@sanity/cli-core': 3.14.1(@noble/hashes@2.2.0)(@types/node@26.6.6)(esbuild@0.28.2)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)
       '@sanity/client': 8.14.1
-      '@sanity/codegen': 8.3.0(oxfmt@0.75.0)(react@19.3.1)(supports-color@8.1.1)(typescript@7.0.2)
+      '@sanity/codegen': 8.3.0(oxfmt@0.77.0)(react@19.3.1)(supports-color@10.2.2)(typescript@7.0.2)
       '@sanity/descriptors': 1.3.0
       '@sanity/export': 7.1.0
       '@sanity/generate-help-url': 4.0.0
       '@sanity/id-utils': 1.1.0
       '@sanity/import': 7.1.0(@sanity/client@8.14.1)(@types/react@19.3.0)
       '@sanity/migrate': 8.0.5(@types/react@19.3.0)(xstate@5.33.3)
-      '@sanity/runtime-cli': 17.18.0(71ff0250ec182c28c36d6bc48b35fc65)
+      '@sanity/runtime-cli': 17.18.0(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(rolldown@1.2.16)(sanity@6.22.0(181968cd276913c0fbce18413d2578dd))(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)
       '@sanity/schema': 6.22.0(@types/react@19.3.0)
       '@sanity/schema-descriptor-utils': 1.4.0
       '@sanity/telemetry': 1.1.0(react@19.3.1)
       '@sanity/template-validator': 3.1.1
       '@sanity/types': 6.22.0(@types/react@19.3.0)
-      '@sanity/workbench-cli': 2.15.0(@noble/hashes@2.2.0)(@rolldown/plugin-babel@0.2.4(@babel/core@8.1.0)(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(react@19.3.1)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)
+      '@sanity/workbench-cli': 2.15.0(@noble/hashes@2.2.0)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(react@19.3.1)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)
       '@sanity/worker-channels': 2.0.0
-      '@sanity/workflow-cli': 0.36.0(@sanity/cli-core@3.14.1(@noble/hashes@2.2.0)(@types/node@26.6.6)(esbuild@0.28.2)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(react@19.3.1)
-      '@sanity/workflow-engine': 0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2)
+      '@sanity/workflow-cli': 0.36.0(@sanity/cli-core@3.14.1(@noble/hashes@2.2.0)(@types/node@26.6.6)(esbuild@0.28.2)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@10.2.2)(typescript@7.0.2))(typescript@7.0.2))(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@10.2.2)(typescript@7.0.2))(react@19.3.1)
+      '@sanity/workflow-engine': 0.36.0(@types/react@19.3.0)(supports-color@10.2.2)(typescript@7.0.2)
       '@vercel/frameworks': 3.29.0
       chokidar: 5.0.0
       console-table-printer: 2.16.1
@@ -17509,7 +17509,7 @@ snapshots:
     transitivePeerDependencies:
       - vitest
 
-  '@sanity/codegen@8.3.0(oxfmt@0.75.0)(react@19.3.1)(supports-color@10.2.2)(typescript@7.0.2)':
+  '@sanity/codegen@8.3.0(oxfmt@0.77.0)(react@19.3.1)(supports-color@10.2.2)(typescript@7.0.2)':
     dependencies:
       '@babel/core': 7.29.7(supports-color@10.2.2)
       '@babel/generator': 7.29.7
@@ -17533,13 +17533,13 @@ snapshots:
       tsconfig-paths: 4.2.0
       valibot: 1.5.0(typescript@7.0.2)
     optionalDependencies:
-      oxfmt: 0.75.0
+      oxfmt: 0.77.0
     transitivePeerDependencies:
       - react
       - supports-color
       - typescript
 
-  '@sanity/codegen@8.3.0(oxfmt@0.75.0)(react@19.3.1)(supports-color@8.1.1)(typescript@7.0.2)':
+  '@sanity/codegen@8.3.0(oxfmt@0.77.0)(react@19.3.1)(supports-color@8.1.1)(typescript@7.0.2)':
     dependencies:
       '@babel/core': 7.29.7(supports-color@8.1.1)
       '@babel/generator': 7.29.7
@@ -17563,7 +17563,7 @@ snapshots:
       tsconfig-paths: 4.2.0
       valibot: 1.5.0(typescript@7.0.2)
     optionalDependencies:
-      oxfmt: 0.75.0
+      oxfmt: 0.77.0
     transitivePeerDependencies:
       - react
       - supports-color
@@ -17736,7 +17736,7 @@ snapshots:
     optionalDependencies:
       prismjs: 1.27.0
 
-  '@sanity/runtime-cli@17.18.0(71ff0250ec182c28c36d6bc48b35fc65)':
+  '@sanity/runtime-cli@17.18.0(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(rolldown@1.2.16)(sanity@6.22.0(181968cd276913c0fbce18413d2578dd))(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)':
     dependencies:
       '@architect/hydrate': 6.0.2
       '@architect/inventory': 6.1.0
@@ -17744,9 +17744,9 @@ snapshots:
       '@oclif/core': 4.14.0
       '@oclif/plugin-help': 6.3.0
       '@sanity-labs/oclif-plugin-skills-flag': 0.2.1(@oclif/core@4.14.0)
-      '@sanity/blueprints': 0.29.0(@sanity/cli-build@7.1.0(b4cab1e4dfc414d7c5f6a69561e18e39))(jiti@2.7.0)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))
+      '@sanity/blueprints': 0.29.0(@sanity/cli-build@7.1.0(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(rolldown@1.2.16)(sanity@6.22.0(181968cd276913c0fbce18413d2578dd))(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1))(jiti@2.7.0)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))
       '@sanity/blueprints-parser': 0.5.0
-      '@sanity/cli-build': 7.1.0(b4cab1e4dfc414d7c5f6a69561e18e39)
+      '@sanity/cli-build': 7.1.0(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(rolldown@1.2.16)(sanity@6.22.0(181968cd276913c0fbce18413d2578dd))(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)
       '@sanity/cli-core': 3.14.1(@noble/hashes@2.2.0)(@types/node@26.6.6)(esbuild@0.28.2)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)
       '@sanity/client': 8.14.1
       adm-zip: 0.6.1
@@ -17799,7 +17799,7 @@ snapshots:
       - xstate
       - yaml
 
-  '@sanity/runtime-cli@17.18.0(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(rolldown@1.2.16)(sanity@6.22.0(7518c3d97fb019917adf5d12dca2c078))(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)':
+  '@sanity/runtime-cli@17.18.0(e0a7d1e174ee3e224464801644165fd5)':
     dependencies:
       '@architect/hydrate': 6.0.2
       '@architect/inventory': 6.1.0
@@ -17807,9 +17807,9 @@ snapshots:
       '@oclif/core': 4.14.0
       '@oclif/plugin-help': 6.3.0
       '@sanity-labs/oclif-plugin-skills-flag': 0.2.1(@oclif/core@4.14.0)
-      '@sanity/blueprints': 0.29.0(@sanity/cli-build@7.1.0(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(rolldown@1.2.16)(sanity@6.22.0(7518c3d97fb019917adf5d12dca2c078))(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1))(jiti@2.7.0)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))
+      '@sanity/blueprints': 0.29.0(@sanity/cli-build@7.1.0(788252baf8eb5926af85702d9f66a4ef))(jiti@2.7.0)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1))
       '@sanity/blueprints-parser': 0.5.0
-      '@sanity/cli-build': 7.1.0(@babel/core@7.29.7(supports-color@10.2.2))(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@types/node@26.6.6)(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(rolldown@1.2.16)(sanity@6.22.0(7518c3d97fb019917adf5d12dca2c078))(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)(use-sync-external-store@1.7.0(react@19.3.1))(xstate@5.33.3)(yaml@2.9.1)
+      '@sanity/cli-build': 7.1.0(788252baf8eb5926af85702d9f66a4ef)
       '@sanity/cli-core': 3.14.1(@noble/hashes@2.2.0)(@types/node@26.6.6)(esbuild@0.28.2)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)
       '@sanity/client': 8.14.1
       adm-zip: 0.6.1
@@ -18020,7 +18020,7 @@ snapshots:
       - typescript
       - vitest
 
-  '@sanity/vision@6.22.0(6f37a73385ae94eb3a0027221f544361)':
+  '@sanity/vision@6.22.0(455eb04a6e72357e7207f363c9f19619)':
     dependencies:
       '@codemirror/autocomplete': 6.20.4
       '@codemirror/commands': 6.11.1
@@ -18057,7 +18057,7 @@ snapshots:
       react-focus-lock: 2.13.7(@types/react@19.3.0)(react@19.3.1)
       react-rx: 7.1.0(react@19.3.1)(rxjs@7.8.2)
       rxjs: 7.8.2
-      sanity: 6.22.0(@babel/core@8.1.0)(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@rolldown/plugin-babel@0.2.4(@babel/core@8.1.0)(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@26.6.6)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(oxfmt@0.75.0)(prismjs@1.27.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(sugarss@5.0.1(postcss@8.5.32))(supports-color@8.1.1)(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)
+      sanity: 6.22.0(@babel/core@8.1.0)(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@rolldown/plugin-babel@0.2.4(@babel/core@8.1.0)(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@26.6.6)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(oxfmt@0.77.0)(prismjs@1.27.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(sugarss@5.0.1(postcss@8.5.32))(supports-color@8.1.1)(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)
       ui5: '@sanity/ui@5.0.0-alpha.19(react-dom@19.3.1(react@19.3.1))(react@19.3.1)'
       use-effect-event: 2.0.4(react@19.3.1)
       xstate: 5.33.3
@@ -23181,7 +23181,7 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  next-sanity@13.4.0(1147ddabd0f7cd60f37b55e5f6549189):
+  next-sanity@13.4.0(2e7c8ffe9722ad74be4e27e654488bab):
     dependencies:
       '@portabletext/react': 7.0.1(react@19.3.1)
       '@sanity/client': 8.14.1
@@ -23194,7 +23194,7 @@ snapshots:
       next: 16.4.5(@babel/core@8.1.0)(@opentelemetry/api@1.9.1)(@types/node@26.6.6)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
-      sanity: 6.22.0(@babel/core@8.1.0)(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@rolldown/plugin-babel@0.2.4(@babel/core@8.1.0)(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@26.6.6)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(oxfmt@0.75.0)(prismjs@1.27.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(sugarss@5.0.1(postcss@8.5.32))(supports-color@8.1.1)(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)
+      sanity: 6.22.0(@babel/core@8.1.0)(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@rolldown/plugin-babel@0.2.4(@babel/core@8.1.0)(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@26.6.6)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(oxfmt@0.77.0)(prismjs@1.27.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(sugarss@5.0.1(postcss@8.5.32))(supports-color@8.1.1)(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2)
       styled-components: 6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
     transitivePeerDependencies:
       - '@sveltejs/kit'
@@ -23205,7 +23205,7 @@ snapshots:
       - typescript
       - vitest
 
-  next-sanity@13.4.0(@sanity/client@8.14.1)(@types/react@19.3.0)(next@16.4.5(@babel/core@7.29.7(supports-color@10.2.2))(@opentelemetry/api@1.9.1)(@types/node@26.6.6)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sanity@6.22.0(7518c3d97fb019917adf5d12dca2c078))(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@7.0.2):
+  next-sanity@13.4.0(@sanity/client@8.14.1)(@types/react@19.3.0)(next@16.4.5(@babel/core@7.29.7(supports-color@10.2.2))(@opentelemetry/api@1.9.1)(@types/node@26.6.6)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sanity@6.22.0(181968cd276913c0fbce18413d2578dd))(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(typescript@7.0.2):
     dependencies:
       '@portabletext/react': 7.0.1(react@19.3.1)
       '@sanity/client': 8.14.1
@@ -23218,7 +23218,7 @@ snapshots:
       next: 16.4.5(@babel/core@7.29.7(supports-color@10.2.2))(@opentelemetry/api@1.9.1)(@types/node@26.6.6)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
-      sanity: 6.22.0(7518c3d97fb019917adf5d12dca2c078)
+      sanity: 6.22.0(181968cd276913c0fbce18413d2578dd)
       styled-components: 6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
     transitivePeerDependencies:
       - '@sveltejs/kit'
@@ -23563,29 +23563,29 @@ snapshots:
       '@oxc-resolver/binding-win32-arm64-msvc': 11.21.2
       '@oxc-resolver/binding-win32-x64-msvc': 11.21.2
 
-  oxfmt@0.75.0:
+  oxfmt@0.77.0:
     dependencies:
       tinypool: 2.2.0
     optionalDependencies:
-      '@oxfmt/binding-android-arm-eabi': 0.75.0
-      '@oxfmt/binding-android-arm64': 0.75.0
-      '@oxfmt/binding-darwin-arm64': 0.75.0
-      '@oxfmt/binding-darwin-x64': 0.75.0
-      '@oxfmt/binding-freebsd-x64': 0.75.0
-      '@oxfmt/binding-linux-arm-gnueabihf': 0.75.0
-      '@oxfmt/binding-linux-arm-musleabihf': 0.75.0
-      '@oxfmt/binding-linux-arm64-gnu': 0.75.0
-      '@oxfmt/binding-linux-arm64-musl': 0.75.0
-      '@oxfmt/binding-linux-ppc64-gnu': 0.75.0
-      '@oxfmt/binding-linux-riscv64-gnu': 0.75.0
-      '@oxfmt/binding-linux-riscv64-musl': 0.75.0
-      '@oxfmt/binding-linux-s390x-gnu': 0.75.0
-      '@oxfmt/binding-linux-x64-gnu': 0.75.0
-      '@oxfmt/binding-linux-x64-musl': 0.75.0
-      '@oxfmt/binding-openharmony-arm64': 0.75.0
-      '@oxfmt/binding-win32-arm64-msvc': 0.75.0
-      '@oxfmt/binding-win32-ia32-msvc': 0.75.0
-      '@oxfmt/binding-win32-x64-msvc': 0.75.0
+      '@oxfmt/binding-android-arm-eabi': 0.77.0
+      '@oxfmt/binding-android-arm64': 0.77.0
+      '@oxfmt/binding-darwin-arm64': 0.77.0
+      '@oxfmt/binding-darwin-x64': 0.77.0
+      '@oxfmt/binding-freebsd-x64': 0.77.0
+      '@oxfmt/binding-linux-arm-gnueabihf': 0.77.0
+      '@oxfmt/binding-linux-arm-musleabihf': 0.77.0
+      '@oxfmt/binding-linux-arm64-gnu': 0.77.0
+      '@oxfmt/binding-linux-arm64-musl': 0.77.0
+      '@oxfmt/binding-linux-ppc64-gnu': 0.77.0
+      '@oxfmt/binding-linux-riscv64-gnu': 0.77.0
+      '@oxfmt/binding-linux-riscv64-musl': 0.77.0
+      '@oxfmt/binding-linux-s390x-gnu': 0.77.0
+      '@oxfmt/binding-linux-x64-gnu': 0.77.0
+      '@oxfmt/binding-linux-x64-musl': 0.77.0
+      '@oxfmt/binding-openharmony-arm64': 0.77.0
+      '@oxfmt/binding-win32-arm64-msvc': 0.77.0
+      '@oxfmt/binding-win32-ia32-msvc': 0.77.0
+      '@oxfmt/binding-win32-x64-msvc': 0.77.0
 
   oxlint@1.92.0:
     optionalDependencies:
@@ -24591,7 +24591,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sanity@6.22.0(7518c3d97fb019917adf5d12dca2c078):
+  sanity@6.22.0(181968cd276913c0fbce18413d2578dd):
     dependencies:
       '@algorithm.ts/lcs': 4.0.6
       '@date-fns/tz': 1.5.0
@@ -24619,7 +24619,7 @@ snapshots:
       '@sanity/access-ui': 6.22.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
       '@sanity/asset-utils': 2.3.0
       '@sanity/bifur-client': 3.0.0
-      '@sanity/cli': 8.27.0(1b6d5f5e0891d6fd38c0f8d0b71137de)
+      '@sanity/cli': 8.27.0(bd135906612f32ab15d69ec1ab7f028f)
       '@sanity/client': 8.14.1
       '@sanity/color': 3.0.9
       '@sanity/comlink': 4.0.3
@@ -24744,7 +24744,7 @@ snapshots:
       - vitest
       - vue-tsc
 
-  sanity@6.22.0(@babel/core@8.1.0)(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@rolldown/plugin-babel@0.2.4(@babel/core@8.1.0)(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@26.6.6)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(oxfmt@0.75.0)(prismjs@1.27.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(sugarss@5.0.1(postcss@8.5.32))(supports-color@8.1.1)(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2):
+  sanity@6.22.0(@babel/core@8.1.0)(@babel/runtime@7.29.7)(@noble/hashes@2.2.0)(@rolldown/plugin-babel@0.2.4(@babel/core@8.1.0)(@babel/runtime@7.29.7)(rolldown@1.2.16)(vite@8.3.5(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.1(postcss@8.5.32))(terser@5.49.0)(tsx@4.23.1)(yaml@2.9.1)))(@sanity/workflow-blueprint@0.36.0(@sanity/workflow-engine@0.36.0(@types/react@19.3.0)(supports-color@8.1.1)(typescript@7.0.2))(typescript@7.0.2))(@types/node@26.6.6)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(immer@11.0.1)(jiti@2.7.0)(oxfmt@0.77.0)(prismjs@1.27.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rolldown@1.2.16)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(sugarss@5.0.1(postcss@8.5.32))(supports-color@8.1.1)(terser@5.49.0)(tsx@4.23.1)(typescript@7.0.2):
     dependencies:
       '@algorithm.ts/lcs': 4.0.6
       '@date-fns/tz': 1.5.0
@@ -24772,7 +24772,7 @@ snapshots:
       '@sanity/access-ui': 6.22.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(styled-components@6.6.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
       '@sanity/asset-utils': 2.3.0
       '@sanity/bifur-client': 3.0.0
-      '@sanity/cli': 8.27.0(bd289f3709a6c7e1e12427c723e5b7f2)
+      '@sanity/cli': 8.27.0(8f82e38a5bb3f4cfb31337377026b381)
       '@sanity/client': 8.14.1
       '@sanity/color': 3.0.9
       '@sanity/comlink': 4.0.3
@@ -25839,7 +25839,7 @@ snapshots:
   uglify-js@3.19.3:
     optional: true
 
-  ultracite@8.1.1(oxfmt@0.75.0)(oxlint@1.92.0)(prettier@3.9.6)(stylelint@17.16.0(supports-color@10.2.2)(typescript@7.0.2)):
+  ultracite@8.1.1(oxfmt@0.77.0)(oxlint@1.92.0)(prettier@3.9.6)(stylelint@17.16.0(supports-color@10.2.2)(typescript@7.0.2)):
     dependencies:
       '@clack/prompts': 1.8.1
       cli-truncate: 6.1.1
@@ -25861,7 +25861,7 @@ snapshots:
       yaml: 2.9.1
       zod: 4.6.7
     optionalDependencies:
-      oxfmt: 0.75.0
+      oxfmt: 0.77.0
       oxlint: 1.92.0
       prettier: 3.9.6
       stylelint: 17.16.0(supports-color@10.2.2)(typescript@7.0.2)
